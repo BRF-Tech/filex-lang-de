@@ -1,0 +1,23 @@
+{
+  "name": "filex-lang-de",
+  "private": true,
+  "version": "0.1.0",
+  "description": "The filex interface in German — a language pack (AI-translated, awaiting review by a native speaker).",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node scripts/pack.mjs start",
+    "next": "node scripts/pack.mjs next",
+    "build": "node scripts/pack.mjs build",
+    "sync": "node scripts/pack.mjs sync",
+    "validate": "node scripts/pack.mjs build --check && node scripts/validate.mjs filex-app.json --complete && node scripts/validate-de.mjs --quiet-warnings",
+    "check": "node scripts/pack.mjs build --check && node scripts/validate.mjs filex-app.json --complete && node scripts/validate-de.mjs --quiet-warnings",
+    "lint:de": "node scripts/validate-de.mjs"
+  },
+  "devDependencies": {
+    "@intlify/message-compiler": "9.14.5"
+  }
+}

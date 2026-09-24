@@ -1,0 +1,25 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # vue-i18n's own parser, for the strictest check of admin-panel strings.
+      - run: npm install --no-audit --no-fund
+      # filex-app.json must be what translations/ says it is…
+      - run: node scripts/pack.mjs build --check
+      # …and every string must render the way filex will render it.
+      # --complete: a key that is not translated is an ERROR. This pack ships
+      # 100 % coverage, so a catalogue sync that leaves a key behind must be red.
+      - run: node scripts/validate.mjs filex-app.json --complete
+      # …and the German pack's own, stricter check: nothing left untranslated, the
+      # same plural forms as English, "Sie" throughout, the glossary's spellings.
+      - run: node scripts/validate-de.mjs --quiet-warnings

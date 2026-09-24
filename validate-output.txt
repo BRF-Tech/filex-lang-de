@@ -1,0 +1,124 @@
+# node scripts/pack.mjs build --check
+filex-app.json is up to date.
+
+# node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
+filex language pack validator
+  catalogue : catalogue (filex 0.43.0) — 3588 strings (227 of them the server's: e-mails, public pages, notifications)
+  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+  pack      : filex-app.json (filex-app.json)
+
+[de] 100% translated — 3588 of 3588 strings; the other 0 show in English
+  185 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+  plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
+  12 plural key(s) lack a form for one of those categories and show the plain form for it
+  errors: 0 (none) · warnings: 0 (none)
+  plural      cols.apply_all: lacks cols.apply_all_one
+  plural      inspector.activity.version: lacks inspector.activity.version_one
+  plural      inspector.versions.v: lacks inspector.versions.v_one
+  plural      opc.percent: lacks opc.percent_one
+  plural      selection.count: lacks selection.count_one
+  plural      server.app.wake.beyond: lacks server.app.wake.beyond_one
+  plural      server.app.wake.refused: lacks server.app.wake.refused_one
+  plural      server.app.wake.scheduled: lacks server.app.wake.scheduled_one
+  plural      tour.progress: lacks tour.progress_one
+  plural      tz.more: lacks tz.more_one
+  plural      viewer.counter: lacks viewer.counter_one
+  plural      viewer.page_n_of_m: lacks viewer.page_n_of_m_one
+
+# node scripts/validate-de.mjs
+filex German pack check (validate-de)
+  catalogue      : catalogue (filex 0.43.0)
+                   admin table     1832 strings (vue-i18n)
+                   explorer table  1587 strings (plain {var})
+                   server table    227 strings (mails, public pages, notifications)
+                   58 keys in both tables -> 3588 strings
+  plurals        : one, other — 1 extra form key(s) beyond the catalogue
+  pack           : translations\de.json  (3589 strings)
+  syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
+
+Keys shared by both catalogues: 58 (one flat pack value serves both).
+  identical English in both: 58
+
+Errors  : 0 (none)
+Warnings: 0 (none)
+Consistency: 26 short English labels translated more than one way (see below)
+
+Same English, different German (review — context may justify it):
+  "Storage"
+      "Speicher"  <- about.storage, audit.resource.storage, audit.resource.storages, audit.target.storage (+8)
+      "Speicherplatz"  <- usage.cost.storage, drive.storage.label
+  "Signature"
+      "Signatur"  <- appPlugins.detail.signature, appPlugins.wizard.signature, plugins.signature.label
+      "Unterschrift"  <- plugin.pdf.type_signature
+  "Upload"
+      "Hochladen"  <- appearance.previewUpload, plugin.sig.mode_upload, toolbar.upload
+      "Upload"  <- audit.target.upload, opc.kind.upload
+  "Hide"
+      "Ausblenden"  <- common.hide
+      "Verbergen"  <- pendingOps.hide, conn.form.hide
+  "None"
+      "Keine"  <- common.none
+      "Keiner"  <- usage.fields.providerNone
+  "Search"
+      "Suchen"  <- common.search, advsearch.submit, toolbar.search, viewer.search
+      "Suche"  <- nav.search, tour.step.search.title
+  "Indexed files"
+      "Indizierte Dateien"  <- dashboard.stats.files
+      "Indexierte Dateien"  <- search.stats.files
+  "Type"
+      "Typ"  <- explore.cols.mime, queue.fields.type, settings.folderView.col_type, settings.folderView.sort_type (+4)
+      "Eingeben"  <- plugin.sig.mode_type
+  "Copying"
+      "Kopiervorgang"  <- pendingOps.verb.copy
+      "Wird kopiert"  <- ops.copy
+  "Deleting"
+      "Löschvorgang"  <- pendingOps.verb.delete
+      "Wird gelöscht"  <- ops.delete
+  "Moving"
+      "Verschiebevorgang"  <- pendingOps.verb.move
+      "Wird verschoben"  <- ops.move
+  "Working…"
+      "Wird verarbeitet…"  <- pendingOps.working
+      "Wird ausgeführt…"  <- plugin.view.busy
+  "Verified"
+      "Überprüft"  <- plugins.conformance.verified
+      "Verifiziert"  <- settings.smtp.verified
+  "Done"
+      "Erledigt"  <- queue.status.done, opc.status.done, upload.done
+      "Fertig"  <- access.done, e2e.recovery.done, plugin.pdf.pad_done, tour.done
+  "Share"
+      "Freigabe"  <- storages.fields.share
+      "Teilen"  <- access.ui.share, ctx.share, modal.share.create, shortcuts.share (+1)
+  "Coming soon"
+      "Demnächst"  <- userSettings.ai.soon
+      "Demnächst verfügbar"  <- ai.soon
+  "Allowed types: {types}"
+      "Erlaubte Dateitypen: {types}"  <- access.ui.drop_types
+      "Erlaubte Typen: {types}"  <- server.mail.drop_invite.types
+  "Allowed types: all"
+      "Erlaubte Dateitypen: alle"  <- access.ui.drop_types_all
+      "Erlaubte Typen: alle"  <- server.mail.drop_invite.types_all
+  "Star"
+      "Favorit"  <- col.star
+      "Zu Favoriten hinzufügen"  <- ctx.star
+  "Read-only"
+      "Schreibgeschützt"  <- conn.nfs.readOnly
+      "Nur lesen"  <- destpicker.readonly, sidenav.storage.readOnly
+  "Cut"
+      "Ausschneiden"  <- ctx.cut, shortcuts.cut
+      "Ausgeschnitten"  <- toast.cut
+  "Anyone"
+      "Alle"  <- filter.people.any
+      "Beliebige Person"  <- plugin.pdf.unassigned
+  "Archive"
+      "Archiv"  <- ftype.archive
+      "Archivieren"  <- opc.kind.archive
+  "Clear"
+      "Leeren"  <- opc.clear
+      "Entfernen"  <- plugin.file.clear
+  "Tabs"
+      "Tabs"  <- shortcuts.group.tabs
+      "Tab-Leiste"  <- tabs.strip
+  "Show {count} more"
+      "{count} weitere anzeigen"  <- sidenav.tags.more
+      "{count} weiteres anzeigen"  <- sidenav.tags.more_one
