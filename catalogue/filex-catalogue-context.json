@@ -1,5 +1,5 @@
 {
-  "filex": "0.43.0",
+  "filex": "0.44.0",
   "about": "Every key filex has — the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms — explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -4014,6 +4014,539 @@
         "packages/core/src/lib/appLock.ts"
       ]
     },
+    "archive.bad_password": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv parolası yanlış.",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/viewers/ArchiveViewer.vue"
+      ]
+    },
+    "archive.cancel": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Vazgeç",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue",
+        "packages/core/src/modals/ArchiveExtractModal.vue",
+        "packages/core/src/modals/ArchivePasswordModal.vue"
+      ]
+    },
+    "archive.compression": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sıkıştırma",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.continue": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Devam et",
+      "where": [
+        "packages/core/src/modals/ArchivePasswordModal.vue"
+      ]
+    },
+    "archive.create": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Oluştur",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.create_count": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} öğe seçildi",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ],
+      "plural": true
+    },
+    "archive.create_count_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} öğe seçildi",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.create_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv oluştur",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.created": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv oluşturuldu",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "web/src/lib/notificationText.ts",
+        "web/src/lib/webhookEvents.ts"
+      ]
+    },
+    "archive.creating": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Oluşturuluyor…",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.destination_folder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çıkarılacak klasör",
+      "where": [
+        "packages/core/src/modals/ArchiveExtractModal.vue"
+      ]
+    },
+    "archive.dictionary_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Daha büyük sözlükler sıkıştırmayı iyileştirebilir ancak oluşturma ve çıkarma sırasında daha fazla bellek kullanır.",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.dictionary_size": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sözlük boyutu",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.dictionary_size_value": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} MiB",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ],
+      "plural": true
+    },
+    "archive.encrypt_names": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya adlarını şifrele",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.error_limit": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu arşiv, sunucunun çıkarmaya izin verdiği boyutu aşıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.error_unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu sunucu şu anda bu tür bir arşivi açamıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.error_unsupported": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu arşiv çıkarılamıyor: bu sunucu biçimini okuyamıyor ya da içinde filex’in çıkarmadığı bir şey var (bağlantı, özel dosya ya da boyutunu belirtmeyen bir dosya).",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.extract": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çıkar"
+    },
+    "archive.extract_here": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Buraya çıkar",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.extract_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşivi çıkar",
+      "where": [
+        "packages/core/src/modals/ArchiveExtractModal.vue"
+      ]
+    },
+    "archive.extract_to_folder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasöre çıkar",
+      "where": [
+        "packages/core/src/modals/ArchiveExtractModal.vue"
+      ]
+    },
+    "archive.extracted": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} dosya çıkarıldı",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "web/src/lib/notificationText.ts",
+        "web/src/lib/webhookEvents.ts"
+      ],
+      "plural": true
+    },
+    "archive.extracted_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} dosya çıkarıldı",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "web/src/lib/notificationText.ts",
+        "web/src/lib/webhookEvents.ts"
+      ]
+    },
+    "archive.extracting": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çıkarılıyor…",
+      "where": [
+        "packages/core/src/modals/ArchiveExtractModal.vue"
+      ]
+    },
+    "archive.extraction_cancelled": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çıkarma {count} dosyadan sonra iptal edildi",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "archive.extraction_cancelled_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çıkarma {count} dosyadan sonra iptal edildi",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.extraction_completed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çıkarma tamamlandı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.extraction_queued": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv çıkarma arka planda çalışıyor",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.filename": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv adı",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.format": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Biçim",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.invalid_extension": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv adı kullanılabilir biçim uzantılarından biriyle bitmelidir.",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.invalid_folder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Eğik çizgi içermeyen bir klasör adı girin.",
+      "where": [
+        "packages/core/src/modals/ArchiveExtractModal.vue"
+      ]
+    },
+    "archive.invalid_name": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Eğik çizgi içermeyen bir dosya adı girin.",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.opening": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Açılıyor…",
+      "where": [
+        "packages/core/src/modals/ArchivePasswordModal.vue"
+      ]
+    },
+    "archive.password_charset": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "ZIP parolasında yalnızca ASCII karakterler kullanılabilir; ç, ğ, ı, İ, ö, ş, ü gibi harfler kullanılamaz. Her karakteri kullanmak için 7z biçimini seçin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.password_confirm": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parolayı doğrula",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.password_mismatch": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parolalar birbiriyle eşleşmiyor.",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.password_optional": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola (isteğe bağlı)",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.password_required": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu arşiv için parola gerekiyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/modals/ArchivePasswordModal.vue",
+        "packages/core/src/viewers/ArchiveViewer.vue"
+      ]
+    },
+    "archive.password_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv parolası",
+      "where": [
+        "packages/core/src/modals/ArchivePasswordModal.vue"
+      ]
+    },
+    "archive.queued": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv oluşturma arka planda çalışıyor",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archive.solid": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Katı arşiv oluştur",
+      "where": [
+        "packages/core/src/modals/ArchiveCreateModal.vue"
+      ]
+    },
+    "archive.target_exists": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu ada sahip bir öğe zaten var. Başka bir ad seçin veya önce mevcut öğeyi kaldırın.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "archivesAdmin.binaryHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çalıştırılabilir dosya yolları güvenlik açısından hassastır ve tarayıcıdan değil FILEX_ARCHIVE_7Z_BIN ile yapılandırılır.",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.creates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluşturur: {formats}",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.defaultFormat": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan biçim",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.enabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Harici arşiv sağlayıcılarını etkinleştir",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.enabledHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "7-Zip'i açar: 7z, XZ, RAR (bu 7-Zip okuyabiliyorsa) ve parolalı ZIP için ve düz ZIP dışındaki her arşivi oluşturmak için. Düz ZIP, TAR, TAR.GZ ve TAR.BZ2'yi filex kendisi okur.",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.extracts": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çıkarır: {formats}",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.formats": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluşturma biçimleri",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.maxEntries": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En fazla girdi",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.maxSize": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En fazla açılmış boyut (MiB)",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.providerBuiltin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerleşik",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.providerSevenZip": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "7-Zip",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.providers": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcılar",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.providersHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kullanılabilirlik bu sunucuda algılanır.",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv ayarları kaydedildi",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.sevenZipMissing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sunucuda 7-Zip {version} ya da daha yeni bir sürüm bulunamadı. Kurun ya da FILEX_ARCHIVE_7Z_BIN ile yerini gösterin.",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv oluşturma, çıkarma, şifreleme ve güvenlik sınırlarını yapılandırın.",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.test": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifrelemeyi sına",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.testFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv sağlayıcısı sınaması başarısız",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.testOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreli arşiv döngüsü başarıyla tamamlandı",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.timeout": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Komut zaman aşımı (saniye)",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
+    "archivesAdmin.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşivler",
+      "where": [
+        "web/src/views/Archives.vue"
+      ]
+    },
     "audit.fields.action": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -4120,6 +4653,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Uygulama"
+    },
+    "audit.resource.archives": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv ayarları"
     },
     "audit.resource.audit": {
       "in": "admin",
@@ -4416,6 +4954,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "arşive eklendi"
+    },
+    "audit.verb.archive_create": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "arşiv oluşturuldu"
     },
     "audit.verb.archive_extract": {
       "in": "admin",
@@ -6050,6 +6593,7 @@
         "web/src/views/Queue.vue",
         "web/src/views/Replica.vue",
         "web/src/views/Shares.vue",
+        "web/src/views/StorageEdit.vue",
         "web/src/views/Storages.vue",
         "web/src/views/Sync.vue",
         "web/src/views/Updates.vue",
@@ -6121,6 +6665,7 @@
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/Appearance.vue",
+        "web/src/views/Archives.vue",
         "web/src/views/Branding.vue",
         "web/src/views/External.vue",
         "web/src/views/Protection.vue",
@@ -8965,10 +9510,74 @@
         "packages/core/src/modals/ConvertModal.vue"
       ]
     },
+    "coverage.catalog_all": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Tümünü katalogla",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_started": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Senkron başladı — deponun tamamı kataloglanıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.first_scan": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu deponun ilk senkronu henüz bitmedi. Bitene kadar arama, klasör boyutları ve kullanım deponun bir kısmını kapsamaz.",
+      "where": [
+        "packages/core/src/lib/catalogCoverage.ts"
+      ]
+    },
+    "coverage.lazy_filling": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "filex bu depoyu hâlâ kataloglıyor (şimdiye kadar bulunan klasörlerin %{pct} kadarı tamam). Bitene kadar arama, klasör boyutları ve kullanım deponun bir kısmını kapsamaz.",
+      "where": [
+        "packages/core/src/lib/catalogCoverage.ts"
+      ]
+    },
+    "coverage.lazy_on_open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu depoda yalnız açılan klasörler kataloglanır. Arama, klasör boyutları ve kullanım yalnız bu klasörleri kapsar.",
+      "where": [
+        "packages/core/src/lib/catalogCoverage.ts"
+      ]
+    },
+    "coverage.search_some": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şu depoların tamamı henüz kataloglanmadı: {names}. Bu arama oradaki bazı dosyaları bulamayabilir.",
+      "where": [
+        "packages/core/src/lib/catalogCoverage.ts"
+      ]
+    },
     "ctx.access.one_only": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Paylaşım aynı anda tek öğe için çalışır.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "ctx.archive_create": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv oluştur…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "ctx.archive_extract": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşivi çıkar…",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -9917,6 +10526,14 @@
       "tr": "{total} alanın {used} kadarı dolu",
       "where": [
         "packages/core/src/components/SideNav.vue"
+      ]
+    },
+    "drive.storage.used_partial": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "en az {used} kullanılıyor",
+      "where": [
+        "packages/core/src/components/HomeView.vue"
       ]
     },
     "drive.storage.used_unlimited": {
@@ -11212,6 +11829,7 @@
         "web/src/views/ApiMcp.vue",
         "web/src/views/AppPluginPage.vue",
         "web/src/views/Appearance.vue",
+        "web/src/views/Archives.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/Branding.vue",
         "web/src/views/Dashboard.vue",
@@ -14105,6 +14723,15 @@
         "web/src/router/index.ts"
       ]
     },
+    "nav.archives": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşivler",
+      "where": [
+        "web/src/components/Sidebar.vue",
+        "web/src/router/index.ts"
+      ]
+    },
     "nav.audit": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -14720,6 +15347,16 @@
       "syntax": "vue-i18n",
       "tr": "Test bildirimi"
     },
+    "notifications.kinds.archive_created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv oluşturuldu"
+    },
+    "notifications.kinds.archive_extracted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv çıkarıldı"
+    },
     "notifications.kinds.auth_fail_spike": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -15259,6 +15896,14 @@
         "packages/core/src/components/OperationsCenter.vue"
       ]
     },
+    "opc.cancelling": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İptal isteniyor…",
+      "where": [
+        "packages/core/src/components/OperationsCenter.vue"
+      ]
+    },
     "opc.clear": {
       "in": "explorer",
       "syntax": "plain",
@@ -15360,6 +16005,16 @@
       "syntax": "plain",
       "tr": "Arşiv"
     },
+    "opc.kind.archive-create": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv oluşturuluyor"
+    },
+    "opc.kind.archive-extract": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv çıkarılıyor"
+    },
     "opc.kind.convert": {
       "in": "explorer",
       "syntax": "plain",
@@ -15437,6 +16092,7 @@
       "syntax": "plain",
       "tr": "İptal edildi",
       "where": [
+        "packages/core/src/FileExplorer.vue",
         "packages/core/src/components/OperationsCenter.vue",
         "packages/core/src/lib/errorWords.ts"
       ]
@@ -15639,6 +16295,14 @@
         "packages/core/src/components/CommandPalette.vue"
       ]
     },
+    "pendingOps.cancel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İptal et",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
     "pendingOps.dismiss": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -15658,10 +16322,7 @@
     "pendingOps.hide": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Gizle",
-      "where": [
-        "web/src/components/PendingOpsTray.vue"
-      ]
+      "tr": "Gizle"
     },
     "pendingOps.progress": {
       "in": "admin",
@@ -15687,6 +16348,14 @@
         "web/src/components/PendingOpsTray.vue"
       ]
     },
+    "pendingOps.progressPercent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{'%'}{percent}",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
     "pendingOps.retry": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -15699,6 +16368,27 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Aktif işlemler"
+    },
+    "pendingOps.verb.archive": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv"
+    },
+    "pendingOps.verb.archiveCreate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv oluşturuluyor",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
+    "pendingOps.verb.archiveExtract": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv çıkarılıyor",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
     },
     "pendingOps.verb.copy": {
       "in": "admin",
@@ -19884,6 +20574,41 @@
         "count": "a number of days"
       }
     },
+    "server.notify.archive.created.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Arşiv oluşturuldu: {name}",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "name": "a file or folder name, as it is on disk"
+      }
+    },
+    "server.notify.archive.extracted.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosya {path} konumuna çıkarıldı",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "count": "a number",
+        "path": "the file's path inside its storage, e.g. /Reports/2026/q3.pdf"
+      },
+      "plural": true
+    },
+    "server.notify.archive.extracted.body_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "count": "a number",
+        "path": "the file's path inside its storage, e.g. /Reports/2026/q3.pdf"
+      }
+    },
+    "server.notify.archive.extracted.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Arşiv çıkarma tamamlandı",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
+    },
     "server.notify.comment.added.title": {
       "in": "server",
       "syntax": "server",
@@ -20955,6 +21680,21 @@
       "in": "server",
       "syntax": "server",
       "tr": "Bu sürüm kendiliğinden kurulmak üzere işaretlenmemiş. Bilerek kurun.",
+      "about": "Admin panel → Updates: why the newest release will (or will not) be installed by itself, shown under the version number. In the reader's language."
+    },
+    "server.update.reason.package": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{manager} ile kuruldu. Kurulu sürümü {manager} takip edebilsin diye yükseltmeyi {manager} ile yapın.",
+      "about": "Admin panel → Updates: why the newest release will (or will not) be installed by itself, shown under the version number. In the reader's language.",
+      "vars": {
+        "manager": "the package manager that installed filex: Homebrew, winget or Snap — a product name, written the same in every language"
+      }
+    },
+    "server.update.reason.package_unknown": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bir paket yöneticisiyle kuruldu. Kurulu sürümü paket yöneticisi takip edebilsin diye yükseltmeyi onunla yapın.",
       "about": "Admin panel → Updates: why the newest release will (or will not) be installed by itself, shown under the version number. In the reader's language."
     },
     "server.update.reason.patch_auto": {
@@ -22322,6 +23062,30 @@
         "packages/core/src/components/SideNav.vue"
       ]
     },
+    "size.at_least": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "≥ {size}",
+      "where": [
+        "packages/core/src/composables/useLocale.ts"
+      ]
+    },
+    "size.partial_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörün bir kısmı henüz kataloglanmadı; boyutu en az bu kadar.",
+      "where": [
+        "packages/core/src/composables/useLocale.ts"
+      ]
+    },
+    "size.unknown_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasör henüz kataloglanmadı; boyutu bilinmiyor.",
+      "where": [
+        "packages/core/src/composables/useLocale.ts"
+      ]
+    },
     "sort.asc": {
       "in": "explorer",
       "syntax": "plain",
@@ -22493,6 +23257,141 @@
       "tr": "Gelişmiş ayarlar",
       "where": [
         "web/src/components/StorageDriverFields.vue"
+      ]
+    },
+    "storages.catalog.cataloged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kataloglanan klasör",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.complete": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu deponun bütün klasörleri kataloglandı.",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.filler": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arka plan geçişi",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.fillerState.converged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tamamlandı"
+    },
+    "storages.catalog.fillerState.filling": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kataloglanıyor"
+    },
+    "storages.catalog.fillerState.idle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekliyor"
+    },
+    "storages.catalog.fillerState.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı (yalnız açıldıkça)"
+    },
+    "storages.catalog.fillerState.paused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yavaşladı, depo kullanılıyor"
+    },
+    "storages.catalog.fillerState.refreshing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzlenmeyen klasörler yeniden denetleniyor"
+    },
+    "storages.catalog.filling": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arka plan geçişi şimdiye kadar bulunan klasörlerin {'%'}{pct} kadarını katalogladı. Geçiş bitince arama, klasör boyutları ve kullanım deponun tamamını kapsar.",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.heldBack": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Silmesi bekletilen klasör",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.heldBackHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu klasörlerde, filex'in katalogdan kendiliğinden çıkaracağından fazla dosya aynı anda kaybolmuş göründü; bu yüzden hiçbir şey çıkarılmadı. Sonraki bir denetim doğrulayana kadar bu klasörler doğrudan depodan listelenir.",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.listFilling": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Katalog: {'%'}{pct}",
+      "where": [
+        "web/src/views/Storages.vue"
+      ]
+    },
+    "storages.catalog.listOnOpen": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasörler açıldıkça kataloglanır",
+      "where": [
+        "web/src/views/Storages.vue"
+      ]
+    },
+    "storages.catalog.onOpenHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnız açılan klasörler kataloglanır. Şimdi senkronize et deponun tamamını bir kez kataloglar.",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekleyen klasör",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Katalog",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue",
+        "web/src/views/StorageEdit.vue"
+      ]
+    },
+    "storages.catalog.watched": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzlenen klasör",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.watchedOf": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} / {max}",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
       ]
     },
     "storages.createdOk": {
@@ -22749,6 +23648,21 @@
       "syntax": "shared",
       "tr": "Katı sunucu anahtarı denetimi için OpenSSH known_hosts yolu. Varsayılan, ~/.filex/known_hosts içinde ilk bağlantıda güven."
     },
+    "storages.fieldHelp.lazyFill": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Önce tıklanan, arkada tamamlanan: birinin açtığı klasör ilk kataloglanır, yavaş bir arka plan geçişi kalanını kataloglar; böylece arama, klasör boyutları ve kullanım sonunda deponun tamamını kapsar. Yalnız açıldıkça: arka planda hiçbir şey çalışmaz. Yalnız açılan klasörler kataloglanır; arama, klasör boyutları ve kullanım yalnız bu klasörleri kapsadığını söyler. Şimdi senkronize et her şeyi bir kez kataloglar."
+    },
+    "storages.fieldHelp.lazyMaxWatches": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açılan klasörler, filex dışında yapılan değişiklikler için izlenir. Bu sayı aşılınca en uzun süredir açılmayan klasörün izlenmesi biter; biri onu yeniden açtığında klasör yeniden denetlenir."
+    },
+    "storages.fieldHelp.lazyWatchTTL": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu süre boyunca kimsenin açmadığı bir klasörün izlenmesi biter. Biri onu yeniden açtığında klasör yeniden denetlenir."
+    },
     "storages.fieldHelp.passive": {
       "in": "both",
       "syntax": "shared",
@@ -22873,6 +23787,24 @@
       "in": "both",
       "syntax": "shared",
       "tr": "known_hosts dosyası"
+    },
+    "storages.fields.lazyFill": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kataloglama davranışı",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.fields.lazyMaxWatches": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzlenen klasör (en çok)"
+    },
+    "storages.fields.lazyWatchTTL": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzlemeyi bırak (açılmadan geçen dakika)"
     },
     "storages.fields.name": {
       "in": "both",
@@ -23018,6 +23950,14 @@
         "web/src/views/StorageNew.vue"
       ]
     },
+    "storages.fields.syncMode": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Senkron modu",
+      "where": [
+        "web/src/components/StorageSyncMode.vue"
+      ]
+    },
     "storages.fields.tls": {
       "in": "both",
       "syntax": "shared",
@@ -23043,10 +23983,51 @@
       ],
       "plural": true
     },
+    "storages.lazyFill.background": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Önce tıklanan, arkada tamamlanan",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.lazyFill.on_open": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnız açıldıkça",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.modeHelp.fsnotify": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex depoda dışarıda yapılan değişiklikleri izler ve her değişiklik dalgasından sonra depoyu yeniden dolaşır."
+    },
+    "storages.modeHelp.lazy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Önceden dolaşma yok: birinin açtığı klasör doğrudan depodan listelenir ve ilk o kataloglanır. Kalanı arka planda ya da yalnız açıldıkça kataloglanır (aşağıda). Kimsenin izlemediği klasörler her tarama aralığında yeniden denetlenir."
+    },
+    "storages.modeHelp.ondemand": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex depoyu yalnız Şimdi senkronize et düğmesine bastığınızda dolaşır."
+    },
+    "storages.modeHelp.poll": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex, dışarıda yapılan değişiklikleri bulmak için her tarama aralığında deponun tamamını dolaşır."
+    },
     "storages.modeLabel.fsnotify": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Canlı izleme"
+    },
+    "storages.modeLabel.lazy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tembel katalog"
     },
     "storages.modeLabel.ondemand": {
       "in": "admin",
@@ -23837,6 +24818,7 @@
       "syntax": "plain",
       "tr": "İşlem başarısız",
       "where": [
+        "packages/core/src/FileExplorer.vue",
         "packages/core/src/lib/errorWords.ts"
       ]
     },
@@ -24984,6 +25966,38 @@
       "syntax": "vue-i18n",
       "tr": "container kurulumu"
     },
+    "updates.mode.package": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{manager} kurulumu",
+      "where": [
+        "web/src/views/Updates.vue"
+      ]
+    },
+    "updates.mode.packageUnknown": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "paket yöneticisi kurulumu",
+      "where": [
+        "web/src/views/Updates.vue"
+      ]
+    },
+    "updates.packageHowTo": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu filex'i {manager} kurdu; yükseltmesini de {manager} yapar. filex, bir paket yöneticisinin sahip olduğu ikili dosyayı değiştirmez.",
+      "where": [
+        "web/src/views/Updates.vue"
+      ]
+    },
+    "updates.packageHowToUnknown": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu filex'i bir paket yöneticisi kurdu; yükseltmeyi de onunla yapın. filex, bir paket yöneticisinin sahip olduğu ikili dosyayı değiştirmez.",
+      "where": [
+        "web/src/views/Updates.vue"
+      ]
+    },
     "updates.policyIs": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -25476,6 +26490,16 @@
       "where": [
         "web/src/components/UserSettingsModal.vue"
       ]
+    },
+    "userSettings.notifications.events.archive_created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir arşiv oluşturulduğunda"
+    },
+    "userSettings.notifications.events.archive_extracted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir arşiv çıkarıldığında"
     },
     "userSettings.notifications.events.comment_added": {
       "in": "admin",
@@ -26449,6 +27473,27 @@
         "packages/core/src/viewers/ArchiveViewer.vue"
       ]
     },
+    "viewer.archive.location": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv konumu",
+      "where": [
+        "packages/core/src/viewers/ArchiveViewer.vue"
+      ]
+    },
+    "viewer.archive.open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşivi aç"
+    },
+    "viewer.archive.root": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arşiv",
+      "where": [
+        "packages/core/src/viewers/ArchiveViewer.vue"
+      ]
+    },
     "viewer.archive.too_large": {
       "in": "explorer",
       "syntax": "plain",
@@ -26990,6 +28035,16 @@
       "where": [
         "web/src/views/Webhooks.vue"
       ]
+    },
+    "webhooks.events.archive_created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv oluşturma tamamlandı"
+    },
+    "webhooks.events.archive_extracted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv çıkarma tamamlandı"
     },
     "webhooks.events.comment_added": {
       "in": "admin",

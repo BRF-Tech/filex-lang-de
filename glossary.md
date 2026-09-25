@@ -159,6 +159,12 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | search index | Suchindex | |
 | storage scan / scan exclusions | Scan / vom Scan ausgeschlossene Pfade | the walk over a storage (*Scanintervall*); a virus scan is *Virenscan* |
 | catalogue (what the scan records) | katalogisieren | "not catalogued" → *nicht katalogisiert* |
+| catalog (noun, v0.44.0) | Katalog | *Katalogverhalten*, *Katalog: {pct} %* |
+| lazy catalog (a sync mode) | Lazy-Katalog | a chip beside *Echtzeit* / *Intervall* / *Bei Bedarf*, so it stays short; its behaviors *Geöffnetes zuerst, Rest im Hintergrund* / *Nur beim Öffnen*; the background pass → *Hintergrunddurchlauf* |
+| watch / watched (a folder, for changes made outside filex) | überwachen / überwacht | |
+| usage (the storage-used figure) | belegter Speicher | as *{used} belegt*; *Nutzung & Kosten* is a different page |
+| archive / extract | Archiv / entpacken | as *Archiv entpackt* (audit) and *entpackt* (unzip); "Extract here" → *Hier entpacken*; "solid archive" → *solides Archiv* |
+| package manager | Paketmanager | Homebrew, winget and Snap stay as written |
 | pattern (glob) | Muster (Glob-Muster) | *Pfadmuster*; the pattern itself (`.git`, `*.tmp`, `downloads/incomplete/**`) stays as written |
 | emptying the trash / server log | Leeren des Papierkorbs / Serverprotokoll | "Emptying the trash…" → *Papierkorb wird geleert…*; a trash purge is *endgültig löschen*, as in *Endgültig löschen* (`trash.purge`) |
 | details panel (inspector) | Detailbereich | |

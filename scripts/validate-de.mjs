@@ -194,7 +194,7 @@ const KEEP_WORDS = new Set(
     'Windows macOS Linux Debian Ubuntu AppImage deb dmg exe Apple Silicon Keycloak Auth0 Authentik Bleve Vue React Go ' +
     'TypeScript JavaScript Python Rust PHP Ruby Java Kotlin Swift YAML XML TOML SQL JSON HTML CSS ' +
     'cron webhook Webhook Webhooks token Token endpoint Endpoint bucket Bucket host Host proxy Proxy ' +
-    'StartTLS CIDR DN known_hosts clamdscan clamscan B KB MB GB TB PB px OnlyOffice ONLYOFFICE drawio ' +
+    'StartTLS CIDR DN known_hosts clamdscan clamscan B KB MB GB TB PB MiB px OnlyOffice ONLYOFFICE drawio ' +
     'Admin Hex hex base64 Figma Office Word Excel PowerPoint OpenDocument X-Filex-Token Bearer Authorization ' +
     'Backblaze B2 ms v x y z patch Min Max Enterprise Pro Home ' +
     // ordinary words spelled the same in German (or loanwords German UIs use as they are)
@@ -215,6 +215,7 @@ const IDENTICAL_OK = new Set([
   'conn.tokens.rootPlaceholder', // syntax: storage://folder
   'e2e.recover.recovery_placeholder', // input mask XXXX-XXXX-…
   'appearance.namePlaceholder', // sample theme name (Acme Cloud)
+  'archivesAdmin.providerSevenZip', // product name: 7-Zip
   'appPlugins.wizard.manifest', // Manifest (filex-app.json) — the German term is the same
 ]);
 function identicalAllowed(key, en) {
