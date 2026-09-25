@@ -1,7 +1,7 @@
 {
   "name": "filex-lang-de",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The filex interface in German — a language pack (AI-translated, awaiting review by a native speaker).",
   "license": "MIT",
   "type": "module",

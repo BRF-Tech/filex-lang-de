@@ -1,5 +1,5 @@
 {
-  "filex": "0.44.0",
+  "filex": "0.45.0",
   "about": "Every key filex has — the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms — explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -4980,6 +4980,16 @@
       "syntax": "vue-i18n",
       "tr": "kapatıldı"
     },
+    "audit.verb.download_link": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dışarı sürüklenerek indirildi"
+    },
+    "audit.verb.download_link_refused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dışarı sürükleyerek indirme reddedildi"
+    },
     "audit.verb.empty": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -9644,6 +9654,7 @@
       "tr": "İndir",
       "where": [
         "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/CommandPalette.vue",
         "packages/core/src/components/public/PublicShareBody.vue"
       ]
     },
@@ -23613,6 +23624,11 @@
         "web/src/router/index.ts"
       ]
     },
+    "storages.fieldHelp.attemptTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Tek bir denemenin sunucudan bir yaşam belirtisi için bekleyebileceği süre: bağlanma, oturum açma, her isteğin cevabı ve bir aktarımın her yeni parçası. İlerleyen bir aktarım, süresi ne olursa olsun hiçbir zaman kesilmez; sunucunun almayı bıraktığı bir yükleme 60 saniye sonra, bu değer daha uzunsa bu kadar sonra kesilir."
+    },
     "storages.fieldHelp.disablePresign": {
       "in": "both",
       "syntax": "shared",
@@ -23663,6 +23679,11 @@
       "syntax": "vue-i18n",
       "tr": "Bu süre boyunca kimsenin açmadığı bir klasörün izlenmesi biter. Biri onu yeniden açtığında klasör yeniden denetlenir."
     },
+    "storages.fieldHelp.maxAttempts": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Hata geçebilecek türdeyse bir isteğin toplamda kaç kez deneneceği: bağlantı reddedilir ya da kopar, cevap zamanında gelmez, sunucu şu an hizmet veremediğini söyler (5xx). 1 yeniden denemeyi kapatır. Bir ret (yanlış parola, bulunmayan bir klasör, doğrulanamayan bir sertifika) hiçbir zaman yeniden denenmez; gönderilmeye başlamış bir yükleme de yeniden denenmez."
+    },
     "storages.fieldHelp.passive": {
       "in": "both",
       "syntax": "shared",
@@ -23692,6 +23713,21 @@
       "in": "both",
       "syntax": "shared",
       "tr": "Arka uçtaki alt klasör. Zorunlu: filex hesabın kökünü asla mount etmez."
+    },
+    "storages.fieldHelp.s3AttemptTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Tek bir denemenin depodan bir yaşam belirtisi için bekleyebileceği süre: bağlanma, TLS el sıkışması, istek gönderildikten sonraki cevap ve cevabın her yeni parçası. İlerleyen bir aktarım, süresi ne olursa olsun hiçbir zaman kesilmez; deponun almayı bıraktığı bir yükleme 60 saniye sonra, bu değer daha uzunsa bu kadar sonra kesilir. Kopyalama ve yeniden adlandırma cevap için 10 dakikaya kadar bekler, çünkü depo bunları ancak kopya bittiğinde cevaplar."
+    },
+    "storages.fieldHelp.s3MaxAttempts": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Hata geçebilecek türdeyse bir isteğin toplamda kaç kez deneneceği: ağ hatası, zaman aşımı, 5xx cevabı, hız sınırlaması. 1 yeniden denemeyi kapatır. Bir ret (403, bulunmayan bir kova, çözümlenmeyen bir sunucu adı) hiçbir zaman yeniden denenmez."
+    },
+    "storages.fieldHelp.s3TotalTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "İlk denemeden itibaren bu kadar saniye içinde bitemeyecek yeni bir deneme başlatılmaz; böylece çalışmayan bir depoya yükleme ya da listeleme, kesintiyi bu süre içinde bildirir. Sürmekte olan bir aktarım kesilmez. Zaman aşımına uğrayan bir istek ancak bu değer deneme zaman aşımının en az iki katıysa yeniden denenir."
     },
     "storages.fieldHelp.scanExclude": {
       "in": "admin",
@@ -23723,10 +23759,25 @@
       "syntax": "shared",
       "tr": "Düz FTP kimlik bilgilerini açık metin gönderir — sunucu destekliyorsa açın."
     },
+    "storages.fieldHelp.totalTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "İlk denemeden itibaren bu kadar saniye içinde bitemeyecek yeni bir deneme başlatılmaz; böylece çalışmayan bir sunucu bu süre içinde bildirilir. Sürmekte olan bir aktarım kesilmez. Zaman aşımına uğrayan bir istek ancak bu değer deneme zaman aşımının en az iki katıysa yeniden denenir."
+    },
+    "storages.fieldHelp.webdavAttemptTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Tek bir denemenin sunucudan bir yaşam belirtisi için bekleyebileceği süre: bağlanma, oturum açma, her isteğin cevabı ve bir aktarımın her yeni parçası. İlerleyen bir aktarım, süresi ne olursa olsun hiçbir zaman kesilmez; sunucunun almayı bıraktığı bir yükleme 60 saniye sonra, bu değer daha uzunsa bu kadar sonra kesilir. Kopyalama, taşıma ve silme cevap için 10 dakikaya kadar bekler, çünkü sunucu bunları ancak iş bittiğinde cevaplar."
+    },
     "storages.fields.accessKey": {
       "in": "both",
       "syntax": "shared",
       "tr": "Access key"
+    },
+    "storages.fields.attemptTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Deneme zaman aşımı (saniye)"
     },
     "storages.fields.basePath": {
       "in": "both",
@@ -23805,6 +23856,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "İzlemeyi bırak (açılmadan geçen dakika)"
+    },
+    "storages.fields.maxAttempts": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "İstek başına deneme sayısı"
     },
     "storages.fields.name": {
       "in": "both",
@@ -23901,6 +23957,21 @@
       "syntax": "shared",
       "tr": "Temel yol"
     },
+    "storages.fields.s3AttemptTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Deneme zaman aşımı (saniye)"
+    },
+    "storages.fields.s3MaxAttempts": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "İstek başına deneme sayısı"
+    },
+    "storages.fields.s3TotalTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Vazgeçme süresi (saniye)"
+    },
     "storages.fields.scanExclude": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -23962,6 +24033,11 @@
       "in": "both",
       "syntax": "shared",
       "tr": "FTPS (açık AUTH TLS)"
+    },
+    "storages.fields.totalTimeout": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Vazgeçme süresi (saniye)"
     },
     "storages.fields.url": {
       "in": "both",
@@ -25892,6 +25968,26 @@
         "web/src/views/Updates.vue"
       ]
     },
+    "updates.behavior.announce": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca duyurur"
+    },
+    "updates.behavior.minor": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ara sürümleri kurar"
+    },
+    "updates.behavior.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kontrol kapalı"
+    },
+    "updates.behavior.patch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yamaları kurar"
+    },
     "updates.checkFailedWords": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -26005,6 +26101,31 @@
       "where": [
         "web/src/views/Updates.vue"
       ]
+    },
+    "updates.policyLimit.container": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kayıtlı politika (“{policy}”) bu kurulumda etkisiz: bir container kendi imajını değiştiremez, bu yüzden filex yeni sürümleri yalnızca duyurur. Yükseltmek için yeni imajı çekin ya da bunu harici bir güncelleyiciye bırakın."
+    },
+    "updates.policyLimit.disabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kayıtlı politika (“{policy}”) etkisiz: bu sunucuda sürüm kontrolü kapalı, bu yüzden filex yeni sürüm aramaz ve kurmaz."
+    },
+    "updates.policyLimit.package": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kayıtlı politika (“{policy}”) bu kurulumda etkisiz: ikili dosyanın sahibi {manager}, bu yüzden filex yeni sürümleri yalnızca duyurur; yükseltmeyi {manager} yapar:"
+    },
+    "updates.policyLimit.packageUnknown": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kayıtlı politika (“{policy}”) bu kurulumda etkisiz: ikili dosyanın sahibi bir paket yöneticisi, bu yüzden filex yeni sürümleri yalnızca duyurur. Paket yöneticinizle yükseltin."
+    },
+    "updates.policyLimit.zero_major": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kayıtlı politika (“{policy}”) filex 0.x sürümündeyken yalnızca yamaları kurar: 0.x ara sürümleri uyumluluğu bozabilir, bu yüzden duyurulur ve onayınızı bekler."
     },
     "updates.policyName.manual": {
       "in": "admin",

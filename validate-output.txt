@@ -3,11 +3,11 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.44.0) — 3728 strings (233 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.45.0) — 3752 strings (233 of them the server's: e-mails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 3728 of 3728 strings; the other 0 show in English
+[de] 100% translated — 3752 of 3752 strings; the other 0 show in English
   189 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   13 plural key(s) lack a form for one of those categories and show the plain form for it
@@ -28,17 +28,17 @@ filex language pack validator
 
 # node scripts/validate-de.mjs
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.44.0)
-                   admin table     1904 strings (vue-i18n)
-                   explorer table  1649 strings (plain {var})
+  catalogue      : catalogue (filex 0.45.0)
+                   admin table     1928 strings (vue-i18n)
+                   explorer table  1662 strings (plain {var})
                    server table    233 strings (mails, public pages, notifications)
-                   58 keys in both tables -> 3728 strings
+                   71 keys in both tables -> 3752 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (3729 strings)
+  pack           : translations\de.json  (3753 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
-Keys shared by both catalogues: 58 (one flat pack value serves both).
-  identical English in both: 58
+Keys shared by both catalogues: 71 (one flat pack value serves both).
+  identical English in both: 71
 
 Errors  : 0 (none)
 Warnings: 0 (none)
