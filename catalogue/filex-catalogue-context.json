@@ -1,5 +1,5 @@
 {
-  "filex": "0.46.0",
+  "filex": "0.46.1",
   "about": "Every key filex has — the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms — explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -2048,6 +2048,22 @@
         "web/src/api/client.ts"
       ]
     },
+    "appPlugins.actions.autoUpdateOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Otomatik güncellemeyi kapat",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.actions.autoUpdateOn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Otomatik güncellemeyi aç",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
     "appPlugins.actions.details": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -2064,12 +2080,44 @@
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
     },
+    "appPlugins.actions.reviewUpdate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncellemeyi incele",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
     "appPlugins.actions.upgrade": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Yükselt",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.checkUpdates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncellemeleri denetle",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.compat.bad": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu filex ile uyumlu değil",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.compat.needs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex {requires} ile çalışıyor; bu sunucu {filex}. Çalışmaya devam ediyor.",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
       ]
     },
     "appPlugins.deleteConfirm": {
@@ -2782,10 +2830,34 @@
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
     },
+    "appPlugins.runtime.devBuild": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu bir geliştirme derlemesi ({version}): uygulamaların istediği filex sürümleri denetlenmiyor.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
     "appPlugins.runtime.engines": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Motorlar",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.runtime.lastCheck": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamaların kaynakları en son {when} güncelleme için denetlendi.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.runtime.neverChecked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamaların kaynakları günde bir kez güncelleme için denetlenir.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
@@ -2810,6 +2882,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bu örnek yalnızca imzalı uygulamaları kabul ediyor.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.runtime.updateCheckOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Günlük güncelleme denetimi bu örnekte kapalı (FILEX_APP_PLUGIN_UPDATE_CHECK). “Güncellemeleri denetle” yine de sorar.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
@@ -2897,12 +2977,173 @@
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
     },
+    "appPlugins.update.addsModule": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "modül getiriyor",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.autoFrom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{from} sürümünden, {when}",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.autoOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Otomatik güncelleme kapalı",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.available": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme var",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.checkFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Denetlenemedi",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme başarısız",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.failedDetail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version} denendi ve geri alındı; {current} çalışmaya devam ediyor",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.needsApproval": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onay bekliyor",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.needsNewerFilex": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version} için filex {requires} gerekiyor",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.newPermissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yeni: {permissions}",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.noManifestAddress": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex'in saklamadığı bir adresten kuruldu: güncellemelerinin denetlenmesi için bir kez URL'sinden yükseltin",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.noSource": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyadan kuruldu: güncellemelerin denetleneceği bir kaynak yok",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.notChecked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz denetlenmedi",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.upToDate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncel",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.update.updated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendiliğinden güncellendi",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
+    "appPlugins.updates.checked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme denetimi bitti: {updated} güncellendi, {waiting} sizi bekliyor.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.updates.failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} uygulama denetlenemedi ya da güncellenemedi; nedeni satırında, sürümün altında yazıyor.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ],
+      "plural": true
+    },
+    "appPlugins.updates.none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme denetimi bitti: tüm uygulamalar güncel.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
     "appPlugins.upgraded": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "{name} yükseltildi",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.wizard.addedPermissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürümün istediği yeni izinler: {permissions}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.addsModule": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürüm bir modül getiriyor: şimdiye dek hiçbir kodun çalışmadığı yerde kod çalışacak.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
     "appPlugins.wizard.alreadyInstalled": {
@@ -2989,6 +3230,11 @@
       "syntax": "vue-i18n",
       "tr": "“{where}” filex’in indirebileceği bir adres değil: https:// kullanın (düz http:// yalnız bu makinenin kendisi için)."
     },
+    "appPlugins.wizard.errors.fetch.changed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{where} okunurken farklı bir sürüm verdi. Birazdan yeniden deneyin."
+    },
     "appPlugins.wizard.errors.fetch.http_status": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3018,6 +3264,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Sunucu {where} adresine ulaşamadı. İnternete (ya da o adrese) erişebildiğini kontrol edip yeniden deneyin."
+    },
+    "appPlugins.wizard.errors.incompatible": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürüm filex {requires} ile çalışıyor; bu sunucu filex {filex}, bu yüzden burada kurulamaz."
     },
     "appPlugins.wizard.errors.manifest_invalid": {
       "in": "admin",
@@ -3069,6 +3320,11 @@
       "syntax": "vue-i18n",
       "tr": "Modül bu sunucunun kabul ettiğinden büyük."
     },
+    "appPlugins.wizard.errors.up_to_date": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamanın kaynağında artık kurulu sürümden daha yeni bir sürüm yok."
+    },
     "appPlugins.wizard.facts.actions": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3117,10 +3373,34 @@
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
+    "appPlugins.wizard.fromSource": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeni sürüm, uygulamanın kurulduğu yerden okunuyor: {source}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.incompatible": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} {version}, filex {requires} ile çalışıyor; bu sunucu filex {filex}. Burada kurulamaz.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
     "appPlugins.wizard.install": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Kur",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.jump": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm {from} → {to}",
       "where": [
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
@@ -3145,6 +3425,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Manifest URL'si",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.newPermission": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeni",
       "where": [
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
@@ -3190,6 +3478,14 @@
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
+    "appPlugins.wizard.removedPermissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Artık istemediği izinler: {permissions}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
     "appPlugins.wizard.repo": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3202,6 +3498,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "sahip/ad. filex, verilen ref’teki (boşsa varsayılan dal) filex-app.json dosyasını okur, manifestin adını verdiği modülü indirir ve SHA-256’sını doğrular.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.samePermissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulu sürümle aynı izinleri istiyor.",
       "where": [
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
@@ -12048,6 +12352,7 @@
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/AppPluginsTab.vue",
         "web/src/composables/useStorageDelete.ts",
         "web/src/composables/useSyncNow.ts",
         "web/src/views/AdminFiles.vue",
@@ -15696,6 +16001,26 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Test bildirimi"
+    },
+    "notifications.kinds.app_update_available": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama güncellemesi var"
+    },
+    "notifications.kinds.app_update_failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama güncellemesi başarısız"
+    },
+    "notifications.kinds.app_update_needs_approval": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama güncellemesi onay bekliyor"
+    },
+    "notifications.kinds.app_updated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama güncellendi"
     },
     "notifications.kinds.archive_created": {
       "in": "admin",
@@ -21085,6 +21410,70 @@
       "about": "Email (share link, file request): how long the link works.",
       "vars": {
         "count": "a number of days"
+      }
+    },
+    "server.notify.app_update_available.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Uygulamalar altında sizi bekliyor.",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
+    },
+    "server.notify.app_update_available.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{plugin} {version} yayında",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "plugin": "the installed app's name",
+        "version": "a filex version number, e.g. 0.43.1"
+      }
+    },
+    "server.notify.app_update_failed.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Önceki sürüm {from} çalışmaya devam ediyor.",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "from": "the path the item was at"
+      }
+    },
+    "server.notify.app_update_failed.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{plugin} {version} kurulamadı",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "plugin": "the installed app's name",
+        "version": "a filex version number, e.g. 0.43.1"
+      }
+    },
+    "server.notify.app_update_needs_approval.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{plugin} {version} onayınızı bekliyor",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "plugin": "the installed app's name",
+        "version": "a filex version number, e.g. 0.43.1"
+      }
+    },
+    "server.notify.app_updated.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{from} sürümünden kendiliğinden geçti.",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "from": "the path the item was at"
+      }
+    },
+    "server.notify.app_updated.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{plugin} {version} sürümüne güncellendi",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "plugin": "the installed app's name",
+        "version": "a filex version number, e.g. 0.43.1"
       }
     },
     "server.notify.archive.created.title": {
