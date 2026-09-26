@@ -41,7 +41,7 @@ do not switch terms.
 | `@` in explorer strings | literal, never escaped (the explorer's `t()` is a plain replace) |
 | a literal bar / `{` / `}` in an admin string | `{'\|'}` / `{'{'}` / `{'}'}` — a bare bar would start a plural form |
 | `%` right before `{x}` in an admin string | `{'%'}{x}` — vue-i18n's old `%{x}` form eats the `%` |
-| the 55 keys in both tables (`storages.fields.*`, `storages.fieldHelp.*`, …) | no `@`, no bar, no `{'…'}` — one value must satisfy both renderers |
+| the keys in both tables (`in: both`, 74 in v0.47.0: `storages.fields.*`, `storages.fieldHelp.*`, …) | no `@`, no bar, no `{'…'}` — one value must satisfy both renderers |
 | `` `code` `` spans, `<…>` tokens, env vars, CLI flags, paths, key combos | verbatim (key names in prose: *Strg* for Ctrl, *Umschalt* for Shift, *Entf* for Delete, *Eingabetaste* for Enter — but never inside a code span) |
 | `tag:` search syntax | verbatim — the server parses it (`tag:rechnung` is fine; `schlagwort:` would not work) |
 | `plugin:<driver>`, `name://folder`, `storage://folder`, `main://projects/acme` | verbatim |
@@ -169,6 +169,9 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | drag-out download (audit, v0.45.0) | Download durch Herausziehen | "downloaded by dragging it out" → *durch Herausziehen heruntergeladen* |
 | what an update policy does here (badge, v0.45.0) | *Kündigt nur an* / *Installiert Patches* / *Installiert Nebenversionen* / *Prüfung aus* | third person, the install is the subject; the policy's own name stays an infinitive (*nur ankündigen*) |
 | storage order (navigation panel and admin Storages, v0.46.0) | *Nach oben* / *Nach unten* / *Nach Name sortieren* / *Standardreihenfolge verwenden* | *Auf Standardreihenfolge zurücksetzen* on the admin page |
+| queued purge / restore / rename (operations panel and admin tray, v0.47.0) | kind: *Endgültig löschen* / *Wiederherstellen* / *Umbenennen*; tray: *Endgültiges Löschen* / *Wiederherstellung* / *Umbenennung* | the kind as *Kopieren*, *Verschieben*; the tray as *Löschvorgang*; column "Deleted by" → *Gelöscht von* |
+| a count that failed, beside the one that worked (v0.47.0) | *{failed} fehlgeschlagen* | number-neutral, as in `access.ui.mail_partial`: *3 Elemente wiederhergestellt; 1 fehlgeschlagen: …* |
+| a dialog closed while it works (v0.47.0) | *Weiterlaufen lassen* / *Anhalten und schließen* | "this page says when it is done" → *diese Seite gibt Bescheid, sobald …* |
 | pattern (glob) | Muster (Glob-Muster) | *Pfadmuster*; the pattern itself (`.git`, `*.tmp`, `downloads/incomplete/**`) stays as written |
 | emptying the trash / server log | Leeren des Papierkorbs / Serverprotokoll | "Emptying the trash…" → *Papierkorb wird geleert…*; a trash purge is *endgültig löschen*, as in *Endgültig löschen* (`trash.purge`) |
 | details panel (inspector) | Detailbereich | |

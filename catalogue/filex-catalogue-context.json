@@ -4014,6 +4014,14 @@
         "packages/core/src/lib/appLock.ts"
       ]
     },
+    "archive.already_preparing": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} hâlâ okunuyor — okuma bitince bir kez çıkarılacak",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
     "archive.bad_password": {
       "in": "explorer",
       "syntax": "plain",
@@ -4353,6 +4361,14 @@
       "tr": "Arşiv parolası",
       "where": [
         "packages/core/src/modals/ArchivePasswordModal.vue"
+      ]
+    },
+    "archive.preparing_extract": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} okunuyor… çıkarılmadan önce arşivin tamamı okunur.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
       ]
     },
     "archive.queued": {
@@ -6014,6 +6030,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Silinme",
+      "where": [
+        "packages/core/src/components/ListView.vue"
+      ]
+    },
+    "col.deleted_by": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Silen",
       "where": [
         "packages/core/src/components/ListView.vue"
       ]
@@ -9409,6 +9433,22 @@
         "packages/core/src/modals/ConvertModal.vue"
       ]
     },
+    "convert.close_while_converting": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dönüştürme sürüyor. Pencere kapatılıp dönüştürme durdurulsun mu?",
+      "where": [
+        "packages/core/src/modals/ConvertModal.vue"
+      ]
+    },
+    "convert.close_while_saving": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sonuç klasöre kaydediliyor. Pencere kapatılsın mı? Dosya yine de oraya gelir, geldiğinde gezgin haber verir.",
+      "where": [
+        "packages/core/src/modals/ConvertModal.vue"
+      ]
+    },
     "convert.convert": {
       "in": "explorer",
       "syntax": "plain",
@@ -9481,10 +9521,27 @@
         "packages/core/src/modals/ConvertModal.vue"
       ]
     },
+    "convert.reading": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya okunuyor…",
+      "where": [
+        "packages/core/src/modals/ConvertModal.vue"
+      ]
+    },
     "convert.save_failed": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Dosya dönüştürüldü ama bu klasöre kaydedilemedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/modals/ConvertModal.vue"
+      ]
+    },
+    "convert.saving": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sonuç kaydediliyor…",
       "where": [
         "packages/core/src/modals/ConvertModal.vue"
       ]
@@ -9529,10 +9586,74 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "coverage.catalog_done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} baştan sona kataloglandı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} kataloglanamadı. Nedenini yönetim panelinde, deponun senkron geçmişinde görebilirsiniz.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_gone": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} kataloglanırken kaldırıldı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_joined": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} zaten taranıyordu — bittiğinde bu sayfa haber verecek.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_running": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kataloglanıyor…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
     "coverage.catalog_started": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Senkron başladı — deponun tamamı kataloglanıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_stopped": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} kataloglaması bitmeden durduruldu",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.catalog_unfollowed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} arka planda kataloglanmaya devam ediyor; nasıl bittiğini yönetim panelinde deponun senkron geçmişi gösterir",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "coverage.cataloging": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{storage} kataloglanıyor… arka planda sürüyor, bittiğinde bu sayfa söyleyecek.",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -10409,7 +10530,7 @@
       "syntax": "plain",
       "tr": "İndirme tamamlandı",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/dragOut.ts"
       ]
     },
     "dragout.downloading": {
@@ -10417,7 +10538,24 @@
       "syntax": "plain",
       "tr": "Bırakılan klasöre indiriliyor…",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/dragOut.ts"
+      ]
+    },
+    "dragout.downloading_n": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bırakılan klasöre indiriliyor — şimdiye dek {n} dosya…",
+      "where": [
+        "packages/core/src/lib/dragOut.ts"
+      ],
+      "plural": true
+    },
+    "dragout.downloading_n_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bırakılan klasöre indiriliyor — şimdiye dek {n} dosya…",
+      "where": [
+        "packages/core/src/lib/dragOut.ts"
       ]
     },
     "dragout.not_found": {
@@ -10425,7 +10563,7 @@
       "syntax": "plain",
       "tr": "Bırakılan yer bulunamadı — dosya bir klasöre değil bir uygulamaya bırakıldıysa indirme yapılamaz",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/dragOut.ts"
       ]
     },
     "dragout.preparing": {
@@ -10433,13 +10571,38 @@
       "syntax": "plain",
       "tr": "Sürükleme için hazırlanıyor…",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/dragOut.ts"
       ]
     },
     "dragout.ready": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Dosyalar hazır — masaüstüne sürükleyebilirsiniz",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "dragout.stop": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Durdur",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "dragout.stopped": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Durduruldu — gelenler klasörde kalıyor",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/lib/dragOut.ts"
+      ]
+    },
+    "dragout.stopping": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Durduruluyor…",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -11577,10 +11740,26 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "err.bad_kind": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sunucu bu türde bir işi bu yoldan kuyruğa almıyor.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
     "err.detail": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Ayrıntı"
+    },
+    "err.finished": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu iş zaten bitti.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
     },
     "err.load_failed": {
       "in": "explorer",
@@ -11588,6 +11767,14 @@
       "tr": "Bu dosya yüklenemedi.",
       "where": [
         "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "err.name_taken": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aynı adla bir şey zaten var. Oradakinin adını değiştirip yeniden deneyin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
       ]
     },
     "err.network": {
@@ -11603,6 +11790,22 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Bu sunucuda şifreleme anahtarı tanımlı değil, bu yüzden erişim anahtarı verilemiyor. Yöneticinizden tanımlamasını isteyin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.not_cancellable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu iş başladıktan sonra durdurulamaz — kendiliğinden tamamlanır.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.not_in_trash": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Artık çöpte değil — bu arada geri getirilmiş ya da kaldırılmış; hiçbir şey silinmedi.",
       "where": [
         "packages/core/src/lib/errorWords.ts"
       ]
@@ -11752,6 +11955,14 @@
         "packages/core/src/lib/errorWords.ts"
       ]
     },
+    "err.too_many": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Tek seferde en fazla {max} öğe geri getirilebilir. Daha küçük gruplar hâlinde geri getirin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
     "err.upload_stalled": {
       "in": "explorer",
       "syntax": "plain",
@@ -11837,6 +12048,8 @@
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/composables/useStorageDelete.ts",
+        "web/src/composables/useSyncNow.ts",
         "web/src/views/AdminFiles.vue",
         "web/src/views/AdminGrants.vue",
         "web/src/views/ApiMcp.vue",
@@ -11858,6 +12071,7 @@
         "web/src/views/StorageNew.vue",
         "web/src/views/Storages.vue",
         "web/src/views/TaggedFiles.vue",
+        "web/src/views/Trash.vue",
         "web/src/views/Updates.vue",
         "web/src/views/Usage.vue",
         "web/src/views/UserEdit.vue",
@@ -13791,6 +14005,14 @@
         "packages/core/src/components/InspectorPanel.vue"
       ]
     },
+    "inspector.versions.restoring": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Geri yükleniyor…",
+      "where": [
+        "packages/core/src/components/InspectorPanel.vue"
+      ]
+    },
     "inspector.versions.snapshot_current": {
       "in": "explorer",
       "syntax": "plain",
@@ -13803,6 +14025,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Sürüm alındı",
+      "where": [
+        "packages/core/src/components/InspectorPanel.vue"
+      ]
+    },
+    "inspector.versions.snapshotting": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sürüm alınıyor…",
       "where": [
         "packages/core/src/components/InspectorPanel.vue"
       ]
@@ -14284,6 +14514,22 @@
         "web/src/views/Login.vue"
       ]
     },
+    "modal.busy_close.confirm": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Durdur ve kapat",
+      "where": [
+        "packages/core/src/modals/Modal.vue"
+      ]
+    },
+    "modal.busy_close.keep": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Devam etsin",
+      "where": [
+        "packages/core/src/modals/Modal.vue"
+      ]
+    },
     "modal.close": {
       "in": "explorer",
       "syntax": "plain",
@@ -14326,10 +14572,59 @@
         "packages/core/src/modals/DeleteConfirmModal.vue"
       ]
     },
+    "modal.delete.permanent_confirm": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kalıcı olarak sil",
+      "where": [
+        "packages/core/src/modals/DeleteConfirmModal.vue"
+      ]
+    },
+    "modal.delete.permanent_message": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} öğe kalıcı olarak silinecek. Bu geri alınamaz.",
+      "where": [
+        "packages/core/src/modals/DeleteConfirmModal.vue"
+      ],
+      "plural": true
+    },
+    "modal.delete.permanent_message_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} öğe kalıcı olarak silinecek. Bu geri alınamaz.",
+      "where": [
+        "packages/core/src/modals/DeleteConfirmModal.vue"
+      ]
+    },
+    "modal.delete.permanent_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kalıcı olarak silinsin mi?",
+      "where": [
+        "packages/core/src/modals/DeleteConfirmModal.vue"
+      ]
+    },
+    "modal.delete.permanent_working": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Siliniyor…",
+      "where": [
+        "packages/core/src/modals/DeleteConfirmModal.vue"
+      ]
+    },
     "modal.delete.title": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Silinsin mi?",
+      "where": [
+        "packages/core/src/modals/DeleteConfirmModal.vue"
+      ]
+    },
+    "modal.delete.working": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çöpe taşınıyor…",
       "where": [
         "packages/core/src/modals/DeleteConfirmModal.vue"
       ]
@@ -14348,6 +14643,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Oluştur",
+      "where": [
+        "packages/core/src/modals/NewFolderModal.vue"
+      ]
+    },
+    "modal.newfolder.creating": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Oluşturuluyor…",
       "where": [
         "packages/core/src/modals/NewFolderModal.vue"
       ]
@@ -14391,6 +14694,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Kaydet",
+      "where": [
+        "packages/core/src/modals/RenameModal.vue"
+      ]
+    },
+    "modal.rename.saving": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeniden adlandırılıyor…",
       "where": [
         "packages/core/src/modals/RenameModal.vue"
       ]
@@ -16039,6 +16350,14 @@
         "packages/core/src/components/OperationsCenter.vue"
       ]
     },
+    "opc.items": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{total} öğeden {done}",
+      "where": [
+        "packages/core/src/components/OperationsCenter.vue"
+      ]
+    },
     "opc.kind.archive": {
       "in": "explorer",
       "syntax": "plain",
@@ -16082,6 +16401,21 @@
         "packages/core/src/FileExplorer.vue",
         "packages/core/src/lib/errorWords.ts"
       ]
+    },
+    "opc.kind.purge": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kalıcı silme"
+    },
+    "opc.kind.rename": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeniden adlandırma"
+    },
+    "opc.kind.restore": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Geri getirme"
     },
     "opc.kind.trash": {
       "in": "explorer",
@@ -16166,6 +16500,23 @@
       "tr": "İşlemler",
       "where": [
         "packages/core/src/components/OperationsCenter.vue"
+      ]
+    },
+    "opc.trash_items": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çöpten {n} öğe",
+      "where": [
+        "packages/core/src/components/PendingOpsTray.vue"
+      ],
+      "plural": true
+    },
+    "opc.trash_items_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çöpten {n} öğe",
+      "where": [
+        "packages/core/src/components/PendingOpsTray.vue"
       ]
     },
     "ops.copy": {
@@ -16266,6 +16617,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Her yerde",
+      "where": [
+        "packages/core/src/components/CommandPalette.vue"
+      ]
+    },
+    "palette.everywhere_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arama yapılamadı. Yeniden deneyin.",
       "where": [
         "packages/core/src/components/CommandPalette.vue"
       ]
@@ -16387,6 +16746,14 @@
         "web/src/components/PendingOpsTray.vue"
       ]
     },
+    "pendingOps.progressItems": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{total} öğeden {done} · {'%'}{percent}",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
     "pendingOps.progressPercent": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -16449,6 +16816,30 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Taşınıyor",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
+    "pendingOps.verb.purge": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kalıcı olarak siliniyor",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
+    "pendingOps.verb.rename": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden adlandırılıyor",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
+    "pendingOps.verb.restore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Geri getiriliyor",
       "where": [
         "web/src/components/PendingOpsTray.vue"
       ]
@@ -17477,6 +17868,7 @@
       "where": [
         "packages/core/src/components/plugin/PluginInspectorSection.vue",
         "packages/core/src/components/plugin/PluginPageView.vue",
+        "packages/core/src/components/plugin/PluginViewModal.vue",
         "packages/core/src/components/plugin/nodes/SurfacePdfFields.vue",
         "packages/core/src/components/plugin/nodes/SurfacePreview.vue"
       ]
@@ -18874,6 +19266,23 @@
         "packages/core/src/components/public/PublicRequestBody.vue"
       ]
     },
+    "public.upload_saving": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydediliyor…",
+      "where": [
+        "packages/core/src/components/public/PublicRequestBody.vue"
+      ]
+    },
+    "public.upload_unanswered": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Gönderildi ama sunucu zamanında onaylamadı. Hâlâ kaydediyor olabilir: yeniden göndermeden önce bu bağlantıyı size gönderen kişiye sorun.",
+      "where": [
+        "packages/core/src/components/public/PublicLinkPage.vue",
+        "packages/core/src/components/public/PublicRequestBody.vue"
+      ]
+    },
     "public.visits_left": {
       "in": "explorer",
       "syntax": "plain",
@@ -19326,6 +19735,23 @@
         "web/src/views/Replica.vue"
       ]
     },
+    "replica.failures.alreadyQueued": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} yeniden deneme zaten kuyrukta bekliyor",
+      "where": [
+        "web/src/views/Replica.vue"
+      ],
+      "plural": true
+    },
+    "replica.failures.alreadyQueuedOne": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bunun yeniden denemesi zaten kuyrukta bekliyor",
+      "where": [
+        "web/src/views/Replica.vue"
+      ]
+    },
     "replica.failures.empty": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19402,6 +19828,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Onar",
+      "where": [
+        "web/src/views/Replica.vue"
+      ]
+    },
+    "replica.failures.nothingToFix": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onarılacak bir şey yok",
       "where": [
         "web/src/views/Replica.vue"
       ]
@@ -19938,6 +20372,30 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "İndeksi yeniden oluştur",
+      "where": [
+        "web/src/views/SearchTest.vue"
+      ]
+    },
+    "search.rebuildAlreadyRunning": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir yeniden oluşturma zaten sürüyor; bu sayfa onu izliyor.",
+      "where": [
+        "web/src/views/SearchTest.vue"
+      ]
+    },
+    "search.rebuildDone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden oluşturulan indeks devrede",
+      "where": [
+        "web/src/views/SearchTest.vue"
+      ]
+    },
+    "search.rebuildFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İndeks yeniden oluşturulamadı ({reason}). Aramalara önceki indeks cevap vermeye devam ediyor.",
       "where": [
         "web/src/views/SearchTest.vue"
       ]
@@ -23538,12 +23996,27 @@
         "web/src/views/Storages.vue"
       ]
     },
+    "storages.deleteStillRunning": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sunucu {name} deposunu hâlâ siliyor; bitince bu listeden çıkacak.",
+      "where": [
+        "web/src/composables/useStorageDelete.ts"
+      ]
+    },
     "storages.deletedOk": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Depo silindi",
       "where": [
-        "web/src/views/StorageEdit.vue",
+        "web/src/composables/useStorageDelete.ts"
+      ]
+    },
+    "storages.deleting": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Siliniyor…",
+      "where": [
         "web/src/views/Storages.vue"
       ]
     },
@@ -24327,14 +24800,44 @@
         "web/src/views/Storages.vue"
       ]
     },
+    "storages.syncAlreadyRunning": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} zaten taranıyor; bittiğinde bu sayfa söyleyecek.",
+      "where": [
+        "web/src/composables/useSyncNow.ts"
+      ]
+    },
+    "storages.syncDone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name}: tarama bitti",
+      "where": [
+        "web/src/composables/useSyncNow.ts"
+      ]
+    },
+    "storages.syncFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name}: tarama başarısız — {error}",
+      "where": [
+        "web/src/composables/useSyncNow.ts"
+      ]
+    },
     "storages.syncStarted": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Senkron başladı",
       "where": [
-        "web/src/views/Dashboard.vue",
-        "web/src/views/StorageEdit.vue",
-        "web/src/views/Storages.vue"
+        "web/src/composables/useSyncNow.ts"
+      ]
+    },
+    "storages.syncStopped": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name}: tarama bitmeden durduruldu",
+      "where": [
+        "web/src/composables/useSyncNow.ts"
       ]
     },
     "storages.title": {
@@ -24972,6 +25475,14 @@
         "web/src/lib/documentTitle.ts"
       ]
     },
+    "toast.already_there": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Seçilen öğeler zaten {name} içinde — hiçbir şey gönderilmedi",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
     "toast.archive.empty": {
       "in": "explorer",
       "syntax": "plain",
@@ -25075,7 +25586,9 @@
       "tr": "İşlem başarısız",
       "where": [
         "packages/core/src/FileExplorer.vue",
-        "packages/core/src/lib/errorWords.ts"
+        "packages/core/src/lib/errorWords.ts",
+        "packages/core/src/lib/purgeWords.ts",
+        "packages/core/src/lib/restoreWords.ts"
       ]
     },
     "toast.move_kept_both": {
@@ -25097,7 +25610,7 @@
     "toast.moved_to": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "{name} klasörüne taşındı",
+      "tr": "{name} klasörüne taşıma kuyruğa alındı",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -25110,10 +25623,86 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "toast.purged": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak silindi",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ],
+      "plural": true
+    },
+    "toast.purged_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak silindi",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ]
+    },
+    "toast.purged_partly": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak silindi; {failed} öğe silinemedi: {reason}",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ],
+      "plural": true
+    },
+    "toast.purged_partly_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak silindi; {failed} öğe silinemedi: {reason}",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ]
+    },
+    "toast.purging": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak siliniyor…",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ],
+      "plural": true
+    },
+    "toast.purging_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak siliniyor…",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ]
+    },
+    "toast.purging_partly": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak siliniyor; {failed} öğe silinemedi: {reason}",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ],
+      "plural": true
+    },
+    "toast.purging_partly_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe kalıcı olarak siliniyor; {failed} öğe silinemedi: {reason}",
+      "where": [
+        "packages/core/src/lib/purgeWords.ts"
+      ]
+    },
     "toast.read_only_here": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Burada yazma yetkiniz yok",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "toast.rename_queued": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” olarak yeniden adlandırılıyor…",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -25126,12 +25715,31 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "toast.restore_partial": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe geri getirildi, {failed} öğe getirilemedi: {reason}",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/lib/restoreWords.ts"
+      ],
+      "plural": true
+    },
+    "toast.restore_partial_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe geri getirildi, {failed} öğe getirilemedi: {reason}",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/lib/restoreWords.ts"
+      ]
+    },
     "toast.restore_taken": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "{n} öğe geri getirilmedi: aynı adla bir şey zaten var. Oradakinin adını değiştirip yeniden deneyin.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/restoreWords.ts"
       ],
       "plural": true
     },
@@ -25140,7 +25748,7 @@
       "syntax": "plain",
       "tr": "“{name}” geri getirilmedi: aynı adla bir şey zaten var. Oradakinin adını değiştirip yeniden deneyin.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/restoreWords.ts"
       ]
     },
     "toast.restored": {
@@ -25150,6 +25758,7 @@
       "where": [
         "packages/core/src/FileExplorer.vue",
         "packages/core/src/composables/useLocale.ts",
+        "packages/core/src/lib/restoreWords.ts",
         "packages/core/src/lib/uiLocales.ts"
       ],
       "plural": true
@@ -25161,7 +25770,25 @@
       "where": [
         "packages/core/src/FileExplorer.vue",
         "packages/core/src/composables/useLocale.ts",
+        "packages/core/src/lib/restoreWords.ts",
         "packages/core/src/lib/uiLocales.ts"
+      ]
+    },
+    "toast.restoring": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe geri getiriliyor…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "toast.restoring_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe geri getiriliyor…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
       ]
     },
     "toast.same_folder_cut": {
@@ -25204,12 +25831,36 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "toast.undo_partial": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kısmen geri alındı: {total} öğeden {done}",
+      "where": [
+        "packages/core/src/lib/undoWords.ts"
+      ]
+    },
+    "toast.undo_queued": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Geri alma kuyruğa alındı — bittiğini işlemler paneli gösterecek",
+      "where": [
+        "packages/core/src/lib/undoWords.ts"
+      ]
+    },
+    "toast.undoing": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Geri alınıyor…",
+      "where": [
+        "packages/core/src/lib/toastSlot.ts"
+      ]
+    },
     "toast.undone": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Geri alındı",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/undoWords.ts"
       ]
     },
     "toolbar.density.comfortable": {
@@ -25571,6 +26222,14 @@
         "web/src/views/Trash.vue"
       ]
     },
+    "trash.col_deleted_by": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Silen",
+      "where": [
+        "web/src/views/Trash.vue"
+      ]
+    },
     "trash.col_name": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -25626,6 +26285,15 @@
       "tr": "{n} gün",
       "where": [
         "packages/core/src/lib/trashTimeLeft.ts"
+      ]
+    },
+    "trash.deleted_by_nobody": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Kayıt yok: filex dışında kaldırılmış ya da filex bunu tutmaya başlamadan önce silinmiş",
+      "where": [
+        "packages/core/src/components/ListView.vue",
+        "web/src/views/Trash.vue"
       ]
     },
     "trash.emptied": {
@@ -25885,6 +26553,14 @@
         "web/src/views/Trash.vue"
       ]
     },
+    "trash.purge_failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” silinemedi: {reason}",
+      "where": [
+        "web/src/views/Trash.vue"
+      ]
+    },
     "trash.purged": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -25893,10 +26569,27 @@
         "web/src/views/Trash.vue"
       ]
     },
+    "trash.purging": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Kalıcı olarak siliniyor…",
+      "where": [
+        "packages/core/src/components/ListView.vue",
+        "web/src/views/Trash.vue"
+      ]
+    },
     "trash.restore": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Geri yükle",
+      "where": [
+        "web/src/views/Trash.vue"
+      ]
+    },
+    "trash.restore_failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” geri yüklenemedi: {reason}",
       "where": [
         "web/src/views/Trash.vue"
       ]
@@ -25913,6 +26606,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "{name} geri yüklendi",
+      "where": [
+        "web/src/views/Trash.vue"
+      ]
+    },
+    "trash.restoring": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Geri yükleniyor…",
       "where": [
         "web/src/views/Trash.vue"
       ]
@@ -25940,6 +26641,15 @@
       "tr": "Çöp kutusundaki öğeler, yöneticinizin belirlediği saklama süresi dolunca kalıcı olarak silinir.",
       "where": [
         "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "trash.row_busy": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Bu öğe üzerinde zaten bir iş sürüyor",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "web/src/views/Trash.vue"
       ]
     },
     "trash.stopped_after": {
@@ -26421,11 +27131,6 @@
       "syntax": "plain",
       "tr": "İptal"
     },
-    "upload.committing": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Tamamlanıyor"
-    },
     "upload.done": {
       "in": "explorer",
       "syntax": "plain",
@@ -26457,10 +27162,13 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
-    "upload.transferring": {
+    "upload.saving": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "Depolamaya aktarılıyor"
+      "tr": "Depoya kaydediliyor…",
+      "where": [
+        "packages/core/src/components/UploadProgress.vue"
+      ]
     },
     "usage.buckets.accountOps": {
       "in": "admin",
@@ -27786,6 +28494,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Arşivi aç"
+    },
+    "viewer.archive.reading": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Hâlâ okunuyor… İçeriği listelenmeden önce arşivin tamamı okunur; büyük bir arşivde bu biraz sürer.",
+      "where": [
+        "packages/core/src/viewers/ArchiveViewer.vue"
+      ]
     },
     "viewer.archive.root": {
       "in": "explorer",
