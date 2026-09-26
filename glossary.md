@@ -168,6 +168,7 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | attempt / attempt timeout / give up after (a storage's network settings, v0.45.0) | Versuch / Zeitlimit pro Versuch / Aufgeben nach | as *Verbindungszeitlimit*; "Attempts per request" → *Versuche pro Anfrage*; retrying → *Wiederholungen*; an S3 "store" is *der Dienst*, as in the other S3 hints |
 | drag-out download (audit, v0.45.0) | Download durch Herausziehen | "downloaded by dragging it out" → *durch Herausziehen heruntergeladen* |
 | what an update policy does here (badge, v0.45.0) | *Kündigt nur an* / *Installiert Patches* / *Installiert Nebenversionen* / *Prüfung aus* | third person, the install is the subject; the policy's own name stays an infinitive (*nur ankündigen*) |
+| storage order (navigation panel and admin Storages, v0.46.0) | *Nach oben* / *Nach unten* / *Nach Name sortieren* / *Standardreihenfolge verwenden* | *Auf Standardreihenfolge zurücksetzen* on the admin page |
 | pattern (glob) | Muster (Glob-Muster) | *Pfadmuster*; the pattern itself (`.git`, `*.tmp`, `downloads/incomplete/**`) stays as written |
 | emptying the trash / server log | Leeren des Papierkorbs / Serverprotokoll | "Emptying the trash…" → *Papierkorb wird geleert…*; a trash purge is *endgültig löschen*, as in *Endgültig löschen* (`trash.purge`) |
 | details panel (inspector) | Detailbereich | |
