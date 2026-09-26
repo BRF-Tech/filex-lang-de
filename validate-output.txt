@@ -3,12 +3,12 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.46.1) — 3911 strings (240 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.47.0) — 3913 strings (240 of them the server's: e-mails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 3911 of 3911 strings; the other 0 show in English
-  191 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[de] 100% translated — 3913 of 3913 strings; the other 0 show in English
+  192 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   13 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
@@ -28,13 +28,13 @@ filex language pack validator
 
 # node scripts/validate-de.mjs
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.46.1)
-                   admin table     2007 strings (vue-i18n)
+  catalogue      : catalogue (filex 0.47.0)
+                   admin table     2009 strings (vue-i18n)
                    explorer table  1738 strings (plain {var})
                    server table    240 strings (mails, public pages, notifications)
-                   74 keys in both tables -> 3911 strings
+                   74 keys in both tables -> 3913 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (3912 strings)
+  pack           : translations\de.json  (3914 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
 Keys shared by both catalogues: 74 (one flat pack value serves both).
@@ -127,3 +127,4 @@ Same English, different German (review — context may justify it):
   "Show {count} more"
       "{count} weitere anzeigen"  <- sidenav.tags.more
       "{count} weiteres anzeigen"  <- sidenav.tags.more_one
+

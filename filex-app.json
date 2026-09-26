@@ -1897,6 +1897,8 @@
       "install.dl.win_portable_hint": "Läuft von überall – vom USB-Stick, aus „Downloads“ – und speichert seine Dateien direkt daneben. Aktualisiert sich nicht selbst · ~92 MB",
       "install.dl.win_setup": "Windows-Installer (.exe)",
       "install.dl.win_setup_hint": "Installiert filex, fügt es dem Startmenü hinzu und aktualisiert sich selbst · ~92 MB",
+      "install.dl.win_store": "Microsoft Store",
+      "install.dl.win_store_hint": "Von Microsoft signiert, vom Store installiert und aktuell gehalten – keine SmartScreen-Warnung",
       "install.expand": "Details anzeigen",
       "install.install": "Installieren",
       "install.iosInstructions": "Tippen Sie auf die Schaltfläche „Teilen“ und dann auf „Zum Home-Bildschirm“.",

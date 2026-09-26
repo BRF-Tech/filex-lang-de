@@ -216,6 +216,7 @@ const IDENTICAL_OK = new Set([
   'e2e.recover.recovery_placeholder', // input mask XXXX-XXXX-…
   'appearance.namePlaceholder', // sample theme name (Acme Cloud)
   'archivesAdmin.providerSevenZip', // product name: 7-Zip
+  'install.dl.win_store', // product name: Microsoft Store
   'appPlugins.wizard.manifest', // Manifest (filex-app.json) — the German term is the same
 ]);
 function identicalAllowed(key, en) {

@@ -1,5 +1,5 @@
 {
-  "filex": "0.46.1",
+  "filex": "0.47.0",
   "about": "Every key filex has — the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms — explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -14486,6 +14486,22 @@
         "web/src/composables/useInstallPrompt.ts"
       ]
     },
+    "install.dl.win_store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Microsoft Store",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
+    "install.dl.win_store_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Microsoft imzalı; Store kurar ve güncel tutar — SmartScreen uyarısı çıkmaz",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
     "install.expand": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -21425,7 +21441,7 @@
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "plugin": "the installed app's name",
-        "version": "a filex version number, e.g. 0.43.1"
+        "version": "the app's new version, e.g. 1.2.0 (not a filex version)"
       }
     },
     "server.notify.app_update_failed.body": {
@@ -21434,7 +21450,7 @@
       "tr": "Önceki sürüm {from} çalışmaya devam ediyor.",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
-        "from": "the path the item was at"
+        "from": "the app's version that keeps running, e.g. 1.1.0 (not a path)"
       }
     },
     "server.notify.app_update_failed.title": {
@@ -21444,7 +21460,7 @@
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "plugin": "the installed app's name",
-        "version": "a filex version number, e.g. 0.43.1"
+        "version": "the app's version that could not be installed, e.g. 1.2.0 (not a filex version)"
       }
     },
     "server.notify.app_update_needs_approval.title": {
@@ -21454,7 +21470,7 @@
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "plugin": "the installed app's name",
-        "version": "a filex version number, e.g. 0.43.1"
+        "version": "the app's new version, e.g. 1.2.0 (not a filex version)"
       }
     },
     "server.notify.app_updated.body": {
@@ -21463,7 +21479,7 @@
       "tr": "{from} sürümünden kendiliğinden geçti.",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
-        "from": "the path the item was at"
+        "from": "the app's previous version, e.g. 1.1.0 (not a path)"
       }
     },
     "server.notify.app_updated.title": {
@@ -21473,7 +21489,7 @@
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "plugin": "the installed app's name",
-        "version": "a filex version number, e.g. 0.43.1"
+        "version": "the app's new version, e.g. 1.2.0 (not a filex version)"
       }
     },
     "server.notify.archive.created.title": {

@@ -1882,6 +1882,8 @@
   "install.dl.win_portable_hint": "Runs from anywhere — a USB stick, Downloads — and keeps its files beside itself. Does not update itself · ~92 MB",
   "install.dl.win_setup": "Windows installer (.exe)",
   "install.dl.win_setup_hint": "Installs filex and adds it to the Start menu, and updates itself · ~92 MB",
+  "install.dl.win_store": "Microsoft Store",
+  "install.dl.win_store_hint": "Signed by Microsoft, installed and kept up to date by the Store — no SmartScreen warning",
   "install.expand": "Show details",
   "install.install": "Install",
   "install.iosInstructions": "Tap the Share button, then “Add to Home Screen”.",
