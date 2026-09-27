@@ -3,12 +3,12 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.48.0) — 4238 strings (255 of them the server's: emails, public pages, notifications)
+  catalogue : catalogue (filex 0.48.0) — 4242 strings (257 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 4238 of 4238 strings; the other 0 show in English
-  196 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[de] 100% translated — 4242 of 4242 strings; the other 0 show in English
+  197 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   14 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
@@ -31,11 +31,11 @@ filex language pack validator
 filex German pack check (validate-de)
   catalogue      : catalogue (filex 0.48.0)
                    admin table     2083 strings (vue-i18n)
-                   explorer table  2140 strings (plain {var})
-                   server table    255 strings (mails, public pages, notifications)
-                   240 keys in both tables -> 4238 strings
+                   explorer table  2142 strings (plain {var})
+                   server table    257 strings (mails, public pages, notifications)
+                   240 keys in both tables -> 4242 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (4239 strings)
+  pack           : translations\de.json  (4243 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
 Keys shared by both catalogues: 240 (one flat pack value serves both).

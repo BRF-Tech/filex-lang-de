@@ -4578,6 +4578,14 @@
         "packages/core/src/components/plugin/AppFrame.vue"
       ]
     },
+    "appframe.consent_download": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app}, “{name}” dosyasını bilgisayarınıza kaydetmek istiyor.",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
     "appframe.consent_job": {
       "in": "explorer",
       "syntax": "plain",
@@ -17946,6 +17954,11 @@
         "packages/core/src/modals/NewDocumentModal.vue"
       ]
     },
+    "newdoc.group.app": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Uygulamalar"
+    },
     "newdoc.group.diagram": {
       "in": "explorer",
       "syntax": "plain",
@@ -24362,6 +24375,12 @@
       "tr": "Kendi arayüzünü tarayıcınızda, filex'in denetlediği bir yalıtım alanında çalıştırır",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
     },
+    "server.perm.ui_download": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Arayüzü bilgisayarınıza dosya kaydedebilir — her seferinde sizin izninizle",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
     "server.perm.ui_eval": {
       "in": "server",
       "syntax": "server",
@@ -24402,6 +24421,15 @@
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
       "vars": {
         "url": "the address of the sign-in page"
+      }
+    },
+    "server.perm.ui_new": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "“Yeni” menüsüne yeni {ext} dosyası ekler; dosya bu uygulamanın arayüzünde açılır",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "ext": "a file extension with its dot, e.g. .drawio"
       }
     },
     "server.perm.ui_package_fetch": {
