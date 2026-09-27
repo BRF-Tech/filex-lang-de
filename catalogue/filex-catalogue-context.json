@@ -11596,6 +11596,110 @@
         "packages/core/src/components/ListView.vue"
       ]
     },
+    "e2e.big.close": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kapat",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.copied": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kopyalandı",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.copy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kopyala",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.download_file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli dosyayı indir",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.download_folder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli klasörü indir (zip)",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.instead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bunun yerine kendi bilgisayarınızda çözün:",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” çözüldüğünde {size}. Bu tarayıcı indirmeyi belleğinde çözer ve en çok {limit} tutabilir, bu yüzden hiçbir şey indirilmedi.",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.lead_grew": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” çözülürken {limit} sınırını aştı. Bu tarayıcı indirmeyi belleğinde çözer ve daha fazlasını tutamaz, bu yüzden hiçbir şey kaydedilmedi.",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.other_ways": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Chrome, Edge ve filex masaüstü uygulaması, boyutu ne olursa olsun doğrudan diske çözer.",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.step_file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli dosyayı olduğu gibi indirin (aşağıdaki düğme).",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.step_folder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli klasörü zip olarak indirin (aşağıdaki düğme) — klasörün anahtar dosyası da içindedir.",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.step_run": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydettiğiniz klasörde filex decrypt komutunu çalıştırıp parolayı girin:",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
+    "e2e.big.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu tarayıcıda çözülemeyecek kadar büyük",
+      "where": [
+        "packages/core/src/components/E2eTooBigModal.vue"
+      ]
+    },
     "e2e.convert.busy": {
       "in": "explorer",
       "syntax": "plain",
@@ -11789,6 +11893,7 @@
       "syntax": "plain",
       "tr": "Anladım: parolayı da kurtarma anahtarını da kaybedersem verilerim kurtarılamaz.",
       "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11798,6 +11903,7 @@
       "tr": "Devam etmek için uyarıyı onaylayın.",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11843,6 +11949,7 @@
       "syntax": "plain",
       "tr": "Bu sunucunun da bir anahtarı var",
       "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11884,6 +11991,7 @@
       "tr": "Parolayı tekrar girin",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11901,6 +12009,7 @@
       "tr": "Parolalar birbirini tutmuyor.",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11910,6 +12019,7 @@
       "tr": "En az 8 karakter",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11919,6 +12029,7 @@
       "tr": "Parola en az 8 karakter olmalı.",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11943,6 +12054,7 @@
       "syntax": "plain",
       "tr": "GERİ DÖNÜŞÜ YOK",
       "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11959,12 +12071,78 @@
       "syntax": "plain",
       "tr": "Çözülüyor…"
     },
+    "e2e.dl.click_again": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Nereye kaydedileceğini seçmek için İndir’e bir kez daha tıklayın.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.dl.ctx_encrypted_copy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli kopyayı indir",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.dl.too_big": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu tarayıcı tek seferde en çok {limit} çözülmüş veri kaydedebilir, bu ise {size}. Chrome ya da Edge (doğrudan diske kaydeder), filex masaüstü uygulamasını kullanın ya da şifreli dosyayı indirip filex decrypt çalıştırın.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.dl.zip_damaged": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasördeki bir dosya bozuk ya da kurcalanmış. İndirme durduruldu ve hiçbir şey kaydedilmedi.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.dl.zip_done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” kaydedildi — çözülmüş, gerçek adlarla.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.dl.zip_done_plain": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” kaydedildi. İçindeki {n} dosya hiç şifrelenmemişti ve olduğu gibi eklendi.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ],
+      "plural": true
+    },
+    "e2e.dl.zip_done_plain_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” kaydedildi. İçindeki {n} dosya hiç şifrelenmemişti ve olduğu gibi eklendi.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.dl.zip_started": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” içine çözülerek yazılıyor…",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
     "e2e.download.failed": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Şifreli dosya indirilemedi.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.escrowoffer.accept": {
@@ -12093,6 +12271,577 @@
       "tr": "Bu, bu klasörün parolası değil.",
       "where": [
         "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.fxe.bad_name": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu ad şifreli bir dosyanın içine mühürlenemez (255 baytı aşıyor ya da eğik çizgi veya denetim karakteri içeriyor). Önce dosyayı yeniden adlandırın.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.ctx_download_raw": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli dosyayı indir",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.ctx_encrypt": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "E2EE ile şifrele…",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.ctx_password": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parolayı değiştir…",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.ctx_remove": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifrelemeyi kaldır…",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.damaged": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya bozuk ya da kurcalanmış (veya açıldığından beri değişmiş). Hiçbir şey kaydedilmedi.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.downloaded": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” kaydedildi.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.encrypt_busy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleniyor ve yükleniyor… %{percent}",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.encrypt_lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” bu tarayıcıda, kendine ait bir parolayla şifrelenir. Sunucu yalnızca şifreli veriyi saklar. Dosyayı parola ya da kurtarma anahtarı açar — burada ya da çevrimdışı olarak filex decrypt ile.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.encrypt_submit": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifrele",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.encrypt_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosyayı şifrele",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.encrypted": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” şifrelendi. Asıl dosya çöp kutusunda.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.escrow_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu kurulumda anahtar emaneti açık: işletmecisi, bu dosyayı parolanız olmadan açan bir anahtara sahip.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue",
+        "packages/core/src/components/RecoveryKeyModal.vue"
+      ]
+    },
+    "e2e.fxe.escrow_done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Emanet anahtarıyla açıldı — dosya sahibine bildirildi",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.escrow_notify_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosyanın sahibine bildirim gönderilemedi, bu yüzden dosya açılmadı. Emanet anahtarının kullanımı her zaman duyurulur.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.escrow_other_key": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya BAŞKA bir kurulumun emanet anahtarına mühürlenmiş, bu yüzden bu kurulumun emanet anahtarı onu açmaz.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.escrow_predates": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu kurulumun emanet anahtarı var, ama bu dosya onsuz şifrelenmiş (emanet burada açılmadan önce), bu yüzden emanet anahtarı onu açmaz. Parolayı ya da kurtarma anahtarını kullanın.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.escrow_warn_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Emanet anahtarıyla açılan dosyanın sahibine, dosya açılmadan önce bildirim gönderilir. Yalnız yetkiniz olduğunda kullanın.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.escrow_warn_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosyanın sahibine haber gidecek",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.hide_label": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya adını da gizle",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.hide_off_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{stored}” olarak saklanır: ad sunucu tarafından okunabilir kalır, içerik kalmaz.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.hide_on_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{stored}” olarak saklanır: sunucu ne adı ne de türü görür. Gerçek ad dosyanın içinde mühürlüdür; dosyayı burada açınca görünür.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.known_note": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu sekmede zaten açıldı — parola gerekmiyor.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.name_too_long": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ad, sonuna “.fxe” eklenemeyecek kadar uzun. “Dosya adını da gizle” kutusunu işaretleyin ya da önce dosyayı yeniden adlandırın.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.not_readable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu bir filex şifreli dosyası değil ya da başlığı bozuk.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.original_kept": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli kopya kaydedildi, ancak “{name}” çöp kutusuna taşınamadı. Asıl dosyayı kendiniz silin.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.password_cost": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yalnızca dosyanın başlığı değişir: içerik bayt bayt aynen geri gönderilir ve kurtarma anahtarı çalışmaya devam eder.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.fxe.password_done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola değişti. Eski parola bu dosyayı artık açmıyor.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.password_old_copies": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosyanın önceki bir sürümü — sürüm geçmişi, bir yedek, birinin indirdiği bir kopya — ESKİ parolayla açılmaya devam eder.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.fxe.password_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya parolasını değiştir",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.fxe.progress": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "%{percent} tamamlandı",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.purge_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” dosyasının şifreli kopyası kaydedildi, ama aslı kalıcı olarak silinemedi ({reason}). Çöp kutusundan ve sürüm geçmişinden silin.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.purge_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli kopya kaydedilir kaydedilmez önceki sürümleri ve çöp kutusundaki kaydı silinir; açık hâlinden bu sunucuda hiçbir şey kalmaz. Geri alınamaz. Daha önce alınmış yedeklere ve kopyalara ulaşılmaz.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.purge_label": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aslını kalıcı olarak sil (yönetici)",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.purge_no_id": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya henüz katalogda değil, bu yüzden kalıcı olarak silinemez. Klasörü yenileyip tekrar deneyin.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.purge_others": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya sizin değil, {owner} adlı kullanıcının. Onun aslını ve sürümlerini kalıcı olarak sil.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.purge_others_required": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Başkasının dosyasını kalıcı olarak sildiğinizi onaylayın.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.purge_others_unknown": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosyanın kayıtlı bir sahibi yok — sizin değil. Aslını ve sürümlerini kalıcı olarak sil.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.purged": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” şifrelendi. Aslı, sürümleri ve çöp kutusundaki kaydı kalıcı olarak silindi.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.pw_label": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya parolası",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.remove_warn_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya burada çözülür ve özgün adıyla şifresiz bir dosya olarak yüklenir: sunucu, yöneticileri, küçük resimler, arama ve yedekler onu yeniden okuyabilir. Şifreli dosya çöp kutusuna gider.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.remove_warn_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifresiz içerik sunucuya geri döner",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.removed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme kaldırıldı: “{name}” yeniden şifresiz bir dosya. Şifreli dosya çöp kutusunda.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.save_again": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kilit açıldı. Tarayıcınız, dosyanın nereye kaydedileceğini sormadan önce bir tıklama daha istiyor.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.save_button": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydet…",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_backups": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bundan önce alınmış yedekler, kopyalar ve indirmeler onu hâlâ içerir.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya şimdiye kadar şifresiz saklandı ve şifrelemek bunu geri almaz:",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_thumb": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ondan üretilmiş bir küçük resim, asıl dosya kalıcı olarak silinene kadar sunucuda kalır. Arama dizinindeki kaydı, dosya çöp kutusuna gidince kaldırılır.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sunucunun zaten gördükleri",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_trash": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Asıl dosya çöp kutusuna gider ve çöp kutusunun saklama süresi dolana ya da bir yönetici boşaltana kadar orada kalır. Kalıcı olarak kendiniz silemezsiniz.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_trash_admin": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Asıl dosya çöp kutusuna gider ve çöp kutusunun saklama süresi dolana kadar orada kalır — aşağıda kalıcı olarak silmediğiniz sürece.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_versions": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Önceki sürümleri sürüm geçmişinde kalır; onları yalnızca bir yönetici silebilir.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.seen_versions_admin": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Önceki sürümleri sürüm geçmişinde kalır — aşağıda kalıcı olarak silmediğiniz sürece.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.size_unknown": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosyanın boyutu henüz bilinmiyor. Klasörü yenileyip tekrar deneyin.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.type": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli dosya",
+      "where": [
+        "packages/core/src/lib/fileIcons.ts"
+      ]
+    },
+    "e2e.fxe.unlock_busy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İşleniyor…",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_download": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İndir",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” şifreli. Parolası burada, bu tarayıcıda denetlenir ve asla sunucuya gönderilmez.",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aç",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_remove": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifrelemeyi kaldır",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_title_download": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çözerek indir",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_title_open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli dosyayı aç",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unlock_title_remove": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifrelemeyi kaldır",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.unsupported": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya daha yeni bir filex gerektiriyor (gereken: {features}).",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.upload_too_big": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu sunucuda parçalı yükleme yok ve dosya bu tarayıcıdan tek parça gönderilemeyecek kadar büyük.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.use_escrow": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Emanet anahtarını kullan",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.use_password": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Onun yerine parolayı kullan",
+      "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue"
+      ]
+    },
+    "e2e.fxe.warn_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya yalnızca bu parolayla ya da şifrelemeden sonra bir kez gösterilen kurtarma anahtarıyla açılır. filex ikisini de saklamaz. İkisini de kaybederseniz içerik kalıcı olarak kaybolur.",
+      "where": [
+        "packages/core/src/components/E2eFileEncryptModal.vue"
+      ]
+    },
+    "e2e.fxe.wrong_escrow": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu emanet anahtarı bu dosyayı açmıyor.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.wrong_password": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola yanlış.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.fxe.wrong_recovery": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu kurtarma anahtarı bu dosyayı açmıyor.",
+      "where": [
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.level.change": {
@@ -12439,7 +13188,8 @@
       "syntax": "plain",
       "tr": "Parola değişti ama sunucu bunu kaydedemedi; klasörün sahibine haber verilmedi.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.password.bad_recovery": {
@@ -12447,7 +13197,8 @@
       "syntax": "plain",
       "tr": "Bu bir kurtarma anahtarı değil (dörderli gruplar hâlinde 32 karakter).",
       "where": [
-        "packages/core/src/components/E2eChangePasswordModal.vue"
+        "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue"
       ]
     },
     "e2e.password.busy": {
@@ -12481,7 +13232,9 @@
       "tr": "Mevcut parolayı girin ya da kurtarma anahtarını kullanın.",
       "where": [
         "packages/core/src/FileExplorer.vue",
-        "packages/core/src/components/E2eChangePasswordModal.vue"
+        "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.password.done": {
@@ -12505,7 +13258,8 @@
       "syntax": "plain",
       "tr": "Parola değiştirilemedi. Hiçbir şey değiştirilmedi.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.password.lock_instead": {
@@ -12556,7 +13310,8 @@
       "syntax": "plain",
       "tr": "Kurtarma anahtarı",
       "where": [
-        "packages/core/src/components/E2eChangePasswordModal.vue"
+        "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue"
       ]
     },
     "e2e.password.rekey_ack": {
@@ -12742,7 +13497,8 @@
       "syntax": "plain",
       "tr": "Hatırlamıyorum — kurtarma anahtarını kullan",
       "where": [
-        "packages/core/src/components/E2eChangePasswordModal.vue"
+        "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue"
       ]
     },
     "e2e.password.wrong_current": {
@@ -12750,7 +13506,8 @@
       "syntax": "plain",
       "tr": "Parola yanlış.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.password.wrong_recovery": {
@@ -12758,7 +13515,8 @@
       "syntax": "plain",
       "tr": "Kurtarma anahtarı yanlış.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.recover.bad_escrow_key": {
@@ -12766,7 +13524,8 @@
       "syntax": "plain",
       "tr": "Bu okunabilir bir özel anahtar değil (PKCS#8, base64 ya da PEM bekleniyor).",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
       ]
     },
     "e2e.recover.bad_format": {
@@ -12799,6 +13558,7 @@
       "tr": "Emanet anahtarı",
       "where": [
         "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue"
       ]
     },
@@ -12815,6 +13575,7 @@
       "syntax": "plain",
       "tr": "Emanet özel anahtarını yapıştırın (PKCS#8, base64 ya da PEM)",
       "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue"
       ]
     },
@@ -12831,6 +13592,7 @@
       "syntax": "plain",
       "tr": "Emanet özel anahtarını yapıştırın.",
       "where": [
+        "packages/core/src/components/E2eFileUnlockModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue"
       ]
     },
@@ -12888,6 +13650,7 @@
       "tr": "XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue"
       ]
     },
@@ -13012,6 +13775,14 @@
         "packages/core/src/components/RecoveryKeyModal.vue"
       ]
     },
+    "e2e.recovery.lead_file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu anahtar dosyayı parolası olmadan açar. Yalnızca bir kez gösterilir — filex onu saklamaz ve bir daha gösteremez.",
+      "where": [
+        "packages/core/src/components/RecoveryKeyModal.vue"
+      ]
+    },
     "e2e.recovery.lead_replaced": {
       "in": "explorer",
       "syntax": "plain",
@@ -13048,6 +13819,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Bu anahtarı eline geçiren herkes klasörü okuyabilir. Parolanızdan ayrı bir yerde tutun — parolanın yanında duran bir anahtar sizi unutmaya karşı korur, başkasına karşı değil.",
+      "where": [
+        "packages/core/src/components/RecoveryKeyModal.vue"
+      ]
+    },
+    "e2e.recovery.warn_body_file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu anahtara sahip olan herkes dosyayı okuyabilir. Onu paroladan ayrı bir yerde saklayın — parolanın yanında duran bir anahtar sizi unutmaktan korur, başkalarından değil.",
       "where": [
         "packages/core/src/components/RecoveryKeyModal.vue"
       ]
@@ -13229,13 +14008,18 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
-    "e2e.upload.too_big": {
+    "e2e.upload.streaming_unsupported": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "200 MB üstü dosyalar şifreli klasöre yüklenemez (MVP sınırı)",
+      "tr": "Bu dosya 200 MB’tan büyük ve bu sunucuda onu parça parça şifreli göndermek için parçalı yükleme yok.",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
+    },
+    "e2e.upload.too_big": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "200 MB üstü dosyalar şifreli klasöre yüklenemez (MVP sınırı)"
     },
     "editor.missingPath": {
       "in": "admin",
@@ -16356,6 +17140,8 @@
       "tr": "Vazgeç",
       "where": [
         "packages/core/src/components/E2eChangePasswordModal.vue",
+        "packages/core/src/components/E2eFileEncryptModal.vue",
+        "packages/core/src/components/E2eFileUnlockModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue",
         "packages/core/src/components/E2eSettingsModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue",
@@ -23243,10 +24029,22 @@
       "tr": "Şifreli klasör emanet anahtarıyla açıldı",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
     },
+    "server.notify.e2e.escrow_used.title_file": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Şifreli dosya emanet anahtarıyla açıldı",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
+    },
     "server.notify.e2e.password_changed.title": {
       "in": "server",
       "syntax": "server",
       "tr": "Şifreli klasörün parolası değişti",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
+    },
+    "server.notify.e2e.password_changed.title_file": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Şifreli dosyanın parolası değişti",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
     },
     "server.notify.file.deleted.title": {
