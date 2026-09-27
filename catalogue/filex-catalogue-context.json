@@ -1174,8 +1174,8 @@
       "tr": "Bu bir e-posta adresi değil. ad{'@'}ornek.com biçiminde yazın."
     },
     "account.errors.emailRequired": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir e-posta adresi yazın."
     },
     "account.errors.usernameAt": {
@@ -1184,39 +1184,49 @@
       "tr": "Kullanıcı adında {'@'} olamaz; {'@'} e-posta adresine aittir."
     },
     "account.errors.usernameChar": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı adında “{char}” kullanılamaz. a–z, 0–9, nokta, tire ya da alt çizgi kullanın."
     },
     "account.errors.usernameDigit": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı adı rakamla başlayamaz."
     },
     "account.errors.usernameEmpty": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir kullanıcı adı yazın."
     },
     "account.errors.usernameLong": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı adı en çok {max} karakter olabilir."
     },
     "account.errors.usernameReserved": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "“{name}” ayrılmış bir ad; başka bir kullanıcı adı seçin."
     },
     "account.errors.usernameShort": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı adı en az {min} karakter olmalı."
     },
     "account.errors.usernameSpace": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı adında boşluk olamaz. a–z, 0–9, nokta, tire ya da alt çizgi kullanın."
+    },
+    "account.problem.emailInvalid": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu bir e-posta adresi değil. ad@ornek.com biçiminde yazın."
+    },
+    "account.problem.usernameAt": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kullanıcı adında @ olamaz; @ e-posta adresine aittir."
     },
     "adminFiles.hint": {
       "in": "admin",
@@ -2048,22 +2058,6 @@
         "web/src/api/client.ts"
       ]
     },
-    "appPlugins.actions.autoUpdateOff": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Otomatik güncellemeyi kapat",
-      "where": [
-        "web/src/components/plugins/AppPluginsTab.vue"
-      ]
-    },
-    "appPlugins.actions.autoUpdateOn": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Otomatik güncellemeyi aç",
-      "where": [
-        "web/src/components/plugins/AppPluginsTab.vue"
-      ]
-    },
     "appPlugins.actions.details": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -2084,6 +2078,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Güncellemeyi incele",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.actions.rollback": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version} sürümüne dön",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
@@ -2435,6 +2437,22 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Menü işlemleri",
+      "where": [
+        "web/src/components/plugins/AppPluginDetail.vue"
+      ]
+    },
+    "appPlugins.detail.previous": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Saklanan sürüm",
+      "where": [
+        "web/src/components/plugins/AppPluginDetail.vue"
+      ]
+    },
+    "appPlugins.detail.previousText": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version}, {when} tarihinde yerini bıraktı",
       "where": [
         "web/src/components/plugins/AppPluginDetail.vue"
       ]
@@ -2822,6 +2840,22 @@
       ],
       "plural": true
     },
+    "appPlugins.rollbackConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name}, {version} sürümüne geri alınsın mı? Herkes hemen o sürüme geçer; {current} saklanır, aynı yoldan yeniden ileri gidebilirsiniz.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
+    "appPlugins.rolledBack": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name}, {version} sürümüne geri alındı.",
+      "where": [
+        "web/src/components/plugins/AppPluginsTab.vue"
+      ]
+    },
     "appPlugins.runtime.archBad": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -2985,22 +3019,6 @@
         "web/src/lib/appPluginUpdates.ts"
       ]
     },
-    "appPlugins.update.autoFrom": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "{from} sürümünden, {when}",
-      "where": [
-        "web/src/lib/appPluginUpdates.ts"
-      ]
-    },
-    "appPlugins.update.autoOff": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Otomatik güncelleme kapalı",
-      "where": [
-        "web/src/lib/appPluginUpdates.ts"
-      ]
-    },
     "appPlugins.update.available": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3081,6 +3099,14 @@
         "web/src/lib/appPluginUpdates.ts"
       ]
     },
+    "appPlugins.update.previous": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version} sürümü geri dönmek için saklanıyor",
+      "where": [
+        "web/src/lib/appPluginUpdates.ts"
+      ]
+    },
     "appPlugins.update.upToDate": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3089,18 +3115,10 @@
         "web/src/lib/appPluginUpdates.ts"
       ]
     },
-    "appPlugins.update.updated": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Kendiliğinden güncellendi",
-      "where": [
-        "web/src/lib/appPluginUpdates.ts"
-      ]
-    },
     "appPlugins.updates.checked": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Güncelleme denetimi bitti: {updated} güncellendi, {waiting} sizi bekliyor.",
+      "tr": "Güncelleme denetimi bitti: {waiting} güncelleme onayınızı bekliyor.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
@@ -3108,7 +3126,7 @@
     "appPlugins.updates.failed": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "{count} uygulama denetlenemedi ya da güncellenemedi; nedeni satırında, sürümün altında yazıyor.",
+      "tr": "{count} uygulama denetlenemedi; nedeni satırında, sürümün altında yazıyor.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ],
@@ -3158,6 +3176,141 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Geri",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.anyFilex": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "her sürüm",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arayüz dosyaları: {added} eklendi, {removed} çıkarıldı, {changed} değişti",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.filesAdded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklenenler"
+    },
+    "appPlugins.wizard.diff.filesChanged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değişenler"
+    },
+    "appPlugins.wizard.diff.filesMore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "… ve {count} dosya daha",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.filesRemoved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çıkarılanlar"
+    },
+    "appPlugins.wizard.diff.filex": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uyduğu filex: {from} → {to}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.isSigned": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "imzalı",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.isUnsigned": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "imzasız",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.moduleChanged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Modül: {from} → {to}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.moduleRemoved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürümün artık modülü yok.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.moduleSame": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Modül aynı.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.notes": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm notları",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.signed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İmza: {from} → {to}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.uiAdded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürüm kendi arayüzünü getiriyor.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.uiChanged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arayüz: {from} → {to}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.uiRemoved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürüm arayüzünü kaldırıyor.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.diff.uiSame": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arayüz aynı.",
       "where": [
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
@@ -3588,6 +3741,131 @@
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
+    "appPlugins.wizard.ui": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arayüz (ui.zip) — kendi arayüzü olan bir uygulama için",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.as.font": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yazı tipi"
+    },
+    "appPlugins.wizard.uiGroup.as.img": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Görsel"
+    },
+    "appPlugins.wizard.uiGroup.as.media": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Medya"
+    },
+    "appPlugins.wizard.uiGroup.as.style": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Stil dosyası"
+    },
+    "appPlugins.wizard.uiGroup.badge": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi arayüzü var",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.external": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paketin dışındaki adresler",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalar",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.honest": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tarayıcılar bir arayüzün dışarı veri göndermesini tamamen engelleyemiyor (WebRTC; Chrome’da kapatılabiliyor, Firefox’ta kapatılamıyor). Bu uygulamaya, onunla açtığınız dosyaları görmesine güvendiğiniz biri kadar güvenin.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.live": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Canlı, yalnız okuma",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.liveText": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tarayıcınız bu adresten dosya indirir. Adresin sahibi kimin ne zaman kullandığını görür; uygulama isterse bu isteklere açtığınız dosyadan veri ekleyebilir (adres satırında). Adres uygulamanın yazarına aitse bu, verinin yazara gidebilmesi demektir.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.mirror": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aynalanıyor",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.mirrorText": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex bu dosyayı bir kez indirip kendisi sunar; tarayıcılar bu adrese hiç gitmez.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.noEngine": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Modülü yok: sunucuda hiçbir kodu çalışmaz. Arayüz yalnız birlikte açıldığı dosyaları okur ve yazar.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.sha256": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arayüz SHA-256",
+      "where": [
+        "web/src/components/plugins/AppPluginDetail.vue",
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.size": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Boyut",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appPlugins.wizard.uiGroup.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arayüz",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
     "appPlugins.wizard.understand": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3631,7 +3909,7 @@
     "appPlugins.wizard.wasm": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Modül (.wasm) — dil paketi için boş bırakın",
+      "tr": "Modül (.wasm) — dil paketi ya da yalnız arayüzden oluşan bir uygulama için boş bırakın",
       "where": [
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
@@ -4268,6 +4546,123 @@
         "web/src/views/Appearance.vue"
       ]
     },
+    "appframe.confirm_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Onay",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.consent_allow": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İzin ver",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.consent_clipboard": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app} panonuza metin kopyalamak istiyor.",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.consent_deny": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İzin verme",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.consent_job": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app} “{action}” işini başlatmak istiyor.",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.discard": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydetmeden kapat",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.dismiss": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kapat",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.keep_open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Düzenlemeye devam et",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.not_connected": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app} başlamadı. Kapatıp yeniden açın; tekrar ederse yöneticinize haber verin."
+    },
+    "appframe.reload": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeniden yükle",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.save_close": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydet ve kapat",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.unsaved_text": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app} içinde kaydedilmemiş değişiklikler var. Yine de kapatılsın mı?",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.unsaved_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydedilmemiş değişiklikler",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.updated": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app}, {version} sürümüne güncellendi.",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
+    "appframe.updated_reload": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bir yönetici {app} uygulamasının yeni sürümünü onayladı. Yeni sürümü kullanmak için yeniden yükleyin — önce çalışmanızı kaydedin.",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
     "applock.badge": {
       "in": "explorer",
       "syntax": "plain",
@@ -4400,8 +4795,8 @@
       "tr": "Arşiv oluşturuldu",
       "where": [
         "packages/core/src/FileExplorer.vue",
-        "web/src/lib/notificationText.ts",
-        "web/src/lib/webhookEvents.ts"
+        "packages/core/src/lib/notificationText.ts",
+        "packages/core/src/lib/webhookEvents.ts"
       ]
     },
     "archive.creating": {
@@ -4512,8 +4907,8 @@
       "tr": "{count} dosya çıkarıldı",
       "where": [
         "packages/core/src/FileExplorer.vue",
-        "web/src/lib/notificationText.ts",
-        "web/src/lib/webhookEvents.ts"
+        "packages/core/src/lib/notificationText.ts",
+        "packages/core/src/lib/webhookEvents.ts"
       ],
       "plural": true
     },
@@ -4523,8 +4918,8 @@
       "tr": "{count} dosya çıkarıldı",
       "where": [
         "packages/core/src/FileExplorer.vue",
-        "web/src/lib/notificationText.ts",
-        "web/src/lib/webhookEvents.ts"
+        "packages/core/src/lib/notificationText.ts",
+        "packages/core/src/lib/webhookEvents.ts"
       ]
     },
     "archive.extracting": {
@@ -5380,6 +5775,11 @@
       "syntax": "vue-i18n",
       "tr": "iptal edildi"
     },
+    "audit.verb.rollback": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "önceki sürüme döndürüldü"
+    },
     "audit.verb.share_create": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5415,6 +5815,11 @@
       "syntax": "vue-i18n",
       "tr": "test edildi"
     },
+    "audit.verb.ui_save": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "arayüzünden kaydedildi"
+    },
     "audit.verb.unlock": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5429,6 +5834,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "güncellendi"
+    },
+    "audit.verb.upgrade": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yükseltildi"
     },
     "audit.verb.upload": {
       "in": "admin",
@@ -6367,6 +6777,7 @@
       "syntax": "plain",
       "tr": "Değiştirilme",
       "where": [
+        "packages/core/src/components/DraftsView.vue",
         "packages/core/src/components/ListView.vue"
       ]
     },
@@ -6375,6 +6786,7 @@
       "syntax": "plain",
       "tr": "Ad",
       "where": [
+        "packages/core/src/components/DraftsView.vue",
         "packages/core/src/components/ListView.vue"
       ]
     },
@@ -6539,13 +6951,13 @@
       ]
     },
     "common.cancel": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İptal",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/GlobalWebhookCard.vue",
         "web/src/components/ResetPasswordModal.vue",
-        "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
@@ -6573,15 +6985,14 @@
       ]
     },
     "common.close": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kapat",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/InstallPrompt.vue",
-        "web/src/components/NotificationsPanel.vue",
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/Sidebar.vue",
-        "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/components/ui/Modal.vue",
@@ -6595,12 +7006,12 @@
       "tr": "Yapılandırılmış"
     },
     "common.confirm": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Onayla",
       "where": [
-        "web/src/components/ResetPasswordModal.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/ResetPasswordModal.vue"
       ]
     },
     "common.copied": {
@@ -6642,11 +7053,11 @@
       ]
     },
     "common.currentPassword": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Mevcut parola",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "common.delete": {
@@ -6708,11 +7119,11 @@
       ]
     },
     "common.email": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "E-posta",
       "where": [
-        "web/src/components/UserSettingsModal.vue",
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue"
       ]
@@ -6766,14 +7177,14 @@
       "tr": "Gizle"
     },
     "common.loading": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yükleniyor…",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/PendingOpsTray.vue",
         "web/src/components/QuotaWidget.vue",
         "web/src/components/StorageDriverFields.vue",
-        "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginDetail.vue"
       ]
     },
@@ -6817,19 +7228,19 @@
       ]
     },
     "common.newPassword": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yeni parola",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "common.next": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İleri",
       "where": [
-        "web/src/components/NotificationsPanel.vue"
+        "packages/core/src/components/NotificationsPanel.vue"
       ]
     },
     "common.no": {
@@ -6901,11 +7312,11 @@
       "tr": "Bekliyor"
     },
     "common.prev": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Önceki",
       "where": [
-        "web/src/components/NotificationsPanel.vue"
+        "packages/core/src/components/NotificationsPanel.vue"
       ]
     },
     "common.previous": {
@@ -6942,11 +7353,11 @@
       ]
     },
     "common.remove": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kaldır",
       "where": [
-        "web/src/components/UserSettingsModal.vue",
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/views/Branding.vue",
         "web/src/views/Replica.vue"
       ]
@@ -6995,13 +7406,14 @@
       ]
     },
     "common.save": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kaydet",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/GlobalWebhookCard.vue",
-        "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
+        "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/Appearance.vue",
         "web/src/views/Archives.vue",
@@ -7022,11 +7434,11 @@
       "tr": "Kaydedildi"
     },
     "common.saving": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kaydediliyor…",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "common.score": {
@@ -9729,159 +10141,6 @@
         "web/src/views/Connections.vue"
       ]
     },
-    "convert.close": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Kapat",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.close_while_converting": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürme sürüyor. Pencere kapatılıp dönüştürme durdurulsun mu?",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.close_while_saving": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Sonuç klasöre kaydediliyor. Pencere kapatılsın mı? Dosya yine de oraya gelir, geldiğinde gezgin haber verir.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.convert": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştür",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.converting": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürülüyor…",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.done": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürüldü ve klasöre yüklendi.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.failed": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürücü bu dosyayı o biçime çeviremedi.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.from": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Kaynak",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.legacy_admin": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Bu, kullanımdan kalkmakta olan eski dönüştürücü. Yerine Dönüştür uygulamasını kurun (Eklentiler → Uygulamalar) — uygulama kurulunca bu giriş kaybolur.",
-      "where": [
-        "packages/core/src/FileExplorer.vue"
-      ]
-    },
-    "convert.loading": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürücü yükleniyor…",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.no_format": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Eşleşen format yok.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.read_failed": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dosya dönüştürmek için okunamadı.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.reading": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dosya okunuyor…",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.save_failed": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dosya dönüştürüldü ama bu klasöre kaydedilemedi.",
-      "where": [
-        "packages/core/src/FileExplorer.vue",
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.saving": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Sonuç kaydediliyor…",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.search_format": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Hedef format ara (pdf, mp4, png…)",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.title": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştür",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.unreachable": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürücü yanıt vermiyor. Daha sonra yeniden deneyin.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
-    "convert.unsupported_input": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Bu dosya tipi için kaynak format bulunamadı.",
-      "where": [
-        "packages/core/src/modals/ConvertModal.vue"
-      ]
-    },
     "coverage.catalog_all": {
       "in": "explorer",
       "syntax": "plain",
@@ -10018,14 +10277,6 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
-    "ctx.convert": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştür",
-      "where": [
-        "packages/core/src/FileExplorer.vue"
-      ]
-    },
     "ctx.copy": {
       "in": "explorer",
       "syntax": "plain",
@@ -10055,7 +10306,8 @@
       "syntax": "plain",
       "tr": "Sil",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/DraftsView.vue"
       ]
     },
     "ctx.delete_perm": {
@@ -10147,14 +10399,6 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
-    "ctx.needs_convert": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürücü kurulu değil ya da yanıt vermiyor — yönetim panelinde Dış servisler altından kontrol edin.",
-      "where": [
-        "packages/core/src/FileExplorer.vue"
-      ]
-    },
     "ctx.needs_drawio": {
       "in": "explorer",
       "syntax": "plain",
@@ -10183,13 +10427,22 @@
       "syntax": "plain",
       "tr": "Aç",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/DraftsView.vue"
       ]
     },
     "ctx.open_new_tab": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Yeni sekmede aç",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "ctx.open_with": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app} ile aç",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -10829,6 +11082,192 @@
         "packages/core/src/modals/DestinationPickerModal.vue"
       ]
     },
+    "draft.badge": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslak",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "draft.bar.target": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{folder} konumuna kaydedilecek",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "draft.close.body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name}, {folder} için bir taslak ve henüz oraya kaydedilmedi.",
+      "where": [
+        "packages/core/src/modals/DraftCloseModal.vue"
+      ]
+    },
+    "draft.close.discard": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çöpe at",
+      "where": [
+        "packages/core/src/modals/DraftCloseModal.vue"
+      ]
+    },
+    "draft.close.hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Tutulan taslak Taslaklar’da bekler. Çöpe at, taslağı çöp kutusuna taşır.",
+      "where": [
+        "packages/core/src/modals/DraftCloseModal.vue"
+      ]
+    },
+    "draft.close.keep": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslaklarda tut",
+      "where": [
+        "packages/core/src/modals/DraftCloseModal.vue"
+      ]
+    },
+    "draft.close.save": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Diske kaydet",
+      "where": [
+        "packages/core/src/modals/DraftCloseModal.vue"
+      ]
+    },
+    "draft.close.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu taslak kapatılsın mı?",
+      "where": [
+        "packages/core/src/modals/DraftCloseModal.vue"
+      ]
+    },
+    "draft.discarded": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} çöp kutusuna taşındı.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "draft.editing": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Düzenleniyor…",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "draft.kept": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslaklarda tutuluyor",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "draft.save": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydet",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "draft.saved_to": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name}, {folder} konumuna kaydedildi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "draft.taken.body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{folder} konumunda {name} adında bir dosya zaten var. Taslak {suggested} olarak kaydedilsin mi?",
+      "where": [
+        "packages/core/src/modals/DraftConflictModal.vue"
+      ]
+    },
+    "draft.taken.confirm": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} olarak kaydet",
+      "where": [
+        "packages/core/src/modals/DraftConflictModal.vue"
+      ]
+    },
+    "draft.taken.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu adda bir dosya zaten var",
+      "where": [
+        "packages/core/src/modals/DraftConflictModal.vue"
+      ]
+    },
+    "drafts.action.save": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Diske kaydet",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
+    "drafts.col.storage": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Depo",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
+    "drafts.col.target": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kaydedileceği yer",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
+    "drafts.count_of": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} / {limit} taslak",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ],
+      "plural": true
+    },
+    "drafts.lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Henüz kaydedilmemiş yeni belgeler. Bunları yalnızca siz görebilirsiniz.",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
+    "drafts.no_match": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Filtreye uyan taslak yok.",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
+    "drafts.open_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} dosyasını aç",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
     "dragout.done": {
       "in": "explorer",
       "syntax": "plain",
@@ -11157,6 +11596,194 @@
         "packages/core/src/components/ListView.vue"
       ]
     },
+    "e2e.convert.busy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör şifreleniyor…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.cleanup_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör şifrelendi ama eski sürümleri ve çöp kayıtları silinemedi — bunu yalnız klasörün sahibi ya da bir yönetici yapabilir.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.ctx": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "E2EE ile şifrele…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör şifrelendi ({n} dosya). Silinen eski sürüm: {versions}; silinen çöp kaydı: {trash}.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.convert.done_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör şifrelendi ({n} dosya). Silinen eski sürüm: {versions}; silinen çöp kaydı: {trash}.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.drop_trash": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörden çöp kutusuna gidenleri sil",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.drop_versions": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosyaların eski sürümlerini sil (şifresizdirler)",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör şifrelenemedi. Şifrelenmiş dosyalar öyle kalır; devam etmek için klasörü açın.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasördeki her dosya bulunduğu yerde, bu tarayıcıda, aşağıdaki parolayla şifrelenir. Hiçbir şey yer değiştirmez; 1. seviyede adlar olduğu gibi kalır. Yarıda kalırsa klasörü yeniden açınca devam eder.",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.nested": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörün içinde şifreli bir klasör var. Şifreli klasörler iç içe olamaz; hiçbir şey değiştirilmedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.partial": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosya şifrelenemedi (bu arada değişti, çok büyük ya da yazılamıyor). Hâlâ şifresizler; devam etmek için yeniden deneyin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.convert.partial_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosya şifrelenemedi (bu arada değişti, çok büyük ya da yazılamıyor). Hâlâ şifresiz; devam etmek için yeniden deneyin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.past_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme bu dosyaları bundan sonrası için korur. Şimdiye kadar sunucu onları açık hâlde tuttu ve bazı kopyalar kalır: filex küçük resimlerini ve arama için çıkardığı metni siler; bu klasörün eski sürümlerini ve çöp kutusundaki kayıtlarını da silebilir.",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.past_outside": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yedekler, kopya sunucular ve birinin önceden aldığı kopyalar filex'in dışındadır ve olduğu gibi kalır.",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.past_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sunucuda zaten olanlar",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.progress": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{total} dosyanın {n} tanesi şifrelendi · {failed} dosya kaldı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.convert.progress_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{total} dosyanın {n} tanesi şifrelendi · {failed} dosya kaldı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.resume_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörü şifreleme işi başladı ama bitmedi. Henüz ulaşılmayan dosyalar sunucuda hâlâ şifresiz. Devam ederseniz kaldığı yerden sürer.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.resume_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörü şifrelemeyi bitirin",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.stopped": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosyadan sonra durduruldu. Klasörün üstündeki şeritten devam edebilirsiniz.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.convert.stopped_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosyadan sonra durduruldu. Klasörün üstündeki şeritten devam edebilirsiniz.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.convert.submit": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasörü şifrele",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” klasörünü şifrele",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
     "e2e.create.ack": {
       "in": "explorer",
       "syntax": "plain",
@@ -11170,6 +11797,7 @@
       "syntax": "plain",
       "tr": "Devam etmek için uyarıyı onaylayın.",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11226,6 +11854,14 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "e2e.create.names_root_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasörün kendi adı her durumda açık kalır — şifresiz bir klasörün içinde durur. Hiçbir şey ele vermeyen bir ad seçin.",
+      "where": [
+        "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
     "e2e.create.nested": {
       "in": "explorer",
       "syntax": "plain",
@@ -11247,6 +11883,7 @@
       "syntax": "plain",
       "tr": "Parolayı tekrar girin",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11263,6 +11900,7 @@
       "syntax": "plain",
       "tr": "Parolalar birbirini tutmuyor.",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11271,6 +11909,7 @@
       "syntax": "plain",
       "tr": "En az 8 karakter",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11279,6 +11918,7 @@
       "syntax": "plain",
       "tr": "Parola en az 8 karakter olmalı.",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue"
       ]
     },
@@ -11436,7 +12076,7 @@
       "syntax": "plain",
       "tr": "Emanet anahtarı…",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eSettingsModal.vue"
       ]
     },
     "e2e.escrowoffer.title": {
@@ -11455,12 +12095,98 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "e2e.level.change": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Seviyeyi değiştir…",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.content": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yalnız içerik",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eLevelPicker.vue",
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.content_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya içerikleri şifrelenir. Dosya ve klasör adları sunucuya açık kalır; böylece WebDAV, komut satırı ve masaüstü senkronu adlarla çalışmayı sürdürür ve 0.31'den beri her filex klasörü açar.",
+      "where": [
+        "packages/core/src/components/E2eLevelPicker.vue",
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.names": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İçerik ve adlar",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eLevelPicker.vue",
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.names_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İçerik de dosya ve klasör adları da şifrelenir: sunucu yalnız karıştırılmış adlar görür. WebDAV, komut satırı ve masaüstü senkronu da adları karıştırılmış görür; filex 0.47 ve öncesi klasörü açmaz.",
+      "where": [
+        "packages/core/src/components/E2eLevelPicker.vue",
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.pending": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "seviye değişikliği bitmedi",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.raise_ack": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Neyin değiştiğini anladım",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.raise_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "filex buradaki her dosya ve klasöre bu tarayıcıda şifreli bir ad verir. İçeriğe dokunulmaz; yarıda kalırsa kaldığı yerden devam eder. filex açık adlara geri dönüş yolu sunmaz.",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.raise_go": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Adları şifrele",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.level.raise_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasör “İçerik ve adlar” seviyesine geçsin mi?",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
     "e2e.locked.busy": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Doğrulanıyor…",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eLockScreen.vue"
       ]
     },
     "e2e.locked.hint": {
@@ -11468,7 +12194,7 @@
       "syntax": "plain",
       "tr": "İçeriği görmek için klasör parolasını girin. Parola yalnız bu sekmede, bellekte tutulur.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eLockScreen.vue"
       ]
     },
     "e2e.locked.pw_placeholder": {
@@ -11476,7 +12202,7 @@
       "syntax": "plain",
       "tr": "Klasör parolası",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eLockScreen.vue"
       ]
     },
     "e2e.locked.title": {
@@ -11484,7 +12210,7 @@
       "syntax": "plain",
       "tr": "Bu klasör uçtan uca şifreli",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eLockScreen.vue"
       ]
     },
     "e2e.locked.unlock": {
@@ -11492,7 +12218,7 @@
       "syntax": "plain",
       "tr": "Kilidi aç",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eLockScreen.vue"
       ]
     },
     "e2e.locked.use_recovery": {
@@ -11500,13 +12226,537 @@
       "syntax": "plain",
       "tr": "Parolayı mı kaybettiniz? Kurtarma anahtarı kullanın",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/components/E2eLockScreen.vue"
       ]
     },
     "e2e.locked_toast": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Klasör kilitlendi",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.bad_name": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” şifreli klasörde kullanılamaz: ad 1–255 bayt olmalı; bölü, ters bölü ya da kontrol karakteri içeremez.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.busy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Adlar şifreleniyor…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Adlar şifrelendi ({n} öğe yeniden adlandırıldı). Sunucu artık adları göremiyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.names.done_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Adlar şifrelendi ({n} öğe yeniden adlandırıldı). Sunucu artık adları göremiyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Adlar şifrelenemedi. Zaten yeniden adlandırılanlar kaybolmaz; devam etmek için yeniden deneyin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.key_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Anahtar dosyası bu klasördeki adların şifreli olduğunu söylüyor ama ad anahtarı bu anahtarla açılmıyor. Hiçbir şey değiştirilmedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.locked_item": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "🔒 Şifreli öğe",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.move_taken": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taşınmadı: o klasörde “{name}” adı zaten var. Önce ikisinden birinin adını değiştirin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.move_unreadable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taşınmadı: öğelerden birinin adı okunamıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.offer_cost": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ne değişir: WebDAV, komut satırı ve masaüstü senkronu adları karıştırılmış görür; filex 0.47 ve öncesi bu klasörü açmayı reddeder. Sunucu kaç öğe olduğunu ve boyutlarını hâlâ görür.",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.names.partial": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe yeniden adlandırılamadı (izin yok ya da ad bir diskte tutulamıyor). Adları açık kalıyor; devam etmek için yeniden deneyin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.names.partial_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe yeniden adlandırılamadı (izin yok ya da ad bir diskte tutulamıyor). Adı açık kalıyor; devam etmek için yeniden deneyin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.progress": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şu ana kadar {n} ad şifrelendi · {failed} öğe yeniden adlandırılamadı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.names.progress_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şu ana kadar {n} ad şifrelendi · {failed} öğe yeniden adlandırılamadı",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.resume": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Devam et",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.resume_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasördeki adları şifreleme işi başladı ama bitmedi. Henüz ulaşılmayan öğelerin adları hâlâ açık. Devam ederseniz kaldığı yerden sürer.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.resume_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Adları şifrelemeyi bitirin",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.stop": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Durdur",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.stopped": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} addan sonra durduruldu. Kalanlar siz devam edene kadar açık adlarını korur.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.names.stopped_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} addan sonra durduruldu. Kalanlar siz devam edene kadar açık adlarını korur.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.strip_fix": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} adı düzelt (açık kalmış ya da filex dışından taşınmış)",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ],
+      "plural": true
+    },
+    "e2e.names.strip_fix_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} adı düzelt (açık kalmış ya da filex dışından taşınmış)",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.names.unreadable_item": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "🔒 Adı okunamıyor",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.names.write_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Uzun bir adın ad dosyası yazılamadı, bu yüzden hiçbir şey yüklenmedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.announce_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola değişti ama sunucu bunu kaydedemedi; klasörün sahibine haber verilmedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.bad_recovery": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu bir kurtarma anahtarı değil (dörderli gruplar hâlinde 32 karakter).",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.busy": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Değiştiriliyor…",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.cheap_note": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yalnız klasörün anahtar dosyası değişir. Hiçbir dosya yeniden şifrelenmez; kurtarma anahtarı ve varsa emanet anahtarı çalışmaya devam eder.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.current": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Mevcut parola",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.current_required": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Mevcut parolayı girin ya da kurtarma anahtarını kullanın.",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola değişti. Eski parola bu klasörü artık açmıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.escrow_blocked": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörün, bu kurulumda bulunmayan bir anahtar için emanet yuvası var; klasör anahtarını değiştirmek onu kaybettirir. Hiçbir şey değiştirilmedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola değiştirilemedi. Hiçbir şey değiştirilmedi.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.lock_instead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bunun yerine klasörü kilitle",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.new": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeni parola",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.old_copies": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Eski parolayı bilen ve anahtar dosyasının eski bir kopyasına (bir sürüm, bir yedek) sahip olan biri klasörü onunla hâlâ açabilir. Bu bir risk ise “Klasör anahtarını da değiştir”i işaretleyin.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.progress": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şu ana kadar {n} dosya yeniden sarıldı · {failed} başarısız",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ],
+      "plural": true
+    },
+    "e2e.password.progress_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şu ana kadar {n} dosya yeniden sarıldı · {failed} başarısız",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.recovery": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kurtarma anahtarı",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rekey_ack": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Anlıyorum: bu, klasördeki her dosyanın anahtarını yeniden sarar.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rekey_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu yüzden yeni bir parola yeni bir klasör anahtarı gerektirir ve klasördeki her dosyanın anahtarı onunla yeniden sarılır. İçerik yeniden şifrelenmez. Biraz sürebilir; yarıda kalırsa kaldığı yerden devam eder, dosyalar bu sırada da açılır.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rekey_done": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeni klasör anahtarı yerinde ({n} dosya yeniden sarıldı). Eski parola burada artık hiçbir şey açmıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.password.rekey_done_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeni klasör anahtarı yerinde ({n} dosya yeniden sarıldı). Eski parola burada artık hiçbir şey açmıyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.rekey_escrow": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İşletmecinin emanet anahtarı çalışmaya devam eder: yuvası yeni klasör anahtarına mühürlenir.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rekey_partial": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosya yeniden sarılamadı. Önceki anahtarla hâlâ açılıyorlar; yeniden denemek için devam edin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.password.rekey_partial_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosya yeniden sarılamadı. Önceki anahtarla hâlâ açılıyor; yeniden denemek için devam edin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.rekey_rk_kept": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kullandığınız kurtarma anahtarı çalışmaya devam eder.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rekey_rk_new": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeni bir kurtarma anahtarı alırsınız, bir kez gösterilir; eskisi artık çalışmaz.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rekey_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasör v0.31 öncesinden: anahtarı parolasından türetiliyor",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.reset_lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörü kurtarma anahtarıyla açtınız; parolası kaybolmuş ya da başkası tarafından biliniyor olabilir. Şimdi yeni bir parola belirleyin. Bu pencereyi kapatmak klasörü yeniden kilitler.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.reset_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasör için yeni bir parola belirleyin",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.resume_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola değişti ve yeni bir klasör anahtarı verildi. Bazı dosyaların anahtarı hâlâ öncekinin altında; her iki durumda da açılırlar. Bitirmek için devam edin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.resume_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya anahtarları hâlâ yeniden sarılıyor",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.rotate_body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Her dosyanın anahtarı yeni bir klasör anahtarıyla yeniden sarılır. İçerik yeniden şifrelenmez. Yarıda kalırsa kaldığı yerden devam eder; dosyalar bu sırada da açılır.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rotate_label": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör anahtarını da değiştir (her dosyanın anahtarı yeniden sarılır; eski parola başkasınca biliniyor olabilirse kullanın)",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.rotate_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör anahtarı da değişir",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.same": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeni parola mevcut parolayla aynı.",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.strip_action": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parolayı değiştir…",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.password.submit": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parolayı değiştir",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasör parolasını değiştir",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.use_current": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bunun yerine mevcut parolayı kullan",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.use_recovery": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Hatırlamıyorum — kurtarma anahtarını kullan",
+      "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue"
+      ]
+    },
+    "e2e.password.wrong_current": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola yanlış.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.password.wrong_recovery": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kurtarma anahtarı yanlış.",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -11637,6 +12887,7 @@
       "syntax": "plain",
       "tr": "XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue"
       ]
     },
@@ -11646,7 +12897,7 @@
       "tr": "Emanet anahtarı",
       "where": [
         "packages/core/src/components/E2eRecoveryUnlockModal.vue",
-        "web/src/lib/notificationText.ts"
+        "packages/core/src/lib/notificationText.ts"
       ]
     },
     "e2e.recover.tab_recovery": {
@@ -11761,6 +13012,14 @@
         "packages/core/src/components/RecoveryKeyModal.vue"
       ]
     },
+    "e2e.recovery.lead_replaced": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Klasörün yeni bir anahtarı var, bu yüzden yeni bir kurtarma anahtarı da var — eskisi artık açmıyor. Bir kez gösterilir; filex kopyasını tutmaz.",
+      "where": [
+        "packages/core/src/components/RecoveryKeyModal.vue"
+      ]
+    },
     "e2e.recovery.lead_upgraded": {
       "in": "explorer",
       "syntax": "plain",
@@ -11809,6 +13068,55 @@
         "packages/core/src/components/RecoveryKeyModal.vue"
       ]
     },
+    "e2e.settings.close": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kapat",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.settings.escrow": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Emanet anahtarı",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.settings.level": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme seviyesi",
+      "where": [
+        "packages/core/src/components/E2eLevelPicker.vue",
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.settings.open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme ayarları…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.settings.password": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
+    "e2e.settings.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme ayarları",
+      "where": [
+        "packages/core/src/components/E2eSettingsModal.vue"
+      ]
+    },
     "e2e.strip.label": {
       "in": "explorer",
       "syntax": "plain",
@@ -11825,10 +13133,26 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "e2e.unlock.damaged": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Parola doğru ama anahtar dosyasındaki (.filex-e2e.json) klasör anahtarı açılmıyor: dosya bozulmuş. Kurtarma anahtarını deneyin.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
     "e2e.unlock.marker_missing": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Anahtar dosyası (.filex-e2e.json) okunamadı.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.unlock.unsupported": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasör daha yeni bir filex istiyor: bu sürümün tanımadığı bir özellik kullanıyor ({features}). Hiçbir şey değiştirilmedi.",
       "where": [
         "packages/core/src/FileExplorer.vue"
       ]
@@ -11919,6 +13243,22 @@
       "tr": "{param} sorgu parametresi eksik.",
       "where": [
         "web/src/views/Editor.vue"
+      ]
+    },
+    "empty.drafts.hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yeni bir belge, ait olduğu yere kaydedilene kadar burada bekler.",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
+      ]
+    },
+    "empty.drafts.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslak yok",
+      "where": [
+        "packages/core/src/components/DraftsView.vue"
       ]
     },
     "empty.folder": {
@@ -12056,6 +13396,30 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Ayrıntı"
+    },
+    "err.draft_folder_gone": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu taslağın kaydedileceği klasör artık yok.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.draft_limit": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu sunucunun izin verdiği kadar taslağınız var ({limit}). Taslaklar’da bazılarını kaydedin ya da silin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.drafts_unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslaklar burada kullanılamıyor.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
     },
     "err.finished": {
       "in": "explorer",
@@ -12344,15 +13708,16 @@
       "tr": "Bu işlem için yetkiniz yok"
     },
     "errors.generic": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir şeyler ters gitti",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/api/client.ts",
         "web/src/components/ResetPasswordModal.vue",
-        "web/src/components/UserSettingsModal.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/composables/useStorageDelete.ts",
         "web/src/composables/useSyncNow.ts",
         "web/src/views/AdminFiles.vue",
@@ -12449,18 +13814,19 @@
       ]
     },
     "errors.validationFailed": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Lütfen işaretli alanları kontrol edin",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "explore.account": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Hesap",
       "where": [
+        "packages/core/src/FileExplorer.vue",
         "web/src/views/Explore.vue"
       ]
     },
@@ -12662,14 +14028,6 @@
         "web/src/views/External.vue"
       ]
     },
-    "external.convertLegacy": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Eski — kullanımdan kalkıyor. Yerini Dönüştür uygulaması (Eklentiler → Uygulamalar) alıyor; uygulama kuruluyken dosya menüsü bu dönüştürücüyü sunmaz.",
-      "where": [
-        "web/src/views/External.vue"
-      ]
-    },
     "external.envManaged": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -12823,14 +14181,6 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "erişilemiyor",
-      "where": [
-        "web/src/views/External.vue"
-      ]
-    },
-    "external.names.convert": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Dönüştürücü",
       "where": [
         "web/src/views/External.vue"
       ]
@@ -13960,6 +15310,7 @@
       "syntax": "plain",
       "tr": "Yüklenemedi",
       "where": [
+        "packages/core/src/FileExplorer.vue",
         "packages/core/src/components/InspectorPanel.vue"
       ]
     },
@@ -14376,12 +15727,12 @@
       ]
     },
     "install.desktopAllDownloads": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tüm indirmeler ve sürüm notları",
       "where": [
-        "web/src/components/InstallPrompt.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/InstallPrompt.vue"
       ]
     },
     "install.desktopDownload": {
@@ -14390,12 +15741,12 @@
       "tr": "{platform} için indir"
     },
     "install.desktopSubtitle": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Klasörleri bu bilgisayara eşitleyin, arka planda güncel kalsınlar. {platform} için mevcut.",
       "where": [
-        "web/src/components/InstallPrompt.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/InstallPrompt.vue"
       ]
     },
     "install.desktopTitle": {
@@ -14433,7 +15784,7 @@
     "install.dl.deb_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "apt ile sistem geneline kurar · ~99 MB",
+      "tr": "apt ile sistem geneline kurar · ~100 MB",
       "where": [
         "web/src/composables/useInstallPrompt.ts"
       ]
@@ -14454,6 +15805,54 @@
         "web/src/composables/useInstallPrompt.ts"
       ]
     },
+    "install.dl.linux_snap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Snap Store",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
+    "install.dl.linux_snap_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ubuntu ve snapd olan diğer Linux'lar, Ubuntu App Center'da da var — snapd kurar ve güncel tutar",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
+    "install.dl.mac_brew": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Homebrew",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
+    "install.dl.mac_brew_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "brew install brf-tech/filex/filex-app — brew upgrade ile güncel kalır",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
+    "install.dl.rpm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Fedora / openSUSE (.rpm)",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
+    "install.dl.rpm_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dnf ya da zypper ile sistem geneline kurar · ~100 MB",
+      "where": [
+        "web/src/composables/useInstallPrompt.ts"
+      ]
+    },
     "install.dl.win_portable": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -14465,7 +15864,7 @@
     "install.dl.win_portable_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Her yerden çalışır — USB bellek, İndirilenler — ve dosyalarını yanında tutar. Kendini güncellemez · ~92 MB",
+      "tr": "Her yerden çalışır — USB bellek, İndirilenler — ve dosyalarını yanında tutar. Kendini güncellemez · ~125 MB",
       "where": [
         "web/src/composables/useInstallPrompt.ts"
       ]
@@ -14481,7 +15880,7 @@
     "install.dl.win_setup_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex'i kurar, Başlat menüsüne ekler ve kendini günceller · ~92 MB",
+      "tr": "filex'i kurar, Başlat menüsüne ekler ve kendini günceller · ~125 MB",
       "where": [
         "web/src/composables/useInstallPrompt.ts"
       ]
@@ -14856,6 +16255,7 @@
       "syntax": "plain",
       "tr": "Kapat",
       "where": [
+        "packages/core/src/components/NotificationsPanel.vue",
         "packages/core/src/modals/Modal.vue"
       ]
     },
@@ -14955,7 +16355,9 @@
       "syntax": "plain",
       "tr": "Vazgeç",
       "where": [
+        "packages/core/src/components/E2eChangePasswordModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue",
+        "packages/core/src/components/E2eSettingsModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue",
         "packages/core/src/modals/NewFolderModal.vue"
       ]
@@ -15008,6 +16410,7 @@
       "syntax": "plain",
       "tr": "Vazgeç",
       "where": [
+        "packages/core/src/modals/DraftConflictModal.vue",
         "packages/core/src/modals/RenameModal.vue"
       ]
     },
@@ -15589,30 +16992,30 @@
       ]
     },
     "nav.themeAuto": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Otomatik",
       "where": [
-        "web/src/components/DarkModeToggle.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/DarkModeToggle.vue"
       ]
     },
     "nav.themeDark": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Karanlık",
       "where": [
-        "web/src/components/DarkModeToggle.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/DarkModeToggle.vue"
       ]
     },
     "nav.themeLight": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Aydınlık",
       "where": [
-        "web/src/components/DarkModeToggle.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/DarkModeToggle.vue"
       ]
     },
     "nav.trash": {
@@ -15716,6 +17119,22 @@
         "packages/core/src/modals/NewDocumentModal.vue"
       ]
     },
+    "newdoc.err.draft_limit": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu sunucunun izin verdiği kadar taslağınız var ({limit}). Önce Taslaklar’da bazılarını kaydedin ya da silin.",
+      "where": [
+        "packages/core/src/modals/NewDocumentModal.vue"
+      ]
+    },
+    "newdoc.err.draft_limit_any": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu sunucunun izin verdiği sayıda taslağınız var. Önce Taslaklar’da bazılarını kaydedin ya da silin.",
+      "where": [
+        "packages/core/src/modals/NewDocumentModal.vue"
+      ]
+    },
     "newdoc.err.exists": {
       "in": "explorer",
       "syntax": "plain",
@@ -15755,6 +17174,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Metin ve kod"
+    },
+    "newdoc.hint.draft": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslak olarak açılır: siz kaydedene kadar klasörde hiçbir şey oluşturulmaz.",
+      "where": [
+        "packages/core/src/modals/NewDocumentModal.vue"
+      ]
     },
     "newdoc.hint.ext_added": {
       "in": "explorer",
@@ -15812,6 +17239,14 @@
         "packages/core/src/modals/NewDocumentModal.vue"
       ]
     },
+    "newdoc.open_drafts": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslakları aç",
+      "where": [
+        "packages/core/src/modals/NewDocumentModal.vue"
+      ]
+    },
     "newdoc.title": {
       "in": "explorer",
       "syntax": "plain",
@@ -15852,6 +17287,16 @@
       "tr": "Yönetim panelinde Dış servisler altından kurabilirsiniz.",
       "where": [
         "packages/core/src/modals/NewDocumentModal.vue"
+      ]
+    },
+    "node.drafts": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslaklar",
+      "where": [
+        "packages/core/src/components/DraftsView.vue",
+        "packages/core/src/components/ListView.vue",
+        "packages/core/src/lib/listing.ts"
       ]
     },
     "node.folder": {
@@ -15940,20 +17385,20 @@
       ]
     },
     "notifications.bell": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirim çanı",
       "where": [
-        "web/src/components/NotificationBell.vue"
+        "packages/core/src/components/NotificationBell.vue"
       ]
     },
     "notifications.empty": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Henüz bildirim yok",
       "where": [
-        "web/src/components/NotificationBell.vue",
-        "web/src/components/NotificationsPanel.vue",
+        "packages/core/src/components/NotificationBell.vue",
+        "packages/core/src/components/NotificationsPanel.vue",
         "web/src/views/Notifications.vue"
       ]
     },
@@ -16073,6 +17518,11 @@
       "syntax": "vue-i18n",
       "tr": "Emanet anahtarı kullanıldı"
     },
+    "notifications.kinds.e2e_password_changed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasör parolası değişti"
+    },
     "notifications.kinds.file_deleted": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -16112,6 +17562,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Uygulama bildirimi"
+    },
+    "notifications.kinds.plugin_update_available": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo eklentisi güncellemesi var"
     },
     "notifications.kinds.primary_read_fail": {
       "in": "admin",
@@ -16174,28 +17629,28 @@
       "tr": "Webhook testi"
     },
     "notifications.manageAdmin": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirim yönetimi",
       "where": [
-        "web/src/components/NotificationBell.vue"
+        "packages/core/src/components/NotificationBell.vue"
       ]
     },
     "notifications.markAllRead": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tümünü okundu işaretle",
       "where": [
-        "web/src/components/NotificationBell.vue",
-        "web/src/components/NotificationsPanel.vue"
+        "packages/core/src/components/NotificationBell.vue",
+        "packages/core/src/components/NotificationsPanel.vue"
       ]
     },
     "notifications.markRead": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Okundu işaretle",
       "where": [
-        "web/src/components/NotificationsPanel.vue"
+        "packages/core/src/components/NotificationsPanel.vue"
       ]
     },
     "notifications.notConfigured": {
@@ -16207,136 +17662,136 @@
       ]
     },
     "notifications.openTarget": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirimin konusunu aç",
       "where": [
-        "web/src/components/NotificationRow.vue"
+        "packages/core/src/components/NotificationRow.vue"
       ]
     },
     "notifications.pageOf": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Sayfa {page} / {pages} · toplam {total}",
       "where": [
-        "web/src/components/NotificationsPanel.vue"
+        "packages/core/src/components/NotificationsPanel.vue"
       ]
     },
     "notifications.prefs.browser": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tarayıcı bildirimleri",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.browserHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yeni bir şey geldiğinde sekmenin dışında bildirim göster. Bildirime tıklayınca konusu olan dosya, klasör ya da paylaşım açılır.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.desktopHandled": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Masaüstü uygulaması bunları kendisi gösteriyor",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.enableBrowser": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirimlere izin ver",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.inApp": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Uygulama içi çan",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.inAppHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kapatırsanız çanınız boşalır. Hiçbir kayıt silinmez — yönetici tüm olayları görmeye devam eder.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.movedToSettings": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kendi bildirim ayarlarınız — zil, tarayıcı bildirimleri, hangi olaylar — kullanıcı ayarlarınızda.",
       "where": [
         "web/src/views/Notifications.vue"
       ]
     },
     "notifications.prefs.openSettings": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirim ayarlarımı aç",
       "where": [
         "web/src/views/Notifications.vue"
       ]
     },
     "notifications.prefs.permDefault": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İzin henüz istenmedi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.permDenied": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu tarayıcıda engellendi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.permDeniedHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tarayıcı ayarlarından bu siteye bildirim iznini yeniden verin.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.permGranted": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu tarayıcıda izin verildi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.permUnsupported": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu tarayıcı bildirim gösteremiyor",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.saved": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tercih kaydedildi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "notifications.prefs.title": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirimleriniz"
     },
     "notifications.scopeAdmins": {
@@ -16380,23 +17835,23 @@
       ]
     },
     "notifications.severity.critical": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kritik"
     },
     "notifications.severity.error": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Hata"
     },
     "notifications.severity.info": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bilgi"
     },
     "notifications.severity.warning": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Uyarı"
     },
     "notifications.testSent": {
@@ -16408,12 +17863,12 @@
       ]
     },
     "notifications.title": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirimler",
       "where": [
-        "web/src/components/NotificationBell.vue",
-        "web/src/components/NotificationsPanel.vue"
+        "packages/core/src/components/NotificationBell.vue",
+        "packages/core/src/components/NotificationsPanel.vue"
       ]
     },
     "notifications.tokenHint": {
@@ -16449,11 +17904,11 @@
       ]
     },
     "notifications.unreadCount": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "{n} okunmamış",
       "where": [
-        "web/src/components/NotificationBell.vue"
+        "packages/core/src/components/NotificationBell.vue"
       ]
     },
     "notifications.unreadHere": {
@@ -16465,20 +17920,20 @@
       ]
     },
     "notifications.unreadOnly": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Sadece okunmamış",
       "where": [
-        "web/src/components/NotificationsPanel.vue",
+        "packages/core/src/components/NotificationsPanel.vue",
         "web/src/views/Notifications.vue"
       ]
     },
     "notifications.viewAll": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tüm bildirimleri gör",
       "where": [
-        "web/src/components/NotificationBell.vue"
+        "packages/core/src/components/NotificationBell.vue"
       ]
     },
     "notifications.webhookConfig": {
@@ -18230,6 +19685,22 @@
         "packages/core/src/components/plugin/SurfaceRenderer.vue"
       ]
     },
+    "plugins.actions.reviewUpdate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncellemeyi incele",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.actions.setSource": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme kaynağı…",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
     "plugins.add": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -18314,6 +19785,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "yazma",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.checkUpdates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncellemeleri denetle",
       "where": [
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
@@ -18563,6 +20042,14 @@
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
     },
+    "plugins.fields.source": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme kaynağı",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
     "plugins.fields.state": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -18683,6 +20170,46 @@
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
     },
+    "plugins.review.how": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex bu derlemeyi indirir, SHA-256 değeri yukarıdakiyle aynı değilse reddeder ve eklentiyi yüklenmiş bir dosya gibi yükseltir: yapabildikleri yeniden sınanır, yeni dosya başlamazsa öncekisi geri gelir.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.review.jump": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm {from} → {to}",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.review.notes": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm notları",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.review.sha": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{platform} derlemesinin SHA-256 değeri",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.review.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} güncellemesi",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
     "plugins.shaHint": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -18707,6 +20234,11 @@
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
     },
+    "plugins.source.feed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaynağından"
+    },
     "plugins.source.file": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -18721,6 +20253,46 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "URL'den"
+    },
+    "plugins.sourceForm.clear": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Denetimi durdurmak için boş bırakın.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.sourceForm.cleared": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} için artık güncelleme kaynağı yok.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.sourceForm.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaydedildi: {name}, {source} kaynağını izliyor.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.sourceForm.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} için güncelleme kaynağı",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.sourceHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir GitHub reposu (sahip/ad — filex son sürüme eklenmiş filex-storage.json dosyasını okur) ya da bir filex-storage.json dosyasının https adresi. filex bunu her gün denetler ve yeni bir sürüm olduğunda size söyler; siz onaylamadan hiçbir şey kurulmaz.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
     },
     "plugins.state.disabled": {
       "in": "admin",
@@ -18775,6 +20347,62 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bir eklenti filex'in kendi yetkileriyle çalışır ve üzerinde açılan her deponun kimlik bilgileri ona verilir. Yalnızca güvendiğiniz eklentileri kurun.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.update.available": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme var",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.update.checkFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Denetlenemedi",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.update.incompatible": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version} için filex {requires} gerekiyor",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.update.upToDate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncel",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.updates.checked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme denetimi bitti: {waiting} güncelleme onayınızı bekliyor.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.updates.failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bazı kaynaklar okunamadı; nedeni satırında yazıyor.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.updates.none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncelleme denetimi bitti: kaynağı olan tüm eklentiler güncel.",
       "where": [
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
@@ -18877,43 +20505,43 @@
       ]
     },
     "profile.avatar.change": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Fotoğrafı değiştir",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.avatar.failed": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu görsel işlenemedi — başka bir tane deneyin.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.avatar.help": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Adınızın yanında ve dosya yöneticisinin işbirliği çubuğunda görünür — hesabınızla açılan her istemcide. Otomatik olarak 160 piksele küçültülür.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.avatar.label": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Profil fotoğrafı",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.avatar.notImage": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Lütfen bir görsel dosyası seçin.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.avatar.upload": {
@@ -18922,115 +20550,120 @@
       "tr": "Fotoğraf yükle"
     },
     "profile.locale": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Dil",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.passwordChanged": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Parola değiştirildi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.saved": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Profil kaydedildi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.code": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Doğrulama kodu",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.disable": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "2FA'yı kapat",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.disabled": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Pasif",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.enable": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "2FA'yı aç",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.enabled": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Aktif",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.recoveryHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bunları şimdi kaydedin — doğrulayıcınızı kaybederseniz her biri bir kez oturum açmanızı sağlar. Yalnızca bu sefer gösterilir.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.recoveryTitle": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kurtarma kodları",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.scanHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu QR kodu doğrulayıcı uygulamanızla tarayın, sonra 6 haneli kodu girin.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.totp.title": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İki adımlı doğrulama",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.username.help": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Kullanıcı adınız. Oturum açarken bunu da e-postanızı da kullanabilirsiniz — bağlantı istemcileri (SFTP, FTP) için ise bu ad gerekir, çünkü oturum açtıkları addaki {'@'} işareti onların ayar dosyalarında kaçış gerektirir.",
+      "tr": "Kullanıcı adınız. Oturum açarken bunu da e-postanızı da kullanabilirsiniz — bağlantı istemcileri (SFTP, FTP) için ise bu ad gerekir, çünkü oturum açtıkları addaki {'@'} işareti onların ayar dosyalarında kaçış gerektirir."
+    },
+    "profile.username.helpText": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kullanıcı adınız. Oturum açarken bunu da e-postanızı da kullanabilirsiniz — bağlantı istemcileri (SFTP, FTP) için ise bu ad gerekir, çünkü oturum açtıkları addaki @ işareti onların ayar dosyalarında kaçış gerektirir.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "profile.username.label": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı adı",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "protection.av.address": {
@@ -19277,6 +20910,46 @@
         "web/src/views/Protection.vue"
       ]
     },
+    "protection.drafts.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeni bir belge, ilk kaydına kadar bir taslaktır: onu oluşturan kişinin, başka kimsenin göremediği Taslaklar’ında bekler ve kaydedilene kadar klasöründe hiçbir şey oluşturulmaz. Bir kişinin tutabileceği en fazla taslak sayısı budur; sınıra gelindiğinde Yeni belge önce bazılarının kaydedilmesini ya da silinmesini ister.",
+      "where": [
+        "web/src/views/Protection.vue"
+      ]
+    },
+    "protection.drafts.errRange": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} arasında tam sayı girin.",
+      "where": [
+        "web/src/views/Protection.vue"
+      ]
+    },
+    "protection.drafts.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} arasında. Varsayılan 50. Yeniden başlatma gerekmeden hemen geçerli olur.",
+      "where": [
+        "web/src/views/Protection.vue"
+      ]
+    },
+    "protection.drafts.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişi başına taslak",
+      "where": [
+        "web/src/views/Protection.vue"
+      ]
+    },
+    "protection.drafts.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Taslaklar",
+      "where": [
+        "web/src/views/Protection.vue"
+      ]
+    },
     "protection.savedOk": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19337,7 +21010,7 @@
     "protection.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Çöp kutusu saklama süresi, sürüm politikası, paylaşım bağlantısı süresi ve antivirüs",
+      "tr": "Çöp kutusu saklama süresi, sürüm politikası, paylaşım bağlantısı süresi, taslaklar ve antivirüs",
       "where": [
         "web/src/views/Protection.vue"
       ]
@@ -19928,21 +21601,21 @@
       ]
     },
     "quota.title": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Depolama kotası",
       "where": [
-        "web/src/components/QuotaWidget.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/QuotaWidget.vue"
       ]
     },
     "quota.tooltip": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "{used} / {limit} kullanıldı ({percent})",
       "where": [
-        "web/src/components/QuotaWidget.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/QuotaWidget.vue"
       ]
     },
     "quota.unlimited": {
@@ -19963,12 +21636,12 @@
       ]
     },
     "quota.unlimitedTooltip": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "{used} kullanıldı · sınırsız",
       "where": [
-        "web/src/components/QuotaWidget.vue",
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/QuotaWidget.vue"
       ]
     },
     "quota.used": {
@@ -21476,7 +23149,7 @@
     "server.notify.app_updated.body": {
       "in": "server",
       "syntax": "server",
-      "tr": "{from} sürümünden kendiliğinden geçti.",
+      "tr": "Bir yönetici onayladı; önceki sürüm {from}.",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "from": "the app's previous version, e.g. 1.1.0 (not a path)"
@@ -21485,7 +23158,7 @@
     "server.notify.app_updated.title": {
       "in": "server",
       "syntax": "server",
-      "tr": "{plugin} {version} sürümüne güncellendi",
+      "tr": "{plugin} artık {version} sürümünde",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "plugin": "the installed app's name",
@@ -21568,6 +23241,12 @@
       "in": "server",
       "syntax": "server",
       "tr": "Şifreli klasör emanet anahtarıyla açıldı",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
+    },
+    "server.notify.e2e.password_changed.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Şifreli klasörün parolası değişti",
       "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
     },
     "server.notify.file.deleted.title": {
@@ -21661,6 +23340,22 @@
       "vars": {
         "notice_body": "the installed app's own text for its notification",
         "plugin": "the installed app's name"
+      }
+    },
+    "server.notify.plugin_update_available.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Eklentiler → Depolama altında sizi bekliyor.",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
+    },
+    "server.notify.plugin_update_available.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{plugin} depo eklentisinin {version} sürümü yayında",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "plugin": "the installed app's name",
+        "version": "a filex version number, e.g. 0.43.1"
       }
     },
     "server.notify.primary_read_fail.body": {
@@ -21761,6 +23456,12 @@
       "tr": "Uygulama bildirimi",
       "about": "A word a notification OR an email uses when the event does not say it (an upload with no name typed, a file with no name). One word, both surfaces — they were written twice until v0.43.0."
     },
+    "server.notify.word.locked": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "🔒 Şifreli öğe",
+      "about": "A word a notification OR an email uses when the event does not say it (an upload with no name typed, a file with no name). One word, both surfaces — they were written twice until v0.43.0. Stands in the bell for the name of an item inside an end-to-end encrypted folder whose names are encrypted, while the reader does not have that folder unlocked — the server only has the scrambled name. Keep the lock emoji; it matches the explorer’s own label for such an item."
+    },
     "server.notify.word.openWith": {
       "in": "server",
       "syntax": "server",
@@ -21855,6 +23556,75 @@
       "in": "server",
       "syntax": "server",
       "tr": "Dosya başına küçük durum kayıtları tutar",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
+    "server.perm.ui": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Kendi arayüzünü tarayıcınızda, filex'in denetlediği bir yalıtım alanında çalıştırır",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
+    "server.perm.ui_eval": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Arayüzü, çalışırken ürettiği kodu çalıştırabilir (unsafe-eval)",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
+    "server.perm.ui_net_font": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Siz kullanırken tarayıcınız {url} adresinden yazı tipi yükler: bu adres ne zaman kullanıldığını görür ve arayüz bu isteklere veri ekleyebilir",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "url": "the address of the sign-in page"
+      }
+    },
+    "server.perm.ui_net_img": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Siz kullanırken tarayıcınız {url} adresinden görsel yükler: bu adres ne zaman kullanıldığını görür ve arayüz bu isteklere veri ekleyebilir",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "url": "the address of the sign-in page"
+      }
+    },
+    "server.perm.ui_net_media": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Siz kullanırken tarayıcınız {url} adresinden ses ya da video yükler: bu adres ne zaman kullanıldığını görür ve arayüz bu isteklere veri ekleyebilir",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "url": "the address of the sign-in page"
+      }
+    },
+    "server.perm.ui_net_style": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Siz kullanırken tarayıcınız {url} adresinden stil dosyası yükler: bu adres ne zaman kullanıldığını görür ve arayüz bu isteklere veri ekleyebilir",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "url": "the address of the sign-in page"
+      }
+    },
+    "server.perm.ui_package_fetch": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Arayüzü kendi paketini okur — yalnız bu sürümün dosyalarını, başka hiçbir şeyi değil",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
+    "server.perm.ui_viewer": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{kind} dosyalarını filex'in önizlemesi yerine kendi arayüzünde açar",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "kind": "a kind of file: an extension with its dot (.drawio) or a media type (image/svg+xml)"
+      }
+    },
+    "server.perm.ui_wasm_eval": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Arayüzü tarayıcınızda WebAssembly derleyebilir (wasm-unsafe-eval)",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
     },
     "server.perm.users_lookup": {
@@ -23334,14 +25104,6 @@
         "packages/core/src/composables/useKeyboardShortcuts.ts"
       ]
     },
-    "shortcuts.convert": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştür",
-      "where": [
-        "packages/core/src/composables/useKeyboardShortcuts.ts"
-      ]
-    },
     "shortcuts.copy": {
       "in": "explorer",
       "syntax": "plain",
@@ -23818,6 +25580,31 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Bağlantılar",
+      "where": [
+        "packages/core/src/components/SideNav.vue"
+      ]
+    },
+    "sidenav.drafts": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Taslaklar",
+      "where": [
+        "packages/core/src/components/SideNav.vue"
+      ]
+    },
+    "sidenav.drafts.count": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} taslak",
+      "where": [
+        "packages/core/src/components/SideNav.vue"
+      ],
+      "plural": true
+    },
+    "sidenav.drafts.count_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} taslak",
       "where": [
         "packages/core/src/components/SideNav.vue"
       ]
@@ -25921,14 +27708,6 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
-    "toast.converted_to": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "Dönüştürüldü → {name}",
-      "where": [
-        "packages/core/src/FileExplorer.vue"
-      ]
-    },
     "toast.copied": {
       "in": "explorer",
       "syntax": "plain",
@@ -27832,555 +29611,575 @@
       ]
     },
     "userSettings.adminBadge": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yönetici",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.ai.body": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu sürümde kullanıcıya özel asistan ayarı yok. filex'in sunduğu AI özellikleri tüm kurulum için yönetici tarafından yapılandırılır; bu yüzden burada sizin açıp kapatacağınız bir şey henüz bulunmuyor.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.ai.soon": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yakında",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.demoReadOnly": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu ortak bir demo hesabı; profili, parolası ve ikinci faktörü değiştirilemez.",
       "where": [
-        "web/src/components/UserSettingsModal.vue",
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/views/Users.vue"
       ]
     },
     "userSettings.footNote.ai": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu sekmede kaydedilecek bir şey yok."
     },
     "userSettings.footNote.notifications": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Değiştirdiğiniz anda kaydedilir."
     },
     "userSettings.footNote.preferences": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Değiştirdiğiniz anda kaydedilir."
     },
     "userSettings.footNote.profile": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu sekmedeki değişiklikler Kaydet'e bastığınızda kaydedilir."
     },
     "userSettings.footNote.security": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Buradaki her işlem kendi başına uygulanır."
     },
     "userSettings.heading": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı ayarları",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.headingSub": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Profilinizi, tercihlerinizi ve güvenliğinizi yönetin.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.notifications.events.archive_created": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir arşiv oluşturulduğunda"
     },
     "userSettings.notifications.events.archive_extracted": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir arşiv çıkarıldığında"
     },
     "userSettings.notifications.events.comment_added": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Biri bir dosyaya yorum yaptığında"
     },
     "userSettings.notifications.events.drop_received": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İstek bağlantısıyla bir dosya geldiğinde"
     },
     "userSettings.notifications.events.e2e_escrow_used": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Şifreli bir klasör emanet anahtarıyla açıldığında"
     },
-    "userSettings.notifications.events.file_deleted": {
+    "userSettings.notifications.events.e2e_password_changed": {
       "in": "admin",
       "syntax": "vue-i18n",
+      "tr": "Şifreli klasörünüzün parolası değiştiğinde"
+    },
+    "userSettings.notifications.events.file_deleted": {
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir dosya kalıcı olarak silindiğinde"
     },
     "userSettings.notifications.events.file_infected": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir dosyada virüs bulunduğunda"
     },
     "userSettings.notifications.events.file_moved": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir dosya taşındığında ya da adı değiştiğinde"
     },
     "userSettings.notifications.events.file_trashed": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir dosya çöp kutusuna taşındığında"
     },
     "userSettings.notifications.events.file_updated": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir dosya değiştiğinde"
     },
     "userSettings.notifications.events.file_upload_failed": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bir yükleme tamamlanmadığında"
     },
     "userSettings.notifications.events.file_uploaded": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yeni bir dosya geldiğinde"
     },
     "userSettings.notifications.events.plugin_notice": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kurulu bir uygulama size mesaj gönderdiğinde"
     },
     "userSettings.notifications.events.share_created": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Biri paylaşım bağlantısı oluşturduğunda"
     },
     "userSettings.notifications.eventsHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Birini kapatmak onu zilinizin dışında tutar. Hiçbir şey kaydedilmekten çıkmaz — yönetici her olayı görmeye devam eder.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.notifications.eventsTitle": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Nelerden haberdar olayım",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.open": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Kullanıcı ayarları",
       "where": [
+        "packages/core/src/FileExplorer.vue",
         "web/src/components/TopNav.vue",
         "web/src/views/Explore.vue"
       ]
     },
     "userSettings.prefs.appearance": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Görünüm",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.compact": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Sıkışık dosya listesi kullan",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.compactHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Dosya gezgininde daha dar satırlar.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.desktopApp": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Masaüstü uygulaması",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.desktopAppHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Uygulamanın köşesindeki hatırlatmayı kapattığınızda bir daha çıkmaz — indirmeler burada kalır.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.folderView": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Varsayılan klasör görünümü",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.folderViewHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Hiç değiştirmediğiniz bir klasörün nasıl açılacağı. Değiştirdiğiniz klasörler kendi görünümünü korur — bu ayar onlara dokunmaz.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvColumns": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Varsayılan sütunlarınız özelleştirilmiş (“Bunu tüm klasörler için varsayılanım yap” ile ayarlandı).",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvColumnsReset": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Sıfırla",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvDir": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yön",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvDir_asc": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Artan"
     },
     "userSettings.prefs.fvDir_desc": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Azalan"
     },
     "userSettings.prefs.fvForget": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Hepsini unut",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvInherit": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Sunucu varsayılanı ({value})",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvKept": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "{count} klasör kendi görünümünü koruyor.",
+      "plural": true
+    },
+    "userSettings.prefs.fvKeptCount": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} klasör kendi görünümünü koruyor.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ],
       "plural": true
     },
+    "userSettings.prefs.fvKeptCount_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{count} klasör kendi görünümünü koruyor.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
     "userSettings.prefs.fvMode": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Görünüm",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvSort": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Sıralama",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.fvSort_modified": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Değiştirilme"
     },
     "userSettings.prefs.fvSort_name": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Ad"
     },
     "userSettings.prefs.fvSort_size": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Boyut"
     },
     "userSettings.prefs.fvSort_type": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tür"
     },
     "userSettings.prefs.fvView_gallery": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Galeri"
     },
     "userSettings.prefs.fvView_grid": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Izgara"
     },
     "userSettings.prefs.fvView_list": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Liste"
     },
     "userSettings.prefs.languageHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Burada hemen uygulanır; bir sonraki tarayıcıda da açılsın diye hesabınıza kaydedilir.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.mode": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Aydınlık ya da karanlık",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.modeHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Hangi sürümün çizileceği. Otomatik, işletim sisteminizi izler.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.openTrigger": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Dosyaları açma",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.openTriggerDouble": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Çift tık",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.openTriggerHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Farenin dosyayı nasıl açtığı. Dokunmatik ekranda tek dokunuş her zaman açar, kutucuk her zaman seçer.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.openTriggerSingle": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tek tık",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.palette": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Renk paleti",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.paletteHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "O sürümün hangi renklerden oluştuğu. Her paletin aydınlık ve karanlık bir sürümü vardır; bu ayarla üstteki ayar birlikte çalışır.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.startPage": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Açılış sayfası",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.startPageHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Oturum açtığınızda ya da ana adrese geldiğinizde filex burayı açar. Doğrudan bir sayfanın bağlantısına tıkladığınızda yine o sayfaya gidersiniz.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.startPage_admin": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Yönetim paneli"
     },
     "userSettings.prefs.startPage_files": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Dosyalar"
     },
     "userSettings.prefs.startPage_home": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Ana sayfa"
     },
     "userSettings.prefs.timezone": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Saat dilimi",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.timezoneHint": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tarihler bir an olarak saklanır ve burada seçtiğiniz saatle gösterilir; böylece herkes aynı anı kendi saatiyle görür. Hesabınıza kaydedilir, başka bir tarayıcıda da geçerli olur.",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.prefs.timezoneNow": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "{zone} bölgesinde şu an: {time}",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.saveChanges": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Değişiklikleri kaydet",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.security.passwordTitle": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Parolayı değiştir",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.security.totpDisabled": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İki adımlı doğrulama kapalı",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.security.totpEnabled": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "İki adımlı doğrulama açık",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "userSettings.subtitle.ai": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Burada henüz ayarlayabileceğiniz bir şey yok."
     },
     "userSettings.subtitle.notifications": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Zilinize ve masaüstünüze neyin ulaşacağı."
     },
     "userSettings.subtitle.preferences": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Uygulamanın cihazlarınızda nasıl göründüğü ve okunduğu."
     },
     "userSettings.subtitle.profile": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Adınız, e-postanız ve fotoğrafınız — başkalarının gördüğü bilgiler."
     },
     "userSettings.subtitle.security": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Parolanız ve ikinci faktörünüz."
     },
     "userSettings.tabs.ai": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "AI asistanı"
     },
     "userSettings.tabs.notifications": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bildirimler"
     },
     "userSettings.tabs.preferences": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Tercihler"
     },
     "userSettings.tabs.profile": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Profil"
     },
     "userSettings.tabs.security": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Güvenlik"
     },
     "userSettings.title": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Ayarlar",
       "where": [
-        "web/src/components/UserSettingsModal.vue"
+        "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
     "users.addNew": {
@@ -28426,11 +30225,11 @@
       ]
     },
     "users.fields.displayName": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Görünen ad",
       "where": [
-        "web/src/components/UserSettingsModal.vue",
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue"
       ]
@@ -29483,6 +31282,11 @@
       "syntax": "vue-i18n",
       "tr": "Şifreli klasör parolası yerine emanet anahtarıyla açıldı"
     },
+    "webhooks.events.e2e_password_changed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreli bir klasörün parolası değiştirildi ya da kurtarma anahtarıyla sıfırlandı"
+    },
     "webhooks.events.file_deleted": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -29606,27 +31410,27 @@
       ]
     },
     "webhooks.offReason.antivirus": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Virüs taraması kapalı (Koruma).",
       "where": [
-        "web/src/lib/webhookEvents.ts"
+        "packages/core/src/lib/webhookEvents.ts"
       ]
     },
     "webhooks.offReason.appPlugins": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Bu sunucuda uygulamalar kapalı.",
       "where": [
-        "web/src/lib/webhookEvents.ts"
+        "packages/core/src/lib/webhookEvents.ts"
       ]
     },
     "webhooks.offReason.escrow": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Şifreli klasörler için emanet anahtarı kurulmamış.",
       "where": [
-        "web/src/lib/webhookEvents.ts"
+        "packages/core/src/lib/webhookEvents.ts"
       ]
     },
     "webhooks.saved": {

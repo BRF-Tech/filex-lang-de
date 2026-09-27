@@ -217,6 +217,9 @@ const IDENTICAL_OK = new Set([
   'appearance.namePlaceholder', // sample theme name (Acme Cloud)
   'archivesAdmin.providerSevenZip', // product name: 7-Zip
   'install.dl.win_store', // product name: Microsoft Store
+  'install.dl.linux_snap', // product name: Snap Store
+  'install.dl.mac_brew', // product name: Homebrew
+  'install.dl.rpm', // distributions and a file type: Fedora / openSUSE (.rpm)
   'appPlugins.wizard.manifest', // Manifest (filex-app.json) — the German term is the same
 ]);
 function identicalAllowed(key, en) {
