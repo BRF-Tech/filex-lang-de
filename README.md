@@ -10,9 +10,9 @@ one manifest, `filex-app.json`, no code and no build.
 
 | | |
 |---|---|
-| Version | 0.1.4, for filex 0.47.0 |
-| Written against | the filex **v0.47.0** catalogue (`catalogue/`, 3,913 strings — 1,935 admin, 1,664 explorer, 240 the server's, 74 drawn by both) |
-| Coverage | 100 % — 3,913 of 3,913 strings, plus 1 extra plural form |
+| Version | 0.1.5, for filex 0.48.0 |
+| Written against | the filex **v0.48.0** catalogue (`catalogue/`, 4,238 strings — 1,843 admin, 1,900 explorer, 255 the server's, 240 drawn by both) |
+| Coverage | 100 % — 4,238 of 4,238 strings, plus 1 extra plural form |
 | Validators | platform: 0 errors · 0 warnings — German check: 0 errors · 0 warnings ([`validate-output.txt`](validate-output.txt)) |
 
 ## Install

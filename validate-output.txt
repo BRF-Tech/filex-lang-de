@@ -3,17 +3,18 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.47.0) — 3913 strings (240 of them the server's: e-mails, public pages, notifications)
+  catalogue : catalogue (filex 0.48.0) — 4238 strings (255 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 3913 of 3913 strings; the other 0 show in English
-  192 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[de] 100% translated — 4238 of 4238 strings; the other 0 show in English
+  196 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
-  13 plural key(s) lack a form for one of those categories and show the plain form for it
+  14 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
   plural      archive.dictionary_size_value: lacks archive.dictionary_size_value_one
   plural      cols.apply_all: lacks cols.apply_all_one
+  plural      drafts.count_of: lacks drafts.count_of_one
   plural      inspector.activity.version: lacks inspector.activity.version_one
   plural      inspector.versions.v: lacks inspector.versions.v_one
   plural      opc.percent: lacks opc.percent_one
@@ -28,29 +29,35 @@ filex language pack validator
 
 # node scripts/validate-de.mjs
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.47.0)
-                   admin table     2009 strings (vue-i18n)
-                   explorer table  1738 strings (plain {var})
-                   server table    240 strings (mails, public pages, notifications)
-                   74 keys in both tables -> 3913 strings
+  catalogue      : catalogue (filex 0.48.0)
+                   admin table     2083 strings (vue-i18n)
+                   explorer table  2140 strings (plain {var})
+                   server table    255 strings (mails, public pages, notifications)
+                   240 keys in both tables -> 4238 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (3914 strings)
+  pack           : translations\de.json  (4239 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
-Keys shared by both catalogues: 74 (one flat pack value serves both).
-  identical English in both: 74
+Keys shared by both catalogues: 240 (one flat pack value serves both).
+  identical English in both: 240
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 27 short English labels translated more than one way (see below)
+Consistency: 30 short English labels translated more than one way (see below)
 
 Same English, different German (review — context may justify it):
   "Storage"
-      "Speicher"  <- about.storage, audit.resource.storage, audit.resource.storages, audit.target.storage (+8)
+      "Speicher"  <- about.storage, audit.resource.storage, audit.resource.storages, audit.target.storage (+9)
       "Speicherplatz"  <- usage.cost.storage, drive.storage.label
   "Signature"
       "Signatur"  <- appPlugins.detail.signature, appPlugins.wizard.signature, plugins.signature.label
       "Unterschrift"  <- plugin.pdf.type_signature
+  "Could not check"
+      "Prüfung fehlgeschlagen"  <- appPlugins.update.checkFailed
+      "Prüfung nicht möglich"  <- plugins.update.checkFailed
+  "Up to date"
+      "Auf dem neuesten Stand"  <- appPlugins.update.upToDate
+      "Aktuell"  <- plugins.update.upToDate
   "Upload"
       "Hochladen"  <- appearance.previewUpload, plugin.sig.mode_upload, toolbar.upload
       "Upload"  <- audit.target.upload, opc.kind.upload
@@ -84,6 +91,7 @@ Same English, different German (review — context may justify it):
       "Wird verschoben"  <- ops.move
   "Working…"
       "Wird verarbeitet…"  <- pendingOps.working
+      "Wird bearbeitet…"  <- e2e.fxe.unlock_busy
       "Wird ausgeführt…"  <- plugin.view.busy
   "Verified"
       "Überprüft"  <- plugins.conformance.verified
@@ -103,6 +111,9 @@ Same English, different German (review — context may justify it):
   "Allowed types: all"
       "Erlaubte Dateitypen: alle"  <- access.ui.drop_types_all
       "Erlaubte Typen: alle"  <- server.mail.drop_invite.types_all
+  "Continue"
+      "Weiter"  <- archive.continue, plugin.page.pin_submit, server.public.continue
+      "Fortsetzen"  <- e2e.names.resume
   "Extract to folder"
       "Zielordner"  <- archive.destination_folder
       "In Ordner entpacken"  <- archive.extract_to_folder
@@ -127,4 +138,3 @@ Same English, different German (review — context may justify it):
   "Show {count} more"
       "{count} weitere anzeigen"  <- sidenav.tags.more
       "{count} weiteres anzeigen"  <- sidenav.tags.more_one
-
