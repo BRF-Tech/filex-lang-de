@@ -19570,6 +19570,69 @@
         "web/src/components/PermissionGrid.vue"
       ]
     },
+    "permissions.apps.default": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.apps.defaultAllowed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan (izin var)",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.apps.defaultDenied": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan (izin yok)",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.apps.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulu bir uygulamanın rol ve kişi bazında verilip geri alınabilen izinleri.",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.apps.holders.admin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamanın varsayılanı: yalnızca yöneticiler"
+    },
+    "permissions.apps.holders.user": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamanın varsayılanı: dosya değiştirebilenler"
+    },
+    "permissions.apps.holders.viewer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamanın varsayılanı: herkes"
+    },
+    "permissions.apps.readOnly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama izinlerini yalnızca bir yönetici değiştirebilir.",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.apps.resetAll": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılana döndür",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
     "permissions.card.adminNote": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19701,6 +19764,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Yönetim alanı"
+    },
+    "permissions.groups.apps": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamalar"
     },
     "permissions.groups.files": {
       "in": "admin",
@@ -20155,6 +20223,14 @@
         "web/src/components/RoleEditor.vue"
       ]
     },
+    "permissions.rules.descriptionIn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açıklama ({language})",
+      "where": [
+        "web/src/components/RoleNameTranslations.vue"
+      ]
+    },
     "permissions.rules.disableConfirm": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -20292,6 +20368,14 @@
         "web/src/views/Roles.vue"
       ]
     },
+    "permissions.rules.nameIn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol adı ({language})",
+      "where": [
+        "web/src/components/RoleNameTranslations.vue"
+      ]
+    },
     "permissions.rules.passwordRequired": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -20414,6 +20498,31 @@
         "web/src/views/Roles.vue"
       ]
     },
+    "permissions.rules.translations": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Diğer dillerde ad ve açıklama",
+      "where": [
+        "web/src/components/RoleNameTranslations.vue"
+      ]
+    },
+    "permissions.rules.translationsCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} dil",
+      "where": [
+        "web/src/components/RoleNameTranslations.vue"
+      ],
+      "plural": true
+    },
+    "permissions.rules.translationsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Herkes rolü filex'i kullandığı dilde görür. Bir dil boş bırakılırsa o dilde yukarıdaki ad ve açıklama görünür.",
+      "where": [
+        "web/src/components/RoleNameTranslations.vue"
+      ]
+    },
     "permissions.rules.viewerCeilingNote": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -20421,6 +20530,11 @@
       "where": [
         "web/src/components/BuiltinRoleEditor.vue"
       ]
+    },
+    "permissions.source.app_default": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "uygulamanın varsayılanı"
     },
     "permissions.source.base": {
       "in": "admin",

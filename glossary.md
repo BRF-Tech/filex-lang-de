@@ -220,6 +220,8 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | install request / plugin request (v0.49.0) | Installationsanfrage / Plug-in-Anfrage | approve / reject → *genehmigen / ablehnen*; statuses *Wartet / Genehmigt / Abgelehnt / Abgelaufen / Quelle geändert*; operation chips *Installieren / Aktualisieren* |
 | starting role for SSO groups (v0.49.0) | Startrolle für SSO-Gruppen | |
 | a refused action, `server.perm.action.*` (v0.49.0) | nominalised infinitive: *Löschen von Dateien*, *Anmelden über die Desktop-App*, *endgültigen Löschen von Dateien* | always after *zum* in all six `server.perm.denied.*` sentences (*Ihr Konto hat keine Berechtigung zum {action}.*) |
+| an app permission's Default (v0.49.0, role and person editors) | Standard | the choice beside *Erlauben* / *Verweigern*; with what it comes to: *Standard (erlaubt)* / *Standard (verweigert)*; the source after " · " → *Standard der App*; the app's own default: *Standard der App: alle / Personen, die Dateien ändern dürfen / nur Administratoren* |
+| a role's name in other languages (v0.49.0) | Name und Beschreibung in anderen Sprachen | *Rollenname ({language})*, *Beschreibung ({language})*; "{count} languages" → *{count} Sprachen* |
 
 **v0.49.0 (roles and permissions) — notes:**
 
