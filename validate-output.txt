@@ -3,12 +3,12 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.48.1) — 4242 strings (257 of them the server's: emails, public pages, notifications)
+  catalogue : catalogue (filex 0.49.0) — 4501 strings (295 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 4242 of 4242 strings; the other 0 show in English
-  197 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[de] 100% translated — 4501 of 4501 strings; the other 0 show in English
+  208 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   14 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
@@ -29,13 +29,13 @@ filex language pack validator
 
 # node scripts/validate-de.mjs
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.48.1)
-                   admin table     2083 strings (vue-i18n)
+  catalogue      : catalogue (filex 0.49.0)
+                   admin table     2304 strings (vue-i18n)
                    explorer table  2142 strings (plain {var})
-                   server table    257 strings (mails, public pages, notifications)
-                   240 keys in both tables -> 4242 strings
+                   server table    295 strings (mails, public pages, notifications)
+                   240 keys in both tables -> 4501 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (4243 strings)
+  pack           : translations\de.json  (4502 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
 Keys shared by both catalogues: 240 (one flat pack value serves both).
@@ -65,7 +65,7 @@ Same English, different German (review — context may justify it):
       "Ausblenden"  <- common.hide
       "Verbergen"  <- pendingOps.hide, conn.form.hide
   "None"
-      "Keine"  <- common.none
+      "Keine"  <- common.none, permissions.none
       "Keiner"  <- usage.fields.providerNone
   "Search"
       "Suchen"  <- common.search, advsearch.submit, toolbar.search, viewer.search
@@ -93,6 +93,9 @@ Same English, different German (review — context may justify it):
       "Wird verarbeitet…"  <- pendingOps.working
       "Wird bearbeitet…"  <- e2e.fxe.unlock_busy
       "Wird ausgeführt…"  <- plugin.view.busy
+  "Read-only"
+      "Nur lesen"  <- permissions.presets.read_only, destpicker.readonly, sidenav.storage.readOnly
+      "Schreibgeschützt"  <- conn.nfs.readOnly
   "Verified"
       "Überprüft"  <- plugins.conformance.verified
       "Verifiziert"  <- settings.smtp.verified
@@ -120,9 +123,6 @@ Same English, different German (review — context may justify it):
   "Star"
       "Favorit"  <- col.star
       "Zu Favoriten hinzufügen"  <- ctx.star
-  "Read-only"
-      "Schreibgeschützt"  <- conn.nfs.readOnly
-      "Nur lesen"  <- destpicker.readonly, sidenav.storage.readOnly
   "Cut"
       "Ausschneiden"  <- ctx.cut, shortcuts.cut
       "Ausgeschnitten"  <- toast.cut
