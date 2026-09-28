@@ -1,5 +1,5 @@
 {
-  "filex": "0.48.1",
+  "filex": "0.49.0-pre",
   "about": "Every key filex has — the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms — explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -2836,7 +2836,8 @@
       "syntax": "vue-i18n",
       "tr": "{count} izin | {count} izin",
       "where": [
-        "web/src/components/plugins/AppPluginsTab.vue"
+        "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue"
       ],
       "plural": true
     },
@@ -3153,7 +3154,8 @@
       "syntax": "vue-i18n",
       "tr": "Bu sürümün istediği yeni izinler: {permissions}",
       "where": [
-        "web/src/components/plugins/AppPluginInstallWizard.vue"
+        "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue"
       ]
     },
     "appPlugins.wizard.addsModule": {
@@ -3587,7 +3589,7 @@
       "syntax": "vue-i18n",
       "tr": "Yeni",
       "where": [
-        "web/src/components/plugins/AppPluginInstallWizard.vue"
+        "web/src/components/plugins/AppPluginPermissionList.vue"
       ]
     },
     "appPlugins.wizard.next": {
@@ -3604,7 +3606,7 @@
       "tr": "Bu uygulama hiçbir izin istemiyor.",
       "where": [
         "web/src/components/plugins/AppPluginDetail.vue",
-        "web/src/components/plugins/AppPluginInstallWizard.vue"
+        "web/src/components/plugins/AppPluginPermissionList.vue"
       ]
     },
     "appPlugins.wizard.noReason": {
@@ -3612,7 +3614,7 @@
       "syntax": "vue-i18n",
       "tr": "Uygulama gerekçe vermiyor.",
       "where": [
-        "web/src/components/plugins/AppPluginInstallWizard.vue"
+        "web/src/components/plugins/AppPluginPermissionList.vue"
       ]
     },
     "appPlugins.wizard.permissions": {
@@ -3620,7 +3622,7 @@
       "syntax": "vue-i18n",
       "tr": "Bu uygulamanın istediği izinler",
       "where": [
-        "web/src/components/plugins/AppPluginInstallWizard.vue"
+        "web/src/components/plugins/AppPluginPermissionList.vue"
       ]
     },
     "appPlugins.wizard.ref": {
@@ -3871,7 +3873,8 @@
       "syntax": "vue-i18n",
       "tr": "Bu uygulamanın neler yapabileceğini anladım, kurulmasını istiyorum",
       "where": [
-        "web/src/components/plugins/AppPluginInstallWizard.vue"
+        "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue"
       ]
     },
     "appPlugins.wizard.upgrade": {
@@ -5420,12 +5423,32 @@
     "audit.resource.grants": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "İzin"
+      "tr": "Klasör erişimi"
     },
     "audit.resource.notifications": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bildirim"
+    },
+    "audit.resource.permission_rule": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol"
+    },
+    "audit.resource.permissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerleşik rol"
+    },
+    "audit.resource.plugin_request": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklenti isteği"
+    },
+    "audit.resource.plugin_requests": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklenti isteği"
     },
     "audit.resource.plugins": {
       "in": "admin",
@@ -5466,6 +5489,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Çoğaltma hedefi"
+    },
+    "audit.resource.roles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol"
     },
     "audit.resource.rules": {
       "in": "admin",
@@ -5605,6 +5633,21 @@
       "syntax": "vue-i18n",
       "tr": "Dosya"
     },
+    "audit.target.permission_rule": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol"
+    },
+    "audit.target.permissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerleşik rol"
+    },
+    "audit.target.plugin_request": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklenti isteği"
+    },
     "audit.target.profile": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5673,6 +5716,11 @@
       "syntax": "vue-i18n",
       "tr": "eylem çalıştırıldı"
     },
+    "audit.verb.approve": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "onaylandı"
+    },
     "audit.verb.archive_add": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5692,6 +5740,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "oluşturuldu"
+    },
+    "audit.verb.defaults_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "izinleri değiştirildi"
     },
     "audit.verb.delete": {
       "in": "admin",
@@ -5723,6 +5776,11 @@
       "syntax": "vue-i18n",
       "tr": "kuruldu"
     },
+    "audit.verb.expire": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "süresi doldu"
+    },
     "audit.verb.mkdir": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5747,6 +5805,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "parola sıfırlandı"
+    },
+    "audit.verb.permissions_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "istisnaları değiştirildi"
     },
     "audit.verb.pin_locked": {
       "in": "admin",
@@ -5773,6 +5836,11 @@
       "syntax": "vue-i18n",
       "tr": "yeniden oluşturuldu"
     },
+    "audit.verb.reject": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "reddedildi"
+    },
     "audit.verb.restore": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5782,6 +5850,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "iptal edildi"
+    },
+    "audit.verb.roles_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "rolü değiştirildi"
     },
     "audit.verb.rollback": {
       "in": "admin",
@@ -5802,6 +5875,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "yıldızlandı"
+    },
+    "audit.verb.supersede": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kaynağı değiştiği için kapatıldı"
     },
     "audit.verb.sync_trigger": {
       "in": "admin",
@@ -6964,15 +7042,19 @@
       "tr": "İptal",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/BuiltinRoleEditor.vue",
         "web/src/components/GlobalWebhookCard.vue",
         "web/src/components/ResetPasswordModal.vue",
+        "web/src/components/RoleEditor.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/FileVersions.vue",
         "web/src/views/Replica.vue",
+        "web/src/views/Roles.vue",
         "web/src/views/Settings.vue",
         "web/src/views/Shares.vue",
         "web/src/views/StorageEdit.vue",
@@ -7077,6 +7159,7 @@
         "web/src/views/ApiMcp.vue",
         "web/src/views/Appearance.vue",
         "web/src/views/Replica.vue",
+        "web/src/views/Roles.vue",
         "web/src/views/Shares.vue",
         "web/src/views/StorageEdit.vue",
         "web/src/views/Storages.vue",
@@ -7339,6 +7422,7 @@
       "where": [
         "web/src/components/QuotaWidget.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/Audit.vue",
@@ -7419,7 +7503,10 @@
       "tr": "Kaydet",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/BuiltinRoleEditor.vue",
         "web/src/components/GlobalWebhookCard.vue",
+        "web/src/components/RoleEditor.vue",
+        "web/src/components/UserRolesCard.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
@@ -14506,9 +14593,13 @@
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/api/client.ts",
+        "web/src/components/BuiltinRoleEditor.vue",
         "web/src/components/ResetPasswordModal.vue",
+        "web/src/components/RoleEditor.vue",
+        "web/src/components/UserRolesCard.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/composables/useStorageDelete.ts",
         "web/src/composables/useSyncNow.ts",
@@ -14526,6 +14617,7 @@
         "web/src/views/MyShares.vue",
         "web/src/views/Protection.vue",
         "web/src/views/Replica.vue",
+        "web/src/views/Roles.vue",
         "web/src/views/SearchTest.vue",
         "web/src/views/Settings.vue",
         "web/src/views/Shares.vue",
@@ -14556,6 +14648,7 @@
       "where": [
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/stores/audit.ts",
         "web/src/stores/external.ts",
@@ -15815,7 +15908,7 @@
     "grants.empty": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Henüz izin yok.",
+      "tr": "Henüz yetki yok.",
       "where": [
         "web/src/views/AdminGrants.vue"
       ]
@@ -15887,7 +15980,7 @@
     "grants.title": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "İzinler",
+      "tr": "Klasör erişimi",
       "where": [
         "web/src/views/AdminGrants.vue"
       ]
@@ -17654,7 +17747,7 @@
     "nav.grants": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "İzinler",
+      "tr": "Klasör erişimi",
       "where": [
         "web/src/components/Sidebar.vue",
         "web/src/router/index.ts"
@@ -17718,6 +17811,15 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Replikasyon",
+      "where": [
+        "web/src/components/Sidebar.vue",
+        "web/src/router/index.ts"
+      ]
+    },
+    "nav.roles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Roller",
       "where": [
         "web/src/components/Sidebar.vue",
         "web/src/router/index.ts"
@@ -18361,6 +18463,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Uygulama bildirimi"
+    },
+    "notifications.kinds.plugin_requested": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklenti kurulum isteği"
     },
     "notifications.kinds.plugin_update_available": {
       "in": "admin",
@@ -19455,6 +19562,936 @@
         "web/src/components/PendingOpsTray.vue"
       ]
     },
+    "permissions.all": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tümü",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.card.adminNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yöneticiler tüm izinlere sahiptir; roller ve istisnalar onlara uygulanmaz.",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.builtinRole": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol: {role} — yukarıdaki hesap bilgilerinden değiştirin.",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.clear": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstisnaları temizle",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.conditional": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rolü bazı klasörlerde farklı çalışır; burada gösterilen, geri kalan her yerde geçerli olandır.",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.exceptionsTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kişiye özel istisnalar",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.readOnlyRoleNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{role}” yalnızca dosyaları görüntüleyebilir; bu yüzden eklemeye, değiştirmeye, silmeye ve paylaşmaya istisna olarak izin verilemez. İzin vermek için bunlardan birini rolde işaretleyin (ya da başka bir rol seçin).",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzinler kaydedildi",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.settingsTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rollerden gelen sınırlar",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kişinin neler yapabileceği: rolü ve yalnızca ona özel istisnalar. Sonuç ve nereden geldiği her iznin yanında gösterilir.",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Roller ve izinler",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.card.viewerNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Salt okunur bir hesap, burada ne ayarlanırsa ayarlansın dosya ekleyemez, değiştiremez, silemez ve paylaşamaz.",
+      "where": [
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.customBadge": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstisnalar",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "permissions.effect.allow": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzin ver",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.effect.deny": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddet",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.effect.inherit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Devral"
+    },
+    "permissions.groups.access": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Web uygulaması dışından erişim"
+    },
+    "permissions.groups.account": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi hesabı"
+    },
+    "permissions.groups.admin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetim alanı"
+    },
+    "permissions.groups.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalar ve klasörler"
+    },
+    "permissions.groups.sharing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım ve özellikler"
+    },
+    "permissions.items.access.api.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişisel API anahtarı oluşturma ve kullanma."
+    },
+    "permissions.items.access.api.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "API anahtarları"
+    },
+    "permissions.items.access.desktop.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Masaüstü uygulamasından oturum açma."
+    },
+    "permissions.items.access.desktop.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Masaüstü uygulaması"
+    },
+    "permissions.items.access.ftp.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "FTPS ile bağlanma."
+    },
+    "permissions.items.access.ftp.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "FTPS"
+    },
+    "permissions.items.access.nfs.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "NFS export'u oluşturma ve bağlama."
+    },
+    "permissions.items.access.nfs.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "NFS export'ları"
+    },
+    "permissions.items.access.s3.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "S3 erişim anahtarı oluşturma ve kullanma."
+    },
+    "permissions.items.access.s3.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "S3 erişim anahtarları"
+    },
+    "permissions.items.access.sftp.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SFTP ile bağlanma ve SSH anahtarı kaydetme."
+    },
+    "permissions.items.access.sftp.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SFTP"
+    },
+    "permissions.items.access.webdav.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "WebDAV ile bağlanma, ör. işletim sisteminin dosya yöneticisinden."
+    },
+    "permissions.items.access.webdav.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "WebDAV"
+    },
+    "permissions.items.account.edit.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi adını, e-postasını, resmini ve parolasını değiştirme."
+    },
+    "permissions.items.account.edit.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi profilini düzenleme"
+    },
+    "permissions.items.admin.audit.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Denetim kaydını görme."
+    },
+    "permissions.items.admin.audit.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Denetim kaydını okuma"
+    },
+    "permissions.items.admin.full.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Geri kalan her şey. Yalnızca yönetici rolüyle gelir."
+    },
+    "permissions.items.admin.full.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tam yönetici"
+    },
+    "permissions.items.admin.grants.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm klasör yetkilerini görme ve geri alma."
+    },
+    "permissions.items.admin.grants.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasör erişimlerini yönetme"
+    },
+    "permissions.items.admin.monitor.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Pano, kullanım, senkron geçmişi ve iş kuyruğu; salt okunur."
+    },
+    "permissions.items.admin.monitor.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzleme"
+    },
+    "permissions.items.admin.shares.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Herkesin bağlantılarını görme ve iptal etme."
+    },
+    "permissions.items.admin.shares.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm paylaşımları yönetme"
+    },
+    "permissions.items.admin.users.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kullanıcılar, izinleri, kotaları ve parola sıfırlama — yönetici hesapları hariç."
+    },
+    "permissions.items.admin.users.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kullanıcıları yönetme"
+    },
+    "permissions.items.ai.use.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yapay zekâ ajanlarının ve MCP istemcilerinin /api/ai üzerinden dosyalarla çalışması."
+    },
+    "permissions.items.ai.use.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yapay zekâ ajan API'si"
+    },
+    "permissions.items.comments.write.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalara yorum yazma."
+    },
+    "permissions.items.comments.write.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorum yazma"
+    },
+    "permissions.items.files.create.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yükleme, klasör ve dosya oluşturma, kopyalama, arşiv açma, çöp kutusundan geri yükleme."
+    },
+    "permissions.items.files.create.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya ve klasör ekleme"
+    },
+    "permissions.items.files.delete.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya ve klasörleri çöp kutusuna taşıma."
+    },
+    "permissions.items.files.delete.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Silme"
+    },
+    "permissions.items.files.download.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyaları ve zip arşivlerini cihaza kaydetme; WebDAV, SFTP, FTP, S3 veya NFS ile okuma. Önizleme açık kalır."
+    },
+    "permissions.items.files.download.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İndirme"
+    },
+    "permissions.items.files.modify.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Üzerine yazma, metin düzenleyicide veya ONLYOFFICE'te düzenleme, eski sürüme dönme."
+    },
+    "permissions.items.files.modify.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya değiştirme"
+    },
+    "permissions.items.files.move.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya ve klasörleri başka klasöre taşıma. Aynı anda taşıyıp yeniden adlandırmak ikisini de gerektirir."
+    },
+    "permissions.items.files.move.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Taşıma"
+    },
+    "permissions.items.files.purge.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çöp kutusunu boşaltma; çöp kutusu olmayan depolarda silme."
+    },
+    "permissions.items.files.purge.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kalıcı silme"
+    },
+    "permissions.items.files.rename.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya ve klasörlere aynı klasörde yeni ad verme."
+    },
+    "permissions.items.files.rename.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden adlandırma"
+    },
+    "permissions.items.files.tag.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Etiket ekleme ve kaldırma."
+    },
+    "permissions.items.files.tag.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Etiketleme"
+    },
+    "permissions.items.plugins.run.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İmza akışı gibi uygulama eylemlerini çalıştırma."
+    },
+    "permissions.items.plugins.run.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama çalıştırma"
+    },
+    "permissions.items.share.links.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Herkese açık indirme bağlantısı oluşturma."
+    },
+    "permissions.items.share.links.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım bağlantıları"
+    },
+    "permissions.items.share.upload_links.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başkalarının dosya yükleyebileceği bağlantı oluşturma."
+    },
+    "permissions.items.share.upload_links.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yükleme bağlantıları"
+    },
+    "permissions.items.share.users.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başka hesaplara bir dosya veya klasöre erişim verme."
+    },
+    "permissions.items.share.users.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişilerle paylaşma"
+    },
+    "permissions.none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hiçbiri",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.presets.custom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özel izinler"
+    },
+    "permissions.presets.full_admin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tam yönetici"
+    },
+    "permissions.presets.guest": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Misafir"
+    },
+    "permissions.presets.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hazır ayar",
+      "where": [
+        "web/src/components/BuiltinRoleEditor.vue",
+        "web/src/components/RoleEditor.vue",
+        "web/src/components/UserRolesCard.vue"
+      ]
+    },
+    "permissions.presets.read_only": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Salt okunur"
+    },
+    "permissions.presets.standard": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Standart kullanıcı"
+    },
+    "permissions.presets.upload_only": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca yükleme"
+    },
+    "permissions.result.allowed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzin var",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.result.denied": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzin yok",
+      "where": [
+        "web/src/components/PermissionGrid.vue"
+      ]
+    },
+    "permissions.rules.add": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeni rol",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.blockedExt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Engellenen dosya türleri",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/lib/permissionLimits.ts"
+      ]
+    },
+    "permissions.rules.blockedExtHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ör. exe, bat, ps1",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.builtin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerleşik",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.builtinSaved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol kaydedildi",
+      "where": [
+        "web/src/components/BuiltinRoleEditor.vue"
+      ]
+    },
+    "permissions.rules.builtinSummary": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzinleri satırın Aksiyon menüsünden ayarlanır",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.custom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özel",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.deleteConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” rolü silinsin mi?",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.deleteMove": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu role {count} kişi sahip. Bunun yerine hangi rolü alsınlar? | Bu role {count} kişi sahip. Bunun yerine hangi rolü alsınlar?",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
+    "permissions.rules.deleteTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” rolünü sil",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.deleted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol silindi",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.description": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açıklama",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.disableConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” kapatılsın mı? Bu role sahip {count} kişi, rol yeniden açılana kadar hiçbir erişime sahip olmaz. | “{name}” kapatılsın mı? Bu role sahip {count} kişi, rol yeniden açılana kadar hiçbir erişime sahip olmaz.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
+    "permissions.rules.disabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.edit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rolü düzenle",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.editBuiltin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{role} rolünü düzenle",
+      "where": [
+        "web/src/components/BuiltinRoleEditor.vue",
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.effects": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzinler",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz özel rol yok.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.enabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Etkin",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.folders": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bazı klasörlerde farklı",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.foldersHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteğe bağlı. Depo ya da klasör seçin, sonra oradaki dosya işlemlerine izin verin ya da onları reddedin. Diğer her yerde yukarıdaki işaretler geçerlidir.",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.locked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her şey, her zaman — değiştirilemez",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.maxDays": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım bağlantısının en uzun süresi (gün)",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/lib/permissionLimits.ts"
+      ]
+    },
+    "permissions.rules.maxUpload": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En büyük dosya (MB)",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/lib/permissionLimits.ts"
+      ]
+    },
+    "permissions.rules.members": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} üye",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
+    "permissions.rules.membersColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişiler",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.moveTo": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Verilecek rol",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.name": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol adı",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.passwordRequired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım bağlantılarında parola zorunlu",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/lib/permissionLimits.ts"
+      ]
+    },
+    "permissions.rules.paths": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasörler (ör. Arşiv veya Müşteriler/*/Sözleşmeler)",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.permissionsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu role sahip kişilerin neler yapabileceğini işaretleyin. Yeni bir rol Standart kullanıcı hazır ayarıyla başlar; bir hazır ayar işaretleri tek tıkla değiştirir.",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.plusGroups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO grupları için başlangıç rolü: {list}",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.require2fa": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İki adımlı doğrulama zorunlu",
+      "where": [
+        "web/src/components/RoleEditor.vue",
+        "web/src/lib/permissionLimits.ts"
+      ]
+    },
+    "permissions.rules.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol kaydedildi",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.settings": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sınırlar",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.ssoGroups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO grupları için başlangıç rolü",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.ssoGroupsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İlk oturum açışında bu gruplardan birini taşıyan yeni bir hesap bu rolü alır. Sonrasında rolü, herkesinki gibi, kişinin sayfasından değiştirilir.",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.storages": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depolar",
+      "where": [
+        "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.summaryAllow": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzin verir: {list}",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.summaryCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{total} izinden {count} tanesi",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.summaryDeny": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddeder: {list}",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.summaryFolders": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{places} içinde:",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.summaryLimits": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sınırlar: {list}",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.viewerCeilingNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir İzleyici asla dosya ekleyemez, değiştiremez, silemez veya paylaşamaz; bunlar kapalı kalır.",
+      "where": [
+        "web/src/components/BuiltinRoleEditor.vue"
+      ]
+    },
+    "permissions.source.base": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yerleşik rol"
+    },
+    "permissions.source.override": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "bu kişiye özel istisna"
+    },
+    "permissions.source.role": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yalnızca yöneticiler"
+    },
+    "permissions.source.role_off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” rolü kapalı"
+    },
+    "permissions.source.rule": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” rolü"
+    },
+    "permissions.source.viewer_ceiling": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "salt okunur hesap"
+    },
+    "permissions.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol, adı olan bir izin kümesidir. Herkesin tam olarak bir rolü vardır: Yönetici (her şey, kilitli), Kullanıcı, İzleyici ya da kişinin kendi sayfasında seçilen özel bir rol. Kişiye özel istisnalar rolün önüne geçer.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Roller",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.twoFactor.action": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şimdi kur",
+      "where": [
+        "web/src/components/TwoFactorGate.vue"
+      ]
+    },
+    "permissions.twoFactor.body": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yöneticiniz bu hesap için iki adımlı doğrulamayı zorunlu kıldı. Devam etmek için kurun.",
+      "where": [
+        "web/src/components/TwoFactorGate.vue"
+      ]
+    },
+    "permissions.twoFactor.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İki adımlı doğrulama gerekli",
+      "where": [
+        "web/src/components/TwoFactorGate.vue"
+      ]
+    },
     "plugin.cancel_failed": {
       "in": "explorer",
       "syntax": "plain",
@@ -20484,6 +21521,340 @@
         "packages/core/src/components/plugin/SurfaceRenderer.vue"
       ]
     },
+    "pluginRequests.actions.approve": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onayla ve kur",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.actions.reject": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddet",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.actions.review": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İncele",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.approved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} {version} kuruldu",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekleyen istek yok.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.emptyHistory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz istek yok.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.expiresAfter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimsenin karar vermediği bir isteğin süresi {count} gün sonra dolar.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ],
+      "plural": true
+    },
+    "pluginRequests.fields.expires": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Süre sonu",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.permissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzinler",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.plugin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklenti",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gerekçe",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.requested": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstendi",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.requester": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteyen",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.source": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaynak",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.status": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durum",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.fields.version": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.hideHistory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca bekleyen istekleri göster",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.jump": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{from} → {to}",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.kind.app": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama"
+    },
+    "pluginRequests.kind.storage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo eklentisi"
+    },
+    "pluginRequests.op.install": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulum"
+    },
+    "pluginRequests.op.upgrade": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yükseltme"
+    },
+    "pluginRequests.pendingCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} bekliyor",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.rejected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} isteği reddedildi",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.decided": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{status}: {who}, {when}",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.decidedNobody": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{status}, {when}",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.frozen": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onaylarsanız yalnızca bu baytlar ve bu izinler kurulur, başka hiçbir şey değil. Kaynak şu an farklı bir şey sunuyorsa hiçbir şey kurulmaz ve istek “Kaynak değişti” olarak kapanır.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.lastError": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son onay denemesi başarısız oldu: {error}",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.manifestSha256": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Manifest SHA-256",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.note": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Not",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.rejectPlaceholder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteği bırakan bunu okuyabilir.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.rejectReason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Neden reddettiğiniz (isteğe bağlı)",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.sha256": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SHA-256",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulum isteği: {name}",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.showHistory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Karara bağlanan istekleri göster",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.source.own": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi güncelleme kaynağı",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.status.approved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onaylandı"
+    },
+    "pluginRequests.status.expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Süresi doldu"
+    },
+    "pluginRequests.status.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekliyor"
+    },
+    "pluginRequests.status.rejected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddedildi"
+    },
+    "pluginRequests.status.superseded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaynak değişti"
+    },
+    "pluginRequests.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "API anahtarı eklenti kuramaz, yükseltemez ya da kaldıramaz: bir ajan, betik ya da CLI bunun yerine buraya istek bırakır. Kaynağın o an verdiği yanıt isteğe dondurulur — manifest, SHA-256, izinler — ve onayladığınızda yalnızca bu kurulur.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.superseded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} kaynağı istek bırakıldıktan sonra değişti; hiçbir şey kurulmadı. İstek “Kaynak değişti” olarak kapatıldı.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulum istekleri",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.via": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "API anahtarı “{key}”",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
     "plugins.actions.reviewUpdate": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -21147,6 +22518,7 @@
       "syntax": "vue-i18n",
       "tr": "Bir eklenti filex'in kendi yetkileriyle çalışır ve üzerinde açılan her deponun kimlik bilgileri ona verilir. Yalnızca güvendiğiniz eklentileri kurun.",
       "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
     },
@@ -24153,6 +25525,26 @@
         "plugin": "the installed app's name"
       }
     },
+    "server.notify.plugin_requested.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{requester}: {reason}",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "reason": "the requester's own words: why the plugin is needed",
+        "requester": "the name of the person who asked (an API key's account), or the word for \"someone\""
+      }
+    },
+    "server.notify.plugin_requested.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Eklenti isteği: {plugin} {version}",
+      "about": "A notification — the bell, the browser's pop-up and the desktop app's — about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "plugin": "the name of the app or storage plugin somebody asked for",
+        "version": "the version asked for, e.g. 1.2.0 (not a filex version)"
+      }
+    },
     "server.notify.plugin_update_available.body": {
       "in": "server",
       "syntax": "server",
@@ -24290,6 +25682,249 @@
       "syntax": "server",
       "tr": "bir dosya",
       "about": "A word a notification OR an email uses when the event does not say it (an upload with no name typed, a file with no name). One word, both surfaces — they were written twice until v0.43.0. Used where a file would be named and it has none: the {name} of a notification, and the {name} in a share email’s subject and fact line."
+    },
+    "server.perm.action.access.api": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "API anahtarı oluşturma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.access.desktop": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "masaüstü uygulamasından oturum açma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.access.ftp": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "FTPS ile bağlanma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.access.nfs": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "NFS export'larını kullanma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.access.s3": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "S3 erişim anahtarı kullanma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.access.sftp": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "SFTP ile bağlanma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.access.webdav": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "WebDAV ile bağlanma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.account.edit": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "profilinizi veya parolanızı değiştirme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.admin.audit": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "denetim kaydını okuma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.admin.full": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "bu sunucunun yapılandırmasını değiştirme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.admin.grants": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "klasör erişimlerini yönetme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.admin.monitor": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "kullanımı ve iş kuyruğunu görme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.admin.shares": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "herkesin paylaşımlarını yönetme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.admin.users": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "kullanıcıları yönetme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.ai.use": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "yapay zekâ ajan API'sini kullanma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.comments.write": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosyalara yorum yazma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.create": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya veya klasör ekleme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.delete": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya silme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.download": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya indirme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.modify": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya değiştirme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.move": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosyaları başka klasöre taşıma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.purge": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosyaları kalıcı olarak silme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.rename": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya yeniden adlandırma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.tag": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya etiketleme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.plugins.run": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "uygulama çalıştırma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.share.links": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "paylaşım bağlantısı oluşturma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.share.upload_links": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "yükleme bağlantısı oluşturma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.share.users": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "başka kişilerle paylaşma",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.app_denied": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{app} uygulamasının “{permission}” iznine sahip değilsiniz.",
+      "about": "API refusal when a person lacks one of an app's own permissions (the role editor lists them under the app's name). {permission} is the app's label for it, e.g. “Request signatures”; {app} is the app's name, e.g. “Sign”. One sentence.",
+      "vars": {
+        "app": "the installed app's name, e.g. “e-Signature”",
+        "permission": "the app's own label for one of its permissions, in the reader's language when the app has one, e.g. “Request signatures”"
+      }
+    },
+    "server.perm.blocked_extension": {
+      "in": "server",
+      "syntax": "server",
+      "tr": ".{ext} türündeki dosyalar hesabınız için engellendi.",
+      "about": "API refusal when the person's role blocks a file type they tried to upload, create or rename to. One sentence.",
+      "vars": {
+        "ext": "a file extension without the dot, e.g. exe"
+      }
+    },
+    "server.perm.denied.base": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Hesabınızın {action} izni yok.",
+      "about": "API refusal shown when a person lacks a permission (a toast or dialog in the file manager, or an error an API client logs). One sentence; the {action} is a lowercase phrase from server.perm.action.*. Which sentence is said names where the “no” came from: base — the person's built-in role (User, Viewer) does not include it; override — an administrator set an exception for this person alone; role — only administrators ever hold it; rule — the person's custom role {rule} does not include it; role_off — the person's custom role {rule} is switched off; viewer_ceiling — a read-only account can never hold it.",
+      "vars": {
+        "action": "what the person tried to do — one of the server.perm.action.* phrases"
+      }
+    },
+    "server.perm.denied.override": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bir yönetici hesabınız için “{action}” iznini kapattı.",
+      "about": "API refusal shown when a person lacks a permission (a toast or dialog in the file manager, or an error an API client logs). One sentence; the {action} is a lowercase phrase from server.perm.action.*. Which sentence is said names where the “no” came from: base — the person's built-in role (User, Viewer) does not include it; override — an administrator set an exception for this person alone; role — only administrators ever hold it; rule — the person's custom role {rule} does not include it; role_off — the person's custom role {rule} is switched off; viewer_ceiling — a read-only account can never hold it.",
+      "vars": {
+        "action": "what the person tried to do — one of the server.perm.action.* phrases"
+      }
+    },
+    "server.perm.denied.role": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Yalnızca yöneticilerin {action} izni var.",
+      "about": "API refusal shown when a person lacks a permission (a toast or dialog in the file manager, or an error an API client logs). One sentence; the {action} is a lowercase phrase from server.perm.action.*. Which sentence is said names where the “no” came from: base — the person's built-in role (User, Viewer) does not include it; override — an administrator set an exception for this person alone; role — only administrators ever hold it; rule — the person's custom role {rule} does not include it; role_off — the person's custom role {rule} is switched off; viewer_ceiling — a read-only account can never hold it.",
+      "vars": {
+        "action": "what the person tried to do — one of the server.perm.action.* phrases"
+      }
+    },
+    "server.perm.denied.role_off": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "“{rule}” rolü kapalı olduğu için size {action} izni verilmiyor.",
+      "about": "API refusal shown when a person lacks a permission (a toast or dialog in the file manager, or an error an API client logs). One sentence; the {action} is a lowercase phrase from server.perm.action.*. Which sentence is said names where the “no” came from: base — the person's built-in role (User, Viewer) does not include it; override — an administrator set an exception for this person alone; role — only administrators ever hold it; rule — the person's custom role {rule} does not include it; role_off — the person's custom role {rule} is switched off; viewer_ceiling — a read-only account can never hold it.",
+      "vars": {
+        "action": "what the person tried to do — one of the server.perm.action.* phrases",
+        "rule": "the name an administrator gave a role (a custom role; the key keeps its older name)"
+      }
+    },
+    "server.perm.denied.rule": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "“{rule}” rolü size {action} izni vermiyor.",
+      "about": "API refusal shown when a person lacks a permission (a toast or dialog in the file manager, or an error an API client logs). One sentence; the {action} is a lowercase phrase from server.perm.action.*. Which sentence is said names where the “no” came from: base — the person's built-in role (User, Viewer) does not include it; override — an administrator set an exception for this person alone; role — only administrators ever hold it; rule — the person's custom role {rule} does not include it; role_off — the person's custom role {rule} is switched off; viewer_ceiling — a read-only account can never hold it.",
+      "vars": {
+        "action": "what the person tried to do — one of the server.perm.action.* phrases",
+        "rule": "the name an administrator gave a role (a custom role; the key keeps its older name)"
+      }
+    },
+    "server.perm.denied.viewer_ceiling": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Salt okunur bir hesabın {action} izni olamaz.",
+      "about": "API refusal shown when a person lacks a permission (a toast or dialog in the file manager, or an error an API client logs). One sentence; the {action} is a lowercase phrase from server.perm.action.*. Which sentence is said names where the “no” came from: base — the person's built-in role (User, Viewer) does not include it; override — an administrator set an exception for this person alone; role — only administrators ever hold it; rule — the person's custom role {rule} does not include it; role_off — the person's custom role {rule} is switched off; viewer_ceiling — a read-only account can never hold it.",
+      "vars": {
+        "action": "what the person tried to do — one of the server.perm.action.* phrases"
+      }
     },
     "server.perm.engines": {
       "in": "server",
@@ -27540,7 +29175,7 @@
     "storages.fields.rbacHint": {
       "in": "both",
       "syntax": "shared",
-      "tr": "Açıkken admin olmayanlar yalnızca izin panelinden kendilerine verilen dosya/klasörleri görür. Kapalıyken depo tüm kullanıcılara açıktır (yetki role göre).",
+      "tr": "Açıkken yönetici olmayanlar yalnızca kendilerine yetki verilen dosya ve klasörleri görür (Klasör erişimi sayfasında listelenir). Kapalıyken herkes depoyu rolüne göre açar.",
       "where": [
         "web/src/views/StorageEdit.vue"
       ]
@@ -31024,6 +32659,14 @@
         "web/src/views/Users.vue"
       ]
     },
+    "users.createdRoleNotSet": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesap İzleyici olarak oluşturuldu, ancak rolü atanamadı: {error}",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
     "users.deleteConfirm": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -31208,6 +32851,7 @@
       "syntax": "vue-i18n",
       "tr": "Kullanıcı",
       "where": [
+        "web/src/views/Roles.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue"
       ]
@@ -31217,6 +32861,7 @@
       "syntax": "vue-i18n",
       "tr": "İzleyici",
       "where": [
+        "web/src/views/Roles.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue"
       ]

@@ -209,6 +209,24 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | payload / severity | Payload / Schweregrad | |
 | slot (a free concurrency slot) | Slot | |
 | backend | Backend | |
+| role / custom role / built-in role (v0.49.0) | Rolle / benutzerdefinierte Rolle / integrierte Rolle | badges *Integriert* / *Benutzerdefiniert*; a custom role's name is the administrator's text, never translated, quoted „…“ (*Rolle „{name}“*); the three built-in roles keep `users.roles.*` (*Administrator / Benutzer / Betrachter*) |
+| permission (what a role holds, v0.49.0) | Berechtigung | the existing term; a role's summary *Erlaubt: {list}* / *Verweigert: {list}*; "{count} of {total} permissions" → *{count} von {total} Berechtigungen* |
+| exception (set for one person, v0.49.0) | Ausnahme | "Exceptions for this person" → *Ausnahmen für diese Person*; "Clear exceptions" → *Ausnahmen entfernen* |
+| Inherit / Allow / Deny (buttons, v0.49.0) | Erben / Erlauben / Verweigern | infinitives, like every button |
+| Allowed / Denied (the result, v0.49.0) | Erlaubt / Verweigert | the source after " · ": *integrierte Rolle*, *Rolle „{name}“*, *Ausnahme für diese Person*, *nur Administratoren*, *schreibgeschütztes Konto*, *Rolle „{name}“ ist deaktiviert* |
+| preset (v0.49.0) | Voreinstellung | *Vollzugriff / Standardbenutzer / Nur lesen / Nur hochladen / Gast*; the badge of a person whose permissions match no preset → *Benutzerdefinierte Berechtigungen* (not *Benutzerdefiniert*, the custom-role badge) |
+| Folder access (the old "Permissions" page, v0.49.0) | Ordnerzugriff | kept apart from *Berechtigung*; the page's older `grants.*` strings keep *Berechtigung* for one grant |
+| limits (of a role, v0.49.0) | Einschränkungen | *Maximale Gültigkeitsdauer von Freigabelinks (Tage)*, *Gesperrte Dateitypen*, *Maximale Dateigröße (MB)*, *Zwei-Faktor-Authentifizierung erforderlich* |
+| install request / plugin request (v0.49.0) | Installationsanfrage / Plug-in-Anfrage | approve / reject → *genehmigen / ablehnen*; statuses *Wartet / Genehmigt / Abgelehnt / Abgelaufen / Quelle geändert*; operation chips *Installieren / Aktualisieren* |
+| starting role for SSO groups (v0.49.0) | Startrolle für SSO-Gruppen | |
+| a refused action, `server.perm.action.*` (v0.49.0) | nominalised infinitive: *Löschen von Dateien*, *Anmelden über die Desktop-App*, *endgültigen Löschen von Dateien* | always after *zum* in all six `server.perm.denied.*` sentences (*Ihr Konto hat keine Berechtigung zum {action}.*) |
+
+**v0.49.0 (roles and permissions) — notes:**
+
+- `server.perm.action.*` are nominalised infinitives (capitalised, German grammar) and every `server.perm.denied.*` sentence puts `{action}` after *zum* (dative), so `files.purge` is inflected (*endgültigen Löschen …*). A new denied sentence must keep *zum {action}*, or that one phrase breaks. All 6 × 28 = 168 combinations were read.
+- "requester" of a plugin request → *anfragende Person* / *Angefragt von* (a request is an *Anfrage*); the older *anfordernde Person* stays for file and signature requests (*Anforderung*).
+- "Off" badge beside a disabled role → *Aus* (glossary: chips *An / Aus*); the verb and the sentences use *deaktivieren / deaktiviert*.
+- `permissions.rules.summaryFolders` "In {places}:" → *Für {places}:* (*In Projekte:* would need an article that a storage name or path cannot carry).
 
 ## Plurals — German's CLDR categories
 
