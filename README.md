@@ -55,8 +55,8 @@ node scripts/validate-de.mjs --lengths               # the German check, plus th
 `validate-de.mjs` adds to the platform validator what a German translation needs on top: a value left in
 English is an error unless it is a name, a unit or a word German shares; the number of plural forms must equal
 the English; code spans, `<…>` tokens, leading/trailing whitespace and a trailing `…` / `:` must survive;
-any *du* form is an error; a glossary lint (*Passwort*, *E-Mail*, *Plug-in*, „…“ quotes, spaced en dashes,
-*z. B.*); a consistency report (one short English label translated two ways) and a length report.
+any *du* form is an error; a glossary lint (*Passwort*, *E-Mail*, *Plug-in*, „…“ quotes, a plain hyphen
+and never an em or en dash, *z. B.*); a consistency report (one short English label translated two ways) and a length report.
 
 ## How it was made, and checked
 

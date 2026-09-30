@@ -22,7 +22,8 @@
  *   - backtick code spans, <…> tokens, leading/trailing whitespace and a trailing … or :
  *     must survive;
  *   - register: any "du" form is an error (the pack addresses the reader as "Sie");
- *   - glossary lint (Passwort not Kennwort, E-Mail, Plug-in, „…“ quotes, " – " dashes, z. B.);
+ *   - glossary lint (Passwort not Kennwort, E-Mail, Plug-in, „…“ quotes, a plain "-" and never
+ *     an em or en dash, z. B.);
  *   - a consistency report (one short English label translated two ways) and a length report.
  *
  * The two renderers, and so the rules per key:
@@ -231,8 +232,12 @@ function identicalAllowed(key, en) {
 /* ── register / glossary lint (Sie, never du) ────────────────────────────── */
 const DU_FORMS = /(^|[^\p{L}])(du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure|euren|eurem|eurer)(?=[^\p{L}]|$)/iu;
 // The reader is "Sie"; a lower-case possessive at the start of a sentence addressing them is a slip.
-const SIE_LOWER = /(^|[.!?:–—]\s+)(ihr|ihre|ihren|ihrem|ihrer|ihres)\s+(Konto|Passwort|Datei|Dateien|Ordner|Sitzung|Browser|Computer|Schlüssel|Token|Profil|E-Mail)/u;
+const SIE_LOWER = /(^|[.!?:]\s+|\s-\s+)(ihr|ihre|ihren|ihrem|ihrer|ihres)\s+(Konto|Passwort|Datei|Dateien|Ordner|Sitzung|Browser|Computer|Schlüssel|Token|Profil|E-Mail)/u;
 const W = (re, flags = 'u') => new RegExp(`(^|[^\\p{L}])(?:${re})(?=[^\\p{L}]|$)`, flags);
+// filex writes a plain hyphen, never an em or en dash (2026-09-30), and German
+// follows it: " - " between two clauses, "1-40" for a range. Built from the
+// code points, so no editor or tool can quietly turn the check into them.
+const LONG_DASH = new RegExp(`[${String.fromCharCode(0x2014)}${String.fromCharCode(0x2013)}]`, 'u');
 const GLOSSARY_LINT = [
   [/Kennw(o|ö)rt/i, 'use "Passwort", not "Kennwort"'],
   [/Mülleimer|Abfalleimer/i, 'use "Papierkorb"'],
@@ -243,7 +248,7 @@ const GLOSSARY_LINT = [
   [W('Login|Logout|einloggen|ausloggen|eingeloggt|ausgeloggt', 'iu'), 'use "anmelden" / "abmelden" / "Anmeldung"'],
   [/mit (einem )?Stern|markiert.*Favorit/i, 'starred → "Favoriten", not "markiert" / "Stern"'],
   [/”/, 'German closing quote is “ (open with „)'],
-  [/ — /, 'use the spaced en dash " – " in German'],
+  [LONG_DASH, 'no em or en dash: write a plain hyphen "-" (" - " between two clauses, "1-40" for a range)'],
   [/z\.B\.|d\.h\.|z\.b\./, 'write "z. B." / "d. h." with a space'],
 ];
 

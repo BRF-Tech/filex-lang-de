@@ -21,7 +21,8 @@ do not switch terms.
   *SFTP-Zugang*, *{name}-Ordner* (Duden: Durchkopplung).
 - **Quotation marks**: English “ ” become German „ “ (*„{name}“ gelöscht*). Straight `"` quotes the
   English uses around literal values, menu names or input examples stay straight `"`.
-- **Dashes**: the English spaced em dash " — " becomes the German spaced en dash " – ".
+- **Dashes**: a plain hyphen, never an em dash or an en dash (filex's rule since 2026-09-30, German
+  included): " - " between two clauses, as the English writes it. The validator refuses a long dash.
 - *e.g.* → *z. B.*, *i.e.* → *d. h.*, *etc.* → *usw.* (with the thin, normal space German uses: `z. B.`).
 - Keep UI labels short. German runs 30 %+ longer than English and builds long compounds; in buttons,
   tabs, chips, table headers, the side nav and dashboard tiles prefer the shortest **natural** wording
@@ -257,8 +258,8 @@ der lesenden Person (`Intl.PluralRules` im Browser, `x/text` auf dem Server). De
 - **Percent**: number, no-break space, `%` (DIN 5008): `{percent} %`, `{n} %` — the space is U+00A0 so
   the two never wrap apart. (In an admin-panel string `%` may follow a placeholder freely; only `%{` is
   the vue-i18n trap.)
-- **Ranges**: en dash without spaces — *1–10 MB*, *1–40 Zeichen* (the English hyphen is kept inside
-  code-like input rules such as `a-z`).
+- **Ranges**: a plain hyphen without spaces: *1-10 MB*, *1-40 Zeichen*, `a-z` (no en dash, see
+  **Dashes**).
 - **Numbers and dates** come from the browser's locale (*134.362*, *2,48 TB*, *22. Sept. 2026*), not
   from the pack.
 
