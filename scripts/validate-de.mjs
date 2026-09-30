@@ -222,6 +222,7 @@ const IDENTICAL_OK = new Set([
   'install.dl.mac_brew', // product name: Homebrew
   'install.dl.rpm', // distributions and a file type: Fedora / openSUSE (.rpm)
   'appPlugins.wizard.manifest', // Manifest (filex-app.json) — the German term is the same
+  'login.realm', // Realm: the concept's name, kept as German Keycloak and Kerberos docs keep it (v0.50.0)
 ]);
 function identicalAllowed(key, en) {
   if (IDENTICAL_OK.has(key)) return true;

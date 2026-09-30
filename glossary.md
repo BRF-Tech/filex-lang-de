@@ -116,7 +116,7 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | field | Feld | |
 | permission | Berechtigung | |
 | grant (noun) / grant (verb) | Berechtigung / erteilen | "Grant revoked" → *Berechtigung widerrufen* |
-| access | Zugriff | "People with access" → *Personen mit Zugriff* |
+| access | Zugriff | "People with access" → *Personen mit Zugriff*; the share dialog's "Who has access" (v0.50.0, it now lists groups too) → *Wer Zugriff hat* |
 | revoke | widerrufen | |
 | owner | Eigentümer | |
 | administrator / admin | Administrator / Admin | "Admin panel" → *Adminbereich*; "Admins only" → *Nur Admins* |
@@ -223,6 +223,21 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | a refused action, `server.perm.action.*` (v0.49.0) | nominalised infinitive: *Löschen von Dateien*, *Anmelden über die Desktop-App*, *endgültigen Löschen von Dateien* | always after *zum* in all six `server.perm.denied.*` sentences (*Ihr Konto hat keine Berechtigung zum {action}.*) |
 | an app permission's Default (v0.49.0, role and person editors) | Standard | the choice beside *Erlauben* / *Verweigern*; with what it comes to: *Standard (erlaubt)* / *Standard (verweigert)*; the source after " · " → *Standard der App*; the app's own default: *Standard der App: alle / Personen, die Dateien ändern dürfen / nur Administratoren* |
 | a role's name in other languages (v0.49.0) | Name und Beschreibung in anderen Sprachen | *Rollenname ({language})*, *Beschreibung ({language})*; "{count} languages" → *{count} Sprachen* |
+| **group** (a named set of people, v0.50.0) | **Gruppe** (pl. *Gruppen*) | member → *Mitglied*; "through the group „{group}“" → *über die Gruppe „{group}“*; a group's folder access → *Ordnerzugriff einer Gruppe*; "Role priority" → *Rollenpriorität*; column "How they joined" → *Beitritt*, values *Hinzugefügt* / *SSO*; an SSO group (what the sign-in carries) → *SSO-Gruppe*, an operating-system group → *Betriebssystemgruppe* |
+| identity provider (the IdP behind SSO, v0.50.0) | Identitätsanbieter | kept apart from filex's own *Anmeldeanbieter* (auth provider) |
+| sign-in security (admin page, v0.50.0) | Anmeldesicherheit | nav, page title and audit resource alike |
+| wrong attempt / failed attempt (v0.50.0) | Fehlversuch (pl. *Fehlversuche*) | "Wrong attempts per account" → *Fehlversuche pro Konto*; the server's "Wrong credentials." → *Falsche Anmeldedaten.*; "{count} attempts left" → *Noch {count} Versuche*; "locked at failed attempt {limit}" → *beim {limit}. Fehlversuch … gesperrt* |
+| lock (of an account or an address after wrong attempts, v0.50.0) | Sperre / gesperrt | "Lift the lock" → *Sperre aufheben* (the verb the app-lock screen already uses); "lock lifted" → *Sperre aufgehoben*; "First lock" / "Longest lock" → *Erste Sperre* / *Längste Sperre*; "Lock step" → *Sperrstufe*; "locks in force" → *wirksame Sperren*, "In force" → *Wirksam* |
+| counting window (v0.50.0) | Zählfenster | "Counting" (a status) → *Wird gezählt* |
+| door (the way in a password is typed at: web form, WebDAV, FTP, SFTP, S3, v0.50.0) | Zugang | "Web form" → *Webformular*; "Other" → *Sonstiges* (the same word in the reason column) |
+| allow-list / allowed addresses (v0.50.0) | erlaubte Adressen | "Allow-list pass" → *Erlaubte Adresse durchgelassen*; "exempt" → *ausgenommen* |
+| trusted proxy (v0.50.0 page, the older field already said so) | vertrauenswürdiger Proxy (pl. *Proxys*) | "Link-local addresses" → *Link-lokale Adressen*; "This machine (loopback)" → *Dieser Rechner (Loopback)*; "built-in default" → *eingebauter Standard*, as `server.auth_provider.from_default` |
+| test account (operating-system sign-in, v0.50.0) | Testkonto | it "signs in" → *meldet sich an*; the test "signs a real account in" → *meldet ein echtes Konto an* |
+| super administrator (v0.50.0) | Super-Administrator | "made a super administrator" → *zum Super-Administrator gemacht* |
+| first sign-in rule (v0.50.0) | Regel für die erste Anmeldung | "Open an account at the first sign-in" → *Bei der ersten Anmeldung ein Konto anlegen* |
+| Linux / Windows account, operating-system account (v0.50.0) | Linux-Konto / Windows-Konto / Betriebssystemkonto | "(this machine or its domain)" → *(dieser Rechner oder seine Domäne)*; a Windows domain → *Domäne*, an e-mail domain → *E-Mail-Domäne*; PAM service file → *PAM-Dienstdatei* |
+| machine (the server's own computer) | Rechner | as `conn.guide.*` already writes it; the Windows policy keeps its German name *Auf diesen Computer vom Netzwerk aus zugreifen* |
+| realm (sign-in field, v0.50.0) | Realm (der, pl. *Realms*) | a concept name, kept as German Keycloak and Kerberos texts keep it; "the {realm} realm" → *zum Realm {realm}*; `login.realm` is in `validate-de.mjs`'s identical list |
 
 **v0.49.0 (roles and permissions) — notes:**
 
@@ -230,6 +245,15 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 - "requester" of a plugin request → *anfragende Person* / *Angefragt von* (a request is an *Anfrage*); the older *anfordernde Person* stays for file and signature requests (*Anforderung*).
 - "Off" badge beside a disabled role → *Aus* (glossary: chips *An / Aus*); the verb and the sentences use *deaktivieren / deaktiviert*.
 - `permissions.rules.summaryFolders` "In {places}:" → *Für {places}:* (*In Projekte:* would need an article that a storage name or path cannot carry).
+
+**v0.50.0 (pre-release: sign-in security, operating-system accounts, realms, groups) - notes:**
+
+- Written against filex main before the v0.50.0 tag; the release round syncs the catalogue again from the tag.
+- The two new `server.perm.denied.*_group` sentences keep *zum {action}* (see v0.49.0 above).
+- `server.login.failed_remaining*`: the ordinal is German's number-plus-period, *beim {limit}. Fehlversuch*; `{wait}` / `{time}` sit after *in* (*in 3 Minuten*, *in 1 Minute*), and the `server.login.wait_*` forms read the same in the nominative and the dative, so they fit there.
+- A provider is switched on and off (*einschalten / ausschalten*, as on the rest of the providers page); a role is *deaktiviert* (as `permissions.source.role_off`); an account in filex is *deaktiviert* / *aktiviert*.
+- `server.auth_provider.pam_hint_test_account_wrong` keeps `<user>` inside its code span: a code span is verbatim, and the validator compares it byte for byte.
+- `authProviders.reasons.forbidden_account` keeps the English account names (*Administrator, Guest, NT AUTHORITY*) as written; on a German Windows the guest account is *Gast*, and a reviewer may prefer to name that one.
 
 ## Plurals — German's CLDR categories
 
