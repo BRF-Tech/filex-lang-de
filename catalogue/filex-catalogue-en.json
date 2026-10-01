@@ -366,7 +366,7 @@
   "appPlugins.state.failed": "Failed",
   "appPlugins.state.refused": "Refused",
   "appPlugins.state.running": "Running",
-  "appPlugins.subtitle": "WebAssembly apps that add rows to the file menu and run as jobs - signing, conversion, anything a manifest describes. An app runs inside filex with only the permissions it asked for and you granted.",
+  "appPlugins.subtitle": "Apps add things to do with files: commands in the file menu that run as jobs (signing, conversion), editors that open a kind of file in an interface of their own (diagrams, text), or a language. Each runs inside filex with only the permissions it asked for and you granted.",
   "appPlugins.supertenantOnly": "Apps are managed by the platform operator.",
   "appPlugins.tabs.apps": "Apps",
   "appPlugins.tabs.storage": "Storage plugins",

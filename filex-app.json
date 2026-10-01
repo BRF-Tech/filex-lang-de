@@ -381,7 +381,7 @@
       "appPlugins.state.failed": "Fehlgeschlagen",
       "appPlugins.state.refused": "Abgelehnt",
       "appPlugins.state.running": "Läuft",
-      "appPlugins.subtitle": "WebAssembly-Apps, die dem Dateimenü Einträge hinzufügen und als Aufträge laufen - Unterschreiben, Konvertieren, alles, was ein Manifest beschreibt. Eine App läuft innerhalb von filex nur mit den Berechtigungen, die sie angefordert hat und die Sie ihr erteilt haben.",
+      "appPlugins.subtitle": "Apps fügen hinzu, was sich mit Dateien tun lässt: Befehle im Dateimenü, die als Aufträge laufen (Unterschreiben, Konvertieren), Editoren, die eine Dateiart in einer eigenen Oberfläche öffnen (Diagramme, Text), oder eine Sprache. Jede App läuft innerhalb von filex nur mit den Berechtigungen, die sie angefordert hat und die Sie ihr erteilt haben.",
       "appPlugins.supertenantOnly": "Apps werden vom Plattformbetreiber verwaltet.",
       "appPlugins.tabs.apps": "Apps",
       "appPlugins.tabs.storage": "Speicher-Plug-ins",

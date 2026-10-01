@@ -3030,7 +3030,7 @@
     "appPlugins.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Dosya menüsüne satır ekleyen ve iş olarak çalışan WebAssembly uygulamaları - imzalama, dönüştürme, bir manifestin tarif ettiği her şey. Bir uygulama filex'in içinde, yalnızca istediği ve sizin verdiğiniz izinlerle çalışır.",
+      "tr": "Uygulamalar dosyalarla yapılacak işler ekler: dosya menüsüne eklenip iş olarak çalışan komutlar (imzalama, dönüştürme), bir dosya türünü kendi arayüzünde açan düzenleyiciler (diyagram, metin) ya da bir dil. Her biri filex'in içinde, yalnızca istediği ve sizin verdiğiniz izinlerle çalışır.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
