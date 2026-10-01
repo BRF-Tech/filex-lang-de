@@ -3,14 +3,14 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : catalogue (filex 0.49.0) — 4501 strings (295 of them the server's: emails, public pages, notifications)
+  catalogue : G:\filex-lang-de\catalogue (filex 0.49.0) — 5247 strings (344 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 4501 of 4501 strings; the other 0 show in English
-  208 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[de] 100% translated — 5247 of 5247 strings; the other 0 show in English
+  225 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
-  14 plural key(s) lack a form for one of those categories and show the plain form for it
+  15 plural key(s) lack a form for one of those categories and show the plain form for it
   errors: 0 (none) · warnings: 0 (none)
   plural      archive.dictionary_size_value: lacks archive.dictionary_size_value_one
   plural      cols.apply_all: lacks cols.apply_all_one
@@ -18,6 +18,7 @@ filex language pack validator
   plural      inspector.activity.version: lacks inspector.activity.version_one
   plural      inspector.versions.v: lacks inspector.versions.v_one
   plural      opc.percent: lacks opc.percent_one
+  plural      peek.more: lacks peek.more_one
   plural      selection.count: lacks selection.count_one
   plural      server.app.wake.beyond: lacks server.app.wake.beyond_one
   plural      server.app.wake.refused: lacks server.app.wake.refused_one
@@ -30,24 +31,24 @@ filex language pack validator
 # node scripts/validate-de.mjs
 filex German pack check (validate-de)
   catalogue      : catalogue (filex 0.49.0)
-                   admin table     2304 strings (vue-i18n)
-                   explorer table  2142 strings (plain {var})
-                   server table    295 strings (mails, public pages, notifications)
-                   240 keys in both tables -> 4501 strings
+                   admin table     2950 strings (vue-i18n)
+                   explorer table  2192 strings (plain {var})
+                   server table    344 strings (mails, public pages, notifications)
+                   239 keys in both tables -> 5247 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (4502 strings)
+  pack           : translations\de.json  (5248 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
-Keys shared by both catalogues: 240 (one flat pack value serves both).
-  identical English in both: 240
+Keys shared by both catalogues: 239 (one flat pack value serves both).
+  identical English in both: 239
 
 Errors  : 0 (none)
 Warnings: 0 (none)
-Consistency: 30 short English labels translated more than one way (see below)
+Consistency: 34 short English labels translated more than one way (see below)
 
 Same English, different German (review — context may justify it):
   "Storage"
-      "Speicher"  <- about.storage, audit.resource.storage, audit.resource.storages, audit.target.storage (+9)
+      "Speicher"  <- about.storage, audit.resource.storage, audit.resource.storages, audit.target.storage (+11)
       "Speicherplatz"  <- usage.cost.storage, drive.storage.label
   "Signature"
       "Signatur"  <- appPlugins.detail.signature, appPlugins.wizard.signature, plugins.signature.label
@@ -61,11 +62,14 @@ Same English, different German (review — context may justify it):
   "Upload"
       "Hochladen"  <- appearance.previewUpload, plugin.sig.mode_upload, toolbar.upload
       "Upload"  <- audit.target.upload, opc.kind.upload
+  "Comment"
+      "Kommentar"  <- audit.target.comment
+      "Kommentieren"  <- permissions.items.comments.write.label
   "Hide"
       "Ausblenden"  <- common.hide
       "Verbergen"  <- pendingOps.hide, conn.form.hide
   "None"
-      "Keine"  <- common.none, permissions.none
+      "Keine"  <- common.none, defaultApps.none, permissions.none
       "Keiner"  <- usage.fields.providerNone
   "Search"
       "Suchen"  <- common.search, advsearch.submit, toolbar.search, viewer.search
@@ -105,6 +109,15 @@ Same English, different German (review — context may justify it):
   "Share"
       "Freigabe"  <- storages.fields.share
       "Teilen"  <- access.ui.share, ctx.share, modal.share.create, shortcuts.share (+1)
+  "Link"
+      "Verknüpfen"  <- tenants.link
+      "Link"  <- symlink.badge.unknown
+  "Shared"
+      "Gemeinsam"  <- tenants.signin.shared
+      "Geteilt"  <- sidenav.storage.shared
+  "Drawn"
+      "Erzeugt"  <- tools.thumbs.count.ok
+      "Gezeichnet"  <- plugin.pdf.style_drawn
   "Coming soon"
       "Demnächst"  <- userSettings.ai.soon
       "Demnächst verfügbar"  <- ai.soon

@@ -2307,30 +2307,6 @@
         "web/src/components/plugins/AppPluginDetail.vue"
       ]
     },
-    "appPlugins.detail.logs.empty": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Henüz günlük kaydı yok.",
-      "where": [
-        "web/src/components/plugins/AppPluginDetail.vue"
-      ]
-    },
-    "appPlugins.detail.logs.live": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Canlı - 2 saniyede bir yenilenir",
-      "where": [
-        "web/src/components/plugins/AppPluginDetail.vue"
-      ]
-    },
-    "appPlugins.detail.logs.title": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Günlük",
-      "where": [
-        "web/src/components/plugins/AppPluginDetail.vue"
-      ]
-    },
     "appPlugins.detail.noSettings": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -2692,6 +2668,74 @@
         "web/src/components/plugins/AppPluginDetail.vue"
       ]
     },
+    "appPlugins.detail.thumbs.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu uygulama şu türlerin küçük resimlerini çizer: {kinds}. Aşağıdaki sınırlar ona verilen her dosyaya uygulanır.",
+      "where": [
+        "web/src/components/plugins/AppPluginThumbLimits.vue"
+      ]
+    },
+    "appPlugins.detail.thumbs.field.concurrency": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aynı anda çizilen dosya"
+    },
+    "appPlugins.detail.thumbs.field.max_input_mb": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gönderilen en büyük dosya (MB)"
+    },
+    "appPlugins.detail.thumbs.field.memory_mb": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bellek (MB)"
+    },
+    "appPlugins.detail.thumbs.field.timeout_s": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya başına süre (saniye)"
+    },
+    "appPlugins.detail.thumbs.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan {def}; {min} ile {max} arası. Boş ya da 0 varsayılandır.",
+      "where": [
+        "web/src/components/plugins/AppPluginThumbLimits.vue"
+      ]
+    },
+    "appPlugins.detail.thumbs.order": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hangi türde önce bunun sorulacağı Eklentiler → Varsayılan uygulamalar'da belirlenir.",
+      "where": [
+        "web/src/components/plugins/AppPluginThumbLimits.vue"
+      ]
+    },
+    "appPlugins.detail.thumbs.outOfRange": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} arasında bir tam sayı (0 varsayılandır).",
+      "where": [
+        "web/src/components/plugins/AppPluginThumbLimits.vue"
+      ]
+    },
+    "appPlugins.detail.thumbs.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim sınırları kaydedildi.",
+      "where": [
+        "web/src/components/plugins/AppPluginThumbLimits.vue"
+      ]
+    },
+    "appPlugins.detail.thumbs.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimler",
+      "where": [
+        "web/src/components/plugins/AppPluginThumbLimits.vue"
+      ]
+    },
     "appPlugins.detail.unsigned": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -2711,7 +2755,7 @@
     "appPlugins.empty.description": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Bir GitHub reposundan kurun: sahip/ad yazın; filex reponun filex-app.json dosyasını okur, adını verdiği modülü indirir ve hiçbir şey kurulmadan önce uygulamanın istediği her izni gösterir.",
+      "tr": "Bir GitHub reposundan kurun: sahip/ad yazın; filex reponun filex-app.json dosyasını okur, adını verdiği modülü ya da arayüz paketini indirir (bir dil ikisini de gerektirmez) ve hiçbir şey kurulmadan önce uygulamanın istediği her izni gösterir.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
@@ -2909,7 +2953,7 @@
     "appPlugins.runtime.archBad": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Bu sunucunun işlemcisi WebAssembly motorunu çalıştıramıyor; burada hiçbir uygulama başlayamaz.",
+      "tr": "Bu sunucunun işlemcisi WebAssembly motorunu çalıştıramıyor ve uygulama altyapısı yalnızca bu motorla açılıyor: burada hiçbir uygulama, yalnızca bir arayüz ya da bir dil olanı bile, kurulamaz ve çalıştırılamaz.",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue"
       ]
@@ -3048,6 +3092,11 @@
       "syntax": "vue-i18n",
       "tr": "Uygulamalar"
     },
+    "appPlugins.tabs.defaults": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan uygulamalar"
+    },
     "appPlugins.tabs.storage": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3152,7 +3201,7 @@
     "appPlugins.update.previous": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "{version} sürümü geri dönmek için saklanıyor",
+      "tr": "{version} sürümü geri dönmek için saklanıyor ({when} tarihinde değiştirildi)",
       "where": [
         "web/src/lib/appPluginUpdates.ts"
       ]
@@ -3432,7 +3481,7 @@
     "appPlugins.wizard.errors.fetch.bad_url": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "“{where}” filex’in indirebileceği bir adres değil: https:// kullanın (düz http:// yalnız bu makinenin kendisi için)."
+      "tr": "“{where}” filex’in uygulama indirdiği bir adres değil: herkese açık internette bir https:// adresi olmalı, bu makine ya da özel ağ değil."
     },
     "appPlugins.wizard.errors.fetch.changed": {
       "in": "admin",
@@ -3577,6 +3626,104 @@
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
+    "appPlugins.wizard.fileTypes.capability.open": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açma"
+    },
+    "appPlugins.wizard.fileTypes.capability.thumbnail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim"
+    },
+    "appPlugins.wizard.fileTypes.col.capability": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ne için",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.col.current": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şu an",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.col.kind": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tür",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.col.place": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu uygulama",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu uygulamanın açtığı ya da küçük resmini çizdiği her türde nereye gireceği. Değiştirmediğiniz türler varsayılan sırada kalır; sonradan Eklentiler → Varsayılan uygulamalar'dan değiştirebilirsiniz.",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.descUpgrade": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnız bu sürümün eklediği türler: önceki sürümün ele aldığı türlerin sırası olduğu gibi kalır. Hiçbir şeyi değiştirmezseniz varsayılan sıra kullanılır; bunu sonra Eklentiler → Varsayılan uygulamalar'dan değiştirebilirsiniz.",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.nobody": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimse",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.notSaved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kuruldu, ama bazı dosya türü seçimleri kaydedilmedi: {list}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "appPlugins.wizard.fileTypes.place.first": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İlk sırada"
+    },
+    "appPlugins.wizard.fileTypes.place.last": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onlardan sonra"
+    },
+    "appPlugins.wizard.fileTypes.place.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı"
+    },
+    "appPlugins.wizard.fileTypes.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya türleri",
+      "where": [
+        "web/src/components/plugins/AppPluginFileTypes.vue"
+      ]
+    },
     "appPlugins.wizard.fromSource": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3701,7 +3848,7 @@
     "appPlugins.wizard.repoHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "sahip/ad. filex, verilen ref’teki (boşsa varsayılan dal) filex-app.json dosyasını okur, manifestin adını verdiği modülü indirir ve SHA-256’sını doğrular.",
+      "tr": "sahip/ad. filex, verilen ref’teki (boşsa varsayılan dal) filex-app.json dosyasını okur, manifestin adını verdiği modülü ya da arayüz paketini indirir (bir dil ikisini de gerektirmez) ve SHA-256’sını doğrular.",
       "where": [
         "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
@@ -4362,6 +4509,62 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Henüz tema yok. Aşağıda bir tane oluşturun; hazır paletlerin yanında herkese görünür.",
+      "where": [
+        "web/src/views/Appearance.vue"
+      ]
+    },
+    "appearance.pageToken.shareCard": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım sayfası kartı",
+      "where": [
+        "web/src/lib/themeTokens.ts"
+      ]
+    },
+    "appearance.pageToken.shareGroundBottom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım sayfası zemini, alt",
+      "where": [
+        "web/src/lib/themeTokens.ts"
+      ]
+    },
+    "appearance.pageToken.shareGroundTop": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım sayfası zemini, üst",
+      "where": [
+        "web/src/lib/themeTokens.ts"
+      ]
+    },
+    "appearance.pageToken.signInCard": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma sayfası kartı",
+      "where": [
+        "web/src/lib/themeTokens.ts"
+      ]
+    },
+    "appearance.pageToken.signInGround": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma sayfası zemini",
+      "where": [
+        "web/src/lib/themeTokens.ts"
+      ]
+    },
+    "appearance.pages.help": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalıyken paylaşım sayfası ve oturum açma sayfası renklerini yukarıdaki paletten alır.",
+      "where": [
+        "web/src/views/Appearance.vue"
+      ]
+    },
+    "appearance.pages.own": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Paylaşım ve oturum açma sayfaları için ayrı renkler",
       "where": [
         "web/src/views/Appearance.vue"
       ]
@@ -5439,6 +5642,11 @@
       "syntax": "vue-i18n",
       "tr": "Denetim kaydı"
     },
+    "audit.resource.auth": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum"
+    },
     "audit.resource.auth_provider": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5468,6 +5676,16 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Dosya"
+    },
+    "audit.resource.file_association": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan uygulamalar"
+    },
+    "audit.resource.file_types": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan uygulamalar"
     },
     "audit.resource.grants": {
       "in": "admin",
@@ -5619,10 +5837,30 @@
       "syntax": "vue-i18n",
       "tr": "Senkron"
     },
+    "audit.resource.tenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı"
+    },
+    "audit.resource.tenant_domain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi alan adı"
+    },
     "audit.resource.themes": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Tema"
+    },
+    "audit.resource.thumbnail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimler"
+    },
+    "audit.resource.tools": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Araçlar"
     },
     "audit.resource.totp": {
       "in": "admin",
@@ -5692,6 +5930,11 @@
       "syntax": "vue-i18n",
       "tr": "Kimlik sağlayıcısı"
     },
+    "audit.target.comment": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorum"
+    },
     "audit.target.external": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5701,6 +5944,16 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Dosya"
+    },
+    "audit.target.file_type": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya türü"
+    },
+    "audit.target.grant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasör erişimi"
     },
     "audit.target.group": {
       "in": "admin",
@@ -5727,6 +5980,11 @@
       "syntax": "vue-i18n",
       "tr": "Dosya"
     },
+    "audit.target.op": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İşlem"
+    },
     "audit.target.permission_rule": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5747,6 +6005,11 @@
       "syntax": "vue-i18n",
       "tr": "Profil"
     },
+    "audit.target.providers": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı"
+    },
     "audit.target.search": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5756,6 +6019,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Ayar"
+    },
+    "audit.target.settings": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ayarlar"
     },
     "audit.target.share": {
       "in": "admin",
@@ -5771,6 +6039,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Senkron"
+    },
+    "audit.target.tenant_domain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi alan adı"
     },
     "audit.target.trash": {
       "in": "admin",
@@ -5830,10 +6103,45 @@
       "syntax": "vue-i18n",
       "tr": "arşiv açıldı"
     },
+    "audit.verb.certificate_delete": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "sertifika kaldırıldı"
+    },
+    "audit.verb.certificate_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "sertifika yüklendi"
+    },
+    "audit.verb.check": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "denetlendi"
+    },
+    "audit.verb.comment_add": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yorum eklendi"
+    },
+    "audit.verb.comment_delete": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yorum silindi"
+    },
+    "audit.verb.copy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kopyalandı"
+    },
     "audit.verb.create": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "oluşturuldu"
+    },
+    "audit.verb.cross_origin_refused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "başka bir siteden gelen istek reddedildi"
     },
     "audit.verb.defaults_set": {
       "in": "admin",
@@ -5870,10 +6178,35 @@
       "syntax": "vue-i18n",
       "tr": "kuruldu"
     },
+    "audit.verb.entry_available": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "öğe yeniden kullanılabilir"
+    },
+    "audit.verb.entry_unavailable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "öğe kullanılamıyor"
+    },
     "audit.verb.expire": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "süresi doldu"
+    },
+    "audit.verb.grant_revoke": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "erişim kaldırıldı"
+    },
+    "audit.verb.grant_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "erişim verildi"
+    },
+    "audit.verb.insecure_auth_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "güvensiz sağlayıcı izni değiştirildi"
     },
     "audit.verb.member_remove": {
       "in": "admin",
@@ -5894,6 +6227,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "taşındı"
+    },
+    "audit.verb.op_cancel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "işlem durduruldu"
     },
     "audit.verb.page_job": {
       "in": "admin",
@@ -5945,6 +6283,16 @@
       "syntax": "vue-i18n",
       "tr": "reddedildi"
     },
+    "audit.verb.repair": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "onarıldı"
+    },
+    "audit.verb.reset": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "varsayılana döndürüldü"
+    },
     "audit.verb.restore": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5965,6 +6313,11 @@
       "syntax": "vue-i18n",
       "tr": "önceki sürüme döndürüldü"
     },
+    "audit.verb.settings_update": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "sınırlar değiştirildi"
+    },
     "audit.verb.share_create": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5979,6 +6332,16 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "yıldızlandı"
+    },
+    "audit.verb.storage_link": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "depo bağlandı"
+    },
+    "audit.verb.storage_unlink": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "depo bağı kaldırıldı"
     },
     "audit.verb.supersede": {
       "in": "admin",
@@ -6000,10 +6363,25 @@
       "syntax": "vue-i18n",
       "tr": "etiketler değiştirildi"
     },
+    "audit.verb.tenants_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kiracılar değiştirildi"
+    },
     "audit.verb.test": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "test edildi"
+    },
+    "audit.verb.thumbnail_limits": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "küçük resim sınırları değiştirildi"
+    },
+    "audit.verb.thumbnail_sent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "küçük resim çizerken dışarıya dosya gönderdi"
     },
     "audit.verb.ui_save": {
       "in": "admin",
@@ -6050,6 +6428,16 @@
       "syntax": "vue-i18n",
       "tr": "doğrulandı"
     },
+    "audit.verb.version_restore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "sürümü geri yüklendi"
+    },
+    "audit.verb.version_snapshot": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "sürümü kaydedildi"
+    },
     "audit.verb.zip": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6061,6 +6449,40 @@
       "tr": "{resource} (AI)",
       "where": [
         "web/src/lib/auditLabel.ts"
+      ]
+    },
+    "authProviders.add": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcı ekle",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.addErrors.slug_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca küçük harf, rakam ve tire; bir türün adı da olamaz."
+    },
+    "authProviders.addErrors.slug_taken": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kısa ad başka bir sağlayıcıda."
+    },
+    "authProviders.addHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aynı türden ikinci bir sağlayıcı: başka bir dizin ya da yalnızca bazı kiracılar için bir SSO. Kapalı olarak oluşturulur: kartında doldurun, deneyin ve orada açın.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.addTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başka bir oturum açma sağlayıcısı",
+      "where": [
+        "web/src/views/AuthProviders.vue"
       ]
     },
     "authProviders.apiTokenAlways": {
@@ -6338,6 +6760,49 @@
         "web/src/views/AuthProviders.vue"
       ]
     },
+    "authProviders.create": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluştur",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcı kapalı olarak oluşturuldu: kartında doldurun.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.delete": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sil",
+      "where": [
+        "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.deleteConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” silinsin mi? Artık kimse bunun üzerinden oturum açamaz.",
+      "where": [
+        "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.deleted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcı silindi",
+      "where": [
+        "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
     "authProviders.envReadOnly": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6353,6 +6818,11 @@
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
+    },
+    "authProviders.fieldHints.ca_pem": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizinin sertifikasını imzalayan özel CA, olduğu gibi yapıştırılır. Boşsa sistemin güvendiği kökler."
     },
     "authProviders.fieldHints.email_domain": {
       "in": "admin",
@@ -6414,6 +6884,11 @@
       "syntax": "vue-i18n",
       "tr": "CA sertifika dosyası"
     },
+    "authProviders.fields.ca_pem": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "CA sertifikası (PEM)"
+    },
     "authProviders.fields.client_id": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6432,7 +6907,7 @@
     "authProviders.fields.email_attr": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "E-posta attribute"
+      "tr": "E-posta niteliği"
     },
     "authProviders.fields.email_domain": {
       "in": "admin",
@@ -6447,7 +6922,7 @@
     "authProviders.fields.header_email": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "E-posta header'ı"
+      "tr": "E-posta başlığı"
     },
     "authProviders.fields.header_name": {
       "in": "admin",
@@ -6457,12 +6932,12 @@
     "authProviders.fields.header_roles": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Roller header'ı"
+      "tr": "Roller başlığı"
     },
     "authProviders.fields.header_user": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Kullanıcı header'ı"
+      "tr": "Kullanıcı başlığı"
     },
     "authProviders.fields.issuer": {
       "in": "admin",
@@ -6539,10 +7014,44 @@
       "syntax": "vue-i18n",
       "tr": "Kullanıcı filtresi"
     },
+    "authProviders.kind": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tür",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Görünen ad",
+      "where": [
+        "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.labelHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma sayfasının ona verdiği ad. Boşsa türün kendi adı.",
+      "where": [
+        "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
     "authProviders.legacy": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "v0.43.0’dan önce, bu sayfa hiçbir şeyi uygulamazken kaydedildi - hiç kullanılmadı ve kapalı olarak içe aktarıldı. Her alanı gözden geçirin, sonra açın.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.lockoutConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu, bir kiracının oturum açabildiği son yolu kaldırır. Devam edilsin mi?",
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
@@ -6597,6 +7106,14 @@
         "web/src/views/AuthProviders.vue"
       ]
     },
+    "authProviders.platformTenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısı",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
     "authProviders.providers.api-token": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6625,7 +7142,7 @@
     "authProviders.providers.proxy-header": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Reverse-proxy header"
+      "tr": "Ters vekil başlığı"
     },
     "authProviders.providers.windows": {
       "in": "admin",
@@ -6793,6 +7310,22 @@
       "syntax": "vue-i18n",
       "tr": "Boş bırakırsanız bu sunucunun kendi adresi + /api/auth/oidc/callback kullanılır.",
       "where": [
+        "web/src/components/ProviderFields.vue"
+      ]
+    },
+    "authProviders.review": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Artık her oturum açma sağlayıcısı hizmet verdiği kiracılara bağlı. Yükseltme her sağlayıcıyı o an var olan her kiracıya bağladı, yani kimse için hiçbir şey değişmedi: aşağıdaki bağları gözden geçirin ve bir sağlayıcının hizmet vermemesi gereken kiracıları kaldırın.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.reviewDone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gözden geçirdim",
+      "where": [
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -6801,6 +7334,7 @@
       "syntax": "vue-i18n",
       "tr": "Kaydet ve uygula",
       "where": [
+        "web/src/components/TenantSelfService.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -6809,6 +7343,7 @@
       "syntax": "vue-i18n",
       "tr": "Kaydedildi ve uygulandı - yeniden başlatma gerekmiyor.",
       "where": [
+        "web/src/components/TenantSelfService.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -6817,7 +7352,7 @@
       "syntax": "vue-i18n",
       "tr": "Ayarlı - değiştirmek için yenisini yazın; korumak için boş bırakın.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/components/ProviderFields.vue"
       ]
     },
     "authProviders.secretSetShort": {
@@ -6832,6 +7367,22 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bu sayfada aynı adla kaydedilmiş bir yapılandırma saklanıyor, ama ortam bu sağlayıcıyı tanımladığı sürece kullanılmıyor.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.slug": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kısa ad",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.slugHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük harf, rakam ve tire; sağlayıcıyı adreslerde adlandırır. Boşsa bir ad seçilir.",
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
@@ -6863,6 +7414,46 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Teknik ayrıntı: {detail}",
+      "where": [
+        "web/src/components/ProviderChecks.vue"
+      ]
+    },
+    "authProviders.tenantsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İşaretli olmayan kiracı bu sağlayıcıdan hiçbir şey almaz: kişileri bunun üzerinden oturum açamaz, bundan hesap da edinmez.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.tenantsOwned": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir kiracının kendi sağlayıcısı: yalnızca {tenant} kiracısına hizmet verir.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.tenantsSave": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracıları kaydet",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.tenantsSaved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracılar kaydedildi",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.tenantsTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bunun üzerinden oturum açan kiracılar",
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
@@ -6928,6 +7519,8 @@
       "syntax": "vue-i18n",
       "tr": "Deneme, geçemeyen bir adımda durdu",
       "where": [
+        "web/src/components/ProviderChecks.vue",
+        "web/src/components/TenantSelfService.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -6936,7 +7529,7 @@
       "syntax": "vue-i18n",
       "tr": "Buradan denetlenebilen her adım geçti",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/components/ProviderChecks.vue"
       ]
     },
     "authProviders.title": {
@@ -7448,6 +8041,7 @@
         "web/src/views/GroupEdit.vue",
         "web/src/views/StorageEdit.vue",
         "web/src/views/StorageNew.vue",
+        "web/src/views/TenantEdit.vue",
         "web/src/views/UserEdit.vue"
       ]
     },
@@ -7462,8 +8056,10 @@
         "web/src/components/GlobalWebhookCard.vue",
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/RoleEditor.vue",
+        "web/src/components/TenantSelfService.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
@@ -7478,6 +8074,8 @@
         "web/src/views/StorageEdit.vue",
         "web/src/views/StorageNew.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue",
         "web/src/views/Trash.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue",
@@ -7503,6 +8101,7 @@
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/Sidebar.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/components/ui/Modal.vue",
         "web/src/components/ui/Toast.vue",
@@ -7574,6 +8173,7 @@
       "syntax": "vue-i18n",
       "tr": "Sil",
       "where": [
+        "web/src/components/TenantSelfService.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/Appearance.vue",
@@ -7583,6 +8183,7 @@
         "web/src/views/Shares.vue",
         "web/src/views/StorageEdit.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/TenantEdit.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue",
         "web/src/views/Webhooks.vue"
@@ -7626,6 +8227,7 @@
         "web/src/views/Groups.vue",
         "web/src/views/Replica.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/Tenants.vue",
         "web/src/views/Users.vue",
         "web/src/views/Webhooks.vue"
       ]
@@ -7645,6 +8247,7 @@
       "syntax": "vue-i18n",
       "tr": "Aktif",
       "where": [
+        "web/src/components/TenantSelfService.vue",
         "web/src/views/About.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/External.vue",
@@ -7730,6 +8333,7 @@
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/GroupEdit.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/TenantEdit.vue",
         "web/src/views/Webhooks.vue"
       ]
     },
@@ -7846,8 +8450,10 @@
       "where": [
         "web/src/components/QuotaWidget.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/DefaultAppsTab.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
+        "web/src/components/tools/ThumbnailRepairTab.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/Audit.vue",
         "web/src/views/Dashboard.vue",
@@ -7932,9 +8538,13 @@
         "web/src/components/BuiltinRoleEditor.vue",
         "web/src/components/GlobalWebhookCard.vue",
         "web/src/components/RoleEditor.vue",
+        "web/src/components/TenantSelfService.vue",
         "web/src/components/UserRolesCard.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
+        "web/src/components/plugins/AppPluginThumbLimits.vue",
+        "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
+        "web/src/components/tools/ThumbLimitsCard.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/Appearance.vue",
         "web/src/views/Archives.vue",
@@ -7946,6 +8556,7 @@
         "web/src/views/Replica.vue",
         "web/src/views/Settings.vue",
         "web/src/views/StorageEdit.vue",
+        "web/src/views/TenantEdit.vue",
         "web/src/views/Usage.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Webhooks.vue"
@@ -8028,6 +8639,7 @@
       "syntax": "vue-i18n",
       "tr": "Şimdi test et",
       "where": [
+        "web/src/components/TenantSelfService.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/External.vue"
       ]
@@ -8073,6 +8685,7 @@
         "web/src/views/Shares.vue",
         "web/src/views/StorageEdit.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/TenantEdit.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue"
       ]
@@ -10971,6 +11584,22 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "ctx.open_with_builtin": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yerleşik görüntüleyiciyle aç",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "ctx.open_with_choose": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Uygulama seç…",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
     "ctx.paste": {
       "in": "explorer",
       "syntax": "plain",
@@ -11190,10 +11819,261 @@
       "syntax": "vue-i18n",
       "tr": "Güncellendi"
     },
+    "defaultApps.actions.edit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Düzenle",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.actions.reset": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılana dön",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue",
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.actions.resetNothing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu tür zaten varsayılan sırada.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.actions.view": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Göster",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.builtin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex (yerleşik)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue",
+        "web/src/lib/fileTypes.ts"
+      ]
+    },
+    "defaultApps.col.kind": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tür",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.col.open": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açan",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.col.status": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sıra",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.col.thumbnail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimler",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her dosya türünü hangi uygulamanın açtığı ve küçük resmini hangisinin çizdiği. Bir tür, filex dışında bir şey onu işliyorsa ya da siz değiştirdiyseniz listelenir.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.editor.down": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aşağı taşı",
+      "where": [
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.editor.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı",
+      "where": [
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.editor.on": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açık",
+      "where": [
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.editor.open": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açan"
+    },
+    "defaultApps.editor.openAllOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm açanlar kapalı: bu türdeki dosyalar filex'in kendi görüntüleyicisinde açılır."
+    },
+    "defaultApps.editor.openHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişiler açık olanlar arasından seçer; seçim yapana kadar dosya ilk sıradakiyle açılır."
+    },
+    "defaultApps.editor.openNone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu türü filex dışında açan yok."
+    },
+    "defaultApps.editor.thumbnail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resmi çizen"
+    },
+    "defaultApps.editor.thumbnailAllOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm işleyiciler kapalı: bu türdeki dosyalar küçük resim almaz."
+    },
+    "defaultApps.editor.thumbnailHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyayı ilk çizebilen kazanır; çizemezse sıradaki sorulur."
+    },
+    "defaultApps.editor.thumbnailNone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu türün küçük resmini çizen yok."
+    },
+    "defaultApps.editor.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": ".{ext} dosyaları",
+      "where": [
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.editor.up": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yukarı taşı",
+      "where": [
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Burada henüz hiçbir uygulama bir dosya türünü açmıyor ya da çizmiyor.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yok",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sunucuda uygulamalar kapalı: her dosya türünü yalnız filex açar ve çizer.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.offList": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı: {names}",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.readonly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bunları yalnız bu panele oturum açmış bir yönetici değiştirebilir. API anahtarı ve demo yalnız okur.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue",
+        "web/src/components/plugins/FileTypeEditor.vue"
+      ]
+    },
+    "defaultApps.resetDone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": ".{ext}: varsayılan sıraya dönüldü.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": ".{ext}: kaydedildi.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.status.custom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değiştirildi",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.status.default": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.supertenantOnly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hangi uygulamanın hangi dosya türünü açıp çizeceğine platform işletmecisi karar verir.",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan uygulamalar",
+      "where": [
+        "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
     "demo.adminHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Tam yönetici yetkisi için demo dışı bir hesapla oturum açın.",
+      "tr": "Burada yönetim paneli her hesap için salt okunur - gösterdiklerini değiştirmek için kendi filex'inizi çalıştırın.",
       "where": [
         "web/src/views/Login.vue"
       ]
@@ -11201,7 +12081,7 @@
     "demo.alsoIncluded": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Ayrıca: uygulamalar - izin incelemesinden geçerek kurulan WebAssembly eklentileri, e-İmza ve Dönüştür ile birlikte · dil paketleri ve sağdan sola yerleşim · Görünüm ekranından kurum temaları · oluşturduğunuz bağlantılar, Paylaştıklarım'da · kişisel ve takım etiketleri · sembolik bağlantılı klasörler · klasör başına hatırlanan görünüm ve sıralama · roller ve kişiye özel istisnalar, dosya ve klasör bazında erişim ve uygulamaların kendi izinleri · çok kiracılık · OIDC SSO ve LDAP / Active Directory · yerinde görüntüleyiciler ve düzenleyiciler, ONLYOFFICE ile Office belgeleri · + Yeni menüsünden belge oluşturma - Markdown, metin, CSV ve kod her yerde; Word, Excel, PowerPoint ve OpenDocument ise ONLYOFFICE bağlıyken · tüm seçimi tek akışlı arşiv olarak indirme · çöp kutusu ve sürümleme · replikasyon · kotalar · denetim kaydı · webhook ve uygulama içi bildirimler · depolama eklentileri · kalıcı işlem kuyruğu · depolama sağlayıcınızın kendi günlük raporundan üretilen kullanım ve maliyet görünümü.",
+      "tr": "Ayrıca: uygulamalar - izin incelemesinden geçerek kurulan WebAssembly eklentileri, e-İmza ve Dönüştür ile birlikte · dil paketleri ve sağdan sola yerleşim · Görünüm ekranından kurum temaları · oluşturduğunuz bağlantılar, Paylaştıklarım'da · kişisel ve takım etiketleri · sembolik bağlantılı klasörler · klasör başına hatırlanan görünüm ve sıralama · roller, gruplar ve kişiye özel istisnalar, dosya ve klasör bazında erişim ve uygulamaların kendi izinleri · her kiracının kendi realm'iyle (oturum açma adıyla) çok kiracılık · OIDC SSO, LDAP / Active Directory ve Windows ya da Linux hesabıyla oturum açma · IP izin listesiyle giriş denemesi sınırı · yerinde görüntüleyiciler ve düzenleyiciler, ONLYOFFICE ile Office belgeleri · + Yeni menüsünden belge oluşturma - Markdown, metin, CSV ve kod her yerde; Word, Excel, PowerPoint ve OpenDocument ise ONLYOFFICE bağlıyken · tüm seçimi tek akışlı arşiv olarak indirme · çöp kutusu ve sürümleme · replikasyon · kotalar · denetim kaydı · webhook ve uygulama içi bildirimler · depolama eklentileri · kalıcı işlem kuyruğu · depolama sağlayıcınızın kendi günlük raporundan üretilen kullanım ve maliyet görünümü.",
       "where": [
         "web/src/views/Login.vue"
       ]
@@ -11316,6 +12196,20 @@
       "tr": "6 depolama sürücüsü, iki yönde",
       "where": [
         "web/src/views/Login.vue"
+      ]
+    },
+    "demo.hiddenAddress": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "demoda gizli",
+      "where": [
+        "web/src/components/loginSecurity/AddressListEditor.vue",
+        "web/src/components/loginSecurity/AutoResolution.vue",
+        "web/src/components/loginSecurity/UntrustedForwarders.vue",
+        "web/src/lib/auditLabel.ts",
+        "web/src/lib/format.ts",
+        "web/src/views/Audit.vue",
+        "web/src/views/LoginSecurity.vue"
       ]
     },
     "demo.hideSignIn": {
@@ -12289,6 +13183,14 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "e2e.convert.large_progress": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” şifreleniyor: %{percent}",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
     "e2e.convert.lead": {
       "in": "explorer",
       "syntax": "plain",
@@ -12410,6 +13312,23 @@
       "tr": "“{name}” klasörünü şifrele",
       "where": [
         "packages/core/src/components/EncryptedFolderModal.vue"
+      ]
+    },
+    "e2e.convert.too_large_here": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosya bu tarayıcının tek parçada gönderebileceğinden büyük ve bu sunucu parça parça yükleme almıyor; bu yüzden yerlerinde şifrelenemediler. Hâlâ şifresizler ve onlar şifrelenene kadar klasörün şifrelenmesi tamamlanmış sayılmaz.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ],
+      "plural": true
+    },
+    "e2e.convert.too_large_here_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} dosya bu tarayıcının tek parçada gönderebileceğinden büyük ve bu sunucu parça parça yükleme almıyor; bu yüzden yerinde şifrelenemedi. Hâlâ şifresiz ve o şifrelenene kadar klasörün şifrelenmesi tamamlanmış sayılmaz.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
       ]
     },
     "e2e.create.ack": {
@@ -14540,11 +15459,6 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
-    "e2e.upload.too_big": {
-      "in": "explorer",
-      "syntax": "plain",
-      "tr": "200 MB üstü dosyalar şifreli klasöre yüklenemez (MVP sınırı)"
-    },
     "editor.missingPath": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -14725,6 +15639,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Taslaklar burada kullanılamıyor.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.entry_unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu öğe kullanılamıyor: depo, öğenin hâlâ var olup olmadığını söyleyemedi. Bir sonraki taramadan sonra yeniden deneyin.",
       "where": [
         "packages/core/src/lib/errorWords.ts"
       ]
@@ -14993,7 +15915,11 @@
       "tr": "Bu işlem yapılamadı. Yeniden deneyin.",
       "where": [
         "web/src/components/plugins/AppPluginDetail.vue",
+        "web/src/components/plugins/AppPluginThumbLimits.vue",
+        "web/src/components/plugins/DefaultAppsTab.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
+        "web/src/components/tools/ThumbLimitsCard.vue",
+        "web/src/components/tools/ThumbnailRepairTab.vue",
         "web/src/views/Queue.vue",
         "web/src/views/Replica.vue",
         "web/src/views/Webhooks.vue"
@@ -15025,6 +15951,7 @@
         "web/src/components/BuiltinRoleEditor.vue",
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/RoleEditor.vue",
+        "web/src/components/TenantSelfService.vue",
         "web/src/components/UserGroupsCard.vue",
         "web/src/components/UserRolesCard.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
@@ -15058,6 +15985,8 @@
         "web/src/views/StorageNew.vue",
         "web/src/views/Storages.vue",
         "web/src/views/TaggedFiles.vue",
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue",
         "web/src/views/Trash.vue",
         "web/src/views/Updates.vue",
         "web/src/views/Usage.vue",
@@ -15080,7 +16009,9 @@
       "tr": "Yüklenemedi. Yeniden deneyin.",
       "where": [
         "web/src/components/plugins/AppPluginDetail.vue",
+        "web/src/components/plugins/AppPluginThumbLimits.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/DefaultAppsTab.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/stores/audit.ts",
@@ -15276,6 +16207,11 @@
       "syntax": "vue-i18n",
       "tr": "Bu bir loopback adresi, ama filex {publicUrl} adresinde yayında - orayı açan kişiler bu makinede değil ve onların tarayıcısında “{host}” kendi bilgisayarları demektir."
     },
+    "external.advisories.jwt_not_enforced": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Doküman sunucusu imzasız bir isteği kabul etti, yani üzerinde JWT kapalı. Bu durumda filex'in imzasını yok sayar, özel adreslerden indirmeyi reddeder (ONLYOFFICE Docs 7.4 ve sonrası) ve kaydetme geri çağrılarını imzasız gönderir; filex bunları reddeder. Doküman sunucusunda JWT_ENABLED=true yapın ve JWT_SECRET'i aynı sırra ayarlayın."
+    },
     "external.advisories.public_url_bare_host": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -15430,7 +16366,7 @@
     "external.legs.callbackOk": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex'e ulaştı - doküman sunucusu bir deneme dosyasını indirdi",
+      "tr": "filex'e ulaştı - doküman sunucusu bir deneme dosyasını, belgelerin kullandığı imzalı adresin aynısından indirdi",
       "where": [
         "web/src/views/External.vue"
       ]
@@ -15616,6 +16552,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Erişilebilir",
+      "where": [
+        "web/src/views/External.vue"
+      ]
+    },
+    "external.testedUnsaved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sonuçlar formdaki, henüz kaydedilmemiş değerlere ait. Kullanmak için kaydedin.",
       "where": [
         "web/src/views/External.vue"
       ]
@@ -17484,34 +18428,22 @@
     "install.dl.appimage": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Linux (.AppImage)",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Linux (.AppImage)"
     },
     "install.dl.appimage_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Taşınabilir - kurulum yok, çalıştırılabilir yapıp açmanız yeterli · ~140 MB",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Taşınabilir - kurulum yok, çalıştırılabilir yapıp açmanız yeterli. Ubuntu 23.10 ve sonrasında önce tek seferlik bir adım gerekir, uygulama bunu size gösterir · ~140 MB"
     },
     "install.dl.deb": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Debian / Ubuntu (.deb)",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Debian / Ubuntu (.deb)"
     },
     "install.dl.deb_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "apt ile sistem geneline kurar · ~100 MB",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "apt ile sistem geneline kurar · ~100 MB"
     },
     "install.dl.dmg": {
       "in": "admin",
@@ -17561,53 +18493,45 @@
         "web/src/composables/useInstallPrompt.ts"
       ]
     },
+    "install.dl.other_arm64": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arm işlemciler için (arm64)"
+    },
+    "install.dl.other_x64": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Intel ve AMD işlemciler için (x64)"
+    },
     "install.dl.rpm": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Fedora / openSUSE (.rpm)",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Fedora / openSUSE (.rpm)"
     },
     "install.dl.rpm_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "dnf ya da zypper ile sistem geneline kurar · ~100 MB",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "dnf ya da zypper ile sistem geneline kurar · ~100 MB"
     },
     "install.dl.win_portable": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Windows taşınabilir (.exe)",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Windows taşınabilir (.exe)"
     },
     "install.dl.win_portable_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Her yerden çalışır - USB bellek, İndirilenler - ve dosyalarını yanında tutar. Kendini güncellemez · ~125 MB",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Her yerden çalışır - USB bellek, İndirilenler - ve dosyalarını yanında tutar. Kendini güncellemez · ~125 MB"
     },
     "install.dl.win_setup": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Windows kurulumu (.exe)",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "Windows kurulumu (.exe)"
     },
     "install.dl.win_setup_hint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex'i kurar, Başlat menüsüne ekler ve kendini günceller · ~125 MB",
-      "where": [
-        "web/src/composables/useInstallPrompt.ts"
-      ]
+      "tr": "filex'i kurar, Başlat menüsüne ekler ve kendini günceller · ~125 MB"
     },
     "install.dl.win_store": {
       "in": "admin",
@@ -18134,10 +19058,31 @@
       "syntax": "vue-i18n",
       "tr": "Kilitlendi"
     },
+    "loginSecurity.attempts.action.settings_changed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ayarlar değiştirildi"
+    },
     "loginSecurity.attempts.action.unlocked": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Kilit açıldı"
+    },
+    "loginSecurity.attempts.allLocks": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm kilitler ({n})",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.attempts.changed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değişen: {fields}",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
     },
     "loginSecurity.attempts.columns.action": {
       "in": "admin",
@@ -18190,7 +19135,7 @@
     "loginSecurity.attempts.desc": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Hatalı denemeler, kilitler, kilit açmalar ve izinli adres geçişleri; en yeni üstte. Parolalar hiçbir zaman kaydedilmez.",
+      "tr": "Hatalı denemeler, kilitler, kilit açmalar, izinli adres geçişleri ve bu ayarlardaki değişiklikler; en yeni üstte - yönetici hangi kapıdan gelmiş olursa olsun. Parolalar hiçbir zaman kaydedilmez.",
       "where": [
         "web/src/views/LoginSecurity.vue"
       ]
@@ -18279,6 +19224,29 @@
       "where": [
         "web/src/views/LoginSecurity.vue"
       ]
+    },
+    "loginSecurity.attempts.via.api": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "API anahtarı"
+    },
+    "loginSecurity.attempts.via.mcp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "MCP"
+    },
+    "loginSecurity.attempts.via.other": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Diğer",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.attempts.via.panel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetim paneli"
     },
     "loginSecurity.limit.accountMaxFails": {
       "in": "admin",
@@ -18563,7 +19531,192 @@
     "loginSecurity.proxies.addressesHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Yukarıdaki sınıfların dışındaki bir vekil sunucu, örneğin kendi vekil sunucunuzun önündeki bir CDN uç sunucusu: adresi veya ağı (CIDR).",
+      "tr": "Yukarıdaki anahtarların kapsamadığı bir vekil sunucu - yayımlanmış bir port üzerinden ana makinedeki, başka bir makinedeki ya da kendi vekil sunucunuzun önündeki bir CDN uç sunucusu: adresi veya ağı (CIDR).",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.believes": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenilen",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.env.container": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex kendine ait bir ağdaki bir konteynerde çalışıyor: o ağdaki öteki konteynerlere - filex'in önündeki vekil sunucu konteynerine - güvenilir."
+    },
+    "loginSecurity.proxies.auto.env.host-network": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex ana makine ağını kullanan bir konteynerde çalışıyor: ana makinenin kendi ağını görür, bu yüzden yalnızca bu makineye güvenilir."
+    },
+    "loginSecurity.proxies.auto.env.kubernetes": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex bir Kubernetes pod'unda çalışıyor: pod'un kendi ağına güvenilir. Başka bir düğümdeki ingress denetleyicisi bunun dışındadır - kümenizin pod ağını (CIDR) aşağıya ekleyin."
+    },
+    "loginSecurity.proxies.auto.env.plain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex konteynerde değil, doğrudan bu makinede çalışıyor: yalnızca bu makineye güvenilir. Başka bir makinedeki vekil sunucuyu aşağıya yazın."
+    },
+    "loginSecurity.proxies.auto.env.podman-rootless": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex rootless bir Podman konteynerinde çalışıyor: bağlantıları aktarılarak gelir, bu yüzden yalnızca bu makineye güvenilir."
+    },
+    "loginSecurity.proxies.auto.env.unknown": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex nasıl bağlı olduğunu anlayamadı, bu yüzden yalnızca bu makineye güvenilir."
+    },
+    "loginSecurity.proxies.auto.excluded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Asla güvenilmeyen",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.excludedHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ağ geçitleri ve filex'in kendi adresi: ana makinenin (yayımlanmış bir portun docker-proxy'si, ana makinedeki bir süreç) ya da konteyner çalışma ortamının (rootless Podman) aktardığı bağlantılar bunlardan gelir.",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.interfaces": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ağ arayüzleri",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.notInUse": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yürürlükte değil: yürürlükteki liste bunu kullanmıyor. Bu anahtar açıkken kaydetmek onu yürürlüğe koyar.",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.reason.container-network": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "konteyner ağı - güvenilir"
+    },
+    "loginSecurity.proxies.auto.reason.down": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kapalı - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.reason.host": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ana makinenin kendi arayüzü - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.reason.lan": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yerel ağda (macvlan ya da ipvlan) - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.reason.link-local-only": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yalnızca bağlantı-yerel adresler - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.reason.other": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "başka türde bir arayüz - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.reason.rootless": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "rootless ağ - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.reason.tunnel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "tünel (kullanıcı alanı ağı ya da VPN) - güvenilmez"
+    },
+    "loginSecurity.proxies.auto.runtime.container": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "konteyner"
+    },
+    "loginSecurity.proxies.auto.runtime.containerd": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "containerd"
+    },
+    "loginSecurity.proxies.auto.runtime.docker": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Docker"
+    },
+    "loginSecurity.proxies.auto.runtime.kubernetes": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kubernetes"
+    },
+    "loginSecurity.proxies.auto.runtime.podman": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Podman"
+    },
+    "loginSecurity.proxies.auto.runtimeLabel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çalışma ortamı: {runtime}",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.thisMachine": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "bu makine",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Otomatik neye çözüldü",
+      "where": [
+        "web/src/components/loginSecurity/AutoResolution.vue"
+      ]
+    },
+    "loginSecurity.proxies.auto.warning.ambiguous": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex'in ağı hakkında okudukları birbiriyle çelişiyor, bu yüzden otomatik yalnızca bu makineye güveniyor. Vekil sunucunuzu aşağıya yazın."
+    },
+    "loginSecurity.proxies.auto.warning.unreadable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex nasıl bağlı olduğunu okuyamadı, bu yüzden otomatik yalnızca bu makineye güveniyor. Vekil sunucunuzu aşağıya yazın."
+    },
+    "loginSecurity.proxies.class.auto": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Otomatik (auto)",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.proxies.class.autoHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex'in nerede çalıştığına göre belirlenir: bu makine ve konteynerde, bağlı olduğu konteyner ağları - ağ geçitleri asla, yerel ağ asla.",
       "where": [
         "web/src/views/LoginSecurity.vue"
       ]
@@ -18611,7 +19764,7 @@
     "loginSecurity.proxies.class.privateHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "RFC 1918 ve RFC 4193 özel aralıkları: kendi ağınızdaki ya da bir Docker ağındaki vekil sunucu.",
+      "tr": "RFC 1918 ve RFC 4193 özel aralıkları: yerel ağınızdaki her makine ve ağ geçitleri dahil her Docker ağı.",
       "where": [
         "web/src/views/LoginSecurity.vue"
       ]
@@ -18640,6 +19793,111 @@
         "web/src/views/LoginSecurity.vue"
       ]
     },
+    "loginSecurity.proxies.forwarders.confirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{address} vekil sunucu olarak güvenilsin mi?\n\nfilex onun ilettiği istemci adresine inanır. {address} sizin vekil sunucunuz değilse, ondan gönderen herkes hangi adresle sayılacağını kendisi seçer: adres başına sınırı atlatabilir ya da izinli listedeki bir adresi sahiplenebilir.",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.confirmPublic": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{address} genel bir adres. Yalnızca kendi vekil sunucunuz ya da CDN'inizin uç sunucusuysa güvenin, asla bir ziyaretçininkine.",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.confirmRelay": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{address}, aktarılan bağlantıların geldiği bir adres - bir konteyner ağının ağ geçidi ya da filex'in kendi adresi. Ana makinenin ya da konteyner çalışma ortamının aktardığı her şey, yayımlanmış bir port da dahil, ondan gelir. Yalnızca o porta vekil sunucunuzdan başka hiçbir şey ulaşamıyorsa güvenin (127.0.0.1 üzerinde yayımlanmış ya da güvenlik duvarıyla kapatılmış).",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bunlar X-Forwarded-For ya da X-Real-IP gönderdi ama filex onlara güvenmiyor: başlığı yok saydı ve her isteği onların kendi isteği olarak saydı. Biri sizin vekil sunucunuz mu? Ona güvenin, filex de ilettiği istemci adresine inansın.",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.more": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Burada listelenmeyen {n} tane daha var.",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.public": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "genel adres",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.relay": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ağ geçidi ya da filex'in kendi adresi",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.seen": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} istek, son: {when}",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ],
+      "plural": true
+    },
+    "loginSecurity.proxies.forwarders.showAll": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tümünü göster ({n})",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.showFewer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Daha azını göster",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenilmeyen bir eş, iletilen adres gönderiyor",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.trust": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{address} adresine güven",
+      "where": [
+        "web/src/components/loginSecurity/UntrustedForwarders.vue"
+      ]
+    },
+    "loginSecurity.proxies.forwarders.trusted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{address} artık güvenilir",
+      "where": [
+        "web/src/views/LoginSecurity.vue"
+      ]
+    },
     "loginSecurity.proxies.inForce": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -18659,7 +19917,7 @@
     "loginSecurity.proxies.override": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Kaydettiğinizde bu liste burada saklanır ve FILEX_TRUSTED_PROXIES ortam değişkenini ezer. Değişkene, o da boşsa yerleşik varsayılana dönmek için kayıtlı listeyi kaldırın.",
+      "tr": "Kaydettiğinizde bu liste burada saklanır ve FILEX_TRUSTED_PROXIES ortam değişkenini ezer. Değişkene, o da boşsa otomatik varsayılana dönmek için kayıtlı listeyi kaldırın.",
       "where": [
         "web/src/views/LoginSecurity.vue"
       ]
@@ -18683,7 +19941,7 @@
     "loginSecurity.proxies.resetConfirm": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Güvenilir vekil sunucuların kayıtlı listesi kaldırılsın mı? Yeniden FILEX_TRUSTED_PROXIES ortam değişkeni ya da yerleşik varsayılan geçerli olur.",
+      "tr": "Güvenilir vekil sunucuların kayıtlı listesi kaldırılsın mı? Yeniden FILEX_TRUSTED_PROXIES ortam değişkeni ya da otomatik varsayılan geçerli olur.",
       "where": [
         "web/src/views/LoginSecurity.vue"
       ]
@@ -18704,10 +19962,10 @@
         "web/src/views/LoginSecurity.vue"
       ]
     },
-    "loginSecurity.proxies.source.default": {
+    "loginSecurity.proxies.source.auto": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Yerleşik varsayılan: bu makine, özel ağlar ve bağlantı-yerel adresler"
+      "tr": "Otomatik: yerleşik varsayılan"
     },
     "loginSecurity.proxies.source.env": {
       "in": "admin",
@@ -18930,6 +20188,7 @@
       "tr": "Vazgeç",
       "where": [
         "packages/core/src/modals/DraftConflictModal.vue",
+        "packages/core/src/modals/OpenWithDialog.vue",
         "packages/core/src/modals/RenameModal.vue"
       ]
     },
@@ -19420,6 +20679,15 @@
         "web/src/views/Explore.vue"
       ]
     },
+    "nav.myTenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracım",
+      "where": [
+        "web/src/components/Sidebar.vue",
+        "web/src/router/index.ts"
+      ]
+    },
     "nav.notifications": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19529,6 +20797,15 @@
         "web/src/router/index.ts"
       ]
     },
+    "nav.tenants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracılar",
+      "where": [
+        "web/src/components/Sidebar.vue",
+        "web/src/router/index.ts"
+      ]
+    },
     "nav.theme": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19562,6 +20839,15 @@
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/DarkModeToggle.vue"
+      ]
+    },
+    "nav.tools": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Araçlar",
+      "where": [
+        "web/src/components/Sidebar.vue",
+        "web/src/router/index.ts"
       ]
     },
     "nav.trash": {
@@ -20179,6 +21465,16 @@
       "syntax": "vue-i18n",
       "tr": "Paylaşım bağlantısı oluşturuldu"
     },
+    "notifications.kinds.tenant_domain_restored": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi alan adı yeniden çalışıyor"
+    },
+    "notifications.kinds.tenant_domain_suspended": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi alan adı çalışmıyor"
+    },
     "notifications.kinds.update_applied": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -20779,6 +22075,11 @@
       "syntax": "plain",
       "tr": "Geri getirme"
     },
+    "opc.kind.thumbs": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Küçük resim onarımı"
+    },
     "opc.kind.trash": {
       "in": "explorer",
       "syntax": "plain",
@@ -20879,6 +22180,63 @@
       "tr": "Çöpten {n} öğe",
       "where": [
         "packages/core/src/components/PendingOpsTray.vue"
+      ]
+    },
+    "openWith.always": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{ext} dosyalarını her zaman bu uygulamayla aç",
+      "where": [
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
+    "openWith.builtin": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "filex görüntüleyicisi (yerleşik)",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
+    "openWith.hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Hesabınızda saklanır. Ayarlar, Varsayılan uygulamalar bölümünden değiştirebilirsiniz.",
+      "where": [
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
+    "openWith.lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} hangi uygulamayla açılsın?",
+      "where": [
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
+    "openWith.now": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şu an bununla açılıyor",
+      "where": [
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
+    "openWith.open": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aç",
+      "where": [
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
+    "openWith.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Birlikte aç",
+      "where": [
+        "packages/core/src/modals/OpenWithDialog.vue"
       ]
     },
     "ops.copy": {
@@ -21055,6 +22413,48 @@
         "packages/core/src/components/CommandPalette.vue"
       ]
     },
+    "peek.empty": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Boş",
+      "where": [
+        "packages/core/src/components/FolderPeek.vue"
+      ]
+    },
+    "peek.items": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe",
+      "where": [
+        "packages/core/src/components/FolderPeek.vue"
+      ],
+      "plural": true
+    },
+    "peek.items_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} öğe",
+      "where": [
+        "packages/core/src/components/FolderPeek.vue"
+      ]
+    },
+    "peek.loading": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İçine bakılıyor…",
+      "where": [
+        "packages/core/src/components/FolderPeek.vue"
+      ]
+    },
+    "peek.more": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "+{n} tane daha",
+      "where": [
+        "packages/core/src/components/FolderPeek.vue"
+      ],
+      "plural": true
+    },
     "pendingOps.cancel": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -21202,6 +22602,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Geri getiriliyor",
+      "where": [
+        "web/src/components/PendingOpsTray.vue"
+      ]
+    },
+    "pendingOps.verb.thumbs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimler onarılıyor",
       "where": [
         "web/src/components/PendingOpsTray.vue"
       ]
@@ -22680,6 +24088,30 @@
         "packages/core/src/components/plugin/PluginPageView.vue"
       ]
     },
+    "plugin.page_view.failed_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İş tamamlanamadı",
+      "where": [
+        "packages/core/src/components/plugin/PluginPageView.vue"
+      ]
+    },
+    "plugin.page_view.finished_text": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Burada yapılacak başka bir şey kalmadı. Dosyalara dönebilir ya da bu sekmeyi kapatabilirsiniz.",
+      "where": [
+        "packages/core/src/components/plugin/PluginPageView.vue"
+      ]
+    },
+    "plugin.page_view.finished_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İş bitti",
+      "where": [
+        "packages/core/src/components/plugin/PluginPageView.vue"
+      ]
+    },
     "plugin.page_view.open_ops": {
       "in": "explorer",
       "syntax": "plain",
@@ -22688,10 +24120,18 @@
         "packages/core/src/components/plugin/PluginPageView.vue"
       ]
     },
+    "plugin.page_view.opening_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sonuç açılıyor",
+      "where": [
+        "packages/core/src/components/plugin/PluginPageView.vue"
+      ]
+    },
     "plugin.page_view.queued_text": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "filex işi yürütüyor. İlerleyişi işlemler tepsisinde; bittiğinde haber verilecek.",
+      "tr": "filex işi yürütüyor. Bittiğinde bu sayfa söyler; ilerleyişi işlemler tepsisinde de görünür.",
       "where": [
         "packages/core/src/components/plugin/PluginPageView.vue"
       ]
@@ -23389,6 +24829,46 @@
         "packages/core/src/components/plugin/SurfaceRenderer.vue"
       ]
     },
+    "pluginLog.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz günlük kaydı yok.",
+      "where": [
+        "web/src/components/plugins/PluginLogPanel.vue"
+      ]
+    },
+    "pluginLog.firstAt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İlk: {when}",
+      "where": [
+        "web/src/components/plugins/PluginLogPanel.vue"
+      ]
+    },
+    "pluginLog.live": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Canlı - 2 saniyede bir yenilenir",
+      "where": [
+        "web/src/components/plugins/PluginLogPanel.vue"
+      ]
+    },
+    "pluginLog.repeated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "×{count}",
+      "where": [
+        "web/src/components/plugins/PluginLogPanel.vue"
+      ]
+    },
+    "pluginLog.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Günlük",
+      "where": [
+        "web/src/components/plugins/PluginLogPanel.vue"
+      ]
+    },
     "pluginRequests.actions.approve": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -23721,6 +25201,14 @@
       "tr": "API anahtarı “{key}”",
       "where": [
         "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "plugins.actions.logs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Günlük",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
       ]
     },
     "plugins.actions.reviewUpdate": {
@@ -24172,6 +25660,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Boş yuva için sıraya girmek zorunda kalan çağrılar. Yalnızca yavaşlamış bir eklenti, hata vermeye başlamadan önce burada görünür.",
+      "where": [
+        "web/src/components/plugins/StoragePluginsTab.vue"
+      ]
+    },
+    "plugins.logsTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} günlüğü",
       "where": [
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
@@ -25292,6 +26788,14 @@
       "tr": "{name} ile paylaşıldı",
       "where": [
         "packages/core/src/components/public/PublicShell.vue"
+      ]
+    },
+    "public.unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu öğe şu anda açılamıyor: bulunduğu depo, öğenin durumu hakkında yanıt vermedi. Bağlantıyı size gönderen kişiye haber verin.",
+      "where": [
+        "packages/core/src/components/public/PublicShareBody.vue"
       ]
     },
     "public.up": {
@@ -26936,6 +28440,16 @@
       "tr": "Gizli değer saklanamıyor: gizli değerler mühürlü tutulur ve bu sunucuda FILEX_SECRET_KEY yok. Onu ayarlayın, filex'i yeniden başlatın ve yeniden kaydedin.",
       "about": "Admin panel → Identity providers: why a change to a sign-in provider was refused, or the question asked before switching on a provider whose test failed."
     },
+    "server.auth_provider.tenant_lockout": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "“{name}”, “{tenant}” kiracısının bir yöneticisinin oturum açabildiği son yol. Önce ona başka bir yol bağlayın ya da siz bağlayana dek kiracının dışarıda kalacağını onaylayın.",
+      "about": "Admin panel → Identity providers: why a change to a sign-in provider was refused, or the question asked before switching on a provider whose test failed.",
+      "vars": {
+        "name": "the sign-in provider's name, e.g. ldap",
+        "tenant": "the name an administrator gave the tenant, e.g. Acme"
+      }
+    },
     "server.auth_provider.test_account_disabled": {
       "in": "server",
       "syntax": "server",
@@ -26946,6 +28460,24 @@
       "in": "server",
       "syntax": "server",
       "tr": "Denemede kullandığınız hesap bir kiracıya ait; platformun süper yöneticisi olamaz. Kiracıya ait olmayan bir hesapla deneyin.",
+      "about": "Admin panel → Identity providers: why a change to a sign-in provider was refused, or the question asked before switching on a provider whose test failed."
+    },
+    "server.auth_provider.test_account_other_tenant": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Denemede kullandığınız hesap başka bir kiracıya ait; bu kiracının yöneticisi olamaz. Bu kiracının bir hesabıyla ya da yeni bir hesapla deneyin.",
+      "about": "Admin panel → Identity providers: why a change to a sign-in provider was refused, or the question asked before switching on a provider whose test failed."
+    },
+    "server.auth_provider.test_realm_required": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu sağlayıcı birden çok kiracıya hizmet veriyor: deneme hesabının hangi realm'de oturum açacağını belirtin.",
+      "about": "Admin panel → Identity providers: why a change to a sign-in provider was refused, or the question asked before switching on a provider whose test failed."
+    },
+    "server.auth_provider.test_realm_unknown": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu realm hiçbir kiracıya ait değil.",
       "about": "Admin panel → Identity providers: why a change to a sign-in provider was refused, or the question asked before switching on a provider whose test failed."
     },
     "server.auth_provider.test_required": {
@@ -27821,6 +29353,12 @@
       "tr": "bir dosya",
       "about": "A word a notification OR an email uses when the event does not say it (an upload with no name typed, a file with no name). One word, both surfaces - they were written twice until v0.43.0. Used where a file would be named and it has none: the {name} of a notification, and the {name} in a share email’s subject and fact line."
     },
+    "server.origin.refused": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu değişiklik filex'in kendisinden değil, başka bir siteden gönderildi; oturumunuzu korumak için reddedildi. O site filex'i bilerek gömüyorsa bir yönetici onu `FILEX_CORS_ALLOWED_ORIGINS` ile izinli kılabilir.",
+      "about": "API refusal when a page on another site sent a change (an upload, a delete, a sign-in) through the visitor's browser with their session, and filex refused it. Read mostly by whoever built that page, sometimes by the visitor. Keep `FILEX_CORS_ALLOWED_ORIGINS` exactly as written, between its backticks. Plain text; two sentences."
+    },
     "server.perm.action.access.api": {
       "in": "server",
       "syntax": "server",
@@ -28098,19 +29636,19 @@
     "server.perm.files_lock": {
       "in": "server",
       "syntax": "server",
-      "tr": "Seçtiğiniz dosyayı süreli olarak herkese (yöneticiler dâhil) salt-okunur kilitler",
+      "tr": "Üzerinde çalıştığı bir dosyayı herkese (yöneticiler dâhil) salt okunur kilitler: en çok bir yıl boyunca ya da uygulama veya bir yönetici kilidi kaldırana kadar",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
     },
     "server.perm.files_read": {
       "in": "server",
       "syntax": "server",
-      "tr": "Seçtiğiniz dosyaların içeriğini okur",
+      "tr": "Açıldığı ya da çalıştırıldığı dosyaların ve kayıt tuttuğu dosyaların içeriğini okur",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
     },
     "server.perm.files_write": {
       "in": "server",
       "syntax": "server",
-      "tr": "Seçtiğiniz dosyanın yanına ya da yeni sürümü olarak dosya yazar",
+      "tr": "Çalıştırıldığı dosyanın yanına, seçtiğiniz bir klasöre ya da o dosyanın yeni sürümü olarak dosya yazar",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
     },
     "server.perm.http": {
@@ -28163,6 +29701,15 @@
       "syntax": "server",
       "tr": "Dosya başına küçük durum kayıtları tutar",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
+    "server.perm.thumbnail": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{kind} dosyalarının küçük resimlerini çizer: filex'in çizdiği bu türdeki her dosyanın baytları, hangi depoda olursa olsun, tek tek ona verilir",
+      "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop.",
+      "vars": {
+        "kind": "a kind of file: an extension with its dot (.jar) or a media type (application/java-archive)"
+      }
     },
     "server.perm.ui": {
       "in": "server",
@@ -28845,6 +30392,91 @@
       "about": "Admin panel → Storages (Add storage / edit a storage): why the storage's settings were refused. Shown as the error when saving. File and folder patterns (.git, *.tmp, downloads/incomplete/**) and the example folder names stay as written.",
       "vars": {
         "pattern": "the pattern (one line of the setting) as the administrator typed it"
+      }
+    },
+    "server.tenant_domain.restored_body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "DNS kaydı yeniden kiracınızın platformdaki adresini gösteriyor; kiracınıza {domain} üzerinden ulaşılıyor.",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "domain": "the domain, e.g. files.acme.example"
+      }
+    },
+    "server.tenant_domain.restored_title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{domain} yeniden çalışıyor",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "domain": "the domain, e.g. files.acme.example"
+      }
+    },
+    "server.tenant_domain.suspended_body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "DNS kaydı artık kiracınızın platformdaki adresini göstermiyor ({reason}); kayıt düzelene dek kiracınıza {domain} üzerinden ulaşılamaz. Hiçbir şey silinmedi: CNAME kaydını geri koyun, alan adı bir sonraki denetimde yeniden çalışır.",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "domain": "the domain, e.g. files.acme.example",
+        "reason": "what the DNS answered instead, in the reader's language: one of the server.tenant_domain.why_* sentences"
+      }
+    },
+    "server.tenant_domain.suspended_title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{domain} çalışmıyor",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "domain": "the domain, e.g. files.acme.example"
+      }
+    },
+    "server.tenant_domain.why_dns_failed": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "DNS'e sorulamadı ({detail})",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "detail": "the resolver's own error, in English, e.g. i/o timeout"
+      }
+    },
+    "server.tenant_domain.why_no_cname": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{domain} bir CNAME değil, kendi adres kayıtları var",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "domain": "the domain, e.g. files.acme.example"
+      }
+    },
+    "server.tenant_domain.why_no_record": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{domain} hiç çözümlenmiyor",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "domain": "the domain, e.g. files.acme.example"
+      }
+    },
+    "server.tenant_domain.why_points_elsewhere": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "CNAME kaydı {target} yerine {found} adresini gösteriyor",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "found": "where the CNAME points now, e.g. other.example",
+        "target": "the tenant's address on the platform it must point at, e.g. acme.tenants.files.example"
+      }
+    },
+    "server.tenant_domain.why_wildcard_cname": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{target}, {found} adresine bir CNAME: platformun *.{tenant_domain} kaydı adres kaydı (A/AAAA) olmalı",
+      "about": "A notification a tenant's administrators get when the tenant's own domain (a CNAME to the tenant's address on the platform) stops pointing at it, so it stops working, or when it points there again.",
+      "vars": {
+        "found": "where that address points, e.g. lb.files.example",
+        "target": "the tenant's address on the platform, e.g. acme.tenants.files.example",
+        "tenant_domain": "the installation's tenant domain, e.g. tenants.files.example"
       }
     },
     "server.token.scope_unknown": {
@@ -31191,11 +32823,6 @@
       "syntax": "shared",
       "tr": "Kova"
     },
-    "storages.fields.dialTimeout": {
-      "in": "both",
-      "syntax": "shared",
-      "tr": "Bağlanma zaman aşımı (saniye)"
-    },
     "storages.fields.disablePresign": {
       "in": "both",
       "syntax": "shared",
@@ -32134,6 +33761,993 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "tenantSelf.activeSince": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{when} tarihinden beri çalışıyor",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.add": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ekle",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.addDomain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi alan adı",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.addOwn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi {kind} ekle",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.bringCertificate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sertifika getir",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.certByFilex": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex (ACME)",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.certByProxy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Öndeki vekil",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.certificate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sertifika",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.certificateHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{domain} için sertifika (zinciriyle) ve özel anahtarı, PEM olarak. Anahtar mühürlenerek saklanır ve bir daha gösterilmez.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.certificatePem": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sertifika (PEM)",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.certificateSaved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sertifika kaydedildi",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.checkNow": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şimdi denetle",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.confirmFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Denemesi başarısız oldu. Yine de açılsın mı?",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.deleteDomainConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{domain} bu kiracıdan kaldırılsın mı? Hemen çalışmayı bırakır.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.domain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Alan adı",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.domainDetail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ayrıntı",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.domainErrors.certificate_expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sertifikanın süresi dolmuş."
+    },
+    "tenantSelf.domainErrors.certificate_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu, PEM biçiminde bir sertifika ve anahtar değil."
+    },
+    "tenantSelf.domainErrors.certificate_key_mismatch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özel anahtar bu sertifikaya ait değil."
+    },
+    "tenantSelf.domainErrors.certificate_needs_secret_key": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özel anahtar mühürlenerek saklanır ve bu kurulumda FILEX_SECRET_KEY yok."
+    },
+    "tenantSelf.domainErrors.certificate_wrong_name": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sertifika bu alan adı için değil."
+    },
+    "tenantSelf.domainErrors.domain_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu, bir kiracının getirebileceği bir alan adı değil (en az iki parçalı; harf, rakam ve tire)."
+    },
+    "tenantSelf.domainErrors.domain_reserved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu ad platformun kendi adı."
+    },
+    "tenantSelf.domainErrors.domain_taken": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu alan adı zaten kullanımda."
+    },
+    "tenantSelf.domainErrors.no_tenant_domain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum kiracılara bir alan adının yöneltilebileceği bir adres vermiyor."
+    },
+    "tenantSelf.domainStatus": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durum",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.domainsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi alan adınızı getirmek için ondan {target} adresine bir CNAME kaydı oluşturun, sonra buraya ekleyin. Kayıt görüldüğü anda çalışır; kayıt kalkarsa (geri gelene dek) durur. Alan adınızın altında bir ad kullanın (files.acme.example): yalın bir alan adı CNAME taşıyamaz.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.domainsTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Adresler ve kendi alan adları",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.ftpsNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "FTPS sunucunun tek sertifikasını sunar: adı denetleyen bir istemci FTPS'te alan adınızı reddeder. SFTP ve WebDAV bundan etkilenmez.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.guarded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcılarınız yalnızca genel adreslere ulaşır; LDAP şifrelidir (ldaps:// ya da StartTLS).",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.insecure": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvensiz ve iç ağ sağlayıcılarına izin ver",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.insecureHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalıyken bu kiracının kendi sağlayıcıları özel ya da iç ağ adreslerine ulaşamaz ve LDAP ldaps:// ya da StartTLS kullanmak zorundadır. Açıkken ikisine de izin verilir; kendi ağınızın içindeki bir dizin için. Her değişiklik denetim kaydına düşer.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.insecureOn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platform, bu kiracının sağlayıcılarının iç ağ adreslerine ve düz ldap://'ye ulaşmasına izin veriyor.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.keyPem": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özel anahtar (PEM)",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.noDomains": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz kendi alan adı yok.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.noTenantDomain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum kiracılara kendi adreslerini vermiyor; bu yüzden bir alan adı onlara yöneltilemez (FILEX_TENANT_DOMAIN).",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.ownCertificate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi sertifikası, {when} tarihine dek",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.ownCertificateSoon": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi sertifikası, {when} tarihinde bitiyor: yenisini getirin",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.platformAddress": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracınızın platformdaki adresi:",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.pointAt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{target} adresine bir CNAME bekleniyor",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.providerAdded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcı kapalı olarak eklendi: doldurun, deneyin ve açın.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.removeCertificate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi sertifikayı kaldır",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.sharedHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun hangi sağlayıcılarının kiracınıza hizmet vereceğine platform operatörü karar verir.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.sharedTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun verdikleri",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.signinHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracınızın kendi OIDC'si ya da LDAP'ı. Kişileri realm'inizle bunlar üzerinden oturum açar; başka kiracıların kişileri açamaz.",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.signinTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.status.active": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çalışıyor"
+    },
+    "tenantSelf.status.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekliyor"
+    },
+    "tenantSelf.status.suspended": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durdu"
+    },
+    "tenantSelf.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracınızın kendi oturum açma sağlayıcıları, platformun ona verdikleri ve kendi alan adları.",
+      "where": [
+        "web/src/views/TenantSelf.vue"
+      ]
+    },
+    "tenantSelf.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracım",
+      "where": [
+        "web/src/views/TenantSelf.vue"
+      ]
+    },
+    "tenantSelf.why.dns_failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "DNS'e sorulamadı ({detail}); hiçbir şey değişmedi"
+    },
+    "tenantSelf.why.no_cname": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{domain}, {target} adresine bir CNAME değil, kendi adres kayıtları var"
+    },
+    "tenantSelf.why.no_record": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{domain} hiç çözümlenmiyor"
+    },
+    "tenantSelf.why.points_elsewhere": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "CNAME kaydı {target} yerine {found} adresini gösteriyor"
+    },
+    "tenantSelf.why.wildcard_cname": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{target}, {found} adresine bir CNAME: platformun *.{tenant_domain} kaydı adres kaydı (A/AAAA) olmalı"
+    },
+    "tenants.add": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeni kiracı",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.addressTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Adres",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.chooseStorage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir depo seçin…",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.create": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluştur",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.createdOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı oluşturuldu",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.deleteAccounts": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} hesabını da sil (açık bağlantıları kapanır)",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ],
+      "plural": true
+    },
+    "tenants.deleteConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” kiracısı silinsin mi? Depoları silinmez, yalnızca bağları kaldırılır; dosyaları kalır.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.deletedOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı silindi",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.editTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı",
+      "where": [
+        "web/src/router/index.ts"
+      ]
+    },
+    "tenants.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz kiracı yok.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.errors.host_taken": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu adres başka bir kiracıda."
+    },
+    "tenants.errors.realm_empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracının bir realm'i olmalı."
+    },
+    "tenants.errors.realm_immutable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Realm asla değişmez."
+    },
+    "tenants.errors.realm_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca küçük harf, rakam ve tire; en çok 63 karakter, harf ya da rakamla başlayıp biter."
+    },
+    "tenants.errors.realm_none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kısa addan realm olabilecek bir şey çıkmadı: bir realm yazın.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.errors.realm_reserved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu realm ayrılmış."
+    },
+    "tenants.errors.realm_taken": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu realm başka bir kiracıda."
+    },
+    "tenants.errors.slug_taken": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kısa ad başka bir kiracıda."
+    },
+    "tenants.fields.adminGroup": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetici grubu",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.adminGroupHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açarken bu grubu taşıyan kişiler kiracının yöneticisidir.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.cookieDomain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çerez alanı",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.cookieDomainHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturumu kiracının alt alanları arasında paylaştırır (.acme.example). Boşsa adresten türetilir. Adres çıplak bir alan adıysa ya da üst alanı genel bir sonekse (.com.tr) ayarlayın.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.enabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açabilir",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.enabledHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalıyken kiracı askıya alınır: kişilerinden hiçbiri oturum açamaz. Hiçbir şey silinmez.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.host": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi adresi",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.fields.hostHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracıya ulaşılan host (files.acme.example). Oturum açma sayfası orada kiracıyı kendiliğinden bilir, kişileri realm yazmaz. Boşsa platformun adresinde realm'leriyle oturum açarlar.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.name": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ad",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.fields.oidcClientId": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstemci kimliği",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.oidcClientSecret": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstemci sırrı",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.oidcIssuer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Issuer adresi",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.oidcRedirectUrl": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönlendirme adresi",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.oidcRedirectUrlHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Boşsa: https://<adres>/api/auth/oidc/callback.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.realm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Realm",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.fields.roleClaim": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rol claim'i",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.slug": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kısa ad",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.fields.slugEditHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değiştirmek realm'i değiştirmez.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.fields.slugHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracının bu platformda benzersiz kısa adı. Realm bundan önerilir.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.generalTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Genel",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.link": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağla",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.linkStorage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo bağla",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.modeOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı kip kapalı (FILEX_MULTI_TENANT): yalnızca platformun kendi kiracısı oturum açabilir. Diğer kiracılar ve sahip oldukları her şey korunur; kip yeniden açılınca kişileri tekrar oturum açar.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.noMatch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eşleşen kiracı yok.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.noStorages": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlı depo yok.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.oidcHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracının kendi kimlik sağlayıcısı; kendi adresinde kullanılır. Boşsa kişileri parolayla ya da platformun sağlayıcılarıyla oturum açar.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.oidcTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi SSO'su (OIDC)",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.peopleColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişiler",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.peopleCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} hesap",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ],
+      "plural": true
+    },
+    "tenants.platform": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platform",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.platformAlwaysOn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısı askıya alınamaz.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.platformHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısı: kişileri boş realm ile oturum açar, yöneticileri tüm kiracıları yönetir.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.platformNoDelete": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısı silinemez.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.platformRealm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yok: boş realm",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.platformRealmHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısının realm'i yoktur: kişileri Realm alanını boş bırakarak oturum açar.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.platformStoragesHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısı her depoya erişir; buradaki bağ yalnızca deponun ona ait olduğunu belirtir.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.realmLockedHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Realm asla değişmez: bu kiracının hesap adreslerinin (alex{'@'}{realm}.local) ve kişilerinin uygulamalarına kaydettiği kullanıcı adlarının ({realm}/alex) parçasıdır. Değiştirmek ikisini de koparırdı.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.realmNewHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük harf, rakam ve tire. Kiracı oluşturulduktan sonra asla değişmez.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.realmSuggestedHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kısa addan önerildi; şimdi değiştirebilirsiniz. Kiracı oluşturulduktan sonra asla değişmez: kişilerinin adreslerinin (alex{'@'}realm.local) ve uygulamalarına kaydettikleri kullanıcı adlarının (realm/alex) parçasıdır.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.realmSuggesting": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Realm aranıyor…",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.savedOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı kaydedildi",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.search": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı ara…",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.secretSet": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ayarlı (değiştirmek için yenisini yazın)",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.secretSetHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Saklanır, hiç gösterilmez. Korumak için boş bırakın.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.signin.ownOidc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendi SSO'su",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.signin.shared": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ortak",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.signinColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.state.active": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Etkin",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.state.suspended": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Askıda",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.stateColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durum",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.storageCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} depo",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ],
+      "plural": true
+    },
+    "tenants.storagesHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kiracının kişilerinin eriştiği depolar. Hiçbir kiracıya bağlı olmayan depo platformundur.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.storagesTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depolar",
+      "where": [
+        "web/src/views/TenantEdit.vue",
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu platformun her kiracısı: oturum açma adı (realm), kendi adresi, kişilerinin eriştiği depolar ve hesapları. Kiracıları yalnızca platform operatörü yönetir.",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracılar",
+      "where": [
+        "web/src/views/Tenants.vue"
+      ]
+    },
+    "tenants.unlink": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağı kaldır",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
+    "tenants.unlinkConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{storage} bu kiracıdan ayrılsın mı? Depo ve dosyaları kalır; bu kiracının kişileri artık ona erişemez.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
+    },
     "theme.close": {
       "in": "explorer",
       "syntax": "plain",
@@ -32801,6 +35415,611 @@
         "packages/core/src/components/ViewSwitcher.vue"
       ]
     },
+    "tools.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bilerek başlattığınız bakım işleri. Hiçbiri kimsenin dosyasını değiştirmez.",
+      "where": [
+        "web/src/views/Tools.vue"
+      ]
+    },
+    "tools.tabs.thumbnails": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim onarımı"
+    },
+    "tools.thumbs.all_storages": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm depolar",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.attempt.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "çizdi",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.busy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimler zaten onarılıyor.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.col.attempted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son deneme",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.col.handlers": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sorulan işleyiciler",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.col.name": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.col.reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Neden",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.col.size": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Boyut",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.col.storage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.count.failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başarısız",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.count.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çizilen",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.count.processed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bakılan",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.count.skipped": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Atlanan",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tek bir dosyanın, bir klasörün ve içindekilerin, bir deponun ya da tümünün küçük resimlerini yeniden çizin. Arka planda çalışır; bu sayfadan ayrılabilirsiniz.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.done": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim onarımı bitti.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.generators.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eriştiğiniz dosyaların küçük resimleri, kimin çizdiğine göre sayılmış: filex'in kendisi ya da bir uygulama.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.generators.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz hiç küçük resim çizilmedi.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.generators.legacy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "0.50 öncesi ya da yer tutucu kart",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.generators.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimleri kim çizdi",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.last_run": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son onarım",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.limits.desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sınırlardan birini aşan SVG'nin küçük resmi çizilmez: simgesiyle görünür ve nedeniyle birlikte Araçlar → Küçük resim onarımı altında listelenir. Atladığı dosyaları çizmek için sınırı yükseltin.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.folder_previews": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasör önizlemeleri",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.folder_previews_desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Klasörler içlerine en son giren dosyalarla çizilir (ızgarada, galeride ve listede), işaretçi bir klasörün üzerinde durunca içindekiler listelenir. Kapalıyken klasik klasör simgeleri görünür ve liste açılmaz.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} arasında bir tam sayı.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.readonly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu ayarlar sunucunun tamamı için geçerlidir; sunucunun yöneticisi değiştirebilir.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim ayarları kaydedildi.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.size": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En büyük SVG (MB)",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.size_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} MB arası. Varsayılan 5.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.svg_title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SVG sınırları",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.time": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En uzun çizim süresi (saniye)",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.time_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} saniye arası. Varsayılan 10.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim ayarları",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.mode": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ne çizilsin",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.mode_fix": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Düzelt",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.mode_fix_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eksik, başarısız, atlanmış ya da güncelliğini yitirmiş olanları çizer. Doğru olan küçük resimlere dokunmaz.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.mode_rebuild": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden oluştur",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.mode_rebuild_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her dosyayı yeniden çizer. Daha uzun sürer; bir motor değiştikten sonra kullanın.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.note": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sayfadan ayrılsanız da sürer.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.path": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya ya da klasör (isteğe bağlı)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.path_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Deponun tamamı için boş bırakın.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.path_needs_storage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tek bir dosyayı ya da klasörü onarmak için bir depo seçin.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.path_not_found": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu yolda bir dosya ya da klasör yok.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.path_placeholder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "/Fotoğraflar/2024",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.problems_empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her dosyanın küçük resmi var.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.problems_title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resmi olmayan ya da yedek işleyicinin çizdiği dosyalar",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.problems_truncated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En yeni 500 tanesi gösteriliyor.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.progress": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{total} dosyadan {done}",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.queued": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başlamayı bekliyor…",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.app_failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{app} çizemedi",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.app_timeout": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{app} süre sınırını aştı ({limit} sn)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.app_too_large": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{app} uygulamasının boyut sınırından büyük ({limit} MB)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.archive_encrypted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreli arşiv: içindekiler listelenmez",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.archive_too_large": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv listelenemeyecek kadar büyük (listeleme sınırları aşıldı)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çizilemedi",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.fell_back": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{first} çizemedi, {generator} çizdi",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.no_engine": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu tür dosyayı çizebilen bir motor yok",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.no_handler": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu türün tüm işleyicileri kapalı (Varsayılan uygulamalar)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.no_tool.audio": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "FFmpeg kurulu değil"
+    },
+    "tools.thumbs.reason.no_tool.heif": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "HEIC destekli ImageMagick kurulu değil"
+    },
+    "tools.thumbs.reason.no_tool.office": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LibreOffice ile Ghostscript ya da poppler gerekiyor"
+    },
+    "tools.thumbs.reason.no_tool.other": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu tür dosyanın gerektirdiği program kurulu değil",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.no_tool.pdf": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ghostscript de poppler de kurulu değil"
+    },
+    "tools.thumbs.reason.no_tool.video": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "FFmpeg kurulu değil"
+    },
+    "tools.thumbs.reason.svg_timeout": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SVG süre sınırını aştı ({limit} sn)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.svg_too_large": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SVG boyut sınırından büyük ({limit} MB)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.refused.never_synced": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dışarıda bırakıldı: hiç senkron edilmedi. Önce senkron başlatın, sonra onarın."
+    },
+    "tools.thumbs.refused.sync_aborted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dışarıda bırakıldı: son senkronu yarıda kesildi. Yeniden senkron başlatın, sonra onarın."
+    },
+    "tools.thumbs.refused.sync_running": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dışarıda bırakıldı: bu deponun senkronu hâlâ sürüyor. Bitince yeniden deneyin."
+    },
+    "tools.thumbs.retry": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden dene",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.run_failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim onarımı durdu: {error}",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.running": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimler onarılıyor…",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.start": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başlat",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.stop": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durdur",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.stopped": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resim onarımı durduruldu.",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.storage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Küçük resimleri onar",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Araçlar",
+      "where": [
+        "web/src/views/Tools.vue"
+      ]
+    },
     "tour.aria": {
       "in": "explorer",
       "syntax": "plain",
@@ -33095,7 +36314,7 @@
     "trash.deleted_by_nobody": {
       "in": "both",
       "syntax": "shared",
-      "tr": "Kayıt yok: filex dışında kaldırılmış ya da filex bunu tutmaya başlamadan önce silinmiş",
+      "tr": "Kayıt yok: virüs taraması karantinaya almış ya da filex bunu tutmaya başlamadan önce silinmiş",
       "where": [
         "packages/core/src/components/ListView.vue",
         "web/src/views/Trash.vue"
@@ -33578,6 +36797,38 @@
       "where": [
         "packages/core/src/components/TimeZoneDialog.vue",
         "packages/core/src/components/TimeZonePicker.vue"
+      ]
+    },
+    "unavailable.inspector": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kullanılamıyor",
+      "where": [
+        "packages/core/src/components/InspectorPanel.vue"
+      ]
+    },
+    "unavailable.why.dir": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Depo bu klasörün hâlâ var olup olmadığını söyleyemedi. Depo yeniden yanıt verene kadar ne klasör ne de içindekiler açılabilir ya da değiştirilebilir; bir sonraki tarama yeniden denetler.",
+      "where": [
+        "packages/core/src/lib/unavailable.ts"
+      ]
+    },
+    "unavailable.why.file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Depo bu dosyanın hâlâ var olup olmadığını söyleyemedi. Depo yeniden yanıt verene kadar dosya açılamaz ve değiştirilemez; bir sonraki tarama yeniden denetler.",
+      "where": [
+        "packages/core/src/lib/unavailable.ts"
+      ]
+    },
+    "unavailable.withReason": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{why} Deponun yanıtı: {reason}",
+      "where": [
+        "packages/core/src/lib/unavailable.ts"
       ]
     },
     "unit.bytes": {
@@ -34251,6 +37502,62 @@
       "in": "both",
       "syntax": "shared",
       "tr": "Yakında",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.change": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{ext} dosyalarını açan uygulama",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.empty": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Henüz hiçbir dosya türü için uygulama seçmediniz: her dosya, yöneticinizin ilk sıraya koyduğu uygulamayla açılır.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bir dosyanın menüsünden seçin: Birlikte aç, Uygulama seç…, sonra \"Her zaman bu uygulamayla aç\" kutusunu işaretleyin. Yalnız yöneticinizin o tür için açık bıraktığı uygulamalar sunulur.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.reset": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sıfırla",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.resetAll": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Tümünü sıfırla",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Varsayılan uygulamalar",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.apps.unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Artık kullanılamıyor: siz yeniden seçene kadar {app} ile açılıyor.",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
@@ -35622,12 +38929,100 @@
         "packages/core/src/modals/PreviewModal.vue"
       ]
     },
+    "viewer.office_download_not_requested": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Belge sunucusu bu dosyayı filex’ten hiç istemedi. Dosya daha önce açıldıysa belge sunucusu kendi kopyasını kullanıyor olabilir.",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_download_refused": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "filex, belge sunucusunun bu dosya için yaptığı isteği şu nedenle reddetti: {reason}.",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_download_served": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Belge sunucusu bu dosyayı filex’ten indirdi, ancak tarayıcınız dönüştürülmüş kopyayı belge sunucusundan yükleyemedi. Belge sunucusunun önündeki vekil sunucunun X-Forwarded-Proto ve X-Forwarded-Host başlıklarına bakın.",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
     "viewer.office_failed": {
       "in": "explorer",
       "syntax": "plain",
       "tr": "Bu belge ONLYOFFICE ile açılamadı. Bilgisayarınızda açmak için indirin.",
       "where": [
         "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "viewer.office_fetch_reason.bad_link": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "adres bozuktu",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.body_unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "dosyanın içeriği bulunamadı",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.not_found": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "dosya artık yok",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.object_missing": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "dosya depoda yok",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.read_failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "dosya depodan okunamadı",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.signature_bad": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "imzası eşleşmedi (JWT sırrı değişti ya da adres değiştirildi)",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.signature_expired": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "adresin süresi dolmuştu",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
+      ]
+    },
+    "viewer.office_fetch_reason.storage_unavailable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "depo açılamadı",
+      "where": [
+        "packages/core/src/lib/officeDiagnosis.ts"
       ]
     },
     "viewer.office_forbidden": {

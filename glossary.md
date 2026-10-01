@@ -238,6 +238,11 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | Linux / Windows account, operating-system account (v0.50.0) | Linux-Konto / Windows-Konto / Betriebssystemkonto | "(this machine or its domain)" → *(dieser Rechner oder seine Domäne)*; a Windows domain → *Domäne*, an e-mail domain → *E-Mail-Domäne*; PAM service file → *PAM-Dienstdatei* |
 | machine (the server's own computer) | Rechner | as `conn.guide.*` already writes it; the Windows policy keeps its German name *Auf diesen Computer vom Netzwerk aus zugreifen* |
 | realm (sign-in field, v0.50.0) | Realm (der, pl. *Realms*) | a concept name, kept as German Keycloak and Kerberos texts keep it; "the {realm} realm" → *zum Realm {realm}*; `login.realm` is in `validate-de.mjs`'s identical list |
+| thumbnail / draw a thumbnail (v0.50.0) | Vorschaubild / Vorschaubild erzeugen | as `queue.type.thumb`; "Thumbnail repair" → *Vorschaubilder reparieren*; the app or engine that draws one → *Erzeuger* |
+| default apps / kind (of file) (v0.50.0) | Standard-Apps / Typ (*Dateityp*) | as German Windows says *Standard-Apps*; the order of a kind's apps → *Reihenfolge*, "default order" → *Standardreihenfolge* |
+| Tools (admin page, v0.50.0) | Werkzeuge | as `about.thumbnails` (*Werkzeuge für Vorschaubilder*) |
+| own domain (a tenant's, v0.50.0) | eigene Domain | a web domain is *Domain* (as `external.advisories.*`); a Windows domain stays *Domäne* |
+| slug (tenant, sign-in provider, v0.50.0) | Kurzname | |
 
 **v0.49.0 (roles and permissions) — notes:**
 

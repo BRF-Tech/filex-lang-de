@@ -197,7 +197,7 @@ const KEEP_WORDS = new Set(
     'cron webhook Webhook Webhooks token Token endpoint Endpoint bucket Bucket host Host proxy Proxy ' +
     'StartTLS CIDR DN known_hosts clamdscan clamscan B KB MB GB TB PB MiB px OnlyOffice ONLYOFFICE drawio ' +
     'Admin Hex hex base64 Figma Office Word Excel PowerPoint OpenDocument X-Filex-Token Bearer Authorization ' +
-    'Backblaze B2 ms v x y z patch Min Max Enterprise Pro Home ' +
+    'Backblaze B2 ms v x y z patch Min Max Enterprise Pro Home Docker Kubernetes Podman containerd ' +
     // ordinary words spelled the same in German (or loanwords German UIs use as they are)
     'Antivirus antivirus Megabytes megabytes Bytes bytes Normal normal Name Status Filter Details Version ' +
     'Link Links Export Import Start Test Server Client Code Design Info Tour Tags Tag Backend Update Updates ' +
@@ -223,6 +223,7 @@ const IDENTICAL_OK = new Set([
   'install.dl.rpm', // distributions and a file type: Fedora / openSUSE (.rpm)
   'appPlugins.wizard.manifest', // Manifest (filex-app.json) — the German term is the same
   'login.realm', // Realm: the concept's name, kept as German Keycloak and Kerberos docs keep it (v0.50.0)
+  'tenants.fields.realm', // the same Realm, as a field and a column on the Tenants pages (v0.50.0)
 ]);
 function identicalAllowed(key, en) {
   if (IDENTICAL_OK.has(key)) return true;
