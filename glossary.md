@@ -50,7 +50,7 @@ do not switch terms.
 
 ## Product and proper names — untouched
 
-filex, ONLYOFFICE / OnlyOffice (as the English writes it), draw.io / diagrams.net, WebDAV, SFTP, FTP, FTPS,
+filex, ONLYOFFICE (the product's one spelling, never translated), draw.io / diagrams.net, WebDAV, SFTP, FTP, FTPS,
 NFS / NFSv3, SMB / CIFS, NAS, S3, MinIO, Hetzner, AWS, Backblaze B2, ClamAV, clamd, MCP, API,
 REST, PIN, OIDC, LDAP, Active Directory, SSO, TOTP, 2FA, RBAC, JWT, SMTP, TLS, HTTPS, CIDR, DN,
 ETag, MIME, SHA-256, HMAC, ed25519, PEM, PKCS#8, WebAssembly, Wasm, GitHub, Claude, rclone,
