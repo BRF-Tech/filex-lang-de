@@ -325,7 +325,7 @@
     "about.office": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Ofis belgeleri (OnlyOffice)",
+      "tr": "Ofis belgeleri (ONLYOFFICE)",
       "where": [
         "web/src/views/About.vue"
       ]
@@ -333,7 +333,7 @@
     "about.officeHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Ofis belgelerinin küçük resimleri OnlyOffice'ten gelir. Ayarlar → Dış servisler altında yapılandırın; o zamana kadar tür simgeleriyle görünürler.",
+      "tr": "Ofis belgelerinin küçük resimleri ONLYOFFICE'ten gelir. Ayarlar → Dış servisler altında yapılandırın; o zamana kadar tür simgeleriyle görünürler.",
       "where": [
         "web/src/views/About.vue"
       ]
@@ -12056,7 +12056,7 @@
     "defaultApps.onlyoffice": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OnlyOffice",
+      "tr": "ONLYOFFICE",
       "where": [
         "web/src/components/tools/ThumbnailRepairTab.vue",
         "web/src/lib/fileTypes.ts"
@@ -35752,7 +35752,7 @@
     "tools.thumbs.limits.office_desc": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OnlyOffice, ofis belgesinin ilk sayfasını çizer. Düzenleyicilerle paylaştığı tek bir dönüştürücüyle çalışır, bu yüzden filex ona varsayılan olarak her seferinde tek belge gönderir. Boyut sınırını aşan belgenin küçük resmi çizilmez ve çok büyük diye işaretlenir.",
+      "tr": "ONLYOFFICE, ofis belgesinin ilk sayfasını çizer. Düzenleyicilerle paylaştığı tek bir dönüştürücüyle çalışır, bu yüzden filex ona varsayılan olarak her seferinde tek belge gönderir. Boyut sınırını aşan belgenin küçük resmi çizilmez ve çok büyük diye işaretlenir.",
       "where": [
         "web/src/components/tools/ThumbLimitsCard.vue"
       ]
@@ -35792,7 +35792,7 @@
     "tools.thumbs.limits.office_title": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Ofis belgeleri (OnlyOffice)",
+      "tr": "Ofis belgeleri (ONLYOFFICE)",
       "where": [
         "web/src/components/tools/ThumbLimitsCard.vue"
       ]
@@ -36079,7 +36079,7 @@
     "tools.thumbs.reason.no_tool.office": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OnlyOffice yapılandırılmamış (Ayarlar → Dış servisler)"
+      "tr": "ONLYOFFICE yapılandırılmamış (Ayarlar → Dış servisler)"
     },
     "tools.thumbs.reason.no_tool.other": {
       "in": "admin",
@@ -36102,7 +36102,7 @@
     "tools.thumbs.reason.oo_corrupt": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OnlyOffice okuyamadı: dosya bozuk olabilir",
+      "tr": "ONLYOFFICE okuyamadı: dosya bozuk olabilir",
       "where": [
         "web/src/components/tools/ThumbnailRepairTab.vue"
       ]
@@ -36118,7 +36118,7 @@
     "tools.thumbs.reason.oo_retry": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OnlyOffice yanıt vermedi ({detail}); {tries} kez denendi, sonra yeniden denenecek",
+      "tr": "ONLYOFFICE yanıt vermedi ({detail}); {tries} kez denendi, sonra yeniden denenecek",
       "where": [
         "web/src/components/tools/ThumbnailRepairTab.vue"
       ]
@@ -36126,7 +36126,7 @@
     "tools.thumbs.reason.oo_retry_done": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OnlyOffice yanıt vermedi ({detail}); {tries} denemeden sonra bırakıldı",
+      "tr": "ONLYOFFICE yanıt vermedi ({detail}); {tries} denemeden sonra bırakıldı",
       "where": [
         "web/src/components/tools/ThumbnailRepairTab.vue"
       ]
