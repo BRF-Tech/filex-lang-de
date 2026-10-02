@@ -322,6 +322,22 @@
         "web/src/views/About.vue"
       ]
     },
+    "about.office": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ofis belgeleri (OnlyOffice)",
+      "where": [
+        "web/src/views/About.vue"
+      ]
+    },
+    "about.officeHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ofis belgelerinin küçük resimleri OnlyOffice'ten gelir. Ayarlar → Dış servisler altında yapılandırın; o zamana kadar tür simgeleriyle görünürler.",
+      "where": [
+        "web/src/views/About.vue"
+      ]
+    },
     "about.search": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -3827,6 +3843,14 @@
       "tr": "Uygulama gerekçe vermiyor.",
       "where": [
         "web/src/components/plugins/AppPluginPermissionList.vue"
+      ]
+    },
+    "appPlugins.wizard.officeMissing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ofis belgeleri {name} ile dönüştürülür ve bu sunucuya bağlı bir {name} yok. Uygulama kurulur; ofis belgeleriyle yaptığı işler, bir yönetici Dış servisler sayfasından {name} bağladığında çalışır. Yeniden başlatma gerekmez.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
     "appPlugins.wizard.permissions": {
@@ -12027,6 +12051,15 @@
       "tr": "Kapalı: {names}",
       "where": [
         "web/src/components/plugins/DefaultAppsTab.vue"
+      ]
+    },
+    "defaultApps.onlyoffice": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "OnlyOffice",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue",
+        "web/src/lib/fileTypes.ts"
       ]
     },
     "defaultApps.readonly": {
@@ -22000,6 +22033,22 @@
         "packages/core/src/lib/errorWords.ts"
       ]
     },
+    "opc.err.office_unconfigured": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ofis belgeleri ONLYOFFICE ile dönüştürülür ve bu sunucuya bağlı bir ONLYOFFICE yok. Yöneticinize başvurun.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "opc.err.office_unconfigured_admin": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ofis belgeleri ONLYOFFICE Document Server ile dönüştürülür ve bağlı bir sunucu yok. Dış servisler sayfasından bir sunucu bağlayıp yeniden deneyin; yeniden başlatma gerekmez.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
     "opc.err.out_of_memory": {
       "in": "explorer",
       "syntax": "plain",
@@ -23875,7 +23924,15 @@
       "syntax": "plain",
       "tr": "{name} bu sunucuda kurulu değil - sunucuya kurup filex'i yeniden başlatın.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/pluginMenu.ts"
+      ]
+    },
+    "plugin.needs_office": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ofis belgeleri için {name} gerekiyor ve bu sunucuya bağlı değil - Dış servisler sayfasından bağlayın.",
+      "where": [
+        "packages/core/src/lib/pluginMenu.ts"
       ]
     },
     "plugin.needs_other": {
@@ -23883,7 +23940,7 @@
       "syntax": "plain",
       "tr": "{name} bu sunucuda kullanılamıyor.",
       "where": [
-        "packages/core/src/FileExplorer.vue"
+        "packages/core/src/lib/pluginMenu.ts"
       ]
     },
     "plugin.not_applicable": {
@@ -34910,6 +34967,62 @@
         "packages/core/src/components/ThemePalette.vue"
       ]
     },
+    "thumbNote.corrupt": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bozuk",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
+    "thumbNote.corrupt_why": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Küçük resim yok: dosya okunamadı. Bozuk ya da eksik olabilir.",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
+    "thumbNote.encrypted": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
+    "thumbNote.encrypted_why": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Küçük resim yok: dosya şifreli ya da parolayla korunuyor.",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
+    "thumbNote.full": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{label}. {why}",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
+    "thumbNote.too_large": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Çok büyük",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
+    "thumbNote.too_large_why": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Küçük resim yok: dosya, küçük resim boyut sınırından büyük.",
+      "where": [
+        "packages/core/src/lib/thumbNote.ts"
+      ]
+    },
     "title.admin": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -35636,6 +35749,54 @@
         "web/src/components/tools/ThumbLimitsCard.vue"
       ]
     },
+    "tools.thumbs.limits.office_desc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "OnlyOffice, ofis belgesinin ilk sayfasını çizer. Düzenleyicilerle paylaştığı tek bir dönüştürücüyle çalışır, bu yüzden filex ona varsayılan olarak her seferinde tek belge gönderir. Boyut sınırını aşan belgenin küçük resmi çizilmez ve çok büyük diye işaretlenir.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.office_size": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En büyük ofis belgesi (MB)",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.office_size_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} MB arası. Varsayılan 25.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.office_slots": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aynı anda belge",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.office_slots_hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{min} ile {max} arası. Varsayılan 1.",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
+    "tools.thumbs.limits.office_title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ofis belgeleri (OnlyOffice)",
+      "where": [
+        "web/src/components/tools/ThumbLimitsCard.vue"
+      ]
+    },
     "tools.thumbs.limits.readonly": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -35918,7 +36079,7 @@
     "tools.thumbs.reason.no_tool.office": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "LibreOffice ile Ghostscript ya da poppler gerekiyor"
+      "tr": "OnlyOffice yapılandırılmamış (Ayarlar → Dış servisler)"
     },
     "tools.thumbs.reason.no_tool.other": {
       "in": "admin",
@@ -35937,6 +36098,54 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "FFmpeg kurulu değil"
+    },
+    "tools.thumbs.reason.oo_corrupt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "OnlyOffice okuyamadı: dosya bozuk olabilir",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.oo_password": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Parolayla korunuyor",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.oo_retry": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "OnlyOffice yanıt vermedi ({detail}); {tries} kez denendi, sonra yeniden denenecek",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.oo_retry_done": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "OnlyOffice yanıt vermedi ({detail}); {tries} denemeden sonra bırakıldı",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.oo_too_large": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ofis boyut sınırından büyük ({limit} MB)",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
+    },
+    "tools.thumbs.reason.oo_too_large_ds": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Belge sunucusunun kendi sınırından büyük",
+      "where": [
+        "web/src/components/tools/ThumbnailRepairTab.vue"
+      ]
     },
     "tools.thumbs.reason.svg_timeout": {
       "in": "admin",
