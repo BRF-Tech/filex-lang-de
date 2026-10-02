@@ -6113,6 +6113,11 @@
         "web/src/views/Audit.vue"
       ]
     },
+    "audit.verb.account_pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "hesap açıldı, onay bekliyor"
+    },
     "audit.verb.action": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6874,10 +6879,23 @@
       "syntax": "vue-i18n",
       "tr": "1 ile 64 arasında bir tam sayı; aynı anda daha fazlası gelirse yeniden denemeleri istenir."
     },
+    "authProviders.fieldHints.show_refusal_reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan olarak kapalı. Açıkken, parolası doğru olduğu hâlde burada oturum açamayan kişiye (ilk oturum açışta hesap açılmıyorsa ya da izinli bir grupta değilse) nedeni söylenir. O zaman oturum açma formu, tahmin yürüten birine de parolanın doğru olduğunu söyler; bu parola, aynı hesapları kullanan başka servisleri de açıyor olabilir."
+    },
     "authProviders.fieldHints.timeout_seconds": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "3 ile 60 arasında bir tam sayı."
+    },
+    "authProviders.fieldHints.trust_email": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan olarak kapalı. Kapalıyken, sağlayıcının doğrulanmış olarak işaretlemediği bir adres, henüz bir SSO kimliğine bağlanmamış mevcut bir hesabı açmaz; bu adres için yeni hesap da bir yönetici onaylayana kadar devre dışı açılır. Yalnız adresleri gerçekten sahiplerine ait olan bir sağlayıcıda açın: orada bir adres belirleyebilen herkes, o adresteki hesapla oturum açabilir.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
     },
     "authProviders.fields.admin_group": {
       "in": "admin",
@@ -7019,6 +7037,11 @@
       "syntax": "vue-i18n",
       "tr": "PAM hizmeti (/etc/pam.d içindeki dosyası)"
     },
+    "authProviders.fields.show_refusal_reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Doğru parolayla yapılan oturum açmanın neden reddedildiğini söyle"
+    },
     "authProviders.fields.start_tls": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7033,6 +7056,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bir oturum açmanın süre sınırı (saniye)"
+    },
+    "authProviders.fields.trust_email": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sağlayıcının e-posta adreslerine güven",
+      "where": [
+        "web/src/views/TenantEdit.vue"
+      ]
     },
     "authProviders.fields.trusted_proxies": {
       "in": "admin",
@@ -7578,6 +7609,14 @@
       "tr": "Kimlik sağlayıcılar",
       "where": [
         "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.upgradeHints.trust_email": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu ayar yükseltmede eski davranışı korumak için açık geldi. Sağlayıcınız e-postanın doğrulandığını bildiriyorsa kapatın.",
+      "where": [
+        "web/src/views/TenantEdit.vue"
       ]
     },
     "branding.accent": {
@@ -16259,7 +16298,7 @@
     "external.advisories.jwt_not_enforced": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Doküman sunucusu imzasız bir isteği kabul etti, yani üzerinde JWT kapalı. Bu durumda filex'in imzasını yok sayar, özel adreslerden indirmeyi reddeder (ONLYOFFICE Docs 7.4 ve sonrası) ve kaydetme geri çağrılarını imzasız gönderir; filex bunları reddeder. Doküman sunucusunda JWT_ENABLED=true yapın ve JWT_SECRET'i aynı sırra ayarlayın."
+      "tr": "Doküman sunucusu imzasız bir isteği kabul etti, yani üzerinde JWT kapalı. Yine de filex'in editör yapılandırmasındaki belirteci kendi sırrıyla doğrular ve reddeder; bu yüzden belgeler açılmaz (\"The document security token is not correctly formed\"). Ayrıca özel adreslerden indirmeyi reddeder ve kaydetme geri çağrılarını imzasız gönderir; filex bunları reddeder. Doküman sunucusunda JWT_ENABLED=true yapın ve JWT_SECRET'i aynı sırra ayarlayın."
     },
     "external.advisories.public_url_bare_host": {
       "in": "admin",
@@ -16343,7 +16382,7 @@
     "external.envManagedHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Bir ortam değişkeniyle sabitlenmiş. Buradaki değişiklik hemen uygulanır ama filex bir sonraki açılışta ortamdaki değeri geri yazar.",
+      "tr": "{env} ile ayarlanmış. Buradaki değişiklik, kapatmak da dahil, hemen uygulanır ve filex yeniden başlayana kadar sürer; açılışta ortamdaki değer geri yazılır. Kalıcı olarak kapatmak için {env} değişkenini (ya da yapılandırma dosyasındaki satırını) kaldırın.",
       "where": [
         "web/src/views/External.vue"
       ]
@@ -16601,6 +16640,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Erişilebilir",
+      "where": [
+        "web/src/views/External.vue"
+      ]
+    },
+    "external.testWarn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Erişilebilir, ama her şey yolunda değil: karta bakın",
       "where": [
         "web/src/views/External.vue"
       ]
@@ -18800,7 +18847,7 @@
       "syntax": "vue-i18n",
       "tr": "SSO ile oturum açılamadı. Tekrar deneyin ya da parolayla oturum açın.",
       "where": [
-        "web/src/views/Login.vue"
+        "web/src/lib/ssoRefusal.ts"
       ]
     },
     "login.errRemaining": {
@@ -18955,6 +19002,79 @@
       "where": [
         "web/src/views/Login.vue"
       ]
+    },
+    "login.ssoRefused.account_disabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesabınız devre dışı. Yöneticinize başvurun."
+    },
+    "login.ssoRefused.account_pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesabınız açıldı ve yöneticinizin onayını bekliyor. Onaylandıktan sonra yeniden oturum açın."
+    },
+    "login.ssoRefused.auto_create_off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sunucu ilk SSO oturum açışında hesap açmıyor. Hesabınızın açılması için yöneticinize başvurun."
+    },
+    "login.ssoRefused.busy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sunucuda şu anda çok fazla oturum açma sürüyor. Birkaç dakika sonra tekrar deneyin."
+    },
+    "login.ssoRefused.email_unverified": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimlik sağlayıcınız e-posta adresinizin doğrulandığını bildirmedi; hesabınız yalnız bu adresle açılmaz. Yöneticinize başvurun."
+    },
+    "login.ssoRefused.expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO ile oturum açma çok uzun sürdü ya da başka bir sekmede veya tarayıcıda başlatıldı. Tekrar deneyin."
+    },
+    "login.ssoRefused.forbidden_account": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu bir sistem ya da yerleşik yönetici hesabı; bu hesaplarla burada oturum açılamaz. Kendi hesabınızla oturum açın."
+    },
+    "login.ssoRefused.group_not_allowed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesabınız burada oturum açabilen gruplardan birinde değil. Erişim için yöneticinize başvurun."
+    },
+    "login.ssoRefused.identity_mismatch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu hesap başka bir SSO kimliğine bağlı. Yöneticinize başvurun."
+    },
+    "login.ssoRefused.idp_denied": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma, kimlik sağlayıcınızda iptal edildi ya da reddedildi. Tekrar deneyin; sürerse yöneticinize başvurun."
+    },
+    "login.ssoRefused.idp_error": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma, kimlik sağlayıcınızla tamamlanamadı. Tekrar deneyin; sürerse yöneticinize başvurun."
+    },
+    "login.ssoRefused.maintenance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açma geçici olarak yalnız platform işletmecisine açık. Daha sonra tekrar deneyin.",
+      "where": [
+        "web/src/lib/ssoRefusal.ts"
+      ]
+    },
+    "login.ssoRefused.no_email": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimlik sağlayıcınız bir e-posta adresi göndermedi; hesabınız bu adresle bulunuyor. Yöneticinizden sağlayıcının ayarlarını denetlemesini isteyin."
+    },
+    "login.ssoRefused.tenant_suspended": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurumunuzun bu sunucudaki erişimi askıya alındı. Yöneticinize başvurun."
     },
     "login.submit": {
       "in": "admin",
@@ -33834,6 +33954,38 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "tenantSelf.acmeFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex (ACME): alınamadı ({when})",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.acmeNone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex (ACME): henüz alınmadı",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.acmeObtained": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex (ACME), {when} tarihine kadar",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
+    "tenantSelf.acmeReason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ACME otoritesinin yanıtı: \"{reason}\"",
+      "where": [
+        "web/src/components/TenantSelfService.vue"
+      ]
+    },
     "tenantSelf.activeSince": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -33870,14 +34022,6 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Sertifika getir",
-      "where": [
-        "web/src/components/TenantSelfService.vue"
-      ]
-    },
-    "tenantSelf.certByFilex": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "filex (ACME)",
       "where": [
         "web/src/components/TenantSelfService.vue"
       ]
@@ -38340,6 +38484,46 @@
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
+    "users.account.approve": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onayla ve aç",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.account.disabledAbout": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu hesap devre dışı: oturum açamaz.",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.account.enable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesabı aç",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.account.enabledOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesap açıldı",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.account.pendingAbout": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu hesap bir SSO oturum açışıyla devre dışı olarak açıldı: kimlik sağlayıcısı e-posta adresinin doğrulandığını bildirmedi. Hesabı açmak onu onaylar.",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
     "users.addNew": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -38576,6 +38760,70 @@
       "where": [
         "web/src/views/Roles.vue",
         "web/src/views/UserEdit.vue",
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.sso.linked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu hesap, ilk oturum açtığı SSO kimliğine bağlı. Aynı e-posta adresiyle gelen başka bir kimlik reddedilir.",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.sso.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO kimliği",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.sso.unlink": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO bağını kaldır",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.sso.unlinkConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "\"{email}\" hesabının SSO bağı kaldırılsın mı? Bir sonraki SSO oturum açışı, ilk oturum açışta olduğu gibi yeniden e-posta adresiyle eşleştirilir.",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.sso.unlinkedOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO bağı kaldırıldı",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.status.disabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Devre dışı",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.status.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onay bekliyor",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.status.pendingTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimlik sağlayıcısı e-posta adresini doğrulanmış olarak bildirmeyen bir SSO oturum açışıyla devre dışı açıldı. Onaylamak için hesabı açın.",
+      "where": [
         "web/src/views/Users.vue"
       ]
     },

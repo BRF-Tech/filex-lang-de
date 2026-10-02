@@ -243,6 +243,8 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | Tools (admin page, v0.50.0) | Werkzeuge | as `about.thumbnails` (*Werkzeuge für Vorschaubilder*) |
 | own domain (a tenant's, v0.50.0) | eigene Domain | a web domain is *Domain* (as `external.advisories.*`); a Windows domain stays *Domäne* |
 | slug (tenant, sign-in provider, v0.50.0) | Kurzname | |
+| SSO identity / bound to it / SSO bind (v0.50.0) | SSO-Identität / daran gebunden / SSO-Bindung | "Remove SSO bind" → *SSO-Bindung entfernen*; an account whose first SSO sign-in fixed its identity refuses another identity with the same address |
+| waiting for approval / approve and switch on (an account opened switched off by SSO, v0.50.0) | wartet auf Genehmigung / genehmigen und aktivieren | the security hints (*trust_email*, *show_refusal_reason*) keep every condition of the English: what stays off, who can then sign in to what |
 
 **v0.49.0 (roles and permissions) — notes:**
 
