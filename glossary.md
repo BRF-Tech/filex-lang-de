@@ -245,6 +245,16 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 | slug (tenant, sign-in provider, v0.50.0) | Kurzname | |
 | SSO identity / bound to it / SSO bind (v0.50.0) | SSO-Identität / daran gebunden / SSO-Bindung | "Remove SSO bind" → *SSO-Bindung entfernen*; an account whose first SSO sign-in fixed its identity refuses another identity with the same address |
 | waiting for approval / approve and switch on (an account opened switched off by SSO, v0.50.0) | wartet auf Genehmigung / genehmigen und aktivieren | the security hints (*trust_email*, *show_refusal_reason*) keep every condition of the English: what stays off, who can then sign in to what |
+| encryption policy / who may encrypt (v0.51.0) | Verschlüsselungsrichtlinie / *Wer verschlüsseln darf* | "policy" → *Richtlinie*, as *Update-Richtlinie* and *Versionsrichtlinie*; options *Aus - niemand, auch keine Administratoren* / *Nur Administratoren* / *Alle, deren Rolle es erlaubt* / *Alle, deren Rolle es erlaubt, nach Genehmigung durch einen Administrator*; the role permission "Encrypt" → *Verschlüsseln*; "Applies to {tenant}" → *Gilt für {tenant}* |
+| encryption request / request encryption (v0.51.0) | Verschlüsselungsanfrage / *Verschlüsselung anfragen…* | a request is an *Anfrage*, as the install requests: "Requested by" → *Angefragt von*, "Requested" → *Angefragt*, "Reason" → *Grund*, "{count} waiting" → *Wartend: {count}*, the requester → *anfragende Person*; "Request an encrypted folder…" → *Verschlüsselten Ordner anfragen…* |
+| approval / approve / reject (encryption requests, v0.51.0) | Genehmigung / genehmigen / ablehnen | as the install requests, never *Freigabe* (a share here); statuses *Wartet / Genehmigt / Abgelehnt / Abgelaufen / Verwendet*; an approval is *verwendet* (used once) and *verfällt* (lapses); "approved by {who}" → *genehmigt von {who}*; "Reject…" → *Ablehnen…* |
+| what an approval opens (v0.51.0) | *Dieser Ordner, an Ort und Stelle verschlüsselt* / *Ein neuer verschlüsselter Ordner in diesem Ordner* / *Eine neue verschlüsselte Datei in diesem Ordner* | "where it is" → *an Ort und Stelle*, as `e2e.convert.lead`; "directly inside" → *direkt in*; "and not a folder inside it" → *nicht für einen Ordner darin* |
+| platform operator (encryption screens, v0.51.0) | Plattformbetreiber | the *Betreiber* row above, written as `appPlugins.supertenantOnly` writes it; a tenant's encryption is *eingeschaltet / ausgeschaltet*, chips *An / Aus*; "your organization" → *Ihre Organisation* |
+| Identity providers (admin page and nav, v0.51.0; the English was "Auth providers") | Identitätsanbieter | the English renamed the page, so its title, the nav item and `login.noProviders` follow; strings whose English still says "sign-in provider" keep *Anmeldeanbieter* |
+| Search index (admin nav, v0.51.0; the English was "Search") | Suchindex | as `audit.resource.search` |
+| admin mega menu (v0.51.0) | *Dateien & Speicher* / *Personen & Sicherheit* / *System* | the three top entries; columns *Dateien*, *Speicher*, *Personen & Zugriff*, *Sicherheit*, *Plug-ins & Integrationen*, *Anpassung*, *Wartung & Protokolle*; "Menu" / "Admin menu" → *Menü* / *Adminmenü*; "&" stays as the English writes it (as *Nutzung & Kosten*); an item's hint is an impersonal infinitive or a noun phrase of at most two menu lines (*Suchindex prüfen und neu aufbauen*, *Konten und ihre Rollen*) |
+| save to / Save here (an app's save-as bridge, v0.51.0) | *Speichern in* / *Hier speichern* | as `drafts.col.target`; the picker's title *{app}: „{name}“ speichern in* |
+| an ONLYOFFICE save written beside the file, or not written (v0.51.0) | *daneben gespeichert* / *ist unverändert* | "your edit" → *Ihre Änderung*; audit verbs *daneben in einem anderen Format gespeichert (ONLYOFFICE)* / *Speichern nicht übernommen (ONLYOFFICE)*; "spreadsheet editor" → *Tabelleneditor*; a CSV's sheet → *Tabellenblatt* |
 
 **v0.49.0 (roles and permissions) — notes:**
 
@@ -261,6 +271,12 @@ German IT loanwords used as German nouns (capitalised, German grammar): *das Tok
 - A provider is switched on and off (*einschalten / ausschalten*, as on the rest of the providers page); a role is *deaktiviert* (as `permissions.source.role_off`); an account in filex is *deaktiviert* / *aktiviert*.
 - `server.auth_provider.pam_hint_test_account_wrong` keeps `<user>` inside its code span: a code span is verbatim, and the validator compares it byte for byte.
 - `authProviders.reasons.forbidden_account` keeps the English account names (*Administrator, Guest, NT AUTHORITY*) as written; on a German Windows the guest account is *Gast*, and a reviewer may prefer to name that one.
+
+**v0.51.0 (pre-release: encryption policy and requests, admin mega menu, CSV in ONLYOFFICE, save-as) - notes:**
+
+- Written against filex main before the v0.51.0 tag; the release round syncs the catalogue again from the tag.
+- `server.perm.action.files.encrypt` → *Verschlüsseln von Dateien*, so all six `server.perm.denied.*` sentences keep *zum {action}* (see v0.49.0 above).
+- The refusals keep the English's certainty: *Nur Administratoren dürfen …*, *… ist die Genehmigung eines Administrators erforderlich*, *alle anderen werden abgewiesen*.
 
 ## Plurals — German's CLDR categories
 

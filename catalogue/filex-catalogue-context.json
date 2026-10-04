@@ -2094,7 +2094,8 @@
       "syntax": "vue-i18n",
       "tr": "Yönetim",
       "where": [
-        "web/src/components/Sidebar.vue"
+        "web/src/components/NavDrawer.vue",
+        "web/src/components/TopNav.vue"
       ]
     },
     "app.footer": {
@@ -4926,6 +4927,14 @@
         "packages/core/src/components/plugin/AppFrame.vue"
       ]
     },
+    "appframe.save_as_title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{app}: “{name}” nereye kaydedilsin?",
+      "where": [
+        "packages/core/src/components/plugin/AppFrame.vue"
+      ]
+    },
     "appframe.save_close": {
       "in": "explorer",
       "syntax": "plain",
@@ -5702,6 +5711,26 @@
       "syntax": "vue-i18n",
       "tr": "Kopyalar"
     },
+    "audit.resource.e2e": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme"
+    },
+    "audit.resource.e2e_policy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme politikası"
+    },
+    "audit.resource.e2e_request": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme isteği"
+    },
+    "audit.resource.e2e_tenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı şifrelemesi"
+    },
     "audit.resource.embed": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5975,6 +6004,16 @@
       "syntax": "vue-i18n",
       "tr": "Yorum"
     },
+    "audit.target.e2e_policy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme politikası"
+    },
+    "audit.target.e2e_request": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme isteği"
+    },
     "audit.target.external": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6238,6 +6277,16 @@
       "syntax": "vue-i18n",
       "tr": "süresi doldu"
     },
+    "audit.verb.folder_cleanup": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "klasör temizlendi"
+    },
+    "audit.verb.fxe_header_rewritten": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dosya başlığı yeniden yazıldı"
+    },
     "audit.verb.grant_revoke": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6252,6 +6301,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "güvensiz sağlayıcı izni değiştirildi"
+    },
+    "audit.verb.key_file_rewritten": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "anahtar dosyası yeniden yazıldı"
     },
     "audit.verb.member_remove": {
       "in": "admin",
@@ -6272,6 +6326,16 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "taşındı"
+    },
+    "audit.verb.office_save_refused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kayıt yazılmadı (ONLYOFFICE)"
+    },
+    "audit.verb.office_saved_beside": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "başka biçimde yanına kaydedildi (ONLYOFFICE)"
     },
     "audit.verb.op_cancel": {
       "in": "admin",
@@ -6467,6 +6531,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "yükleme iptal edildi"
+    },
+    "audit.verb.use": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kullanıldı"
     },
     "audit.verb.verify": {
       "in": "admin",
@@ -8136,6 +8205,7 @@
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/RoleEditor.vue",
         "web/src/components/TenantSelfService.vue",
+        "web/src/components/encryption/EncryptionRequestsPanel.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/FileTypeEditor.vue",
@@ -8177,8 +8247,8 @@
         "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/BuiltinRoleEditor.vue",
         "web/src/components/InstallPrompt.vue",
+        "web/src/components/NavDrawer.vue",
         "web/src/components/ResetPasswordModal.vue",
-        "web/src/components/Sidebar.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
@@ -8528,6 +8598,7 @@
       "tr": "Yenile",
       "where": [
         "web/src/components/QuotaWidget.vue",
+        "web/src/components/encryption/EncryptionRequestsPanel.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
         "web/src/components/plugins/DefaultAppsTab.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
@@ -8619,6 +8690,7 @@
         "web/src/components/RoleEditor.vue",
         "web/src/components/TenantSelfService.vue",
         "web/src/components/UserRolesCard.vue",
+        "web/src/components/encryption/EncryptionPolicyCard.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginThumbLimits.vue",
         "web/src/components/plugins/FileTypeEditor.vue",
@@ -12452,6 +12524,14 @@
         "packages/core/src/modals/DestinationPickerModal.vue"
       ]
     },
+    "destpicker.confirm.save": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Buraya kaydet",
+      "where": [
+        "packages/core/src/modals/DestinationPickerModal.vue"
+      ]
+    },
     "destpicker.crumbs": {
       "in": "explorer",
       "syntax": "plain",
@@ -12568,6 +12648,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Şuraya taşı",
+      "where": [
+        "packages/core/src/modals/DestinationPickerModal.vue"
+      ]
+    },
+    "destpicker.title.save": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şuraya kaydet",
       "where": [
         "packages/core/src/modals/DestinationPickerModal.vue"
       ]
@@ -15378,6 +15466,119 @@
         "packages/core/src/components/RecoveryKeyModal.vue"
       ]
     },
+    "e2e.request.already": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bunu zaten istediniz; bir yöneticinin yanıtını bekliyor.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.request.ctx": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme iste…",
+      "where": [
+        "packages/core/src/FileExplorer.vue",
+        "packages/core/src/composables/useE2eFiles.ts"
+      ]
+    },
+    "e2e.request.failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İstek gönderilemedi.",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.lead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Burada şifreli klasör oluşturmak için yönetici onayı gerekiyor. Neden gerektiğini yazın; yanıt size bildirilir. Onay sizin ve bu klasör içindir: hemen içinde yeni bir şifreli klasör oluşturmak için bir kez kullanılabilir.",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.lead_file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosyayı şifrelemek için yönetici onayı gerekiyor. Neden gerektiğini yazın; yanıt size bildirilir. Onay sizin ve bu dosyanın bulunduğu klasör içindir: orada yeni bir şifreli dosya için bir kez kullanılabilir.",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.lead_folder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasörü şifrelemek için yönetici onayı gerekiyor. Neden gerektiğini yazın; yanıt size bildirilir. Onay sizin ve bu klasör içindir: bu klasörü olduğu yerde şifrelemek için bir kez kullanılabilir, içindeki bir klasör için kullanılamaz.",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.option": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreli klasör iste…",
+      "where": [
+        "packages/core/src/modals/NewFolderModal.vue"
+      ]
+    },
+    "e2e.request.reason": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Gerekçe",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.reason_placeholder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İçinde ne var, neden şifrelenmesi gerekiyor",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.reason_required": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yönetici için bir gerekçe yazın.",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.send": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İsteği gönder",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.sending": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Gönderiliyor…",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
+    "e2e.request.sent": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İstek gönderildi. Bir yönetici yanıtladığında size bildirilecek.",
+      "where": [
+        "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "e2e.request.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{name}” için şifreleme iste",
+      "where": [
+        "packages/core/src/components/E2eRequestModal.vue"
+      ]
+    },
     "e2e.settings.close": {
       "in": "explorer",
       "syntax": "plain",
@@ -15694,6 +15895,497 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "encryption.policy.hints.admins": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnız yöneticiler şifreleyebilir; diğer herkes reddedilir."
+    },
+    "encryption.policy.hints.approval": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yukarıdaki gibi, ayrıca yönetici olmayan herkesin şifrelemeden önce burada onay alması gerekir. Yöneticilerden onay istenmez. Onay tek bir kişi içindir, bir kez kullanılır ve yalnız istenen şeyi açar: bir klasörü olduğu yerde şifrelemeyi, bir klasörün hemen içinde yeni bir şifreli klasörü ya da bir klasörde yeni bir şifreli dosyayı. Alttaki klasörlere geçmez."
+    },
+    "encryption.policy.hints.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimse yeni şifreli klasör ya da dosya oluşturamaz. Var olanlar çalışmaya devam eder: açılır, içine dosya eklenir, şifreleme kaldırılabilir."
+    },
+    "encryption.policy.hints.permitted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "O klasörde rolü “Şifreleme” iznini taşıyan herkes (Roller). filex’in bugüne kadarki davranışı budur."
+    },
+    "encryption.policy.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Politika",
+      "where": [
+        "web/src/components/encryption/EncryptionPolicyCard.vue"
+      ]
+    },
+    "encryption.policy.options.admins": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnız yöneticiler"
+    },
+    "encryption.policy.options.approval": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rolü izin veren herkes, yönetici onayıyla"
+    },
+    "encryption.policy.options.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı - yöneticiler dahil kimse"
+    },
+    "encryption.policy.options.permitted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rolü izin veren herkes"
+    },
+    "encryption.policy.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme politikası kaydedildi",
+      "where": [
+        "web/src/components/encryption/EncryptionPolicyCard.vue"
+      ]
+    },
+    "encryption.policy.scopeInstance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sunucunun tamamı için geçerli.",
+      "where": [
+        "web/src/components/encryption/EncryptionPolicyCard.vue"
+      ]
+    },
+    "encryption.policy.scopeTenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{tenant} için geçerli.",
+      "where": [
+        "web/src/components/encryption/EncryptionPolicyCard.vue"
+      ]
+    },
+    "encryption.policy.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kim şifreleyebilir",
+      "where": [
+        "web/src/components/encryption/EncryptionPolicyCard.vue"
+      ]
+    },
+    "encryption.policy.unavailable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platform işletmecisi kuruluşunuz için şifrelemeyi kapatmış. Politikayı yine de seçebilirsiniz; şifreleme yeniden açıldığında geçerli olur.",
+      "where": [
+        "web/src/components/encryption/EncryptionPolicyCard.vue"
+      ]
+    },
+    "encryption.requests.actions.approve": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onayla",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.actions.reject": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddet…",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approve.body": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{who} bundan sonra {path} klasörünü olduğu yerde şifreleyebilir. Onay bir kez kullanılabilir; içindeki bir klasör için kullanılamaz.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approve.bodyFile": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{who} bundan sonra {path} içinde yeni bir şifreli dosya oluşturabilir. Onay bir kez kullanılabilir.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approve.bodyNewFolder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{who} bundan sonra {path} klasörünün hemen içinde yeni bir şifreli klasör oluşturabilir. Onay bir kez kullanılabilir; içinde bir şey olan bir klasör için kullanılamaz.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approve.confirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onayla",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approve.note": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Not (isteğe bağlı; isteyen kişi görür)",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approve.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteği onayla",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstek onaylandı: {who}",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.approvedBy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{who} tarafından onaylandı",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekleyen istek yok.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.emptyHistory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz istek yok.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.expiresAfter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yanıtlanmayan istekler ve kullanılmayan onaylar {count} gün sonra geçersiz olur.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ],
+      "plural": true
+    },
+    "encryption.requests.fields.created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstendi",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.fields.path": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Konum",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.fields.reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gerekçe",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.fields.requester": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteyen",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.fields.status": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durum",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.hideHistory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca bekleyen istekleri göster",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.kind.file": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu klasörde yeni bir şifreli dosya",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.kind.folder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu klasör, olduğu yerde şifrelenir",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.kind.newFolder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu klasörde yeni bir şifreli klasör",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.loadFailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstekler yüklenemedi.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.notPending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu istek artık beklemiyor: yanıtlanmış ya da süresi dolmuş.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.pendingCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} bekliyor",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.reject.confirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddet",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.reject.reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Neden (isteyen kişi görür)",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.reject.required": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Nedenini yazın; isteyen kişiye bildirilir.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.reject.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteği reddet",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.rejected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstek reddedildi: {who}",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.rejectedBy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{who} tarafından reddedildi",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.showHistory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yanıtlanan istekleri göster",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.status.approved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onaylandı"
+    },
+    "encryption.requests.status.expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Süresi doldu"
+    },
+    "encryption.requests.status.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekliyor"
+    },
+    "encryption.requests.status.rejected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Reddedildi"
+    },
+    "encryption.requests.status.used": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kullanıldı"
+    },
+    "encryption.requests.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onay politikasında kişiler şifrelemeden önce burada izin ister.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.tenantDecides": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu isteği kiracının yöneticileri yanıtlar.",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.requests.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme istekleri",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+      ]
+    },
+    "encryption.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Burada kimin uçtan uca şifreli klasör ve dosya oluşturabileceğini belirleyin; onayınızı bekleyen istekleri yanıtlayın.",
+      "where": [
+        "web/src/views/Encryption.vue"
+      ]
+    },
+    "encryption.tenants.fields.available": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme kullanılabilir",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.fields.name": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı",
+      "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue",
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.fields.policy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Politika",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} için şifreleme kapatıldı",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.on": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} için şifreleme açıldı",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.state.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.state.on": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açık",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir kiracıda şifrelemeyi kapatırsanız orada yöneticiler dahil kimse şifreli klasör ya da dosya oluşturamaz. Şifreli olanlar çalışmaya devam eder.",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.supertenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platform işletmecisi",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.tenants.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracılar",
+      "where": [
+        "web/src/components/encryption/EncryptionTenantsPanel.vue"
+      ]
+    },
+    "encryption.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme",
+      "where": [
+        "web/src/views/Encryption.vue"
+      ]
+    },
     "err.bad_kind": {
       "in": "explorer",
       "syntax": "plain",
@@ -15727,6 +16419,94 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Taslaklar burada kullanılamıyor.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_not_allowed.admins_only": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Burada yalnız yöneticiler şifreleyebilir.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_not_allowed.approval_required": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Burada şifrelemek için yönetici onayı gerekiyor. Menüdeki “Şifreleme iste…” ile isteyebilirsiniz.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_not_allowed.other": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Burada şifrelemeye izin verilmiyor.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_not_allowed.permission": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Rolünüz burada şifrelemeye izin vermiyor.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_not_allowed.policy_off": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bir yönetici burada şifrelemeyi kapatmış.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_not_allowed.tenant_disabled": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme burada kullanılamıyor: platform işletmecisi kapatmış.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_policy.undecided": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Şifreleme politikası denetlenemedi. Lütfen biraz sonra yeniden deneyin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_request.kind_mismatch": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu öğe, klasör listelendiğinden beri değişmiş. Klasörü yenileyip tekrar deneyin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_request.not_requestable": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Burada yapabilecekleriniz klasör listelendiğinden beri değişmiş. Şimdi nelerin sunulduğunu görmek için klasörü yenileyin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_request.path_missing": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu klasör ya da dosya artık burada değil. Klasörü yenileyip tekrar deneyin.",
+      "where": [
+        "packages/core/src/lib/errorWords.ts"
+      ]
+    },
+    "err.e2e_request.too_many_pending": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yanıt bekleyen çok sayıda şifreleme isteğiniz var. Bir yönetici bunlardan birini yanıtlayınca yeniden isteyin.",
       "where": [
         "packages/core/src/lib/errorWords.ts"
       ]
@@ -16096,6 +16876,8 @@
       "syntax": "vue-i18n",
       "tr": "Yüklenemedi. Yeniden deneyin.",
       "where": [
+        "web/src/components/encryption/EncryptionRequestsPanel.vue",
+        "web/src/components/encryption/EncryptionTenantsPanel.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginThumbLimits.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
@@ -16112,6 +16894,7 @@
         "web/src/stores/storages.ts",
         "web/src/stores/sync.ts",
         "web/src/stores/users.ts",
+        "web/src/views/Encryption.vue",
         "web/src/views/LoginSecurity.vue",
         "web/src/views/Webhooks.vue"
       ]
@@ -16136,6 +16919,9 @@
       "tr": "Değişiklikleriniz kaydedilemedi. Yeniden deneyin.",
       "where": [
         "web/src/components/GlobalWebhookCard.vue",
+        "web/src/components/encryption/EncryptionPolicyCard.vue",
+        "web/src/components/encryption/EncryptionRequestsPanel.vue",
+        "web/src/components/encryption/EncryptionTenantsPanel.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/stores/settings.ts",
         "web/src/views/Replica.vue"
@@ -20303,6 +21089,7 @@
         "packages/core/src/components/E2eFileEncryptModal.vue",
         "packages/core/src/components/E2eFileUnlockModal.vue",
         "packages/core/src/components/E2eRecoveryUnlockModal.vue",
+        "packages/core/src/components/E2eRequestModal.vue",
         "packages/core/src/components/E2eSettingsModal.vue",
         "packages/core/src/components/EncryptedFolderModal.vue",
         "packages/core/src/modals/NewFolderModal.vue"
@@ -20680,7 +21467,7 @@
       "syntax": "vue-i18n",
       "tr": "Hakkında",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20689,8 +21476,16 @@
       "syntax": "vue-i18n",
       "tr": "Dosya geçmişi",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
+      ]
+    },
+    "nav.adminMenu": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetim menüsü",
+      "where": [
+        "web/src/components/AdminNav.vue"
       ]
     },
     "nav.apiMcp": {
@@ -20698,7 +21493,7 @@
       "syntax": "vue-i18n",
       "tr": "API / MCP",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20707,7 +21502,7 @@
       "syntax": "vue-i18n",
       "tr": "Görünüm",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20716,7 +21511,7 @@
       "syntax": "vue-i18n",
       "tr": "Uygulamalar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20725,7 +21520,7 @@
       "syntax": "vue-i18n",
       "tr": "Arşivler",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20734,7 +21529,7 @@
       "syntax": "vue-i18n",
       "tr": "Denetim kaydı",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20743,7 +21538,7 @@
       "syntax": "vue-i18n",
       "tr": "Kimlik sağlayıcılar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20752,7 +21547,7 @@
       "syntax": "vue-i18n",
       "tr": "Kurumsal kimlik",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20761,7 +21556,7 @@
       "syntax": "vue-i18n",
       "tr": "Bağlantılar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts",
         "web/src/views/Connections.vue",
         "web/src/views/Explore.vue"
@@ -20773,8 +21568,7 @@
       "tr": "Panel",
       "where": [
         "web/src/components/Breadcrumbs.vue",
-        "web/src/components/Sidebar.vue",
-        "web/src/components/TopNav.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20783,7 +21577,16 @@
       "syntax": "vue-i18n",
       "tr": "Yinelenenler",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
+        "web/src/router/index.ts"
+      ]
+    },
+    "nav.encryption": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme",
+      "where": [
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20792,7 +21595,7 @@
       "syntax": "vue-i18n",
       "tr": "Dış servisler",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20801,7 +21604,7 @@
       "syntax": "vue-i18n",
       "tr": "Dosyalar",
       "where": [
-        "web/src/components/Sidebar.vue"
+        "web/src/lib/adminNav.ts"
       ]
     },
     "nav.grants": {
@@ -20809,7 +21612,7 @@
       "syntax": "vue-i18n",
       "tr": "Klasör erişimi",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20818,8 +21621,304 @@
       "syntax": "vue-i18n",
       "tr": "Gruplar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
+      ]
+    },
+    "nav.hint.about": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm ve derleme bilgisi",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.adminFiles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir dosyayı bulun, sürümlerini açın",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.apiMcp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yapay zekâ ajanları için API anahtarları ve MCP",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.appearance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Temalar ve varsayılan görünüm",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.archives": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arşiv oluşturma, açma ve sınırlar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.audit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetim panelinde yapılan her değişiklik",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.authProviders": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kim, nasıl oturum açabilir",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.branding": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Herkese açık sayfalarda ve oturum açma ekranında ad ve logo",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.connections": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlayın ya da S3, SFTP veya uygulamayla erişin",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.dashboard": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sunucunun durumu bir bakışta",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.duplicates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aynı boyut ve içerikteki kopyalar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.encryption": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uçtan uca şifreleme kuralları ve onaylar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.external": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex'in bağlandığı editörler ve önizleme servisleri",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya yöneticisini açın",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.grants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kim hangi dosya ya da klasörü açabilir",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Adlandırılmış kişi grupları",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.loginSecurity": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hatalı parola sınırları ve kilitlenmeler",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.myTenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracınızın oturum açma yolları ve alan adları",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.notifications": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bildirimler ve iletimi",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.plugins": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depolama eklentileri, uygulamalar, varsayılan uygulamalar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.protection": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çöp kutusu, sürümler, bağlantı süresi, taslaklar, antivirüs",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.queue": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arka plan işleri, ilerleme ve yeniden deneme",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.replica": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyaları kurala göre ikinci bir yere kopyalayın",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.roles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Adlandırılmış izin kümeleri",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.search": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Arama indeksini inceleyin, yeniden oluşturun",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.settings": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sunucu geneli ayarlar ve e-posta",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.shares": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişilerin oluşturduğu herkese açık bağlantılar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.storages": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex'in sunduğu depolar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.sync": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her deponun değişiklik taramaları",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.tagged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalara etikete göre göz atın",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.tenants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun tüm kiracıları",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.tools": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bilerek başlattığınız bakım işleri",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.trash": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Silinen dosyalar, saklama süresi dolana kadar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.updates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeni sürümler ve güncelleme kuralı",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.usage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcının bildirdiği kullanım ve maliyeti",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.users": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesaplar ve rolleri",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.hint.webhooks": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosya olaylarını başka sistemlere gönderin",
+      "where": [
+        "web/src/lib/adminNav.ts"
       ]
     },
     "nav.language": {
@@ -20835,7 +21934,7 @@
       "syntax": "vue-i18n",
       "tr": "Giriş güvenliği",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20848,12 +21947,20 @@
         "web/src/views/Explore.vue"
       ]
     },
+    "nav.menu": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Menü",
+      "where": [
+        "web/src/components/TopNav.vue"
+      ]
+    },
     "nav.myTenant": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Kiracım",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20862,7 +21969,7 @@
       "syntax": "vue-i18n",
       "tr": "Bildirimler",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20871,7 +21978,7 @@
       "syntax": "vue-i18n",
       "tr": "Eklentiler",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts",
         "web/src/views/AppHome.vue"
       ]
@@ -20881,7 +21988,7 @@
       "syntax": "vue-i18n",
       "tr": "Koruma",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20890,7 +21997,7 @@
       "syntax": "vue-i18n",
       "tr": "Kuyruk",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20899,7 +22006,7 @@
       "syntax": "vue-i18n",
       "tr": "Replikasyon",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20908,17 +22015,73 @@
       "syntax": "vue-i18n",
       "tr": "Roller",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
     "nav.search": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Arama",
+      "tr": "Arama indeksi",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
+      ]
+    },
+    "nav.section.customize": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özelleştirme",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.section.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.section.integrations": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklentiler ve entegrasyonlar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.section.maintenance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bakım ve kayıtlar",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.section.people": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişiler ve erişim",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.section.security": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenlik",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.section.storage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depolama",
+      "where": [
+        "web/src/lib/adminNav.ts"
       ]
     },
     "nav.settings": {
@@ -20926,7 +22089,7 @@
       "syntax": "vue-i18n",
       "tr": "Ayarlar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20935,7 +22098,7 @@
       "syntax": "vue-i18n",
       "tr": "Paylaşımlar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20944,7 +22107,7 @@
       "syntax": "vue-i18n",
       "tr": "Depolar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20953,7 +22116,7 @@
       "syntax": "vue-i18n",
       "tr": "Senkron çalışmaları",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20962,7 +22125,7 @@
       "syntax": "vue-i18n",
       "tr": "Etiketli dosyalar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -20971,7 +22134,7 @@
       "syntax": "vue-i18n",
       "tr": "Kiracılar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -21015,8 +22178,32 @@
       "syntax": "vue-i18n",
       "tr": "Araçlar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
+      ]
+    },
+    "nav.top.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalar ve depolama",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.top.people": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişiler ve güvenlik",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
+    "nav.top.system": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sistem",
+      "where": [
+        "web/src/lib/adminNav.ts"
       ]
     },
     "nav.trash": {
@@ -21024,7 +22211,7 @@
       "syntax": "vue-i18n",
       "tr": "Çöp kutusu",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -21033,7 +22220,7 @@
       "syntax": "vue-i18n",
       "tr": "Güncellemeler",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -21042,7 +22229,7 @@
       "syntax": "vue-i18n",
       "tr": "Kullanım ve maliyet",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -21051,7 +22238,7 @@
       "syntax": "vue-i18n",
       "tr": "Kullanıcılar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -21060,7 +22247,7 @@
       "syntax": "vue-i18n",
       "tr": "Webhook'lar",
       "where": [
-        "web/src/components/Sidebar.vue",
+        "web/src/lib/adminNav.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -21533,6 +22720,16 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Klasör parolası değişti"
+    },
+    "notifications.kinds.e2e_request_created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme isteği"
+    },
+    "notifications.kinds.e2e_request_decided": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme isteği yanıtlandı"
     },
     "notifications.kinds.file_deleted": {
       "in": "admin",
@@ -22408,6 +23605,15 @@
         "packages/core/src/modals/OpenWithDialog.vue"
       ]
     },
+    "openWith.onlyoffice": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "ONLYOFFICE (tablo düzenleyici)",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "packages/core/src/modals/OpenWithDialog.vue"
+      ]
+    },
     "openWith.open": {
       "in": "explorer",
       "syntax": "plain",
@@ -23255,6 +24461,16 @@
       "syntax": "vue-i18n",
       "tr": "İndirme"
     },
+    "permissions.items.files.encrypt.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uçtan uca şifreli klasör ya da dosya oluşturma, var olan bir klasörü şifreleme."
+    },
+    "permissions.items.files.encrypt.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme"
+    },
     "permissions.items.files.modify.hint": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -23446,7 +24662,7 @@
     "permissions.rules.builtinPlatformOwned": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Yerleşik roller platformun tamamınındır ve platform yöneticisi tarafından yönetilir. Kendi izinleriniz için yeni bir rol oluşturun.",
+      "tr": "Yerleşik roller platformun tamamınındır ve platform işletmecisi tarafından yönetilir. Kendi izinleriniz için yeni bir rol oluşturun.",
       "where": [
         "web/src/components/BuiltinRoleEditor.vue"
       ]
@@ -28688,6 +29904,42 @@
         "name": "the uploader's name as they typed it"
       }
     },
+    "server.e2e.ceiling.single_tenant": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu sunucu çok kiracılı değil; şifrelemesi açılıp kapatılacak bir kiracı yok. Kimin şifreleyebileceğine yalnızca şifreleme politikası karar verir.",
+      "about": "API refusal on the platform operator's switch that turns encryption on or off for one tenant (Admin panel → Encryption → Tenants, or an API client). One or two sentences. The last part of the key says why: single_tenant - this server is not multi-tenant, so it has no tenant ceiling to switch, and who may encrypt is set by the encryption policy alone."
+    },
+    "server.e2e.not_allowed.admins_only": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Burada şifreli klasör ya da dosyayı yalnızca bir yönetici oluşturabilir.",
+      "about": "API refusal when someone tries to create an end-to-end encrypted folder or file (its key file .filex-e2e.json, or a .fxe) and the encryption rules say no - a toast or dialog in the file manager, or an error an API client logs. One sentence. The last part of the key says why: tenant_disabled - the platform operator has switched encryption off for this organization; policy_off - an administrator has turned encryption off; admins_only - only administrators may create encrypted items; permission - the person's role does not include the Encrypt permission here; approval_required - the policy asks for an administrator's approval first, and the person has none for this folder."
+    },
+    "server.e2e.not_allowed.approval_required": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Burada şifrelemek için bir yöneticinin onayı gerekiyor. Önce bir şifreleme isteği gönderin.",
+      "about": "API refusal when someone tries to create an end-to-end encrypted folder or file (its key file .filex-e2e.json, or a .fxe) and the encryption rules say no - a toast or dialog in the file manager, or an error an API client logs. One sentence. The last part of the key says why: tenant_disabled - the platform operator has switched encryption off for this organization; policy_off - an administrator has turned encryption off; admins_only - only administrators may create encrypted items; permission - the person's role does not include the Encrypt permission here; approval_required - the policy asks for an administrator's approval first, and the person has none for this folder."
+    },
+    "server.e2e.not_allowed.permission": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Hesabınızın burada şifreleme izni yok.",
+      "about": "API refusal when someone tries to create an end-to-end encrypted folder or file (its key file .filex-e2e.json, or a .fxe) and the encryption rules say no - a toast or dialog in the file manager, or an error an API client logs. One sentence. The last part of the key says why: tenant_disabled - the platform operator has switched encryption off for this organization; policy_off - an administrator has turned encryption off; admins_only - only administrators may create encrypted items; permission - the person's role does not include the Encrypt permission here; approval_required - the policy asks for an administrator's approval first, and the person has none for this folder."
+    },
+    "server.e2e.not_allowed.policy_off": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bir yönetici şifrelemeyi kapattı.",
+      "about": "API refusal when someone tries to create an end-to-end encrypted folder or file (its key file .filex-e2e.json, or a .fxe) and the encryption rules say no - a toast or dialog in the file manager, or an error an API client logs. One sentence. The last part of the key says why: tenant_disabled - the platform operator has switched encryption off for this organization; policy_off - an administrator has turned encryption off; admins_only - only administrators may create encrypted items; permission - the person's role does not include the Encrypt permission here; approval_required - the policy asks for an administrator's approval first, and the person has none for this folder."
+    },
+    "server.e2e.not_allowed.tenant_disabled": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Burada şifreleme kullanılamıyor: platform işletmecisi kapattı.",
+      "about": "API refusal when someone tries to create an end-to-end encrypted folder or file (its key file .filex-e2e.json, or a .fxe) and the encryption rules say no - a toast or dialog in the file manager, or an error an API client logs. One sentence. The last part of the key says why: tenant_disabled - the platform operator has switched encryption off for this organization; policy_off - an administrator has turned encryption off; admins_only - only administrators may create encrypted items; permission - the person's role does not include the Encrypt permission here; approval_required - the policy asks for an administrator's approval first, and the person has none for this folder."
+    },
     "server.external.url_invalid": {
       "in": "server",
       "syntax": "server",
@@ -29295,6 +30547,43 @@
       "tr": "Şifreli dosyanın parolası değişti",
       "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them."
     },
+    "server.notify.e2e.request_created.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{requester}: {reason}",
+      "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "reason": "the requester's own words: why it needs encrypting",
+        "requester": "the name of the person who asked, or the word for \"someone\""
+      }
+    },
+    "server.notify.e2e.request_created.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Şifreleme isteği: {folder}",
+      "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "folder": "the name of the folder somebody asked to encrypt (for a single file: the folder it is in)"
+      }
+    },
+    "server.notify.e2e.request_decided.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Şifreleme isteği onaylandı: {folder}",
+      "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "folder": "the name of the folder the request was for (for a single file: the folder it is in)"
+      }
+    },
+    "server.notify.e2e.request_decided.title_rejected": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Şifreleme isteği reddedildi: {folder}",
+      "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them. The same notification when an administrator said no; the title without the suffix is the yes.",
+      "vars": {
+        "folder": "the name of the folder the request was for (for a single file: the folder it is in)"
+      }
+    },
     "server.notify.file.deleted.title": {
       "in": "server",
       "syntax": "server",
@@ -29546,6 +30835,105 @@
       "tr": "bir dosya",
       "about": "A word a notification OR an email uses when the event does not say it (an upload with no name typed, a file with no name). One word, both surfaces - they were written twice until v0.43.0. Used where a file would be named and it has none: the {name} of a notification, and the {name} in a share email’s subject and fact line."
     },
+    "server.onlyoffice.refused_bad_bytes": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE {format} dedi ama gönderdiği bir {format} dosyası değil.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "format": "a file format's name in capitals, e.g. DOCX"
+      }
+    },
+    "server.onlyoffice.refused_no_create": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu klasörde yeni dosya oluşturamazsınız ve ONLYOFFICE bir .{ext} dosyasını yalnızca yanına yeni bir {format} dosyası olarak kaydedebilir. Bir düzenlemeyi saklamak için belgeyi kapatmadan önce ONLYOFFICE'in Dosya menüsünden indirip başka bir yere kaydedin.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "ext": "the extension of the file that was edited, without the dot, e.g. doc",
+        "format": "a file format's name in capitals, e.g. DOCX"
+      }
+    },
+    "server.onlyoffice.refused_no_editor": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE bu düzenleme oturumunun kimin için açıldığını bildirmedi; filex burada kimin dosya oluşturabileceğini anlayamadı.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it."
+    },
+    "server.onlyoffice.refused_not_converted": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE dosyayı {format} biçiminde kaydetti ve bu yeniden CSV'ye çevrilemedi.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "format": "a file format's name in capitals, e.g. DOCX"
+      }
+    },
+    "server.onlyoffice.refused_other_type": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE dosyayı {format} biçiminde kaydetti; filex bunu bir .{ext} dosyası için tutmaz.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "ext": "the extension of the file that was edited, without the dot, e.g. doc",
+        "format": "a file format's name in capitals, e.g. DOCX"
+      }
+    },
+    "server.onlyoffice.refused_package": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE, CSV metni beklenirken bir tablo paketi gönderdi.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it."
+    },
+    "server.onlyoffice.refused_too_large": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE'in kaydettiği dosya {mb} MB'tan büyük.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "mb": "the largest save filex takes, in megabytes, e.g. 256"
+      }
+    },
+    "server.onlyoffice.save_refused_body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{why} {name} değişmedi.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "name": "a file or folder name, as it is on disk",
+        "why": "one sentence that says why a save was not written (one of the server.onlyoffice.refused_* sentences, already in the reader's language)"
+      }
+    },
+    "server.onlyoffice.save_refused_title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{name} dosyasındaki düzenlemeniz kaydedilmedi",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "name": "a file or folder name, as it is on disk"
+      }
+    },
+    "server.onlyoffice.saved_beside_body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "ONLYOFFICE {name} dosyasını {format} biçiminde kaydetti; bir .{ext} dosyası bunu tutamadığı için düzenlemeniz aynı klasörde {saved} adıyla duruyor. {name} değişmedi.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "ext": "the extension of the file that was edited, without the dot, e.g. doc",
+        "format": "a file format's name in capitals, e.g. DOCX",
+        "name": "a file or folder name, as it is on disk",
+        "saved": "the name the edit was saved under, beside the file, e.g. report.docx"
+      }
+    },
+    "server.onlyoffice.saved_beside_title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Düzenlemeniz {saved} olarak kaydedildi",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "saved": "the name the edit was saved under, beside the file, e.g. report.docx"
+      }
+    },
     "server.origin.refused": {
       "in": "server",
       "syntax": "server",
@@ -29664,6 +31052,12 @@
       "in": "server",
       "syntax": "server",
       "tr": "dosya indirme",
+      "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
+    },
+    "server.perm.action.files.encrypt": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya şifreleme",
       "about": "A lowercase verb phrase naming what one permission allows, slotted into the server.perm.denied.* sentences as {action}. Grammar must fit every one of those sentences. Where one verb form cannot fit them all, make {action} a noun phrase and word the sentences around it: Turkish writes “dosya silme” (deleting files) and “Hesabınızın {action} izni yok” (your account has no {action} permission); “override” puts it in quotes as the permission's name."
     },
     "server.perm.action.files.modify": {
@@ -34290,7 +35684,7 @@
     "tenantSelf.sharedHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Platformun hangi sağlayıcılarının kiracınıza hizmet vereceğine platform operatörü karar verir.",
+      "tr": "Platformun hangi sağlayıcılarının kiracınıza hizmet vereceğine platform işletmecisi karar verir.",
       "where": [
         "web/src/components/TenantSelfService.vue"
       ]
@@ -34936,7 +36330,7 @@
     "tenants.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Bu platformun her kiracısı: oturum açma adı (realm), kendi adresi, kişilerinin eriştiği depolar ve hesapları. Kiracıları yalnızca platform operatörü yönetir.",
+      "tr": "Bu platformun her kiracısı: oturum açma adı (realm), kendi adresi, kişilerinin eriştiği depolar ve hesapları. Kiracıları yalnızca platform işletmecisi yönetir.",
       "where": [
         "web/src/views/Tenants.vue"
       ]
@@ -38012,9 +39406,19 @@
       "tr": "Şifreli bir klasör emanet anahtarıyla açıldığında"
     },
     "userSettings.notifications.events.e2e_password_changed": {
-      "in": "admin",
-      "syntax": "vue-i18n",
+      "in": "both",
+      "syntax": "shared",
       "tr": "Şifreli klasörünüzün parolası değiştiğinde"
+    },
+    "userSettings.notifications.events.e2e_request_created": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Biri bir klasörü ya da dosyayı şifrelemek istediğinde"
+    },
+    "userSettings.notifications.events.e2e_request_decided": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Şifreleme isteğiniz yanıtlandığında"
     },
     "userSettings.notifications.events.file_deleted": {
       "in": "both",
@@ -39200,6 +40604,14 @@
       "syntax": "plain",
       "tr": "İlk satır başlık olsun"
     },
+    "viewer.csv_office_note": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "CSV olarak kaydedilir: yalnızca etkin sayfanın değerleri kalır. Biçimlendirme, formüller ve diğer sayfalar kaydedilmez.",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
     "viewer.csv_rows": {
       "in": "explorer",
       "syntax": "plain",
@@ -39815,6 +41227,16 @@
       "syntax": "vue-i18n",
       "tr": "Şifreli bir klasörün parolası değiştirildi ya da kurtarma anahtarıyla sıfırlandı"
     },
+    "webhooks.events.e2e_request_created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme isteği - onay politikasında biri bir klasörü ya da dosyayı şifrelemek istedi"
+    },
+    "webhooks.events.e2e_request_decided": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şifreleme isteği bir yönetici tarafından onaylandı ya da reddedildi"
+    },
     "webhooks.events.file_deleted": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -39949,6 +41371,14 @@
       "in": "both",
       "syntax": "shared",
       "tr": "Bu sunucuda uygulamalar kapalı.",
+      "where": [
+        "packages/core/src/lib/webhookEvents.ts"
+      ]
+    },
+    "webhooks.offReason.e2eApproval": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Yalnız şifreleme politikası onay istediğinde.",
       "where": [
         "packages/core/src/lib/webhookEvents.ts"
       ]
