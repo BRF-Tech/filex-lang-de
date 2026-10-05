@@ -3104,6 +3104,11 @@
       "syntax": "vue-i18n",
       "tr": "Çalışıyor"
     },
+    "appPlugins.state.unlicensed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisanssız"
+    },
     "appPlugins.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -4160,6 +4165,674 @@
       "tr": "Dosyalara dön",
       "where": [
         "web/src/views/AppScreen.vue"
+      ]
+    },
+    "appStore.band.graceTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ücretli bir uygulamanın lisansı mağazaya sorulamadı; ek süresiyle çalışıyor",
+      "where": [
+        "web/src/components/AppLicenseAlert.vue"
+      ]
+    },
+    "appStore.band.heldTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisansı geçerli olmadığı için ücretli bir uygulama bekletiliyor",
+      "where": [
+        "web/src/components/AppLicenseAlert.vue"
+      ]
+    },
+    "appStore.breadcrumb": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazadan kur",
+      "where": [
+        "web/src/router/index.ts"
+      ]
+    },
+    "appStore.cancelled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hiçbir şey kurulmadı. Mağazaya bağlantının iptal edildiği bildirildi.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.declined": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazaya güvenilmedi ve bağlantısından hiçbir şey okunmadı.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.done": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{app} kuruldu.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.doneUpgrade": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{app}, {version} sürümüne yükseltildi.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.err.intent_expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum bağlantısının süresi doldu. Mağazada yeniden Kur'a basın."
+    },
+    "appStore.err.intent_gone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum bağlantısı zaten kullanılmış ya da süresi dolmuş. Mağazada yeniden Kur'a basın."
+    },
+    "appStore.err.intent_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum bağlantısı filex'in işleyebileceği bir bağlantı değil: bir bağlantının taşıması gereken bir şey eksik ya da bozuk (oluşturulduğu filex, commit, manifestin SHA-256 özeti). Mağazada yeniden Kur'a basın; yine olursa mağazanın bağlantılarının düzeltilmesi gerekir."
+    },
+    "appStore.err.intent_pin_mismatch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamanın deposunun sunduğu, mağazanın onayladığı değil ({fields}). Hiçbir şey kurulmadı.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.intent_pin_mismatch_commit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürümün etiketi artık mağazanın onayladığı commit'in sunduğunu sunmuyor: depo etiketi taşımış ({fields}). Hiçbir şey kurulmadı.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.intent_session_unknown": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu inceleme artık açık değil: zaten kuruldu ya da kapatıldı veya süresi doldu. Mağazanın kurulum bağlantısını yeniden açın."
+    },
+    "appStore.err.intent_unknown": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza bu kurulum bağlantısını tanımıyor."
+    },
+    "appStore.err.intent_used": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum bağlantısı bu filex'te zaten kullanıldı."
+    },
+    "appStore.err.intent_version_rollback": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{installed} kurulu; bağlantı {link} sürümü için ve bu daha yeni değil. Mağaza bağlantısı kurar ya da yükseltir, asla geri götürmez.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.intent_wrong_instance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulum bağlantısı başka bir filex için oluşturuldu ({link}); bu filex {here}. Mağazada yeniden Kur'a basın ve bu filex'in adresini verin.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.intent_wrong_instance_public_url": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu filex'in FILEX_PUBLIC_URL ayarı, mağaza bağlantılarının bağlanabileceği bir adres değil (sunucu adı olan bir http ya da https adresi olmalı; kullanıcı adı, sorgu ya da parça içermemeli). Sunucuyu yöneten düzeltene kadar hiçbir mağaza bağlantısı alınmaz.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.license_key_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu lisans anahtarı kullanılamaz: 4 ile 512 karakter arası, boşluksuz (sunucunun onu saklamak için FILEX_SECRET_KEY'e de ihtiyacı var)."
+    },
+    "appStore.err.store_bad_answer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza, filex'in kabul etmediği bir yanıt verdi: okuyamadığı bir yanıt, bir yönlendirme (mağazanın API'si yönlendirme izlenmeden sorulur) ya da bu sunucunun saatinden bir günden fazla uzak bir zaman. Sunucunun saatini denetleyin."
+    },
+    "appStore.err.store_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu, filex'in konuştuğu bir mağaza adresi değil: bir mağazaya https ile, herkese açık bir adresten ulaşılır."
+    },
+    "appStore.err.store_key_not_configured": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu mağaza sunucuda yapılandırılmış (FILEX_APP_STORE_URLS) ama FILEX_APP_STORE_KEYS'te olmayan bir anahtarla imzaladı. Anahtarı sunucuyu yöneten ekler."
+    },
+    "appStore.err.store_not_allowed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sunucu bu mağazaya izin vermiyor: FILEX_APP_STORE_URLS ayarlı, bu yüzden kurulum bağlantıları ve lisanslar yalnız orada listelenen mağazalardan alınır (liste boşsa hiçbirinden) ve başka hiçbir mağazaya ilk kullanımda bile güvenilmez. Mağazayı oraya sunucuyu yöneten ekler."
+    },
+    "appStore.err.store_signature_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlantının imzası, bu mağazaya güvenilen anahtarlarla doğrulanmıyor. Hiçbir şey kurulmadı."
+    },
+    "appStore.err.store_source_changed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulu sürüm ({version}) {installed} geldi; bu bağlantı ise {link} geliyor. Bir mağaza bağlantısı bir uygulamayı asla başka bir mağazaya ya da depoya taşımaz, lisans anahtarını da. Önce kurulu uygulamayı kaldırın (bu, ayarlarını ve sakladıklarını siler), sonra bağlantıyı yeniden açın.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.store_source_changed_direct": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulu sürüm ({version}) bir mağazadan değil, doğrudan deposundan ({repo}) kuruldu. {store} mağazasının ücretli bağlantısı kurulu bir uygulamayı kendi lisansına almaz: mağazanın ücretli sürümüne geçmek için önce kurulu uygulamayı kaldırın (bu, ayarlarını ve sakladıklarını siler), sonra bağlantıyı yeniden açın.",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.err.store_unreachable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazaya ulaşılamadı. Biraz sonra bağlantıyı yeniden deneyin."
+    },
+    "appStore.framed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir mağazanın kurulum bağlantısı bir çerçevenin içinde kullanılamaz. Kendi tarayıcı sekmesinde açın.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.license.changeKey": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtarı değiştir",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.checkedAt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son denetim",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.enterKey": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisans anahtarını girin",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.graceNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazaya sorulamadı. Son geçerli yanıt {until} tarihine kadar geçerli.",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.heldNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama bekletiliyor: lisansı {status}. Ayarları ve kayıtlarıyla kurulu kalır, lisans yeniden geçerli olana kadar hiçbir şey çalıştırmaz.",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.key": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisans anahtarı",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.keySaved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtar kaydedildi ve denetlendi.",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.lastError": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son deneme",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.licensee": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisans sahibi",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.nextCheck": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sonraki denetim",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.seats": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Koltuklar",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.seatsOf": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{total} koltuktan {used} kullanımda",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.status.expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "süresi doldu"
+    },
+    "appStore.license.status.free": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ücretsiz"
+    },
+    "appStore.license.status.grace": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "geçerli (mağazaya ulaşılamıyor)"
+    },
+    "appStore.license.status.grace_expired": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ek süre bitti"
+    },
+    "appStore.license.status.invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "geçersiz"
+    },
+    "appStore.license.status.missing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "anahtar yok"
+    },
+    "appStore.license.status.revoked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "iptal edildi"
+    },
+    "appStore.license.status.seats_exhausted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "boş koltuk kalmadı"
+    },
+    "appStore.license.status.unverified": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "henüz doğrulanmadı"
+    },
+    "appStore.license.status.valid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "geçerli"
+    },
+    "appStore.license.status.wrong_app": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "başka bir uygulamanın"
+    },
+    "appStore.license.store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.storeUntrusted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} mağazasına artık burada güvenilmiyor, bu yüzden lisans denetlenemiyor. Yeniden güvenmek için o mağazadan bir kurulum bağlantısı açın.",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisans",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.updatesUntil": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncellemeler",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.validUntil": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Geçerlilik sonu",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.verified": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazaya soruldu.",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.license.verifyNow": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şimdi doğrula",
+      "where": [
+        "web/src/components/plugins/AppPluginLicense.vue"
+      ]
+    },
+    "appStore.malformed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu adres, filex'in okuyabildiği bir mağaza kurulum bağlantısı değil. Mağazanın Kur bağlantısını yeniden açın.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekleyen bir kurulum bağlantısı yok. Mağazanın Kur bağlantısını yeniden açın.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.openApp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulamanın sayfasını aç",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.reviewing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} mağazasından {app} incelemesi açık.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.stores.configured": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yapılandırmada (FILEX_APP_STORE_URLS)",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.stores.confirmRemove": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} mağazasına güvenmeyi bırakalım mı? Kurulum bağlantıları reddedilir ve verdiği lisanslar artık denetlenemez.",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.stores.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz güvenilen bir mağaza yok.",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.stores.intro": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulum bağlantıları ve lisans yanıtları yalnız bu mağazalardan, bu anahtarlarla imzalı olarak kabul edilir. Bir mağazaya kendi kurulum bağlantısından güvenilir.",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.stores.remove": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenmeyi bırak",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.stores.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenilen mağazalar",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.stores.trustedBy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{who} güvendi, {when}",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir uygulama mağazası sizi bir kurulum bağlantısıyla buraya gönderdi. İncelemeyi okuyup siz karar verirsiniz; Kur'a basmadan hiçbir şey kurulmaz.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazadan kur",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.approve": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu mağazaya güven",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.changedBody": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza artık güvenildiği anahtarlardan başka anahtarlarla imzalıyor. Bu, mağaza anahtarlarını yenilediğinde de olur, başka biri onun adına yanıt verdiğinde de. Yeniden güvenmeden önce yeni parmak izlerini mağazanın yayımladıklarıyla karşılaştırın.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.changedTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu mağazanın anahtarları değişti",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.compared": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu parmak izlerini mağazanın yayımladıklarıyla karşılaştırdım ve bu mağazaya güvenmek istiyorum",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.how": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnız burada listelenen anahtarlara güvenilir. Mağazanın sonradan yayımladığı bir anahtar yeniden sorulur.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.keys": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtarları",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.newBody": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex kurulum bağlantılarını ve lisans yanıtlarını yalnız bir yöneticinin güvendiği mağazalardan kabul eder. Bu mağazaya güvenmeden önce aşağıdaki anahtar parmak izlerini mağazanın kendi sitesinde yayımladıklarıyla karşılaştırın.",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.newTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu mağazaya henüz güvenilmiyor",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.previous": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenildiği anahtarlar",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza",
+      "where": [
+        "web/src/views/StoreInstall.vue"
+      ]
+    },
+    "appStore.trust.use.index": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulum bağlantıları"
+    },
+    "appStore.trust.use.license": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisanslar"
+    },
+    "appStore.wizard.fromStore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} mağazasından",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appStore.wizard.held": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama kuruldu ama bekletiliyor: lisansı {status}. Sayfası nedenini söyler ve yeni anahtar alır.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appStore.wizard.keyFromStore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazanın bağlantısı bir lisans anahtarı taşıyor ({prefix}). Onu kullanmak için kutuyu boş bırakın.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appStore.wizard.keyOther": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başka bir lisans anahtarı (isteğe bağlı)",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appStore.wizard.paidNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu ücretli bir uygulama. Mağaza lisansını doğrulayana kadar bekletilir (kurulu durur, hiçbir şey çalıştırmaz) ve her gün yeniden denetlenir.",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appStore.wizard.sourceDirect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "doğrudan GitHub'dan, mağazasız ({repo})",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.wizard.sourceOther": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "bir yüklemeden ya da adresten, mağazasız ({repo})",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.wizard.sourceStore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} mağazasından ({repo})",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
+    },
+    "appStore.wizard.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} uygulamasını mağazadan kur",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
+      ]
+    },
+    "appStore.wizard.upgradeFrom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulu {from}, {fromSource} → bu bağlantı {to}, {toSource}",
+      "where": [
+        "web/src/components/plugins/AppPluginInstallWizard.vue"
       ]
     },
     "appearance.col.id": {
@@ -5681,6 +6354,11 @@
       "syntax": "vue-i18n",
       "tr": "Uygulama"
     },
+    "audit.resource.app_store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama mağazası"
+    },
     "audit.resource.archives": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -5790,6 +6468,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bildirim"
+    },
+    "audit.resource.permission_gap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eksik izin"
     },
     "audit.resource.permission_rule": {
       "in": "admin",
@@ -5994,6 +6677,11 @@
       "syntax": "vue-i18n",
       "tr": "Uygulama"
     },
+    "audit.target.app_store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza"
+    },
     "audit.target.auth_provider": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6063,6 +6751,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "İşlem"
+    },
+    "audit.target.permission_gap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eksik izin"
     },
     "audit.target.permission_rule": {
       "in": "admin",
@@ -6187,6 +6880,11 @@
       "syntax": "vue-i18n",
       "tr": "arşiv açıldı"
     },
+    "audit.verb.cancel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "iptal edildi"
+    },
     "audit.verb.certificate_delete": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6241,6 +6939,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "kapatıldı"
+    },
+    "audit.verb.dismiss": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yok sayıldı"
     },
     "audit.verb.download_link": {
       "in": "admin",
@@ -6302,10 +7005,30 @@
       "syntax": "vue-i18n",
       "tr": "güvensiz sağlayıcı izni değiştirildi"
     },
+    "audit.verb.install": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kuruldu"
+    },
     "audit.verb.key_file_rewritten": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "anahtar dosyası yeniden yazıldı"
+    },
+    "audit.verb.license_held": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "lisansı nedeniyle bekletiliyor"
+    },
+    "audit.verb.license_released": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "lisansı yeniden geçerli"
+    },
+    "audit.verb.license_set": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "lisans anahtarı girildi"
     },
     "audit.verb.member_remove": {
       "in": "admin",
@@ -6492,6 +7215,11 @@
       "syntax": "vue-i18n",
       "tr": "küçük resim çizerken dışarıya dosya gönderdi"
     },
+    "audit.verb.trust": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "güvenildi"
+    },
     "audit.verb.ui_save": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6506,6 +7234,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "kilit açıldı"
+    },
+    "audit.verb.untrust": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "artık güvenilmiyor"
     },
     "audit.verb.unzip": {
       "in": "admin",
@@ -8223,6 +8956,7 @@
         "web/src/views/StorageEdit.vue",
         "web/src/views/StorageNew.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/StoreInstall.vue",
         "web/src/views/TenantEdit.vue",
         "web/src/views/Tenants.vue",
         "web/src/views/Trash.vue",
@@ -8692,6 +9426,7 @@
         "web/src/components/UserRolesCard.vue",
         "web/src/components/encryption/EncryptionPolicyCard.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
+        "web/src/components/plugins/AppPluginLicense.vue",
         "web/src/components/plugins/AppPluginThumbLimits.vue",
         "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
@@ -16823,7 +17558,9 @@
         "web/src/components/UserGroupsCard.vue",
         "web/src/components/UserRolesCard.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/AppPluginLicense.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/AppStoresPanel.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/composables/useStorageDelete.ts",
@@ -16852,6 +17589,7 @@
         "web/src/views/StorageEdit.vue",
         "web/src/views/StorageNew.vue",
         "web/src/views/Storages.vue",
+        "web/src/views/StoreInstall.vue",
         "web/src/views/TaggedFiles.vue",
         "web/src/views/TenantEdit.vue",
         "web/src/views/Tenants.vue",
@@ -22771,6 +23509,11 @@
       "syntax": "vue-i18n",
       "tr": "Eski dizin hesabı başka bir kiracıda"
     },
+    "notifications.kinds.permission_gaps": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Rolde izin düşmüş olabilir"
+    },
     "notifications.kinds.plugin_notice": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -24240,6 +24983,71 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Devral"
+    },
+    "permissions.gaps.builtin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{role}: “{from}” izni var, “{key}” izni yok.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.gaps.dismiss": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yok say, bilerek yapıldı",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.gaps.dismissed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{role}: bilerek yapıldı diye yok sayıldı.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.gaps.folders": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{role}, klasörlerinde: “{from}” izni var, “{key}” izni yok.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.gaps.restore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{permission}” iznini geri ver",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.gaps.restored": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{role} rolüne “{permission}” izni geri verildi.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.gaps.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} rolde bir izin düşmüş olabilir",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
+    "permissions.gaps.why": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sunucu bir süre eski bir sürümle (0.50 ya da daha eski) çalışırken düşmüş olabilir; bilerek kaldırdıysanız yok sayın.",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
     },
     "permissions.groups.access": {
       "in": "admin",
@@ -31387,6 +32195,37 @@
       "syntax": "server",
       "tr": "Kullanıcıları ada/e-postaya göre arar",
       "about": "Plugins → Apps → install review and the app's page: what one permission lets the app do. The administrator reads this before trusting the app with their files. Starts with a verb, no final full stop."
+    },
+    "server.permission_gaps.body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu roller Dosya ve klasör ekleme iznini veriyor ama Şifreleme iznini vermiyor; 0.50 ya da daha eski bir sürümde kaydedilen bir rol böyle kalır. Yönetim → Roller sayfası onları listeler: Şifreleme iznini tek tıkla geri verin ya da bilerek kaldırıldıysa uyarıyı yok sayın.",
+      "about": "A notification administrators get when saved roles allow adding files (the Add files and folders permission) but not encrypting (the Encrypt permission): what a role saved on an older filex, which did not know Encrypt, is left with. Admin → Roles shows each with a button to give Encrypt back. Use the permission names as the role editor shows them (permissions.items.files.create.label and permissions.items.files.encrypt.label in the interface catalogue).",
+      "plural": true
+    },
+    "server.permission_gaps.body_one": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu rol Dosya ve klasör ekleme iznini veriyor ama Şifreleme iznini vermiyor; 0.50 ya da daha eski bir sürümde kaydedilen bir rol böyle kalır. Yönetim → Roller sayfası onu gösterir: Şifreleme iznini tek tıkla geri verin ya da bilerek kaldırıldıysa uyarıyı yok sayın.",
+      "about": "A notification administrators get when saved roles allow adding files (the Add files and folders permission) but not encrypting (the Encrypt permission): what a role saved on an older filex, which did not know Encrypt, is left with. Admin → Roles shows each with a button to give Encrypt back. Use the permission names as the role editor shows them (permissions.items.files.create.label and permissions.items.files.encrypt.label in the interface catalogue)."
+    },
+    "server.permission_gaps.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} rolde Şifreleme izni düşmüş olabilir",
+      "about": "A notification administrators get when saved roles allow adding files (the Add files and folders permission) but not encrypting (the Encrypt permission): what a role saved on an older filex, which did not know Encrypt, is left with. Admin → Roles shows each with a button to give Encrypt back. Use the permission names as the role editor shows them (permissions.items.files.create.label and permissions.items.files.encrypt.label in the interface catalogue).",
+      "vars": {
+        "count": "how many roles allow adding files but not encrypting"
+      },
+      "plural": true
+    },
+    "server.permission_gaps.title_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "A notification administrators get when saved roles allow adding files (the Add files and folders permission) but not encrypting (the Encrypt permission): what a role saved on an older filex, which did not know Encrypt, is left with. Admin → Roles shows each with a button to give Encrypt back. Use the permission names as the role editor shows them (permissions.items.files.create.label and permissions.items.files.encrypt.label in the interface catalogue).",
+      "vars": {
+        "count": "how many roles allow adding files but not encrypting"
+      }
     },
     "server.public.app_heading": {
       "in": "server",

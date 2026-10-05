@@ -3,11 +3,11 @@ filex-app.json is up to date.
 
 # node scripts/validate.mjs filex-app.json --complete --plurals   (the filex validator, copied verbatim from the template)
 filex language pack validator
-  catalogue : G:\filex-lang-de\catalogue (filex 0.51.0) — 5502 strings (366 of them the server's: emails, public pages, notifications)
+  catalogue : G:\filex-lang-de\catalogue (filex 0.51.0) — 5621 strings (370 of them the server's: emails, public pages, notifications)
   syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 5502 of 5502 strings; the other 0 show in English
+[de] 100% translated — 5621 of 5621 strings; the other 0 show in English
   230 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   15 plural key(s) lack a form for one of those categories and show the plain form for it
@@ -31,12 +31,12 @@ filex language pack validator
 # node scripts/validate-de.mjs
 filex German pack check (validate-de)
   catalogue      : catalogue (filex 0.51.0)
-                   admin table     3143 strings (vue-i18n)
+                   admin table     3258 strings (vue-i18n)
                    explorer table  2236 strings (plain {var})
-                   server table    366 strings (mails, public pages, notifications)
-                   243 keys in both tables -> 5502 strings
+                   server table    370 strings (mails, public pages, notifications)
+                   243 keys in both tables -> 5621 strings
   plurals        : one, other — 1 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (5503 strings)
+  pack           : translations\de.json  (5622 strings)
   syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
 Keys shared by both catalogues: 243 (one flat pack value serves both).
