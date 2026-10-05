@@ -6935,6 +6935,11 @@
       "syntax": "vue-i18n",
       "tr": "silindi"
     },
+    "audit.verb.detach": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex grubu olarak tutuldu"
+    },
     "audit.verb.disable": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7180,6 +7185,11 @@
       "syntax": "vue-i18n",
       "tr": "kaynağı değiştiği için kapatıldı"
     },
+    "audit.verb.sync": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dizin senkronize edildi"
+    },
     "audit.verb.sync_trigger": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7332,13 +7342,94 @@
         "web/src/views/AuthProviders.vue"
       ]
     },
-    "authProviders.apiTokenAlways": {
+    "authProviders.card.anyDomain": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "API anahtarları her zaman kabul edilir; API / MCP sayfasında verilir.",
+      "tr": "Her e-posta etki alanı",
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
+    },
+    "authProviders.card.client": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstemci: {id}",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.domains": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "E-posta etki alanları: {list}",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.every": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "her {every}",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.local": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "E-posta ve parola, burada denetlenir",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.localOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Parolayla oturum açma kapalı",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.manualOnly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yalnızca istenince",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.neverSynced": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz senkronize edilmedi",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.proxies": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenilen proxy’ler: {list}",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.synced": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{when} senkronize edildi",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.card.tenants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} kiracı",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ],
+      "plural": true
     },
     "authProviders.checks.account.fail": {
       "in": "admin",
@@ -7455,6 +7546,33 @@
       "syntax": "vue-i18n",
       "tr": "İlk kez oturum açan herkese hesap açılır."
     },
+    "authProviders.checks.groups.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{of} kişiden {n} tanesi gruplarını {attr} içinde listeliyor.",
+      "plural": true
+    },
+    "authProviders.checks.groups.unchecked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimse gruplarını {attr} içinde listelemiyor. Dizininizde gruplar varsa bir grup arama filtresi ayarlayın."
+    },
+    "authProviders.checks.groups_search.fail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{filter} grup araması başarısız: {reason}."
+    },
+    "authProviders.checks.groups_search.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Grup araması {who} için {n} grup buluyor.",
+      "plural": true
+    },
+    "authProviders.checks.groups_search.unchecked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{filter} grup araması {who} için grup bulmuyor."
+    },
     "authProviders.checks.header.fail": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7495,6 +7613,17 @@
       "syntax": "vue-i18n",
       "tr": "pamtester kurulu ve çalıştırılabiliyor ({path})."
     },
+    "authProviders.checks.people.fail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{filter} ile e-postası ({attr}) olan kimse bulunamadı: {reason}."
+    },
+    "authProviders.checks.people.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{filter} ile {n} kişi bulundu; {mail} tanesinin e-postası ({attr}) var.",
+      "plural": true
+    },
     "authProviders.checks.platform.ok": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7534,6 +7663,22 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "sudo, filex'in o tek komutu parolasız çalıştırmasına izin veriyor."
+    },
+    "authProviders.checks.sync_groups.fail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Getirilecek grupların araması ({filter}) başarısız: {reason}."
+    },
+    "authProviders.checks.sync_groups.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu {n} grup getirir.",
+      "plural": true
+    },
+    "authProviders.checks.sync_groups.unchecked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{filter} ile eşleşen grup yok: dizin senkronu hiç grup getirmez."
     },
     "authProviders.checks.test_account.fail": {
       "in": "admin",
@@ -7580,7 +7725,7 @@
       "syntax": "vue-i18n",
       "tr": "{provider} denemesi şu adımlarda başarısız oldu:",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.confirmEnable": {
@@ -7588,7 +7733,7 @@
       "syntax": "vue-i18n",
       "tr": "Yine de aç",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.confirmNote": {
@@ -7596,7 +7741,7 @@
       "syntax": "vue-i18n",
       "tr": "Böyle açılırsa sorun giderilene kadar kimsenin oturum açmasına izin vermeyebilir. Parolayla oturum açma ve kurtarma amaçlı oturum açma her durumda çalışmaya devam eder.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.confirmTitle": {
@@ -7604,7 +7749,7 @@
       "syntax": "vue-i18n",
       "tr": "Deneme başarısız olduğu halde açılsın mı?",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.create": {
@@ -7623,13 +7768,21 @@
         "web/src/views/AuthProviders.vue"
       ]
     },
+    "authProviders.defaultIs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{value} (varsayılan)",
+      "where": [
+        "web/src/views/AuthProviderEdit.vue"
+      ]
+    },
     "authProviders.delete": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Sil",
       "where": [
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.deleteConfirm": {
@@ -7638,7 +7791,7 @@
       "tr": "“{name}” silinsin mi? Artık kimse bunun üzerinden oturum açamaz.",
       "where": [
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.deleted": {
@@ -7647,7 +7800,25 @@
       "tr": "Sağlayıcı silindi",
       "where": [
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
+      ]
+    },
+    "authProviders.editSections.settings": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ayarlar"
+    },
+    "authProviders.editSections.sync": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Senkron"
+    },
+    "authProviders.editTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sağlayıcı",
+      "where": [
+        "web/src/router/index.ts"
       ]
     },
     "authProviders.envReadOnly": {
@@ -7655,7 +7826,7 @@
       "syntax": "vue-i18n",
       "tr": "Ortam tarafından yapılandırılmış: {from}. Orada değiştirip filex’i yeniden başlatın - bu sayfa onu geçersiz kılamaz.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.failedReason": {
@@ -7663,6 +7834,7 @@
       "syntax": "vue-i18n",
       "tr": "Açık, ama başlatılamadı: {reason}",
       "where": [
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -7676,6 +7848,26 @@
       "syntax": "vue-i18n",
       "tr": "Örneğin corp.example ise alex hesabı alex{'@'}corp.example olarak oturum açar. Boş: bu kurulumun işletim sistemi hesapları için seçtiği adres. İlk oturum açmadan önce seçin."
     },
+    "authProviders.fieldHints.email_domains": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca bu etki alanları onunla oturum açabilir ya da ondan hesap alabilir (ör. partner.com). Boş: hepsi."
+    },
+    "authProviders.fieldHints.group_attr": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişinin gruplarını listeleyen nitelik. Active Directory ve lldap: memberOf."
+    },
+    "authProviders.fieldHints.group_base_dn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Grupların arandığı yer. Boş: base DN."
+    },
+    "authProviders.fieldHints.group_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca kişiler gruplarını taşımıyorsa: onları bir aramayla bulur. %s kişinin DN’i, %u oturum açtığı ad - ör. (member=%s)."
+    },
     "authProviders.fieldHints.max_concurrent": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7685,6 +7877,31 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Varsayılan olarak kapalı. Açıkken, parolası doğru olduğu hâlde burada oturum açamayan kişiye (ilk oturum açışta hesap açılmıyorsa ya da izinli bir grupta değilse) nedeni söylenir. O zaman oturum açma formu, tahmin yürüten birine de parolanın doğru olduğunu söyler; bu parola, aynı hesapları kullanan başka servisleri de açıyor olabilir."
+    },
+    "authProviders.fieldHints.sync_disable_missing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizinin oluşturduğu hesaplar, dizin onları artık listelemediğinde kapatılır. Asla bir yönetici ya da burada oluşturulmuş bir hesap değil."
+    },
+    "authProviders.fieldHints.sync_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Senkronun kimleri listeleyeceği. Boş: * ile kullanıcı filtresi - oturum açabilen herkes."
+    },
+    "authProviders.fieldHints.sync_group_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hangi dizin gruplarının getirileceği. Boş: hepsi - ör. (&(objectClass=groupOfNames)(cn=dept-*))."
+    },
+    "authProviders.fieldHints.sync_groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her dizin grubu, eşit tutulan bir filex grubu olur. Hangi grupların olduğu dizinde yönetilir."
+    },
+    "authProviders.fieldHints.sync_interval": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Senkronun kendiliğinden ne sıklıkla çalışacağı - ör. 6h, en az 5m. Boş: yalnızca Şimdi senkronize et’e bastığınızda."
     },
     "authProviders.fieldHints.timeout_seconds": {
       "in": "admin",
@@ -7698,6 +7915,11 @@
       "where": [
         "web/src/views/TenantEdit.vue"
       ]
+    },
+    "authProviders.fieldHints.user_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oturum açan kişiyi bulur. Her %s, yazdığı addır."
     },
     "authProviders.fields.admin_group": {
       "in": "admin",
@@ -7774,10 +7996,25 @@
       "syntax": "vue-i18n",
       "tr": "Hesapların e-posta alan adı"
     },
+    "authProviders.fields.email_domains": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "E-posta etki alanları"
+    },
     "authProviders.fields.group_attr": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Grup niteliği"
+    },
+    "authProviders.fields.group_base_dn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Grup arama base DN"
+    },
+    "authProviders.fields.group_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Grup arama filtresi"
     },
     "authProviders.fields.header_email": {
       "in": "admin",
@@ -7803,6 +8040,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Issuer URL"
+    },
+    "authProviders.fields.label": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ad"
     },
     "authProviders.fields.max_concurrent": {
       "in": "admin",
@@ -7854,6 +8096,31 @@
       "syntax": "vue-i18n",
       "tr": "sudo yolu"
     },
+    "authProviders.fields.sync_disable_missing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizinin artık listelemediği hesapları kapat"
+    },
+    "authProviders.fields.sync_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu filtresi"
+    },
+    "authProviders.fields.sync_group_filter": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Getirilecek gruplar (filtre; boş = hepsi)"
+    },
+    "authProviders.fields.sync_groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her dizin grubunu filex grubu olarak getir"
+    },
+    "authProviders.fields.sync_interval": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu sıklığı"
+    },
     "authProviders.fields.timeout_seconds": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7901,6 +8168,7 @@
       "tr": "Görünen ad",
       "where": [
         "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -7910,6 +8178,7 @@
       "tr": "Oturum açma sayfasının ona verdiği ad. Boşsa türün kendi adı.",
       "where": [
         "web/src/components/TenantSelfService.vue",
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -7918,7 +8187,7 @@
       "syntax": "vue-i18n",
       "tr": "v0.43.0’dan önce, bu sayfa hiçbir şeyi uygulamazken kaydedildi - hiç kullanılmadı ve kapalı olarak içe aktarıldı. Her alanı gözden geçirin, sonra açın.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.lockoutConfirm": {
@@ -7926,7 +8195,7 @@
       "syntax": "vue-i18n",
       "tr": "Bu, bir kiracının oturum açabildiği son yolu kaldırır. Devam edilsin mi?",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.lockoutNote": {
@@ -7942,7 +8211,24 @@
       "syntax": "vue-i18n",
       "tr": "Bu sunucuda {env} ayarlı değil; bu yüzden istemci gizli anahtarı ya da bağlanma parolası burada saklanamaz: gizli değerler yalnızca mühürlü tutulur.",
       "where": [
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.noneOfKind": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu türden henüz yok. Sağlayıcı ekle ile bir tane oluşturun.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.notFound": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Böyle bir oturum açma sağlayıcısı yok. Kaldırılmış olabilir.",
+      "where": [
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.origin.builtin": {
@@ -7955,6 +8241,7 @@
       "syntax": "vue-i18n",
       "tr": "Ortam tarafından ayarlı",
       "where": [
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -7968,6 +8255,7 @@
       "syntax": "vue-i18n",
       "tr": "Bu sunucuda parolayla oturum açma kapalı. Onu yalnızca ortam açabilir ({env}).",
       "where": [
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -7984,7 +8272,7 @@
       "syntax": "vue-i18n",
       "tr": "Platformun kendi kiracısı",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.providers.api-token": {
@@ -8102,6 +8390,11 @@
       "syntax": "vue-i18n",
       "tr": "deneme hesabının parolası yok"
     },
+    "authProviders.reasons.no_people": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "base DN’i ve kullanıcı filtresini denetleyin"
+    },
     "authProviders.reasons.no_such_object": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -8208,7 +8501,7 @@
       "tr": "Kaydet ve uygula",
       "where": [
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.savedApplied": {
@@ -8217,7 +8510,7 @@
       "tr": "Kaydedildi ve uygulandı - yeniden başlatma gerekmiyor.",
       "where": [
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.secretSet": {
@@ -8233,15 +8526,35 @@
       "syntax": "vue-i18n",
       "tr": "ayarlı",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
+    },
+    "authProviders.sections.connection": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlantı"
+    },
+    "authProviders.sections.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruplar"
+    },
+    "authProviders.sections.people": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kişiler"
+    },
+    "authProviders.sections.sync": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu"
     },
     "authProviders.shadowed": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bu sayfada aynı adla kaydedilmiş bir yapılandırma saklanıyor, ama ortam bu sağlayıcıyı tanımladığı sürece kullanılmıyor.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.slug": {
@@ -8263,7 +8576,10 @@
     "authProviders.status.disabled": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Kapalı"
+      "tr": "Kapalı",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
     },
     "authProviders.status.misconfigured": {
       "in": "admin",
@@ -8273,7 +8589,10 @@
     "authProviders.status.ok": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Etkin"
+      "tr": "Etkin",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
     },
     "authProviders.subtitle": {
       "in": "admin",
@@ -8282,6 +8601,248 @@
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
+    },
+    "authProviders.sync.created": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} yeni hesap",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.disabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} kapatıldı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.emailsChanged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} e-posta değişti",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.enabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} yeniden açıldı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.every": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kendiliğinden {every} aralıkla ve Şimdi senkronize et’e bastığınızda çalışır.",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ]
+    },
+    "authProviders.sync.found": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizinde {n} kişi",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue",
+        "web/src/views/AuthProviders.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.groupsByHand": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} zaten elle bağlı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.groupsCreated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} yeni grup",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.groupsFound": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizinde {n} grup",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue",
+        "web/src/views/AuthProviders.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.groupsRemoved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} dizinden kaldırıldı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.groupsRenamed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} yeniden adlandırıldı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.groupsRestored": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} dizine geri döndü",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.lastManual": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son çalışma {when}, elle başlatıldı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ]
+    },
+    "authProviders.sync.lastScheduled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son çalışma {when}, zamanlamayla",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ]
+    },
+    "authProviders.sync.manualOnly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şimdi senkronize et’e bastığınızda çalışır. Kendiliğinden çalışması için “Dizin senkronu sıklığı”nı (ör. 6h) ayarlayın.",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ]
+    },
+    "authProviders.sync.missing": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} artık listelenmiyor",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue",
+        "web/src/views/AuthProviders.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.never": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz çalışmadı. O zamana kadar kişiler ilk oturum açışlarında burada görünür.",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ]
+    },
+    "authProviders.sync.now": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şimdi senkronize et",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.sync.problems": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} sorun",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.running": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Senkronize ediliyor…",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue",
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.sync.skipped": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} atlandı",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.sync.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ]
+    },
+    "authProviders.sync.updated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} kişinin grupları değişti",
+      "where": [
+        "web/src/components/DirectorySyncPanel.vue"
+      ],
+      "plural": true
+    },
+    "authProviders.syncNeedsRunning": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Senkronize etmek için dizini açın ve kaydedin.",
+      "where": [
+        "web/src/views/AuthProviderEdit.vue"
+      ]
+    },
+    "authProviders.tabs.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP"
+    },
+    "authProviders.tabs.local": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerel"
+    },
+    "authProviders.tabs.oidc": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "OIDC"
+    },
+    "authProviders.tabs.pam": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Linux (PAM)"
+    },
+    "authProviders.tabs.proxy-header": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ters proxy başlığı"
+    },
+    "authProviders.tabs.windows": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Windows"
     },
     "authProviders.technicalDetailIs": {
       "in": "admin",
@@ -8296,7 +8857,7 @@
       "syntax": "vue-i18n",
       "tr": "İşaretli olmayan kiracı bu sağlayıcıdan hiçbir şey almaz: kişileri bunun üzerinden oturum açamaz, bundan hesap da edinmez.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.tenantsOwned": {
@@ -8304,7 +8865,7 @@
       "syntax": "vue-i18n",
       "tr": "Bir kiracının kendi sağlayıcısı: yalnızca {tenant} kiracısına hizmet verir.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.tenantsSave": {
@@ -8312,7 +8873,7 @@
       "syntax": "vue-i18n",
       "tr": "Kiracıları kaydet",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.tenantsSaved": {
@@ -8320,7 +8881,7 @@
       "syntax": "vue-i18n",
       "tr": "Kiracılar kaydedildi",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.tenantsTitle": {
@@ -8328,7 +8889,7 @@
       "syntax": "vue-i18n",
       "tr": "Bunun üzerinden oturum açan kiracılar",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.about": {
@@ -8336,7 +8897,7 @@
       "syntax": "vue-i18n",
       "tr": "Bu hesapla gerçek bir oturum açma denenir. Deneme geçip sağlayıcı açık olarak kaydedilince bu hesap filex’te süper yönetici olur; böylece kurulumu yapan kişi içeride kalır. Parola yalnızca o istek için kullanılır ve saklanmaz - her deneme ya da kayıt için yeniden yazın.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.aboutTestOnly": {
@@ -8344,7 +8905,7 @@
       "syntax": "vue-i18n",
       "tr": "Bu hesapla gerçek bir oturum açma denenir. Parola yalnızca o istek için kullanılır ve saklanmaz.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.madeSuperAdmin": {
@@ -8352,7 +8913,7 @@
       "syntax": "vue-i18n",
       "tr": "{account} hesabı süper yönetici yapıldı.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.needed": {
@@ -8360,7 +8921,7 @@
       "syntax": "vue-i18n",
       "tr": "Önce deneme hesabının kullanıcı adını ve parolasını verin: bu sağlayıcı yalnızca gerçek bir hesapla oturum açan bir denemeyle açılır.",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.password": {
@@ -8368,7 +8929,7 @@
       "syntax": "vue-i18n",
       "tr": "Parola",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.title": {
@@ -8376,7 +8937,7 @@
       "syntax": "vue-i18n",
       "tr": "Deneme hesabı",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testAccount.username": {
@@ -8384,7 +8945,7 @@
       "syntax": "vue-i18n",
       "tr": "Kullanıcı adı",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testFail": {
@@ -8394,7 +8955,7 @@
       "where": [
         "web/src/components/ProviderChecks.vue",
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "authProviders.testOk": {
@@ -8410,6 +8971,7 @@
       "syntax": "vue-i18n",
       "tr": "Kimlik sağlayıcılar",
       "where": [
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue"
       ]
     },
@@ -8945,6 +9507,7 @@
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/FileVersions.vue",
         "web/src/views/GroupEdit.vue",
@@ -8988,7 +9551,8 @@
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/components/ui/Modal.vue",
         "web/src/components/ui/Toast.vue",
-        "web/src/views/ApiMcp.vue"
+        "web/src/views/ApiMcp.vue",
+        "web/src/views/Users.vue"
       ]
     },
     "common.configured": {
@@ -9132,7 +9696,7 @@
       "where": [
         "web/src/components/TenantSelfService.vue",
         "web/src/views/About.vue",
-        "web/src/views/AuthProviders.vue",
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/External.vue",
         "web/src/views/Protection.vue",
         "web/src/views/StorageEdit.vue"
@@ -9249,7 +9813,7 @@
       "syntax": "vue-i18n",
       "tr": "Hayır",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "common.none": {
@@ -9526,7 +10090,7 @@
       "tr": "Şimdi test et",
       "where": [
         "web/src/components/TenantSelfService.vue",
-        "web/src/views/AuthProviders.vue",
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/External.vue"
       ]
     },
@@ -9558,7 +10122,7 @@
       "syntax": "vue-i18n",
       "tr": "Evet",
       "where": [
-        "web/src/views/AuthProviders.vue"
+        "web/src/views/AuthProviderEdit.vue"
       ]
     },
     "common.yesDelete": {
@@ -17552,6 +18116,7 @@
         "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/api/client.ts",
         "web/src/components/BuiltinRoleEditor.vue",
+        "web/src/components/DirectorySyncPanel.vue",
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/RoleEditor.vue",
         "web/src/components/TenantSelfService.vue",
@@ -17571,6 +18136,7 @@
         "web/src/views/AppPluginPage.vue",
         "web/src/views/Appearance.vue",
         "web/src/views/Archives.vue",
+        "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/Branding.vue",
         "web/src/views/Dashboard.vue",
@@ -19063,6 +19629,35 @@
         "web/src/views/GroupEdit.vue"
       ]
     },
+    "groups.card.byHand": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Üyeler elle eklenir",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.card.fromDirectory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} dizininden senkronize edilir",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.card.fromMain": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP dizininden senkronize edilir",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.count": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} / {total}"
+    },
     "groups.create": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19087,6 +19682,70 @@
         "web/src/views/GroupEdit.vue"
       ]
     },
+    "groups.directory.deleteNote": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP grubu var oldukça bir sonraki dizin senkronu bu grubu yeniden oluşturur - klasörleri ve rolü olmadan. Dışarıda bırakmak için dizinde kaldırın ya da “Getirilecek gruplar”ı daraltın.",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.directory.keep": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Filex grubu olarak tut",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.directory.kept": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu grup artık dizini izlemiyor.",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.directory.linkHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu bunu bu grubun dizin grubunda tutar.",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.directory.removed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP’den kaldırıldı",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.directory.removedBody": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "“{name}” LDAP grubu artık dizinde yok, bu yüzden LDAP üyeleri bu gruptan çıkarıldı. Klasörleri, rolü ve elle eklenen kişiler duruyor. Grubu silin ya da artık dizini izlemeyen bir filex grubu olarak tutun. Dizin aynı grubu yeniden listelerse (örneğin bir filtre değişikliğinden sonra) bu grup onu yeniden izler; orada yeniden oluşturulan bir grup yeni bir grup olarak gelir.",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.directory.removedHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP grubu artık yok: LDAP üyeleri çıkarıldı. Silmek ya da filex grubu olarak tutmak için açın.",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.directory.synced": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dizin senkronu bunu “{name}” LDAP grubundan getirdi. Üyeleri ve LDAP bağlantısı dizini izler; klasörlerini, rolünü ve önceliğini burada siz belirlersiniz. Hangi LDAP gruplarının olduğu dizinde yönetilir.",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
     "groups.editTitle": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19103,10 +19762,50 @@
         "web/src/views/Groups.vue"
       ]
     },
+    "groups.fields.adminHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruptaki herkes filex yöneticisidir. Bir LDAP grubuna bağlıysa - tam DN ile yazılır ve yalnızca o grubun kendi dizinindeki kişiler için geçerlidir - kimin yönetici olacağına dizin karar verir: gruptan ayrılanlar yöneticiliği kaybeder (son yönetici hiçbir zaman).",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.fields.adminRole": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetici (tam erişim)",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
     "groups.fields.description": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Açıklama",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.fields.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP grupları",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.fields.ldapAdminOnly": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir grubu LDAP gruplarına yalnızca yönetici bağlayabilir.",
+      "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.fields.ldapHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her satıra bir tane: grubun DN’i (cn=finance,ou=groups,dc=example,dc=com) ya da adı (finance); büyük/küçük harf fark etmez. LDAP ile oturum açarken bu grubu gösteren kişiler gruba katılır, göstermediğinde ayrılır.",
       "where": [
         "web/src/views/GroupEdit.vue"
       ]
@@ -19175,8 +19874,7 @@
       "syntax": "vue-i18n",
       "tr": "SSO grupları",
       "where": [
-        "web/src/views/GroupEdit.vue",
-        "web/src/views/Groups.vue"
+        "web/src/views/GroupEdit.vue"
       ]
     },
     "groups.fields.ssoAdminOnly": {
@@ -19218,6 +19916,70 @@
       "tr": "Klasör erişimi",
       "where": [
         "web/src/views/GroupEdit.vue",
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kind.all": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm kaynaklar",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kind.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kind.local": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerel",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kind.removed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP’den kaldırılan",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kind.sso": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kind.synced": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP’den senkronize edilen",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.kindColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Üyeler",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
+    "groups.ldapSummary": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP: {list}",
+      "where": [
         "web/src/views/Groups.vue"
       ]
     },
@@ -19287,6 +20049,14 @@
         "web/src/views/GroupEdit.vue"
       ]
     },
+    "groups.originColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlı olduğu",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
     "groups.prioritySummary": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -19309,6 +20079,15 @@
       "syntax": "vue-i18n",
       "tr": "{name} gruptan çıkarılsın mı?",
       "where": [
+        "web/src/views/GroupEdit.vue"
+      ]
+    },
+    "groups.removeLdapConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} bu gruba LDAP üzerinden katıldı. Şimdi çıkarılsın mı? Dizin onu hâlâ bu gruba koyuyorsa bir sonraki oturum açışında yeniden katılır.",
+      "where": [
+        "web/src/components/UserGroupsCard.vue",
         "web/src/views/GroupEdit.vue"
       ]
     },
@@ -19340,28 +20119,17 @@
     "groups.source.manual": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Eklendi",
-      "where": [
-        "web/src/components/UserGroupsCard.vue",
-        "web/src/views/GroupEdit.vue"
-      ]
+      "tr": "Eklendi"
     },
     "groups.source.sso": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "SSO",
-      "where": [
-        "web/src/components/UserGroupsCard.vue",
-        "web/src/views/GroupEdit.vue"
-      ]
+      "tr": "SSO"
     },
     "groups.source.ssoHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Gruba SSO üzerinden katıldı - her oturum açışta kimlik sağlayıcıyla eşitlenir.",
-      "where": [
-        "web/src/views/GroupEdit.vue"
-      ]
+      "tr": "Gruba SSO üzerinden katıldı - her oturum açışta kimlik sağlayıcıya göre güncellenir."
     },
     "groups.sourceColumn": {
       "in": "admin",
@@ -19372,10 +20140,18 @@
         "web/src/views/GroupEdit.vue"
       ]
     },
+    "groups.ssoSummary": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO: {list}",
+      "where": [
+        "web/src/views/Groups.vue"
+      ]
+    },
     "groups.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Adlandırılmış kişi grupları. Bir klasörü bir grupla, bir kişiyle paylaşır gibi paylaşın; bir gruba rol verin: kendi rolü olmayan her üye o rolü alır. Kişiler buradan elle ya da oturum açarken gelen SSO grubu üzerinden katılır.",
+      "tr": "Adlandırılmış kişi grupları. Bir klasörü bir grupla, bir kişiyle paylaşır gibi paylaşın; bir gruba rol verin: kendi rolü olmayan her üye o rolü alır. Kişiler buradan elle ya da oturum açarken gelen SSO ya da LDAP grubu üzerinden katılır.",
       "where": [
         "web/src/views/Groups.vue"
       ]
@@ -25442,6 +26218,31 @@
         "web/src/views/Roles.vue"
       ]
     },
+    "permissions.rules.allPermissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm izinler - değiştirilemez",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
+    "permissions.rules.allThroughGroups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "tümü {count} grup üzerinden",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
+    "permissions.rules.alwaysOn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her zaman açık",
+      "where": [
+        "web/src/views/Roles.vue"
+      ]
+    },
     "permissions.rules.blockedExt": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -25459,10 +26260,10 @@
         "web/src/components/RoleEditor.vue"
       ]
     },
-    "permissions.rules.builtin": {
+    "permissions.rules.builtinHeading": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Yerleşik",
+      "tr": "Yerleşik roller",
       "where": [
         "web/src/views/Roles.vue"
       ]
@@ -25491,10 +26292,10 @@
         "web/src/views/Roles.vue"
       ]
     },
-    "permissions.rules.custom": {
+    "permissions.rules.customHeading": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Özel",
+      "tr": "Özel roller",
       "where": [
         "web/src/views/Roles.vue"
       ]
@@ -25614,8 +26415,7 @@
       "syntax": "vue-i18n",
       "tr": "Etkin",
       "where": [
-        "web/src/components/RoleEditor.vue",
-        "web/src/views/Roles.vue"
+        "web/src/components/RoleEditor.vue"
       ]
     },
     "permissions.rules.folders": {
@@ -25634,10 +26434,19 @@
         "web/src/components/RoleEditor.vue"
       ]
     },
-    "permissions.rules.groups": {
+    "permissions.rules.givenByGroups": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "{count} grup",
+      "tr": "{count} grup veriyor",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
+    "permissions.rules.limitsBadge": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{count} sınır",
       "where": [
         "web/src/views/Roles.vue"
       ],
@@ -25769,6 +26578,15 @@
         "web/src/components/RoleEditor.vue"
       ]
     },
+    "permissions.rules.someThroughGroups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} tanesi {count} grup üzerinden",
+      "where": [
+        "web/src/views/Roles.vue"
+      ],
+      "plural": true
+    },
     "permissions.rules.ssoGroups": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -25791,6 +26609,14 @@
       "tr": "Bu yalnızca yeni bir hesabın rolünü, ilk oturum açışında bir kez belirler. Her oturum açışta kimlik sağlayıcıyı izleyen üyelik için bunun yerine bir grubu SSO grubuna bağlayın (Yönetim → Gruplar) ve gruba bu rolü verin.",
       "where": [
         "web/src/components/RoleEditor.vue"
+      ]
+    },
+    "permissions.rules.statusColumn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durum",
+      "where": [
+        "web/src/views/Roles.vue"
       ]
     },
     "permissions.rules.storages": {
@@ -25833,14 +26659,6 @@
         "web/src/views/Roles.vue"
       ]
     },
-    "permissions.rules.summaryLimits": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Sınırlar: {list}",
-      "where": [
-        "web/src/views/Roles.vue"
-      ]
-    },
     "permissions.rules.translations": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -25865,15 +26683,6 @@
       "where": [
         "web/src/components/RoleNameTranslations.vue"
       ]
-    },
-    "permissions.rules.viaGroups": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "gruplar üzerinden {count} üye",
-      "where": [
-        "web/src/views/Roles.vue"
-      ],
-      "plural": true
     },
     "permissions.rules.viewBuiltin": {
       "in": "admin",
@@ -25940,7 +26749,7 @@
     "permissions.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Rol, adı olan bir izin kümesidir. Herkesin tam olarak bir rolü vardır: Yönetici (her şey, kilitli), Kullanıcı, İzleyici ya da kişinin kendi sayfasında seçilen özel bir rol - kendi rolü yoksa üyesi olduğu bir grubun verdiği rol. Kişiye özel istisnalar rolün önüne geçer.",
+      "tr": "Rol, adlandırılmış bir izin kümesidir. Herkesin tam bir rolü vardır - yerleşik ya da özel, kendisinin ya da içinde olduğu bir grubun verdiği.",
       "where": [
         "web/src/views/Roles.vue"
       ]
@@ -30305,6 +31114,16 @@
       ],
       "plural": true
     },
+    "server.account.directory_email": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{email}, {directory} dizininin bir adresi: kişileri oturum açtıklarında ya da dizin eşitlendiğinde gelir. Burada oluşturulan hesap, o dizinin asla oturum açtırmayacağı yerel bir hesap olur.",
+      "about": "Admin panel (Users → Add / Edit) and the profile form: why an email address or a username was refused. Shown under the field it is about, in the reader's language. One sentence with a final full stop.",
+      "vars": {
+        "directory": "the LDAP provider's name on the Auth providers page (its label, or its slug)",
+        "email": "the email address"
+      }
+    },
     "server.account.email_invalid": {
       "in": "server",
       "syntax": "server",
@@ -34558,6 +35377,81 @@
         "packages/core/src/components/FilterBar.vue",
         "packages/core/src/components/ListView.vue"
       ]
+    },
+    "sources.accountHint.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP / Active Directory üzerinden oturum açılınca oluşturuldu."
+    },
+    "sources.accountHint.local": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex’te oluşturuldu: bu sayfada, bir davetle ya da kurulumda."
+    },
+    "sources.accountHint.proxy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güvenilen bir ters proxy üzerinden oturum açılınca oluşturuldu."
+    },
+    "sources.accountHint.sso": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO kimlik sağlayıcısı üzerinden oturum açılınca oluşturuldu."
+    },
+    "sources.groupHint.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP gruplarına bağlı: üyeler dizinle katılır ve ayrılır."
+    },
+    "sources.groupHint.local": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Üyeler yalnızca elle eklenir."
+    },
+    "sources.groupHint.sso": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO gruplarına bağlı: üyeler kimlik sağlayıcıyla katılır ve ayrılır."
+    },
+    "sources.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP"
+    },
+    "sources.local": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yerel"
+    },
+    "sources.manual": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eklendi"
+    },
+    "sources.memberHint.ldap": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruba LDAP üzerinden katıldı - her oturum açışta dizine göre güncellenir."
+    },
+    "sources.memberHint.manual": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruba bir yönetici ekledi."
+    },
+    "sources.memberHint.sso": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruba SSO üzerinden katıldı - her oturum açışta kimlik sağlayıcıya göre güncellenir."
+    },
+    "sources.proxy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Proxy"
+    },
+    "sources.sso": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO"
     },
     "split.close": {
       "in": "explorer",
@@ -40735,6 +41629,14 @@
         "web/src/views/UserEdit.vue"
       ]
     },
+    "users.account.directoryAbout": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP dizin senkronu tarafından devre dışı bırakıldı: kişi dizinde devre dışı ya da artık listelenmiyor. Oturumları, API anahtarları ve SFTP anahtarları çalışmaz. Dizin hesabı yeniden etkinleştirdiğinde senkron da etkinleştirir; burada etkinleştirmek, bir yönetici ya da dizin yeniden kapatana kadar açık tutar.",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
     "users.account.disabledAbout": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -40767,10 +41669,216 @@
         "web/src/views/UserEdit.vue"
       ]
     },
+    "users.add.access.invite": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Davet gönder"
+    },
+    "users.add.access.none": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Parola yok"
+    },
+    "users.add.access.password": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Parola belirle"
+    },
+    "users.add.addAnother": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir tane daha ekle",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.createAnother": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluştur ve bir tane daha ekle",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.createAnyway": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yine de yerel hesap oluştur",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.generate": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluştur",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.groupNotSet": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hesap oluşturuldu ama {group} grubuna eklenmedi: {error}",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruplara ekle",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.hide": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Parolayı gizle",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.intro": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Burada oluşturulan hesap: kendi parolasıyla, bir davetle ya da parolasız - ilk oturumundan önce açılan bir SSO hesabı için. LDAP dizinindeki kişiler burada eklenmez: oturum açtıklarında ya da dizinleri senkronize edildiğinde görünürler.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.inviteHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex ilk parolayı oluşturur ve oturum açılacak adresle birlikte e-postayla gönderir. E-posta gönderilemezse parolayı iletmeniz için burada görürsünüz.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.invitedOk": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Davet {email} adresine gönderildi",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.noneHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SSO ile oturum açarlar ya da API anahtarı kullanırlar. Parola daha sonra kişinin sayfasından belirlenebilir.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.notEmailed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{email} hesabı oluşturuldu ama e-posta gönderilemedi. Bu ilk parolayı ona iletin:",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.openDirectory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{directory} dizinini senkronize et",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.passwordNeeded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir parola yazın, oluşturun ya da bunun yerine davet gönderin.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.roleHint.admin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu yönetim alanı dahil her şey."
+    },
+    "users.add.roleHint.custom": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özel bir rol - izinleri Roller sayfasında.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.roleHint.user": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalarla çalışır: yükler, değiştirir, paylaşır - Kullanıcı rolünün izin verdiği kadar."
+    },
+    "users.add.roleHint.viewer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Salt okunur: göz atar ve indirir."
+    },
+    "users.add.show": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Parolayı göster",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.shownOnce": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yalnızca şimdi gösterilir. Oturum açtıktan sonra değiştirebilir.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.signIn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Nasıl oturum açar",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.username": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kullanıcı adı",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.add.usernameHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "SFTP ve FTP için; e-postadan doldurulur.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
     "users.addNew": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Kullanıcı ekle",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.adminByGroup": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir grup aracılığıyla yönetici. Rolünü değiştirmek için kişiyi o gruptan (veya LDAP / SSO grubundan) çıkarın.",
+      "where": [
+        "web/src/views/UserEdit.vue"
+      ]
+    },
+    "users.allGroups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tüm gruplar",
       "where": [
         "web/src/views/Users.vue"
       ]
@@ -40827,6 +41935,14 @@
         "web/src/views/Users.vue"
       ]
     },
+    "users.fields.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruplar",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
     "users.fields.lastLogin": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -40839,6 +41955,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Davet e-postası gönder"
+    },
+    "users.fields.source": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaynak",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
     },
     "users.groupRoleConfirm": {
       "in": "admin",
@@ -40859,7 +41983,7 @@
     "users.newTitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Kullanıcı ekle",
+      "tr": "Yerel hesap ekle",
       "where": [
         "web/src/views/Users.vue"
       ]
@@ -40867,10 +41991,7 @@
     "users.passwordOptionalHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "İsteğe bağlı - parolası olmayan bir hesap SSO ile ya da bir API anahtarıyla oturum açar",
-      "where": [
-        "web/src/views/Users.vue"
-      ]
+      "tr": "İsteğe bağlı - parolası olmayan bir hesap SSO ile ya da bir API anahtarıyla oturum açar"
     },
     "users.quota.errMin": {
       "in": "admin",
@@ -40982,6 +42103,7 @@
       "syntax": "vue-i18n",
       "tr": "Yönetici",
       "where": [
+        "web/src/views/Groups.vue",
         "web/src/views/UserEdit.vue",
         "web/src/views/Users.vue"
       ]
@@ -41046,6 +42168,22 @@
         "web/src/views/UserEdit.vue"
       ]
     },
+    "users.status.directory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP tarafından devre dışı",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
+    "users.status.directoryTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP dizininde devre dışı veya artık listelenmiyor. Dizin hesabı yeniden etkinleştirdiğinde dizin senkronu da etkinleştirir.",
+      "where": [
+        "web/src/views/Users.vue"
+      ]
+    },
     "users.status.disabled": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -41073,7 +42211,7 @@
     "users.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Yerel hesaplar ve OIDC eşlemeleri",
+      "tr": "Yerel, SSO ve LDAP hesapları - hangisi olduğunu Kaynak sütunu söyler",
       "where": [
         "web/src/views/Users.vue"
       ]
