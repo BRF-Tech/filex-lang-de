@@ -8,12 +8,14 @@ one manifest, `filex-app.json`, no code and no build.
 > Formal German (*Sie*), a plain product voice. Terminology is fixed in [`glossary.md`](glossary.md);
 > please keep to it (or change it there first) when you correct a string.
 
+<!-- langpack:status -->
 | | |
 |---|---|
 | Version | 0.1.9, for filex 0.52.0 |
-| Written against | the filex **0.52.0** catalogue (`catalogue/`, 5,784 strings - 3,177 admin, 1,993 explorer, 371 the server's, 243 drawn by both) |
-| Coverage | 100 % - 5,502 of 5,502 strings, plus 1 extra plural form |
-| Validators | platform: 0 errors · 0 warnings — German check: 0 errors · 0 warnings ([`validate-output.txt`](validate-output.txt)) |
+| Catalogue | filex **0.52.0** (`catalogue/`): 5,784 strings - 3,177 admin, 1,993 explorer, 371 the server's, 243 drawn by both |
+| Coverage | 100 % - 5,784 of 5,784 strings, plus 1 extra plural form |
+| Validators | platform: 0 errors, 0 warnings; the pack's own check passes - the last run is [`validate-output.txt`](validate-output.txt) |
+<!-- /langpack:status -->
 
 ## Install
 
