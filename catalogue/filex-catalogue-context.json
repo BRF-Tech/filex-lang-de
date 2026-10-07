@@ -1,5 +1,5 @@
 {
-  "filex": "0.52.0",
+  "filex": "0.52.0+b5a66f16",
   "about": "Every key filex has - the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms - explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -1365,6 +1365,223 @@
         "web/src/views/AdminFiles.vue"
       ]
     },
+    "adminSearch.alias.about": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "sürüm, derleme, lisans"
+    },
+    "adminSearch.alias.adminFiles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dosya sürümleri, sürüm geçmişi"
+    },
+    "adminSearch.alias.allowlist": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "IP adresleri",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
+    },
+    "adminSearch.alias.apiMcp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "API anahtarları, MCP, yapay zekâ ajanları"
+    },
+    "adminSearch.alias.appearance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "tema, karanlık mod, özel CSS"
+    },
+    "adminSearch.alias.archives": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "zip, 7z, tar, arşiv açma"
+    },
+    "adminSearch.alias.audit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kayıt, geçmiş, değişiklikler"
+    },
+    "adminSearch.alias.authProviders": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "LDAP, Active Directory, SSO, OIDC, Keycloak, tek oturum açma"
+    },
+    "adminSearch.alias.branding": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "logo, renkler, ad"
+    },
+    "adminSearch.alias.connections": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "WebDAV, SFTP, FTP, S3, NFS, bağlama, masaüstü uygulaması"
+    },
+    "adminSearch.alias.dashboard": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ana sayfa, genel bakış, durum"
+    },
+    "adminSearch.alias.duplicates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kopyalar, aynı dosyalar"
+    },
+    "adminSearch.alias.encryption": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "uçtan uca, E2E"
+    },
+    "adminSearch.alias.external": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ONLYOFFICE, draw.io, belge sunucusu, editörler"
+    },
+    "adminSearch.alias.files": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dosya yöneticisi, gezgin, göz at"
+    },
+    "adminSearch.alias.grants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "klasör izinleri, ACL"
+    },
+    "adminSearch.alias.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ekipler, takımlar"
+    },
+    "adminSearch.alias.loginSecurity": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kaba kuvvet, kilitlenme, IP adresleri, güvenilir vekil sunucular"
+    },
+    "adminSearch.alias.myTenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "alan adı, kendi oturum açma yolu"
+    },
+    "adminSearch.alias.notifications": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "uyarılar, zil"
+    },
+    "adminSearch.alias.plugins": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "uygulamalar, uzantılar, mağaza"
+    },
+    "adminSearch.alias.protection": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "saklama, sürümler, antivirüs, ClamAV"
+    },
+    "adminSearch.alias.queue": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "işler, arka plan görevleri"
+    },
+    "adminSearch.alias.replica": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "replikasyon, yedek, ayna"
+    },
+    "adminSearch.alias.roles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "izinler, RBAC"
+    },
+    "adminSearch.alias.search": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "indeks, indeksi yeniden oluşturma"
+    },
+    "adminSearch.alias.settings": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "e-posta, SMTP, site adı"
+    },
+    "adminSearch.alias.shares": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "herkese açık bağlantılar, paylaşım bağlantıları"
+    },
+    "adminSearch.alias.smtp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "e-posta sunucusu, giden posta",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
+    },
+    "adminSearch.alias.storages": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "disk, kova, S3, birim"
+    },
+    "adminSearch.alias.stores": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "uygulama mağazası, mağaza",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
+    },
+    "adminSearch.alias.sync": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "taramalar, tarama geçmişi"
+    },
+    "adminSearch.alias.tagged": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "etiketler"
+    },
+    "adminSearch.alias.tenants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "müşteriler, kuruluşlar"
+    },
+    "adminSearch.alias.tools": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "bakım, onarım"
+    },
+    "adminSearch.alias.trash": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "silinen dosyalar, geri dönüşüm"
+    },
+    "adminSearch.alias.twoFactor": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "2FA, TOTP, iki adımlı doğrulama",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
+    },
+    "adminSearch.alias.updates": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "yükseltme, yeni sürüm"
+    },
+    "adminSearch.alias.usage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "maliyet, fatura, kota"
+    },
+    "adminSearch.alias.users": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "hesaplar, kişiler, üyeler"
+    },
+    "adminSearch.alias.webhooks": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "HTTP geri çağrıları, olaylar"
+    },
     "advsearch.around.d1": {
       "in": "explorer",
       "syntax": "plain",
@@ -1743,6 +1960,14 @@
         "web/src/views/ApiMcp.vue"
       ]
     },
+    "apiMcp.cols.comments": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorumlar",
+      "where": [
+        "web/src/views/ApiMcp.vue"
+      ]
+    },
     "apiMcp.cols.created": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -1799,6 +2024,26 @@
         "web/src/views/ApiMcp.vue"
       ]
     },
+    "apiMcp.commentsLevel.read": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Okuma"
+    },
+    "apiMcp.commentsLevel.rw": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Okuma ve yazma"
+    },
+    "apiMcp.commentsLevelHelp.read": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorumları okur"
+    },
+    "apiMcp.commentsLevelHelp.rw": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorum da ekler ve kendi yorumlarını siler"
+    },
     "apiMcp.connectHint": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -1851,6 +2096,22 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Henüz API anahtarı yok. AI/MCP erişimi için bir tane oluşturun.",
+      "where": [
+        "web/src/views/ApiMcp.vue"
+      ]
+    },
+    "apiMcp.fields.comments": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorumlar",
+      "where": [
+        "web/src/views/ApiMcp.vue"
+      ]
+    },
+    "apiMcp.fields.commentsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yorum eklemek ve silmek ayrı bir izindir: “Yazma” bunu kapsamaz. Her API anahtarı yorumları okur; yorum da yazacak bir anahtar için Okuma ve yazma seçin.",
       "where": [
         "web/src/views/ApiMcp.vue"
       ]
@@ -2963,7 +3224,8 @@
       "tr": "{count} izin | {count} izin",
       "where": [
         "web/src/components/plugins/AppPluginsTab.vue",
-        "web/src/components/plugins/PluginRequestsPanel.vue"
+        "web/src/components/plugins/PluginRequestsPanel.vue",
+        "web/src/views/AppStoreScreen.vue"
       ],
       "plural": true
     },
@@ -3128,17 +3390,26 @@
     "appPlugins.tabs.apps": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Uygulamalar"
+      "tr": "Uygulamalar",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "appPlugins.tabs.defaults": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Varsayılan uygulamalar"
+      "tr": "Varsayılan uygulamalar",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "appPlugins.tabs.storage": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Depolama eklentileri"
+      "tr": "Depolama eklentileri",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "appPlugins.title": {
       "in": "admin",
@@ -4199,6 +4470,94 @@
         "web/src/views/StoreInstall.vue"
       ]
     },
+    "appStore.connection.code": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlantı kodu",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.codeHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "fxc_ ile başlar",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.confirmDisconnect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu filex'in {store} ile bağlantısı kesilsin mi? Yeniden bağlanana kadar mağaza ekranından gelen istekler onaylanamaz.",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.connect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağla",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.connected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlı",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.detail": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtar {key} · bağlayan {who}, {when}",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.disconnect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlantıyı kes",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.done": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} ile bağlantı kuruldu.",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.intro": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazada \"My instances\" sayfasını açın, bu filex'in adresini seçin ve bir bağlantı kodu üretin. Kod bir kez ve 30 dakika boyunca geçerlidir. filex bu mağaza için kendine ait bir anahtar üretir; mağaza yalnızca anahtarın açık yarısını saklar ve başka bir şey istemez.",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.notConnected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlı değil",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
+    "appStore.connection.reconnect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden bağla",
+      "where": [
+        "web/src/components/plugins/AppStoresPanel.vue"
+      ]
+    },
     "appStore.declined": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -4303,6 +4662,21 @@
       "syntax": "vue-i18n",
       "tr": "Mağaza, filex'in kabul etmediği bir yanıt verdi: okuyamadığı bir yanıt, bir yönlendirme (mağazanın API'si yönlendirme izlenmeden sorulur) ya da bu sunucunun saatinden bir günden fazla uzak bir zaman. Sunucunun saatini denetleyin."
     },
+    "appStore.err.store_connect_code_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza bu bağlantı kodunu kabul etmedi: kod bilinmiyor, kullanılmış, süresi dolmuş ya da başka bir filex adresi için üretilmiş. Mağazanın \"My instances\" sayfasında bu filex için yeni bir kod üretin."
+    },
+    "appStore.err.store_connection_refused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza bu filex'in imzalı isteğini reddetti. Mağaza bağlantıyı kestiyse yeni bir kodla yeniden bağlayın."
+    },
+    "appStore.err.store_index_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazanın kataloğu, mağazaya güvenilen anahtarla doğrulanmıyor, süresi dolmuş ya da bu filex'in okuduğu biçimde değil. Ondan hiçbir şey gösterilmiyor."
+    },
     "appStore.err.store_invalid": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -4313,10 +4687,28 @@
       "syntax": "vue-i18n",
       "tr": "Bu mağaza sunucuda yapılandırılmış (FILEX_APP_STORE_URLS) ama FILEX_APP_STORE_KEYS'te olmayan bir anahtarla imzaladı. Anahtarı sunucuyu yöneten ekler."
     },
+    "appStore.err.store_media_invalid": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazanın kataloğunda böyle bir simge yok ya da simgenin baytları adının sabitlediği baytlar değil."
+    },
     "appStore.err.store_not_allowed": {
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bu sunucu bu mağazaya izin vermiyor: FILEX_APP_STORE_URLS ayarlı, bu yüzden kurulum bağlantıları ve lisanslar yalnız orada listelenen mağazalardan alınır (liste boşsa hiçbirinden) ve başka hiçbir mağazaya ilk kullanımda bile güvenilmez. Mağazayı oraya sunucuyu yöneten ekler."
+    },
+    "appStore.err.store_not_connected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu filex mağazaya bağlı değil. Bir yönetici onu Eklentiler, Uygulamalar, Güvenilen mağazalar, Bağla altından, mağazanın \"My instances\" sayfasının ürettiği tek kullanımlık kodla bağlar."
+    },
+    "appStore.err.store_refused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza reddetti: {message}",
+      "where": [
+        "web/src/lib/storeRefusal.ts"
+      ]
     },
     "appStore.err.store_signature_invalid": {
       "in": "admin",
@@ -4638,7 +5030,8 @@
       "syntax": "vue-i18n",
       "tr": "Güvenilen mağazalar",
       "where": [
-        "web/src/components/plugins/AppStoresPanel.vue"
+        "web/src/components/plugins/AppStoresPanel.vue",
+        "web/src/lib/adminSearch.ts"
       ]
     },
     "appStore.stores.trustedBy": {
@@ -4754,6 +5147,214 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Lisanslar"
+    },
+    "appStore.view.audience.everyone": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Herkes",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.audience.everyoneHelp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kiracının oturum açmış her hesabı",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.audience.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruplar",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.audience.groupsHelp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aşağıda seçilen grupların üyeleri",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.audience.roles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Roller",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.audience.rolesHelp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aşağıda seçilen rollerden birine sahip hesaplar",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.audience.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kimler görür",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.connected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlı: istekler onaylanabilir",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.enabled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza ekranını göster",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.enabledHelp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aşağıda seçilen kişilerin gezinti paneline \"Uygulama Mağazası\" satırını ekler.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.groups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gruplar",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.intro": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex içinde bir \"Uygulama Mağazası\" sayfası: burada seçilen mağazaların kataloğu, tarayıcı tarafından değil bu sunucu tarafından okunur ve doğrulanır. Burada seçilen kişiler bir uygulama isteyebilir; istek yukarıdaki Kurulum isteklerine düşer ve kurulum yine sizin incelemenizden geçer.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.noGroups": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kiracıda henüz grup yok.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.noStores": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz güvenilen bir mağaza yok. Bir mağazaya kendi kurulum bağlantısından güvenilir.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.notConnected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bağlı değil: istekler bağlanana kadar bekler",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.role.admin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetici",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.role.user": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kullanıcı",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.role.viewer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzleyici",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.roles": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Roller",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza ekranı kaydedildi.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.stores": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Gösterdiği mağazalar",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.tenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracı",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.tenantHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Her kiracının kendi ayarı vardır; ayarı olmayan kiracı ekranı görmez.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza ekranı",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.unconnected": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz bağlı değil: {stores}. Bu mağazadan istek bırakılabilir, ancak siz yukarıdan bağlayana kadar onaylanamaz.",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
+    },
+    "appStore.view.updated": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değiştiren {who}, {when}",
+      "where": [
+        "web/src/components/plugins/AppStoreViewPanel.vue"
+      ]
     },
     "appStore.wizard.fromStore": {
       "in": "admin",
@@ -4992,6 +5593,7 @@
       "syntax": "vue-i18n",
       "tr": "Özel CSS",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Appearance.vue"
       ]
     },
@@ -6589,6 +7191,11 @@
       "syntax": "vue-i18n",
       "tr": "Senkron"
     },
+    "audit.resource.tenancy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı mod"
+    },
     "audit.resource.tenant": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6812,6 +7419,11 @@
       "syntax": "vue-i18n",
       "tr": "Senkron"
     },
+    "audit.target.tenancy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı mod"
+    },
     "audit.target.tenant_domain": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6910,6 +7522,11 @@
       "syntax": "vue-i18n",
       "tr": "yorum silindi"
     },
+    "audit.verb.connect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "bağlandı"
+    },
     "audit.verb.copy": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6945,6 +7562,11 @@
       "syntax": "vue-i18n",
       "tr": "kapatıldı"
     },
+    "audit.verb.disconnect": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "bağlantısı kesildi"
+    },
     "audit.verb.dismiss": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -6964,6 +7586,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "boşaltıldı"
+    },
+    "audit.verb.enable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "açıldı"
     },
     "audit.verb.enroll": {
       "in": "admin",
@@ -7015,6 +7642,11 @@
       "syntax": "vue-i18n",
       "tr": "kuruldu"
     },
+    "audit.verb.intent_request": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "kurulum bağlantısı istendi"
+    },
     "audit.verb.key_file_rewritten": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7064,6 +7696,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "başka biçimde yanına kaydedildi (ONLYOFFICE)"
+    },
+    "audit.verb.office_saved_conflict": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "düzenlenirken değiştiği için yanına kaydedildi (ONLYOFFICE)"
     },
     "audit.verb.op_cancel": {
       "in": "admin",
@@ -7295,6 +7932,11 @@
       "syntax": "vue-i18n",
       "tr": "sürümü kaydedildi"
     },
+    "audit.verb.view": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "mağaza ekranı değiştirildi"
+    },
     "audit.verb.zip": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -7330,6 +7972,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Aynı türden ikinci bir sağlayıcı: başka bir dizin ya da yalnızca bazı kiracılar için bir SSO. Kapalı olarak oluşturulur: kartında doldurun, deneyin ve orada açın.",
+      "where": [
+        "web/src/views/AuthProviders.vue"
+      ]
+    },
+    "authProviders.addHintSingle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aynı türden ikinci bir sağlayıcı, örneğin başka bir dizin. Kapalı olarak oluşturulur: kartında doldurun, deneyin ve orada açın.",
       "where": [
         "web/src/views/AuthProviders.vue"
       ]
@@ -8283,32 +8933,50 @@
     "authProviders.providers.ldap": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "LDAP / Active Directory"
+      "tr": "LDAP / Active Directory",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "authProviders.providers.local": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Yerel (e-posta + parola)"
+      "tr": "Yerel (e-posta + parola)",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "authProviders.providers.oidc": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "OIDC (Keycloak, Auth0, Authentik…)"
+      "tr": "OIDC (Keycloak, Auth0, Authentik…)",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "authProviders.providers.pam": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Linux hesabı (PAM)"
+      "tr": "Linux hesabı (PAM)",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "authProviders.providers.proxy-header": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Ters vekil başlığı"
+      "tr": "Ters vekil başlığı",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "authProviders.providers.windows": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Windows hesabı (bu makine ya da etki alanı)"
+      "tr": "Windows hesabı (bu makine ya da etki alanı)",
+      "where": [
+        "web/src/lib/adminSearch.ts"
+      ]
     },
     "authProviders.reasons.access": {
       "in": "admin",
@@ -9503,10 +10171,12 @@
         "web/src/components/encryption/EncryptionRequestsPanel.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginInstallWizard.vue",
+        "web/src/components/plugins/AppStoresPanel.vue",
         "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/views/ApiMcp.vue",
+        "web/src/views/AppStoreScreen.vue",
         "web/src/views/AuthProviderEdit.vue",
         "web/src/views/AuthProviders.vue",
         "web/src/views/FileVersions.vue",
@@ -9520,6 +10190,7 @@
         "web/src/views/StorageNew.vue",
         "web/src/views/Storages.vue",
         "web/src/views/StoreInstall.vue",
+        "web/src/views/TenancyMode.vue",
         "web/src/views/TenantEdit.vue",
         "web/src/views/Tenants.vue",
         "web/src/views/Trash.vue",
@@ -9552,6 +10223,7 @@
         "web/src/components/ui/Modal.vue",
         "web/src/components/ui/Toast.vue",
         "web/src/views/ApiMcp.vue",
+        "web/src/views/AppStoreScreen.vue",
         "web/src/views/Users.vue"
       ]
     },
@@ -9903,6 +10575,7 @@
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/components/tools/ThumbnailRepairTab.vue",
         "web/src/views/ApiMcp.vue",
+        "web/src/views/AppStoreScreen.vue",
         "web/src/views/Audit.vue",
         "web/src/views/Dashboard.vue",
         "web/src/views/Duplicates.vue",
@@ -9984,6 +10657,7 @@
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/BuiltinRoleEditor.vue",
+        "web/src/components/DigestPolicyCard.vue",
         "web/src/components/GlobalWebhookCard.vue",
         "web/src/components/RoleEditor.vue",
         "web/src/components/TenantSelfService.vue",
@@ -9992,6 +10666,7 @@
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginLicense.vue",
         "web/src/components/plugins/AppPluginThumbLimits.vue",
+        "web/src/components/plugins/AppStoreViewPanel.vue",
         "web/src/components/plugins/FileTypeEditor.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
         "web/src/components/tools/ThumbLimitsCard.vue",
@@ -10693,7 +11368,7 @@
     "conn.guide.mount.note.reachable": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "Sunucuya, tarayıcının geçtiği hangi vekil ya da tünel varsa oradan ulaşır - çünkü altında aynı API vardır. İzinleriniz, depolarınız ve çok kiracılı bir sunucuda kiracınız da birlikte gelir.",
+      "tr": "Sunucuya, tarayıcının geçtiği hangi vekil ya da tünel varsa oradan ulaşır - çünkü altında aynı API vardır. İzinleriniz ve depolarınız da birlikte gelir.",
       "where": [
         "packages/core/src/lib/connectionGuides.ts"
       ]
@@ -12262,7 +12937,7 @@
     "conn.s3keys.inheritNote": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "Bir anahtar sahip olduğunuz yetkiyi yalnızca DARALTABİLİR: yetkileriniz, kiracınız, rolünüz. Anahtarı tek bir kovaya ya da klasöre kısıtlamak, bir dizüstü yedeği ile her şeyi okuyabilen bir kimlik arasındaki farktır.",
+      "tr": "Bir anahtar sahip olduğunuz yetkiyi yalnızca DARALTABİLİR: yetkileriniz ve rolünüz. Anahtarı tek bir kovaya ya da klasöre kısıtlamak, bir dizüstü yedeği ile her şeyi okuyabilen bir kimlik arasındaki farktır.",
       "where": [
         "packages/core/src/components/S3KeysPanel.vue"
       ]
@@ -12536,6 +13211,14 @@
         "packages/core/src/components/TokensPanel.vue"
       ]
     },
+    "conn.tokens.col.comments": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yorumlar",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
     "conn.tokens.col.label": {
       "in": "explorer",
       "syntax": "plain",
@@ -12556,6 +13239,54 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Son kullanım",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
+    "conn.tokens.comments": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yorumlar",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
+    "conn.tokens.commentsHint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yorum eklemek ve silmek ayrı bir izindir - “write” bunu kapsamaz. Her API anahtarı yorumları okur.",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
+    "conn.tokens.commentsRead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Okuma",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
+    "conn.tokens.commentsRw": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Okuma ve yazma",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
+    "conn.tokens.commentsToRead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yorumlar: yalnız okuma",
+      "where": [
+        "packages/core/src/components/TokensPanel.vue"
+      ]
+    },
+    "conn.tokens.commentsToRw": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yorumlar: yazmaya izin ver",
       "where": [
         "packages/core/src/components/TokensPanel.vue"
       ]
@@ -17271,7 +18002,8 @@
       "syntax": "vue-i18n",
       "tr": "Kim şifreleyebilir",
       "where": [
-        "web/src/components/encryption/EncryptionPolicyCard.vue"
+        "web/src/components/encryption/EncryptionPolicyCard.vue",
+        "web/src/lib/adminSearch.ts"
       ]
     },
     "encryption.policy.unavailable": {
@@ -17585,7 +18317,8 @@
       "syntax": "vue-i18n",
       "tr": "Şifreleme istekleri",
       "where": [
-        "web/src/components/encryption/EncryptionRequestsPanel.vue"
+        "web/src/components/encryption/EncryptionRequestsPanel.vue",
+        "web/src/lib/adminSearch.ts"
       ]
     },
     "encryption.subtitle": {
@@ -18116,6 +18849,7 @@
         "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/api/client.ts",
         "web/src/components/BuiltinRoleEditor.vue",
+        "web/src/components/DigestPolicyCard.vue",
         "web/src/components/DirectorySyncPanel.vue",
         "web/src/components/ResetPasswordModal.vue",
         "web/src/components/RoleEditor.vue",
@@ -18125,6 +18859,7 @@
         "web/src/components/plugins/AppPluginInstallWizard.vue",
         "web/src/components/plugins/AppPluginLicense.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/AppStoreViewPanel.vue",
         "web/src/components/plugins/AppStoresPanel.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
@@ -18134,6 +18869,7 @@
         "web/src/views/AdminGrants.vue",
         "web/src/views/ApiMcp.vue",
         "web/src/views/AppPluginPage.vue",
+        "web/src/views/AppStoreScreen.vue",
         "web/src/views/Appearance.vue",
         "web/src/views/Archives.vue",
         "web/src/views/AuthProviderEdit.vue",
@@ -18157,6 +18893,7 @@
         "web/src/views/Storages.vue",
         "web/src/views/StoreInstall.vue",
         "web/src/views/TaggedFiles.vue",
+        "web/src/views/TenancyMode.vue",
         "web/src/views/TenantEdit.vue",
         "web/src/views/Tenants.vue",
         "web/src/views/Trash.vue",
@@ -18180,11 +18917,13 @@
       "syntax": "vue-i18n",
       "tr": "Yüklenemedi. Yeniden deneyin.",
       "where": [
+        "web/src/components/DigestPolicyCard.vue",
         "web/src/components/encryption/EncryptionRequestsPanel.vue",
         "web/src/components/encryption/EncryptionTenantsPanel.vue",
         "web/src/components/plugins/AppPluginDetail.vue",
         "web/src/components/plugins/AppPluginThumbLimits.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
+        "web/src/components/plugins/AppStoreViewPanel.vue",
         "web/src/components/plugins/DefaultAppsTab.vue",
         "web/src/components/plugins/PluginRequestsPanel.vue",
         "web/src/components/plugins/StoragePluginsTab.vue",
@@ -18198,6 +18937,7 @@
         "web/src/stores/storages.ts",
         "web/src/stores/sync.ts",
         "web/src/stores/users.ts",
+        "web/src/views/AppStoreScreen.vue",
         "web/src/views/Encryption.vue",
         "web/src/views/LoginSecurity.vue",
         "web/src/views/Webhooks.vue"
@@ -18384,6 +19124,11 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bu bir loopback adresi, ama filex {publicUrl} adresinde yayında - orayı açan kişiler bu makinede değil ve onların tarayıcısında “{host}” kendi bilgisayarları demektir."
+    },
+    "external.advisories.editor_same_origin": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Editörün betiği (api.js) filex'in kendi sayfalarında, oturum açmış kişinin oturumuyla çalışıyor. FILEX_ONLYOFFICE_FRAME_ORIGIN değerini belge sunucusunun kendi adresine ayarlayın ve oradaki vekil sunucunun /filex-frame/ yolunu filex'e yönlendirmesini sağlayın: filex betiği o zaman orada, kendi çerçevesinde çalıştırır; oradan filex'in oturum depolamasına ve sayfalarına erişilemez."
     },
     "external.advisories.jwt_not_enforced": {
       "in": "admin",
@@ -20954,18 +21699,29 @@
       ]
     },
     "install.install": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Yükle",
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Kur",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/InstallPrompt.vue"
       ]
     },
     "install.iosInstructions": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Paylaş düğmesine dokunun, ardından “Ana Ekrana Ekle”yi seçin.",
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Paylaş'a dokunun (iOS 26'da önce ⋯, sonra Paylaş), ardından “Ana Ekrana Ekle” ve Ekle'ye dokunun.",
       "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
+        "web/src/components/InstallPrompt.vue"
+      ]
+    },
+    "install.menuInstructions": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Tarayıcınızın menüsünü açıp “Uygulamayı yükle” ya da “Ana ekrana ekle”yi seçin.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue",
         "web/src/components/InstallPrompt.vue"
       ]
     },
@@ -20988,7 +21744,7 @@
     "install.title": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex'i yükle",
+      "tr": "filex'i web uygulaması olarak kurun",
       "where": [
         "web/src/components/InstallPrompt.vue"
       ]
@@ -21501,6 +22257,7 @@
       "syntax": "vue-i18n",
       "tr": "İzinli adresler",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/LoginSecurity.vue"
       ]
     },
@@ -21818,6 +22575,7 @@
       "syntax": "vue-i18n",
       "tr": "Giriş denemesi sınırı",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/LoginSecurity.vue"
       ]
     },
@@ -21954,6 +22712,7 @@
       "syntax": "vue-i18n",
       "tr": "Kilitler",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/LoginSecurity.vue"
       ]
     },
@@ -22451,6 +23210,7 @@
       "syntax": "vue-i18n",
       "tr": "Güvenilir vekil sunucular",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/LoginSecurity.vue"
       ]
     },
@@ -23379,6 +24139,14 @@
         "web/src/lib/adminNav.ts"
       ]
     },
+    "nav.hint.tenancy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tek kurulumda birden çok kiracı",
+      "where": [
+        "web/src/lib/adminNav.ts"
+      ]
+    },
     "nav.hint.tenants": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -23643,6 +24411,15 @@
         "web/src/router/index.ts"
       ]
     },
+    "nav.tenancy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı mod",
+      "where": [
+        "web/src/lib/adminNav.ts",
+        "web/src/router/index.ts"
+      ]
+    },
     "nav.tenants": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -23753,6 +24530,7 @@
       "tr": "Kullanıcılar",
       "where": [
         "web/src/lib/adminNav.ts",
+        "web/src/lib/adminSearch.ts",
         "web/src/router/index.ts"
       ]
     },
@@ -24099,6 +24877,126 @@
         "packages/core/src/components/NotificationBell.vue"
       ]
     },
+    "notifications.digest.adminAlerts": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yönetici uyarıları",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.adminAlertsHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Güncellemeler, kopyalar, oturum açma sağlayıcıları, kiracı alan adları ve yöneticilere yönelik diğer uyarılar",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.allUrgent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan: her tür hemen bildirilir. Özet için hiçbir şey bekletilmez.",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.intro": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Biri açmadıkça kapalıdır: kurulumda her bildirim türü hemen bildirilir. Aşağıda kapatılan bir tür kısa bir süre bekletilir ve klasör klasör tek bir özette bildirilir - her dosya için ayrı bir bildirim yerine tek bildirim. Herkes kendi bildirim ayarlarından bunu kendisi için değiştirebilir; bunlar varsayılanlardır.",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.invalidWindow": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "1 ile 15 dakika arasında bir değer seçin.",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.restore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılanlara dön",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Özet ayarları kaydedildi",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.scopeInstance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sunucudaki herkes için",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.scopeTenant": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{tenant} kiracısı için",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bildirim özeti",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.urgentHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulumda her tür açıktır. Bir türü kapatırsanız, kendi seçimini yapmamış herkes için o tür özette toplanır.",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.urgentTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Varsayılan olarak hemen bildirilenler",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.window": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekletme süresi",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.windowHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "1 ile 15 dakika arası. Süre, bekletilen ilk bildirimle başlar.",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
+    "notifications.digest.windowUnit": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "dakika",
+      "where": [
+        "web/src/components/DigestPolicyCard.vue"
+      ]
+    },
     "notifications.empty": {
       "in": "both",
       "syntax": "shared",
@@ -24285,6 +25183,11 @@
       "syntax": "vue-i18n",
       "tr": "Eski dizin hesabı başka bir kiracıda"
     },
+    "notifications.kinds.notification_digest": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bildirim özeti"
+    },
     "notifications.kinds.permission_gaps": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -24468,6 +25371,14 @@
       "in": "both",
       "syntax": "shared",
       "tr": "Kapatırsanız çanınız boşalır. Hiçbir kayıt silinmez - yönetici tüm olayları görmeye devam eder.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "notifications.prefs.iosHomeScreen": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "iPhone ve iPad'de bildirimler tarayıcı sekmesinde değil, ana ekrana eklenmiş filex'te çalışır (iOS 16.4 ve sonrası).",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
@@ -25179,6 +26090,126 @@
       "syntax": "plain",
       "tr": "sırada"
     },
+    "outside.body": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{name} burada açıkken başka bir yerde değiştirildi ve bu düzenleyicide de değişiklikler var. Hangi sürüm kalsın?",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.both": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "İkisini de tut",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.both_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "dışarıdaki sürüm yerinde kalır, sizinki yanına ayrı bir kopya olarak kaydedilir (ad.filex-conflict-zaman).",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.choose": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Seç…",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "outside.hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Siz seçene kadar hiçbir sürümün üstüne yazılmaz.",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.mine": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Benimkini yaz",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.mine_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "kaydedildiğinde sizin sürümünüz dışarıdakinin üstüne yazılır.",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.note.both": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dışarıdaki sürüm yerinde kalıyor; sizinki kaydedildiğinde yanına ayrı bir kopya olarak yazılacak.",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "outside.note.mine": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sizin sürümünüz kaydedildiğinde dışarıdakinin üstüne yazılacak.",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "outside.note.reloaded": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosya dışarıda güncellendi, yeni sürüm yüklendi.",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "outside.note.theirs": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dışarıdaki sürüm yüklendi; burada yapılan değişiklikler atıldı.",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "outside.pending": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya dışarıda değişti. Hangi sürümün kalacağını seçene kadar hiçbir sürümün üstüne yazılmaz.",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
+    "outside.theirs": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dışarıdakini koru",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.theirs_hint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "burada yapılan değişiklikler atılır, dışarıdaki sürüm yüklenir.",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
+    "outside.title": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Bu dosya dışarıda değişti",
+      "where": [
+        "packages/core/src/modals/OutsideChangeModal.vue"
+      ]
+    },
     "overlay.close": {
       "in": "explorer",
       "syntax": "plain",
@@ -25321,6 +26352,207 @@
       "tr": "Aranıyor…",
       "where": [
         "packages/core/src/components/CommandPalette.vue"
+      ]
+    },
+    "panelsearch.clear": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aramayı temizle",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.close": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aramayı kapat",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.count": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} sonuç",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ],
+      "plural": true
+    },
+    "panelsearch.count_one": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{n} sonuç",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.empty": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "“{q}” ile eşleşen bir şey yok.",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.failed": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sonuçların bir kısmı yüklenemedi. Gelenler gösteriliyor.",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.files_all": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosyalarda ara: {q}",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.app": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Uygulamalar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.file": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Dosyalar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.group": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Gruplar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.key": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "API anahtarları",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.page": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sayfalar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.recent": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Son aramalar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.setting": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ayarlar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.share": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Paylaşımlar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.storage": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Depolar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.group.user": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Kullanıcılar",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.label": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yönetim panelinde ara",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.placeholder": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Sayfa, ayar, kişi, uygulama ara…",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.prefixes": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Tek bir türe daraltın:",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.recent_clear": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Son aramaları temizle",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.recent_remove": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Son aramalardan kaldır",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.results": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Arama sonuçları",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.searching": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Aranıyor…",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
+      ]
+    },
+    "panelsearch.trigger": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Ara",
+      "where": [
+        "packages/core/src/components/PanelSearch.vue"
       ]
     },
     "peek.empty": {
@@ -26466,6 +27698,7 @@
       "tr": "Paylaşım bağlantısının en uzun süresi (gün)",
       "where": [
         "web/src/components/RoleEditor.vue",
+        "web/src/lib/adminSearch.ts",
         "web/src/lib/permissionLimits.ts"
       ]
     },
@@ -26559,6 +27792,7 @@
       "tr": "İki adımlı doğrulama zorunlu",
       "where": [
         "web/src/components/RoleEditor.vue",
+        "web/src/lib/adminSearch.ts",
         "web/src/lib/permissionLimits.ts"
       ]
     },
@@ -27903,6 +29137,14 @@
         "web/src/components/plugins/PluginRequestsPanel.vue"
       ]
     },
+    "pluginRequests.actions.approveStore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onayla: mağaza incelemesini aç",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
     "pluginRequests.actions.reject": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -28092,6 +29334,14 @@
         "web/src/components/plugins/PluginRequestsPanel.vue"
       ]
     },
+    "pluginRequests.review.fromStore": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu uygulamayı bir kişi mağaza ekranından istedi. Onaylamak, mağazadan bu filex için taze bir kurulum bağlantısı ister ve onu mağaza incelemesinde açar: herhangi bir kurulum bağlantısıyla aynı denetimler ve aynı izin incelemesi. Siz orada kurana kadar hiçbir şey kurulmaz.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
     "pluginRequests.review.frozen": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -28148,6 +29398,22 @@
         "web/src/components/plugins/PluginRequestsPanel.vue"
       ]
     },
+    "pluginRequests.review.storeLicense": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Lisans anahtarı (ücretli uygulamalar, isteğe bağlı)",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.review.storeLicenseHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onayla birlikte mağazaya gönderilir. İncelemede de girebilirsiniz.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
     "pluginRequests.review.title": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -28168,6 +29434,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Kendi güncelleme kaynağı",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
+    },
+    "pluginRequests.source.store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{store} mağazası ({app})",
       "where": [
         "web/src/components/plugins/PluginRequestsPanel.vue"
       ]
@@ -28196,6 +29470,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Kaynak değişti"
+    },
+    "pluginRequests.storeOpening": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza {name} için bir kurulum bağlantısı üretti; incelemesi açılıyor.",
+      "where": [
+        "web/src/components/plugins/PluginRequestsPanel.vue"
+      ]
     },
     "pluginRequests.subtitle": {
       "in": "admin",
@@ -29352,6 +30634,7 @@
       "syntax": "vue-i18n",
       "tr": "Antivirüs",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Protection.vue"
       ]
     },
@@ -29508,6 +30791,7 @@
       "syntax": "vue-i18n",
       "tr": "Taslaklar",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Protection.vue"
       ]
     },
@@ -29565,6 +30849,7 @@
       "syntax": "vue-i18n",
       "tr": "Paylaşım bağlantıları",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Protection.vue"
       ]
     },
@@ -29621,6 +30906,7 @@
       "syntax": "vue-i18n",
       "tr": "Çöp kutusu saklama",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Protection.vue"
       ]
     },
@@ -29669,6 +30955,7 @@
       "syntax": "vue-i18n",
       "tr": "Sürüm politikası",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Protection.vue"
       ]
     },
@@ -30106,6 +31393,11 @@
       "syntax": "vue-i18n",
       "tr": "Kopya eşitleme"
     },
+    "queue.type.replica_initial_copy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Replikasyon ilk kopyası"
+    },
     "queue.type.replica_report": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -30399,6 +31691,14 @@
         "web/src/views/Replica.vue"
       ]
     },
+    "replica.failures.fields.storage": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo",
+      "where": [
+        "web/src/views/Replica.vue"
+      ]
+    },
     "replica.failures.fixAll": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -30472,6 +31772,145 @@
         "web/src/views/Replica.vue"
       ]
     },
+    "replica.initial.copied": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} kopyalandı ({size})",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.counting": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depodaki dosyalar sayılıyor: şimdiye kadar {n}",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.excluded": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} kural gereği atlandı",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.failed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} hata - “Hatalar” sekmesine bakın",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.finished": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İlk kopya tamamlandı: {n} dosya",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ],
+      "plural": true
+    },
+    "replica.initial.finishedAt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bitiş: {when}",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu depoda zaten olan dosyalar hedefe kopyalanacak.",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.phase.copying": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kopyalanıyor"
+    },
+    "replica.initial.phase.counting": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sayılıyor"
+    },
+    "replica.initial.phase.done": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tamamlandı"
+    },
+    "replica.initial.phase.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sırada"
+    },
+    "replica.initial.phase.waiting": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekliyor"
+    },
+    "replica.initial.present": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} zaten hedefteydi",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.progress": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{n} dosyanın {done} tanesi tamamlandı",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ],
+      "plural": true
+    },
+    "replica.initial.restart": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden çalıştır",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.restartHint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bütün dosyalara yeniden bakar; hedefte zaten olan dosyalara dokunmaz.",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.restarted": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İlk kopya yeniden başlatıldı",
+      "where": [
+        "web/src/views/Replica.vue"
+      ]
+    },
+    "replica.initial.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İlk kopya",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
+    "replica.initial.waiting": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekliyor: hedef yanıt vermiyor ({error}). Kopya kendiliğinden devam edecek.",
+      "where": [
+        "web/src/components/ReplicaInitialCopy.vue"
+      ]
+    },
     "replica.mode.appendOnly": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -30501,6 +31940,14 @@
       "syntax": "vue-i18n",
       "tr": "Şu anki çift"
     },
+    "replica.pair.folderIs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hedefteki klasör: {folder}",
+      "where": [
+        "web/src/views/Replica.vue"
+      ]
+    },
     "replica.pair.noStorages": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -30528,6 +31975,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Eşleştirmeyi kaydet"
+    },
+    "replica.pair.savedCopying": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Eşleştirme kaydedildi. Depoda zaten olan dosyalar hedefe kopyalanıyor.",
+      "where": [
+        "web/src/views/Replica.vue"
+      ]
     },
     "replica.pair.savedOk": {
       "in": "admin",
@@ -30718,6 +32173,7 @@
       "syntax": "vue-i18n",
       "tr": "Yol kuralları",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Replica.vue"
       ]
     },
@@ -30898,6 +32354,7 @@
       "syntax": "vue-i18n",
       "tr": "Replika hedefleri",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Replica.vue"
       ]
     },
@@ -30947,7 +32404,6 @@
       "syntax": "vue-i18n",
       "tr": "Dosya ara… ada göre ya da tag:etiket",
       "where": [
-        "web/src/components/TopNav.vue",
         "web/src/views/SearchTest.vue"
       ]
     },
@@ -31772,6 +33228,39 @@
         "token": "the verification token"
       }
     },
+    "server.mail.digest.footer": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Ayarlar → Bildirimler bölümünde acil olarak işaretlediğiniz bildirimler size hemen ulaşır.",
+      "about": "The email of a notification digest, to a person who asked to be told by email (a file request's owner, today): the kinds they did not mark urgent were held, and this one email tells what changed, folder by folder, in their account language. The subject is also the digest's stored title."
+    },
+    "server.mail.digest.intro": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Son {minutes} dakikada olanlar:",
+      "about": "The email of a notification digest, to a person who asked to be told by email (a file request's owner, today): the kinds they did not mark urgent were held, and this one email tells what changed, folder by folder, in their account language. The subject is also the digest's stored title.",
+      "vars": {
+        "minutes": "a number of minutes"
+      }
+    },
+    "server.mail.digest.subject": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} yeni bildirim",
+      "about": "The email of a notification digest, to a person who asked to be told by email (a file request's owner, today): the kinds they did not mark urgent were held, and this one email tells what changed, folder by folder, in their account language. The subject is also the digest's stored title.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.mail.digest.subject_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "The email of a notification digest, to a person who asked to be told by email (a file request's owner, today): the kinds they did not mark urgent were held, and this one email tells what changed, folder by folder, in their account language. The subject is also the digest's stored title.",
+      "vars": {
+        "count": "a number"
+      }
+    },
     "server.mail.drop_invite.intro": {
       "in": "server",
       "syntax": "server",
@@ -32122,6 +33611,366 @@
         "name": "a file or folder name, as it is on disk"
       }
     },
+    "server.notify.digest.admin": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} yönetici uyarısı",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.admin_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.archive_created": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} arşiv oluşturuldu",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.archive_created_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.archive_extracted": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} arşiv çıkarıldı",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.archive_extracted_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.comment_added": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} yorum",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.comment_added_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.drop_received": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "dosya isteğine {count} yükleme",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.drop_received_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.e2e_escrow_used": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} şifreli klasör emanet anahtarıyla açıldı",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.e2e_escrow_used_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.e2e_password_changed": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} şifreleme parolası değişti",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.e2e_password_changed_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.e2e_request_created": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} şifreleme isteği",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.e2e_request_created_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.e2e_request_decided": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} şifreleme isteği yanıtlandı",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.e2e_request_decided_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_deleted": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosya kalıcı olarak silindi",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_deleted_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_infected": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosyada virüs bulundu",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_infected_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_moved": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosya taşındı",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_moved_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_trashed": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosya çöp kutusuna taşındı",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_trashed_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_updated": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosya değişti",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_updated_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_upload_failed": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} yükleme başarısız oldu",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_upload_failed_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.file_uploaded": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} dosya eklendi",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.file_uploaded_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.more": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} klasör daha",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.more_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.other": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} diğer bildirim",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.other_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.plugin_notice": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} uygulama bildirimi",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.plugin_notice_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
+    "server.notify.digest.share_created": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} paylaşım bağlantısı oluşturuldu",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.digest.share_created_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "One line of a notification DIGEST - the single notification that tells a person, folder by folder, what changed while the kinds they did not mark urgent were held (one minute by default). Each is a count of one kind of change, joined after the folder name with commas: \"Reports: 12 files added, 1 comment\". Short, no full stop; the bell, the browser's pop-up, the desktop app and the digest email all say it.",
+      "vars": {
+        "count": "a number"
+      }
+    },
     "server.notify.drop.received.body": {
       "in": "server",
       "syntax": "server",
@@ -32292,6 +34141,24 @@
       "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
       "vars": {
         "name": "a file or folder name, as it is on disk"
+      }
+    },
+    "server.notify.notification.digest.title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{count} bildirim",
+      "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "count": "a number"
+      },
+      "plural": true
+    },
+    "server.notify.notification.digest.title_one": {
+      "in": "server",
+      "syntax": "server",
+      "about": "A notification - the bell, the browser's pop-up and the desktop app's - about one event. Composed by the READER's screen in their language from what happened. Title: what happened, to what. Body: where, or the detail. Placeholders the event does not carry are removed together with the dash, arrow or colon next to them.",
+      "vars": {
+        "count": "a number"
       }
     },
     "server.notify.plugin.notice.body": {
@@ -32471,6 +34338,12 @@
         "format": "a file format's name in capitals, e.g. DOCX"
       }
     },
+    "server.onlyoffice.refused_conflict_no_create": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Siz düzenlerken başka bir yerde değiştirildi ve klasöründe yeni dosya oluşturamıyorsunuz; bu yüzden filex düzenlemenizi yanında tutamadı.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it."
+    },
     "server.onlyoffice.refused_no_create": {
       "in": "server",
       "syntax": "server",
@@ -32559,6 +34432,25 @@
       "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
       "vars": {
         "saved": "the name the edit was saved under, beside the file, e.g. report.docx"
+      }
+    },
+    "server.onlyoffice.saved_conflict_body": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{name}, düzenleme oturumunuz onu açtıktan sonra başka bir yerde değiştirildi; bu yüzden düzenlemeniz o sürümün üstüne yazılmadı, aynı klasörde {saved} adıyla duruyor. {name} diğer değişikliği koruyor.",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "name": "a file or folder name, as it is on disk",
+        "saved": "the name the edit was saved under, beside the file, e.g. report.docx"
+      }
+    },
+    "server.onlyoffice.saved_conflict_title": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{name} siz düzenlerken değişti",
+      "about": "The bell of the people who edited a document in ONLYOFFICE, when the document server's save was written beside the file (in another format) or not written at all. A title, and one or two sentences under it.",
+      "vars": {
+        "name": "a file or folder name, as it is on disk"
       }
     },
     "server.origin.refused": {
@@ -33639,6 +35531,15 @@
         "pattern": "the pattern (one line of the setting) as the administrator typed it"
       }
     },
+    "server.storage.secret_address_changed": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Adres değişti: {field} alanını yeniden yazın. Kayıtlı bir parola ya da anahtar yalnızca kaydedildiği adrese gönderilir.",
+      "about": "Admin panel → Storages (Add storage / edit a storage): why the storage's settings were refused. Shown as the error when saving. File and folder patterns (.git, *.tmp, downloads/incomplete/**) and the example folder names stay as written.",
+      "vars": {
+        "field": "the setting's key as the driver names it (password, secret_key, private_key), shown as written"
+      }
+    },
     "server.tenant_domain.restored_body": {
       "in": "server",
       "syntax": "server",
@@ -34042,6 +35943,7 @@
       "syntax": "vue-i18n",
       "tr": "Varsayılan klasör görünümü",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Settings.vue"
       ]
     },
@@ -34091,6 +35993,7 @@
       "syntax": "vue-i18n",
       "tr": "Site adı",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Settings.vue"
       ]
     },
@@ -34248,6 +36151,7 @@
       "syntax": "vue-i18n",
       "tr": "E-posta (SMTP)",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Settings.vue"
       ]
     },
@@ -35044,6 +36948,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "Uygulamalar",
+      "where": [
+        "packages/core/src/components/SideNav.vue"
+      ]
+    },
+    "sidenav.appstore": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Uygulama mağazası",
       "where": [
         "packages/core/src/components/SideNav.vue"
       ]
@@ -36550,6 +38462,14 @@
         "web/src/views/Storages.vue"
       ]
     },
+    "storages.secretKept": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kayıtlı - değiştirmek için yazın",
+      "where": [
+        "web/src/components/StorageDriverFields.vue"
+      ]
+    },
     "storages.subtitle": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -36614,6 +38534,279 @@
       "tr": "Depo güncellendi",
       "where": [
         "web/src/views/StorageEdit.vue"
+      ]
+    },
+    "storeScreen.alreadyInstalled": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu sürüm zaten kurulu.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.alreadySent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} isteğiniz zaten yöneticileri bekliyor.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.back": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Dosyalara dön",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.details": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ayrıntılar",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazada listelenen uygulama yok.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.app": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.note": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Not",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.permissions": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İzinler",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.publisher": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yayıncı",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.requested": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstenme",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.state": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Burada",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.status": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Durum",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.fields.version": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Sürüm",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.hidden": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza ekranı bu hesaba gösterilmiyor. Kimlerin göreceğine bir yönetici karar verir.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.mine": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteklerim",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.noMatch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Aramaya uyan uygulama yok.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.noRequests": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz bir uygulama istemediniz.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.reason": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Neden ihtiyacınız var?",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.reasonPlaceholder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ne için kullanacağınız",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.request": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu uygulamayı iste",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.requestIntro": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteğiniz aşağıdaki sözlerinizle yöneticilere gider. Karar onlarındır; uygulamayı kurduklarında uygulamalarınız arasında görünür.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.search": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama ara",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.send": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İsteği gönder",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.sent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} isteğiniz yöneticilere gönderildi.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.stale": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağazaya şu anda ulaşılamıyor: bu, filex'in son denetlediği haliyle kataloğudur ({when}).",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.state.installed": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulu",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.state.pending": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "İstendi",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.state.update": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{version} sürümü kurulu",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.store": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Mağaza",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yöneticinizin seçtiği mağazalardaki uygulamalar. Birini isteyin; bir yönetici karar verir ve kurar.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Uygulama mağazası",
+      "where": [
+        "web/src/router/index.ts",
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.tooMany": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bekleyen birkaç isteğiniz var; yenisini istemeden önce bir karar verilmesini bekleyin.",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
+      ]
+    },
+    "storeScreen.verified": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Doğrulanmış",
+      "where": [
+        "web/src/views/AppStoreScreen.vue"
       ]
     },
     "symlink.badge.broken": {
@@ -37079,6 +39272,207 @@
       "tr": "Etiketler",
       "where": [
         "packages/core/src/FileExplorer.vue"
+      ]
+    },
+    "tenancy.confirmAction": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapat",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.confirmCount": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu kurulumda platformun kendi kiracısı dışında {n} kiracı var.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ],
+      "plural": true
+    },
+    "tenancy.confirmKept": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hiçbir şey silinmez: kişileri, depoları, dosyaları, oturum açma sağlayıcıları ve ayarları korunur. Mod yeniden açılınca her kiracı olduğu gibi geri gelir.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.confirmLabel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Onaylamak için kiracı sayısını ({n}) yazın",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.confirmMaintenance": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yeniden başlatmadan sonra bakım moduna geçerler: yalnızca platformun kendi kiracısı oturum açabilir, bu kiracıların kişilerinin açık oturumları ve API anahtarları çalışmaz.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.confirmRestart": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değişiklik şimdi kaydedilir, filex yeniden başlatılınca devreye girer.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.confirmTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı mod kapatılsın mı?",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.inForce": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Şu an geçerli",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.lockedEnv": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{variable} ortam değişkeniyle ayarlanmış: orada değiştirip filex'i yeniden başlatın. Bu anahtar yalnızca durumu gösterir.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.lockedFile": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yapılandırma dosyasındaki {key} ile ayarlanmış: orada değiştirip filex'i yeniden başlatın. Bu anahtar yalnızca durumu gösterir.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.off": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapalı",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.on": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açık",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.openTenants": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kiracıları yönet",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.restartTitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Değişikliğin geçerli olması için filex'i yeniden başlatın",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.restartToOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaydedildi. Çok kiracılı mod, filex yeniden başlatılınca kapanır; o zamana kadar bu sunucu bütün kiracılara hizmet vermeyi sürdürür. Bir kümedeki her sunucunun yeniden başlatılması gerekir.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.restartToOn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaydedildi. Çok kiracılı mod, filex yeniden başlatılınca açılır; o zamana kadar bu sunucu tek kiracılı bir kurulum olarak çalışır. Bir kümedeki her sunucunun yeniden başlatılması gerekir.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.saved": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaydedildi",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.savedRestart": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kaydedildi. Geçerli olması için filex'i yeniden başlatın.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.subtitle": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Tek kurulum birden çok kuruluşa hizmet verir; her kuruluş kendi oturum açma yöntemi, adresi, depoları ve kişileri olan bir kiracıdır. Kapalıyken kurulum tek bir kuruluşundur ve panelde kiracılarla ilgili hiçbir şey görünmez.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.switchHelp": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Burada kaydedilir, filex bir sonraki açılışında devreye girer.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.switchLabel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı mod",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.tenantsLabel": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Platformun kendi kiracısı dışındaki kiracılar",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Çok kiracılı mod",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.whatOff": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kapatınca kiracılarla ilgili her şey gizlenir. Var olan kiracılar korunur ve bakım moduna geçer: mod yeniden açılana kadar yalnızca platformun kendi kiracısı oturum açabilir.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
+      ]
+    },
+    "tenancy.whatOn": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Açınca Kişiler ve erişim altına Kiracılar sayfası, oturum açma sayfasına Realm alanı, Kimlik sağlayıcılar ve Şifreleme sayfalarına kiracı ayarları eklenir. Çok kiracılı moddaki ilk açılış, bu kurulumun şifreleme politikasını platformun kendi kiracısına taşır.",
+      "where": [
+        "web/src/views/TenancyMode.vue"
       ]
     },
     "tenantSelf.acmeFailed": {
@@ -37804,14 +40198,6 @@
       "tr": "Depo bağla",
       "where": [
         "web/src/views/TenantEdit.vue"
-      ]
-    },
-    "tenants.modeOff": {
-      "in": "admin",
-      "syntax": "vue-i18n",
-      "tr": "Çok kiracılı kip kapalı (FILEX_MULTI_TENANT): yalnızca platformun kendi kiracısı oturum açabilir. Diğer kiracılar ve sahip oldukları her şey korunur; kip yeniden açılınca kişileri tekrar oturum açar.",
-      "where": [
-        "web/src/views/Tenants.vue"
       ]
     },
     "tenants.noMatch": {
@@ -40345,7 +42731,6 @@
       "syntax": "plain",
       "tr": "GB",
       "where": [
-        "packages/core/src/components/AdvancedSearch.vue",
         "packages/core/src/composables/useLocale.ts"
       ]
     },
@@ -40354,7 +42739,6 @@
       "syntax": "plain",
       "tr": "KB",
       "where": [
-        "packages/core/src/components/AdvancedSearch.vue",
         "packages/core/src/composables/useLocale.ts"
       ]
     },
@@ -40363,7 +42747,6 @@
       "syntax": "plain",
       "tr": "MB",
       "where": [
-        "packages/core/src/components/AdvancedSearch.vue",
         "packages/core/src/composables/useLocale.ts"
       ]
     },
@@ -40796,6 +43179,7 @@
       "syntax": "vue-i18n",
       "tr": "Rapor nereden geliyor",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/Usage.vue"
       ]
     },
@@ -41113,6 +43497,38 @@
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
     },
+    "userSettings.notifications.adminAlerts": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Yönetici uyarıları",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.notifications.adminAlertsHint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Güncellemeler, kopyalar, oturum açma sağlayıcıları, kiracı alan adları ve yöneticilere yönelik diğer uyarılar",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.notifications.digestHint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Acil olarak işaretlenen türler size hemen ulaşır. Diğerleri {minutes} dakika bekletilir ve klasör klasör tek bir özet olarak gelir.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.notifications.digestOffHint": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Her tür size hemen ulaşır. Bir türün Acil anahtarını kapatırsanız o tür, klasör klasör tek bir özet olarak gelir.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
     "userSettings.notifications.events.archive_created": {
       "in": "both",
       "syntax": "shared",
@@ -41188,6 +43604,11 @@
       "syntax": "shared",
       "tr": "Yeni bir dosya geldiğinde"
     },
+    "userSettings.notifications.events.notification_digest": {
+      "in": "both",
+      "syntax": "shared",
+      "tr": "Acil olarak işaretlemediğim bildirimlerin özeti"
+    },
     "userSettings.notifications.events.plugin_notice": {
       "in": "both",
       "syntax": "shared",
@@ -41210,6 +43631,22 @@
       "in": "both",
       "syntax": "shared",
       "tr": "Nelerden haberdar olayım",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.notifications.urgent": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Acil",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.notifications.urgentFor": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Hemen bildir: {event}",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
@@ -41403,6 +43840,22 @@
       "in": "both",
       "syntax": "shared",
       "tr": "Liste"
+    },
+    "userSettings.prefs.installApp": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "Web uygulaması olarak kur",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
+    },
+    "userSettings.prefs.installAppLead": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "filex'i bu cihazın ana ekranına ekleyin: bir uygulama gibi kendi penceresinde açılır.",
+      "where": [
+        "packages/core/src/components/UserSettingsDialog.vue"
+      ]
     },
     "userSettings.prefs.languageHint": {
       "in": "both",
@@ -42054,6 +44507,7 @@
       "syntax": "vue-i18n",
       "tr": "Depolama kotası",
       "where": [
+        "web/src/lib/adminSearch.ts",
         "web/src/views/UserEdit.vue"
       ]
     },
@@ -42900,6 +45354,14 @@
         "packages/core/src/modals/PreviewModal.vue"
       ]
     },
+    "viewer.office_frame_unreachable_admin": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "ONLYOFFICE düzenleyici çerçevesi {origin} adresinden yüklenmedi. Oradaki vekil sunucunun çerçeveyi filex'e yönlendirdiğini kontrol edin ({env}).",
+      "where": [
+        "packages/core/src/modals/PreviewModal.vue"
+      ]
+    },
     "viewer.office_unconfigured": {
       "in": "explorer",
       "syntax": "plain",
@@ -43249,6 +45711,11 @@
       "syntax": "vue-i18n",
       "tr": "Dosya yüklendi - yazma işlemi var olmayan bir dosyayı oluşturdu"
     },
+    "webhooks.events.notification_digest": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bildirim özeti - bir kişinin bekletilen bildirimleri, bekleme süresinin sonunda birlikte (yalnızca bunu işaretleyen hedefe gönderilir)"
+    },
     "webhooks.events.plugin_notice": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -43262,7 +45729,7 @@
     "webhooks.eventsHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Hiçbirini işaretlemezseniz tüm olaylar gönderilir.",
+      "tr": "Hiçbirini işaretlemezseniz tüm olaylar gönderilir; bildirim özeti ise yalnızca işaretlendiğinde gönderilir.",
       "where": [
         "web/src/views/Webhooks.vue"
       ]
@@ -43317,7 +45784,8 @@
       "syntax": "vue-i18n",
       "tr": "Varsayılan webhook",
       "where": [
-        "web/src/components/GlobalWebhookCard.vue"
+        "web/src/components/GlobalWebhookCard.vue",
+        "web/src/lib/adminSearch.ts"
       ]
     },
     "webhooks.lastDeliveryOk": {
