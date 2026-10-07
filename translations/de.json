@@ -5045,7 +5045,6 @@
   "tenants.generalTitle": "Allgemein",
   "tenants.link": "Verknüpfen",
   "tenants.linkStorage": "Speicher verknüpfen",
-  "tenants.modeOff": "Der Mehrmandantenmodus ist aus (FILEX_MULTI_TENANT): Nur der eigene Mandant der Plattform kann sich anmelden. Die anderen Mandanten und alles, was sie haben, bleiben erhalten, und ihre Personen können sich wieder anmelden, sobald er wieder eingeschaltet wird.",
   "tenants.noMatch": "Kein Mandant passt.",
   "tenants.noStorages": "Kein Speicher ist verknüpft.",
   "tenants.oidcHint": "Der eigene Identitätsanbieter des Mandanten, verwendet unter seiner eigenen Adresse. Leer: Seine Personen melden sich mit einem Passwort oder über die Anbieter der Plattform an.",
