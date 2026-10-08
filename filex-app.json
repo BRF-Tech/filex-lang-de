@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "name": "lang-de",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "label": {
     "en": "German language pack",
     "de": "Deutsches Sprachpaket"
@@ -4484,7 +4484,6 @@
       "server.field.number": "Geben Sie eine Zahl ein.",
       "server.field.option": "Wählen Sie eine der angebotenen Optionen.",
       "server.field.pin": "Geben Sie alle {count} Zeichen des Codes ein.",
-      "server.field.pin_one": "Geben Sie den Code ein ({count} Zeichen).",
       "server.field.required": "Dieses Feld ist erforderlich.",
       "server.field.required_fields": "Füllen Sie die erforderlichen Felder aus.",
       "server.field.shape": "Diese Antwort entspricht nicht dem Format, das diese Ansicht verlangt hat.",
@@ -4844,7 +4843,6 @@
       "server.share_mail.sent": "E-Mail an {count} Personen gesendet.",
       "server.share_mail.sent_one": "E-Mail an {count} Person gesendet.",
       "server.share_mail.too_many": "Senden Sie an höchstens {count} Adressen auf einmal.",
-      "server.share_mail.too_many_one": "Senden Sie an höchstens {count} Adresse auf einmal.",
       "server.storage.root_path_forbidden": "Ein Speicher kann nicht das gesamte Backend umfassen. Geben Sie als Pfad oder Präfix einen Unterordner ein, etwa fileman oder data/files.",
       "server.storage.scan_exclude_everything": "„{pattern}“ würde alles auf diesem Speicher ausschließen. Geben Sie stattdessen an, was übersprungen werden soll, etwa .git, *.tmp oder downloads/incomplete/**.",
       "server.storage.scan_exclude_limit": "Zu viele Muster oder eines zu lang: Schreiben Sie höchstens {max} Muster mit jeweils höchstens {length} Zeichen.",
@@ -6321,6 +6319,8 @@
       "webhooks.testFail": "Testzustellung fehlgeschlagen: {error}",
       "webhooks.testOk": "Testzustellung an \"{name}\" erfolgreich",
       "webhooks.title": "Webhooks",
+      "server.field.pin_one": "Geben Sie den Code ein ({count} Zeichen).",
+      "server.share_mail.too_many_one": "Senden Sie an höchstens {count} Adresse auf einmal.",
       "sidenav.tags.more_one": "{count} weiteres anzeigen"
     }
   }
