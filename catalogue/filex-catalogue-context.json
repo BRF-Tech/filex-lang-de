@@ -1,5 +1,5 @@
 {
-  "filex": "0.54.0+cf62176c",
+  "filex": "0.54.0+a4428dc3",
   "about": "Every key filex has - the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms - explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -8097,10 +8097,7 @@
     "col.sort": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "Sırala",
-      "where": [
-        "packages/core/src/components/DataTable.vue"
-      ]
+      "tr": "Sırala"
     },
     "col.star": {
       "in": "explorer",
@@ -8187,6 +8184,14 @@
       "in": "explorer",
       "syntax": "plain",
       "tr": "{col} sütununu yeniden boyutlandır",
+      "where": [
+        "packages/core/src/components/DataTable.vue"
+      ]
+    },
+    "cols.sort_by": {
+      "in": "explorer",
+      "syntax": "plain",
+      "tr": "{col} sütununa göre sırala",
       "where": [
         "packages/core/src/components/DataTable.vue"
       ]
@@ -33667,7 +33672,7 @@
     "server.error.app_refused": {
       "in": "server",
       "syntax": "server",
-      "tr": "filex uygulamanın istediğini reddetti: {detail}",
+      "tr": "filex, uygulamanın isteğini reddetti: {detail}",
       "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
       "vars": {
         "detail": "the server's own English detail, as it said it (technical)"
