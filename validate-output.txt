@@ -1,23 +1,23 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : G:\filex-lang-de\catalogue (filex 0.55.0) — 6529 strings (1222 of them the server's: emails, public pages, notifications)
-  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+  catalogue : /var/lib/filex-langpacks/filex-lang-de/catalogue (filex 0.55.0+93505a7e) — 6571 strings (1264 of them the server's: emails, public pages, notifications)
+  syntax    : built-in checker (vue-i18n parser not installed)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 6529 of 6529 strings; the other 0 show in English
+[de] 100% translated — 6571 of 6571 strings; the other 0 show in English
   252 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   15 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.55.0)
+  catalogue      : catalogue (filex 0.55.0+93505a7e)
                    admin table     3279 strings (vue-i18n)
                    explorer table  2262 strings (plain {var})
-                   server table    1222 strings (mails, public pages, notifications)
-                   234 keys in both tables -> 6529 strings
+                   server table    1264 strings (mails, public pages, notifications)
+                   234 keys in both tables -> 6571 strings
   plurals        : one, other — 3 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (6532 strings)
-  syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
+  pack           : translations/de.json  (6574 strings)
+  syntax check   : regex fallback (vue-i18n compiler not found — run `npm install`)
 
 Keys shared by both catalogues: 234 (one flat pack value serves both).
   identical English in both: 234
