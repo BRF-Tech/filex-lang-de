@@ -1,5 +1,5 @@
 {
-  "filex": "0.55.0+93505a7e",
+  "filex": "0.55.0+9512e0ee",
   "about": "Every key filex has - the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms - explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -12365,7 +12365,7 @@
     "demo.alsoIncluded": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Ayrıca: uygulamalar - izin incelemesinden geçerek kurulan WebAssembly eklentileri, e-İmza, Dönüştür, filextext ve draw.io ile birlikte · dil paketleri ve sağdan sola yerleşim · Görünüm ekranından kurum temaları · oluşturduğunuz bağlantılar, Paylaştıklarım'da · kişisel ve takım etiketleri · sembolik bağlantılı klasörler · klasör başına hatırlanan görünüm ve sıralama · roller, gruplar ve kişiye özel istisnalar, dosya ve klasör bazında erişim ve uygulamaların kendi izinleri · her kiracının kendi realm'iyle (oturum açma adıyla) çok kiracılık; kiracı kendi oturum açma sağlayıcılarını, alan adını ve sertifikasını kendisi yönetir · OIDC SSO, LDAP / Active Directory ve Windows ya da Linux hesabıyla oturum açma · IP izin listesiyle giriş denemesi sınırı · yerinde görüntüleyiciler ve düzenleyiciler, ONLYOFFICE ile Office belgeleri · SVG, HEIC, metin ve arşiv küçük resimleri, içine en son gelen dosyalarla çizilen klasörler · Varsayılan uygulamalar: bir dosya türünü hangi uygulamanın açacağı · + Yeni menüsünden belge oluşturma - Markdown, metin, CSV ve kod her yerde; Word, Excel, PowerPoint ve OpenDocument ise ONLYOFFICE bağlıyken · tüm seçimi tek akışlı arşiv olarak indirme · çöp kutusu ve sürümleme · replikasyon · kotalar · denetim kaydı · webhook ve uygulama içi bildirimler · depolama eklentileri · kalıcı işlem kuyruğu · depolama sağlayıcınızın kendi günlük raporundan üretilen kullanım ve maliyet görünümü.",
+      "tr": "Ayrıca: uygulamalar - izin incelemesinden geçerek kurulan WebAssembly eklentileri, e-İmza, Dönüştür, ofis düzenleyici, filextext ve draw.io ile birlikte · izin verdiğiniz bir uygulamayla bir dosyayı birlikte düzenleme ya da şifreli bir klasördeki dosyayı tarayıcınızda çözülmüş olarak açma · dil paketleri ve sağdan sola yerleşim · Görünüm ekranından kurum temaları · oluşturduğunuz bağlantılar, Paylaştıklarım'da · kişisel ve takım etiketleri · sembolik bağlantılı klasörler · klasör başına hatırlanan görünüm ve sıralama · roller, gruplar ve kişiye özel istisnalar, dosya ve klasör bazında erişim ve uygulamaların kendi izinleri · her kiracının kendi realm'iyle (oturum açma adıyla) çok kiracılık; kiracı kendi oturum açma sağlayıcılarını, alan adını ve sertifikasını kendisi yönetir · OIDC SSO, LDAP / Active Directory ve Windows ya da Linux hesabıyla oturum açma · IP izin listesiyle giriş denemesi sınırı · yerinde görüntüleyiciler ve düzenleyiciler, ofis düzenleyici uygulamasında ya da ONLYOFFICE ile Office belgeleri · SVG, HEIC, metin ve arşiv küçük resimleri, içine en son gelen dosyalarla çizilen klasörler · Varsayılan uygulamalar: bir dosya türünü hangi uygulamanın açacağı · + Yeni menüsünden belge oluşturma - Markdown, metin, CSV ve kod her yerde; Word, Excel, PowerPoint ve OpenDocument ise ONLYOFFICE bağlıyken ya da ofis düzenleyici uygulaması kuruluyken · tüm seçimi tek akışlı arşiv olarak indirme · çöp kutusu ve sürümleme · replikasyon · kotalar · denetim kaydı · webhook ve uygulama içi bildirimler · depolama eklentileri · kalıcı işlem kuyruğu · depolama sağlayıcınızın kendi günlük raporundan üretilen kullanım ve maliyet görünümü.",
       "where": [
         "web/src/views/Login.vue"
       ]
@@ -20112,7 +20112,7 @@
     "install.title": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex'i web uygulaması olarak kurun",
+      "tr": "{name} web uygulamasını kurun",
       "where": [
         "web/src/components/InstallPrompt.vue"
       ]
@@ -23728,7 +23728,7 @@
     "notifications.prefs.iosHomeScreen": {
       "in": "both",
       "syntax": "shared",
-      "tr": "iPhone ve iPad'de bildirimler tarayıcı sekmesinde değil, ana ekrana eklenmiş filex'te çalışır (iOS 16.4 ve sonrası).",
+      "tr": "iPhone ve iPad'de bildirimler tarayıcı sekmesinde değil, ana ekrana eklenmiş {name} uygulamasında çalışır (iOS 16.4 ve sonrası).",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
@@ -23832,7 +23832,7 @@
     "notifications.prefs.pushHint": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "Zilinizin size söyledikleri, filex kapalıyken de bu telefona ya da tarayıcıya ulaşır: aynı bildirimler, aynı anda.",
+      "tr": "Zilinizin size söyledikleri, {name} kapalıyken de bu telefona ya da tarayıcıya ulaşır: aynı bildirimler, aynı anda.",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
@@ -28614,7 +28614,7 @@
     "plugins.signature.versionHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "İmzanın adını verdiği sürüm, örneğin 1.3.0. Boş bırakılırsa yalnız SHA-256 özeti üzerine atılmış eski biçim imza doğrulanabilir: 0.55'te uyarıyla kabul edilir, 0.56'dan itibaren reddedilir.",
+      "tr": "İmzanın adını verdiği sürüm, örneğin 1.3.0. Boş bırakılırsa yalnız SHA-256 özeti üzerine atılmış eski biçim imza doğrulanabilir: hâlâ kabul edilir; eklentinin satırındaki uyarı ne zamana kadar kabul edileceğini söyler.",
       "where": [
         "web/src/components/plugins/StoragePluginsTab.vue"
       ]
@@ -38532,8 +38532,12 @@
     "server.store_storage.legacy_signature": {
       "in": "server",
       "syntax": "server",
-      "tr": "Yalnız SHA-256 değeri üzerinden imzalanmış (eski biçim): filex 0.56'ya kadar kabul edilir. Adı, sürümü ve platformu üzerinden imzalanmış bir yapı kurun.",
-      "about": "Installing a storage plugin from an app store (Admin panel → the store review page, /admin/store-install; and the store screen's Storage tab): what the review says before Install - that the plugin is a native program running with the server's rights, what the store's checks measured, whether the build's signature satisfies FILEX_PLUGIN_TRUSTED_KEYS (an environment variable, kept as written) - and why an install is refused. The cap.* keys are short lowercase names of capabilities a plugin proved, listed together in a row. A build is one platform's program file. Admin panel → Plugins → Storage plugins, under a plugin's state: its build's signature verified only in the old form (over the file's SHA-256 alone, not over the plugin's name, version and platform). Still accepted in filex 0.55, refused from 0.56 - kept as written. One or two sentences."
+      "tr": "Yalnız SHA-256 değeri üzerinden imzalanmış (eski biçim): hâlâ kabul ediliyor; filex {version} sürümü ile {date} tarihinden hangisi daha sonra gelirse en az o zamana kadar kabul edilecek. Adı, sürümü ve platformu üzerinden imzalanmış bir yapı kurun.",
+      "about": "Installing a storage plugin from an app store (Admin panel → the store review page, /admin/store-install; and the store screen's Storage tab): what the review says before Install - that the plugin is a native program running with the server's rights, what the store's checks measured, whether the build's signature satisfies FILEX_PLUGIN_TRUSTED_KEYS (an environment variable, kept as written) - and why an install is refused. The cap.* keys are short lowercase names of capabilities a plugin proved, listed together in a row. A build is one platform's program file. Admin panel → Plugins → Storage plugins, under a plugin's state: its build's signature verified only in the old form (over the file's SHA-256 alone, not over the plugin's name, version and platform). Still accepted during its compatibility window: {version} is the earliest filex release that may refuse it (\"0.61\"), {date} the day before which no release does (YYYY-MM-DD); the later of the two holds. Keep both placeholders as written. One or two sentences.",
+      "vars": {
+        "date": "a date and time in the reader's time zone, e.g. 2026-10-03 14:00 (or 2026-10-03 14:00 UTC when the account has no time zone)",
+        "version": "a filex version number, e.g. 0.43.1"
+      }
     },
     "server.store_storage.native": {
       "in": "server",
@@ -47894,7 +47898,7 @@
     "userSettings.prefs.installAppLead": {
       "in": "explorer",
       "syntax": "plain",
-      "tr": "filex'i bu cihazın ana ekranına ekleyin: bir uygulama gibi kendi penceresinde açılır.",
+      "tr": "Bu cihazın ana ekranına ekleyin: {name} bir uygulama gibi kendi penceresinde açılır.",
       "where": [
         "packages/core/src/components/UserSettingsDialog.vue"
       ]
