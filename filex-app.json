@@ -5155,6 +5155,7 @@
       "server.onlyoffice.saved_beside_title": "Ihre Änderung wurde als {saved} gespeichert",
       "server.onlyoffice.saved_conflict_body": "{name} wurde an anderer Stelle geändert, nachdem Ihre Bearbeitungssitzung die Datei geöffnet hatte, daher wurde Ihre Änderung nicht über diese Version geschrieben: Sie liegt in {saved}, im selben Ordner. {name} behält die andere Änderung.",
       "server.onlyoffice.saved_conflict_title": "{name} wurde während Ihrer Bearbeitung geändert",
+      "server.ops.wait.storage_scan": "Wartet kurz: Der Speicher wird gerade gescannt",
       "server.origin.refused": "Diese Änderung wurde von einer anderen Website gesendet, nicht von filex selbst, und deshalb zum Schutz Ihrer Sitzung abgelehnt. Wenn diese Website filex absichtlich einbettet, kann ein Administrator sie mit `FILEX_CORS_ALLOWED_ORIGINS` zulassen.",
       "server.perm.action.access.api": "Erstellen von API-Schlüsseln",
       "server.perm.action.access.desktop": "Anmelden über die Desktop-App",
