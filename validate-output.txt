@@ -1,23 +1,23 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : G:\filex-lang-de\catalogue (filex 0.57.5) — 7004 strings (1418 of them the server's: emails, public pages, notifications)
-  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
+  catalogue : /var/lib/filex-langpacks/filex-lang-de/catalogue (filex 0.57.7+fe39f719) — 7005 strings (1418 of them the server's: emails, public pages, notifications)
+  syntax    : built-in checker (vue-i18n parser not installed)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 7004 of 7004 strings; the other 0 show in English
+[de] 100% translated — 7005 of 7005 strings; the other 0 show in English
   256 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   15 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.57.5)
+  catalogue      : catalogue (filex 0.57.7+fe39f719)
                    admin table     3494 strings (vue-i18n)
-                   explorer table  2324 strings (plain {var})
+                   explorer table  2325 strings (plain {var})
                    server table    1418 strings (mails, public pages, notifications)
-                   232 keys in both tables -> 7004 strings
+                   232 keys in both tables -> 7005 strings
   plurals        : one, other — 3 extra form key(s) beyond the catalogue
-  pack           : translations\de.json  (7007 strings)
-  syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
+  pack           : translations/de.json  (7008 strings)
+  syntax check   : regex fallback (vue-i18n compiler not found — run `npm install`)
 
 Keys shared by both catalogues: 232 (one flat pack value serves both).
   identical English in both: 232

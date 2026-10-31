@@ -6925,6 +6925,7 @@
   "viewer.office_unreachable": "The document server is not answering right now. Try again later, or download the file.",
   "viewer.office_unreachable_admin": "The ONLYOFFICE document server is not answering. Check it in the admin panel under External services.",
   "viewer.open_in_new_tab": "Open in new tab",
+  "viewer.original_size": "Original size",
   "viewer.page_n_of_m": "Page {n} of {m}",
   "viewer.pdf_inline_failed": "Your browser could not display this PDF inline.",
   "viewer.peer_not_installed": "This kind of file cannot be shown here. Download it to open it on your device.",

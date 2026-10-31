@@ -6925,6 +6925,7 @@
   "viewer.office_unreachable": "Der Dokumentserver antwortet gerade nicht. Versuchen Sie es später erneut oder laden Sie die Datei herunter.",
   "viewer.office_unreachable_admin": "Der ONLYOFFICE-Dokumentserver antwortet nicht. Prüfen Sie ihn im Adminbereich unter „Externe Dienste“.",
   "viewer.open_in_new_tab": "In neuem Tab öffnen",
+  "viewer.original_size": "Originalgröße",
   "viewer.page_n_of_m": "Seite {n} von {m}",
   "viewer.pdf_inline_failed": "Ihr Browser konnte dieses PDF nicht direkt anzeigen.",
   "viewer.peer_not_installed": "Diese Art von Datei kann hier nicht angezeigt werden. Laden Sie sie herunter, um sie auf Ihrem Gerät zu öffnen.",
