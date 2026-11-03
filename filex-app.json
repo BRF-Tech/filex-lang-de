@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "name": "lang-de",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "label": {
     "en": "German language pack",
     "de": "Deutsches Sprachpaket"
@@ -5142,7 +5142,6 @@
       "server.notify.captcha.cause.server_error": "der Anbieter hat mit einem Serverfehler geantwortet",
       "server.notify.captcha.cause.timeout": "der Anbieter hat nicht rechtzeitig geantwortet",
       "server.notify.captcha.fallback_body": "In den letzten {minutes} Minuten konnten {count} Formulare den Überprüfungsdienst nicht erreichen und wurden stattdessen mit dem lokalen Proof of Work überprüft. Letzter Grund: {reason}. Prüfen Sie, ob dieser Server den Anbieter (Turnstile oder reCAPTCHA) erreichen kann.",
-      "server.notify.captcha.fallback_body_one": "In den letzten {minutes} Minuten konnte {count} Formular den Überprüfungsdienst nicht erreichen und wurde stattdessen mit dem lokalen Proof of Work überprüft. Letzter Grund: {reason}. Prüfen Sie, ob dieser Server den Anbieter (Turnstile oder reCAPTCHA) erreichen kann.",
       "server.notify.captcha.fallback_title": "Bot-Schutz ist auf die lokale Überprüfung ausgewichen",
       "server.notify.captcha.misconfigured_body": "Ein Anbieter für die Bot-Überprüfung ist ausgewählt, aber Formulare lassen sich damit nicht überprüfen: {reason}. Bis die Schlüssel unter Adminbereich, Bot-Schutz korrigiert sind, bleiben die Formulare durch den lokalen Proof of Work geschützt.",
       "server.notify.captcha.misconfigured_title": "Bot-Schutz ist falsch konfiguriert",
@@ -7124,6 +7123,7 @@
       "webhooks.testFail": "Testzustellung fehlgeschlagen: {error}",
       "webhooks.testOk": "Testzustellung an \"{name}\" erfolgreich",
       "webhooks.title": "Webhooks",
+      "server.notify.captcha.fallback_body_one": "In den letzten {minutes} Minuten konnte {count} Formular den Überprüfungsdienst nicht erreichen und wurde stattdessen mit dem lokalen Proof of Work überprüft. Letzter Grund: {reason}. Prüfen Sie, ob dieser Server den Anbieter (Turnstile oder reCAPTCHA) erreichen kann.",
       "server.field.pin_one": "Geben Sie den Code ein ({count} Zeichen).",
       "server.share_mail.too_many_one": "Senden Sie an höchstens {count} Adresse auf einmal.",
       "sidenav.tags.more_one": "{count} weiteres anzeigen"
