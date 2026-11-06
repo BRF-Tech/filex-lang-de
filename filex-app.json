@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "name": "lang-de",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "label": {
     "en": "German language pack",
     "de": "Deutsches Sprachpaket"

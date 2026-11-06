@@ -11,9 +11,9 @@ one manifest, `filex-app.json`, no code and no build.
 <!-- langpack:status -->
 | | |
 |---|---|
-| Version | 0.1.17, for filex 0.58.0 |
-| Catalogue | filex **0.58.0** (`catalogue/`): 7,109 strings - 3,323 admin, 2,101 explorer, 1,453 the server's, 232 drawn by both |
-| Coverage | 100 % - 7,109 of 7,109 strings, plus 4 extra plural forms |
+| Version | 0.1.18, for filex 0.59.0 |
+| Catalogue | filex **0.59.0** (`catalogue/`): 7,134 strings - 3,340 admin, 2,106 explorer, 1,456 the server's, 232 drawn by both |
+| Coverage | 100 % - 7,134 of 7,134 strings, plus 4 extra plural forms |
 | Validators | platform: 0 errors, 0 warnings; the pack's own check passes - the last run is [`validate-output.txt`](validate-output.txt) |
 <!-- /langpack:status -->
 
