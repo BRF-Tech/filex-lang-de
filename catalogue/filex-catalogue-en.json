@@ -489,6 +489,7 @@
   "appPlugins.wizard.fileTypes.place.last": "After them",
   "appPlugins.wizard.fileTypes.place.off": "Off",
   "appPlugins.wizard.fileTypes.title": "File types",
+  "appPlugins.wizard.fromManifest": "Read from the app's manifest. Its files are named by the SHA-256 the manifest pins; when you approve, filex downloads them and installs nothing that does not match.",
   "appPlugins.wizard.fromSource": "The newer version is read from where the app was installed from: {source}",
   "appPlugins.wizard.install": "Install",
   "appPlugins.wizard.jump": "Version {from} → {to}",

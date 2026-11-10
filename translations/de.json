@@ -489,6 +489,7 @@
   "appPlugins.wizard.fileTypes.place.last": "Danach",
   "appPlugins.wizard.fileTypes.place.off": "Aus",
   "appPlugins.wizard.fileTypes.title": "Dateitypen",
+  "appPlugins.wizard.fromManifest": "Aus dem Manifest der App gelesen. Ihre Dateien werden durch den SHA-256-Hash benannt, den das Manifest für jede festlegt; wenn Sie genehmigen, lädt filex sie herunter und installiert nichts, was nicht übereinstimmt.",
   "appPlugins.wizard.fromSource": "Die neuere Version wird von dort gelesen, von wo die App installiert wurde: {source}",
   "appPlugins.wizard.install": "Installieren",
   "appPlugins.wizard.jump": "Version {from} → {to}",
