@@ -1,22 +1,22 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : /var/lib/filex-langpacks/filex-lang-de/catalogue (filex 0.59.1+51694fdc) — 7135 strings (1456 of them the server's: emails, public pages, notifications)
+  catalogue : /var/lib/filex-langpacks/filex-lang-de/catalogue (filex 0.59.1+291812e3) — 7450 strings (1535 of them the server's: emails, public pages, notifications)
   syntax    : built-in checker (vue-i18n parser not installed)
   pack      : filex-app.json (filex-app.json)
 
-[de] 100% translated — 7135 of 7135 strings; the other 0 show in English
-  257 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
+[de] 100% translated — 7450 of 7450 strings; the other 0 show in English
+  264 value(s) are identical to the English (fine for names and codes; otherwise still to translate)
   plural categories: one, other — explorer/server keys take <key>_one beside the plain key (other); admin strings take 2 | forms in that order
   15 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.59.1+51694fdc)
-                   admin table     3573 strings (vue-i18n)
-                   explorer table  2338 strings (plain {var})
-                   server table    1456 strings (mails, public pages, notifications)
-                   232 keys in both tables -> 7135 strings
+  catalogue      : catalogue (filex 0.59.1+291812e3)
+                   admin table     3744 strings (vue-i18n)
+                   explorer table  2403 strings (plain {var})
+                   server table    1535 strings (mails, public pages, notifications)
+                   232 keys in both tables -> 7450 strings
   plurals        : one, other — 4 extra form key(s) beyond the catalogue
-  pack           : translations/de.json  (7139 strings)
+  pack           : translations/de.json  (7454 strings)
   syntax check   : regex fallback (vue-i18n compiler not found — run `npm install`)
 
 Keys shared by both catalogues: 232 (one flat pack value serves both).
@@ -24,4 +24,4 @@ Keys shared by both catalogues: 232 (one flat pack value serves both).
 
 Errors  : 0 (none)
 Warnings: 1 (GLOSSARY=1)
-Consistency: 33 short English labels translated more than one way (see below)
+Consistency: 36 short English labels translated more than one way (see below)
