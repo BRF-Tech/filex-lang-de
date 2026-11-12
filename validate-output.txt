@@ -1,7 +1,7 @@
 filex-app.json is up to date.
 filex language pack validator
-  catalogue : /var/lib/filex-langpacks/filex-lang-de/catalogue (filex 0.60.0+79454eb3) — 7451 strings (1535 of them the server's: emails, public pages, notifications)
-  syntax    : built-in checker (vue-i18n parser not installed)
+  catalogue : G:\filex-lang-de\catalogue (filex 0.60.1) — 7451 strings (1535 of them the server's: emails, public pages, notifications)
+  syntax    : @intlify/message-compiler 9.14.5 (vue-i18n's own parser)
   pack      : filex-app.json (filex-app.json)
 
 [de] 100% translated — 7451 of 7451 strings; the other 0 show in English
@@ -10,14 +10,14 @@ filex language pack validator
   15 plural key(s) lack a form for one of those categories and show the plain form for it (--plurals lists them)
   errors: 0 (none) · warnings: 0 (none)
 filex German pack check (validate-de)
-  catalogue      : catalogue (filex 0.60.0+79454eb3)
+  catalogue      : catalogue (filex 0.60.1)
                    admin table     3745 strings (vue-i18n)
                    explorer table  2403 strings (plain {var})
                    server table    1535 strings (mails, public pages, notifications)
                    232 keys in both tables -> 7451 strings
   plurals        : one, other — 4 extra form key(s) beyond the catalogue
-  pack           : translations/de.json  (7455 strings)
-  syntax check   : regex fallback (vue-i18n compiler not found — run `npm install`)
+  pack           : translations\de.json  (7455 strings)
+  syntax check   : @intlify/message-compiler 9.14.5 (the parser vue-i18n uses)
 
 Keys shared by both catalogues: 232 (one flat pack value serves both).
   identical English in both: 232
