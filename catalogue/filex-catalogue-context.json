@@ -1,5 +1,5 @@
 {
-  "filex": "0.60.1",
+  "filex": "0.60.2+4d605dd4",
   "about": "Every key filex has - the interface and the text the server writes. `in`: explorer (plain {name} placeholders, @ | literal) · admin (vue-i18n: write {'@'} for @) · both (no @, | or {'…'} at all) · server (emails, public pages, notifications: {name} only, and exactly the placeholders of the English). `plural`: the key takes plural forms - explorer/server: extra keys <key>_zero|_one|_two|_few|_many for the categories your language has (the plain key is `other`); admin: `|`-separated forms, one per category, in CLDR order. `plural_categories`: which categories a language has. `tr`: the Turkish reference. docs: https://docs.filex.sh/PLUGIN-KIT#writing-a-language-pack",
   "plural_categories": {
     "ar": [
@@ -2195,6 +2195,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "API anahtarı güncellendi",
+      "where": [
+        "web/src/views/ApiMcp.vue"
+      ]
+    },
+    "apiMcp.watchKey": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex-watch, {id} numaralı depo",
       "where": [
         "web/src/views/ApiMcp.vue"
       ]
@@ -10618,6 +10626,7 @@
       "where": [
         "web/src/components/QuotaWidget.vue",
         "web/src/components/StorageAccess.vue",
+        "web/src/components/StorageWatchAgent.vue",
         "web/src/components/encryption/EncryptionRequestsPanel.vue",
         "web/src/components/plugins/AppPluginsTab.vue",
         "web/src/components/plugins/DefaultAppsTab.vue",
@@ -19352,6 +19361,8 @@
         "web/src/components/RoleEditor.vue",
         "web/src/components/SearchSettingsCard.vue",
         "web/src/components/StorageAccess.vue",
+        "web/src/components/StorageLiveWatchOffer.vue",
+        "web/src/components/StorageWatchAgent.vue",
         "web/src/components/TenantSelfService.vue",
         "web/src/components/UserGroupsCard.vue",
         "web/src/components/UserRolesCard.vue",
@@ -35913,6 +35924,18 @@
       "tr": "mağaza ekranı değiştirildi",
       "about": "Audit log: what was done to the thing, a short lower-case past participle or noun phrase (deleted, password reset), used as {verb} in server.audit.phrase (“User: deleted”)."
     },
+    "server.audit.verb.watch_key_create": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "filex-watch anahtarı oluşturuldu",
+      "about": "Audit log: what was done to the thing, a short lower-case past participle or noun phrase (deleted, password reset), used as {verb} in server.audit.phrase (“User: deleted”)."
+    },
+    "server.audit.verb.watch_key_delete": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "filex-watch anahtarı geri alındı",
+      "about": "Audit log: what was done to the thing, a short lower-case past participle or noun phrase (deleted, password reset), used as {verb} in server.audit.phrase (“User: deleted”)."
+    },
     "server.audit.verb.zip": {
       "in": "server",
       "syntax": "server",
@@ -38937,6 +38960,105 @@
       "syntax": "server",
       "tr": "Bağlantı herkese açık ya da özel olmalı.",
       "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_key_missing": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu istekte filex-watch anahtarı yok. Anahtarı `Authorization: Bearer <anahtar>` olarak gönderin. Anahtar, yönetim panelinde deponun sayfasında (filex-watch) oluşturulur.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_key_name_too_long": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bir anahtarın adı en fazla {max} karakter olabilir.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "max": "a number of characters, e.g. 100"
+      }
+    },
+    "server.error.watch_key_not_found": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu depoda böyle bir filex-watch anahtarı yok.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_key_other_storage": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu filex-watch anahtarı {storage} numaralı depoya ait, bu raporun adını verdiği depoya değil. Ajanın deposunu {storage} yapın ya da bu deponun sayfasında bir anahtar oluşturun.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "storage": "the number of the storage the key belongs to, e.g. 7"
+      }
+    },
+    "server.error.watch_key_unknown": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu filex-watch anahtarı geçerli değil: geri alınmış ya da bir filex-watch anahtarı değil. Yönetim panelinde deponun sayfasında yeni bir anahtar oluşturun ve ajanın anahtar dosyasına koyun.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_keys_full": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu deponun zaten {max} filex-watch anahtarı var. Önce artık gerekmeyen birini geri alın.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "max": "a number of keys, e.g. 20"
+      }
+    },
+    "server.error.watch_owner_not_admin": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu filex-watch anahtarını oluşturan kişi artık yönetici değil. Bir yöneticinin deponun sayfasında yeni bir anahtar oluşturması gerekir.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_rate_limited": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bir dakikada çok fazla rapor geldi. Bir dakika bekleyin: ajan değişiklikleri saklar ve birlikte gönderir.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_report_invalid": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu rapor okunamadı: {reason}",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "reason": "what was wrong with the report, as the server's check said it (English, technical)"
+      }
+    },
+    "server.error.watch_report_too_large": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu rapor {max_kb} KB'tan büyük. Bir raporda daha az klasör gönderin ya da tam senkron isteyin.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "max_kb": "a size in kibibytes, the number alone, e.g. 1024"
+      }
+    },
+    "server.error.watch_storage_gone": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "Bu depo artık yok ya da anahtarı oluşturan yöneticinin kiracısında değil.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range)."
+    },
+    "server.error.watch_storage_off": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{name} deposu kapalı; yeniden açılana kadar değişikliklerine bakılmaz.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "name": "the storage's name, e.g. media - kept as written"
+      }
+    },
+    "server.error.watch_unsupported_driver": {
+      "in": "server",
+      "syntax": "server",
+      "tr": "{driver} sürücüsündeki bir depoda filex-watch'ın izleyeceği, bir diskteki klasörler yok: bir nesne deposu ya da kendi değişikliklerini bildiren bir depo. filex-watch, diski başka bir makinedeki depolar içindir.",
+      "about": "A refusal or a failed job, said to the person who asked: the file manager, the admin panel, the desktop app, the command line and an AI agent all show this sentence as it is (the API answers it in `message` beside a stable code in `error`). One or two sentences: what happened and, where it applies, what to do. The key's last part is the code: read_only - the storage takes no writes; quota_exceeded - the owner's quota is full; name_taken - something already has the name; name_not_allowed - a name no door of filex lets a file be given (empty, holding / or \\ or NUL, . or .. or only dots and spaces); name_too_long - a name longer than the storage holds; locked - an app holds the file; reserved_name - the name is one filex keeps for itself; not_cancellable / finished - a queued job cannot be stopped / is over; timeout, out_of_memory, crashed, app_removed, action_removed, engine_missing, office_unconfigured - why an app's job failed (the _admin forms are shown to an administrator, who can fix it); not_applicable - an app's action does not fit the files the person selected (its rule names other kinds of file); the e2e request codes (kind_mismatch, not_requestable, path_missing, too_many_pending) - an encryption request that no longer fits the folder. The app doors (an app's action, screen or save): permission_denied, outside_root (a key limited to one folder), app_input_denied, app_folder_denied, app_save_denied, app_no_lookup, action_admin_only - who may not; action_unavailable, action_from_app, app_not_running, app_screen_missing, save_gone - what is not there; app_encrypted_read / app_encrypted_write - an encrypted folder the server has no key to; app_encrypted_file_read / app_encrypted_file_write - a single encrypted file (a .fxe) it has no key to; app_e2e_off, app_e2e_vault, app_e2e_not_encrypted - an app's interface editing a file of an encrypted folder, which the browser decrypts and encrypts again (an administrator turned that off; a vault, whose files an app is handed by the browser from the vault itself and never through these doors; a save that arrived unencrypted); app_save_changed - an app's save over a file that changed since the app opened it; app_save_option - the app asked to save in a way filex does not know (the words beside and copy are an option's own: keep them); app_save_beside_denied, app_save_conflict_denied - a save the office editor writes as a new file beside the document (in another format, or as a conflict copy because the document changed) by a person who may not create files there; app_save_beside_encrypted - the same in an encrypted folder, where a file is saved only in its own format; app_save_beside_bytes - the app named a format and sent something else; app_csv_delimiter, app_csv_encoding, app_csv_bom, app_csv_eol - an app's save of a .csv whose bytes are not what the app said about them (its delimiter, encoding, byte order mark, line ends), so nothing was written; app_csv_unreadable - its bytes are not text filex can read for the file; app_csv_unencodable - the file's encoding cannot hold a character of the save; app_csv_not_text - a spreadsheet package where CSV text belongs; csv_declaration - the app's description of its CSV could not be read; handler_off - an administrator turned the app off for a file type; not_granted - the app was not given a right at install; folder_not_offered, bad_folder - the result's folder; app_kind_unsaved, save_failed - a save; storage_unavailable - a storage that cannot be reached. The app store screen: store_screen_hidden, store_unknown, store_app_unknown; demo_store - a public demo; lock_none - an administrator's unlock found nothing locked. A request filex could not read (bad_json, bad_id, bad_body, bad_multipart, bad_path, bad_name, storage_required, unknown_storage, mixed_storages) or a server fault (internal_error, queue_unavailable, spool_unavailable) says so plainly; an app door's limits (too_many_paths, params_too_large, too_large, chunk_too_large, offset); the Default apps rules (rule_*, bad_file_kind, open_or_thumbnail, default_apps_*); an app's thumbnail limits (out_of_range).",
+      "vars": {
+        "driver": "the storage driver's name, e.g. s3 - kept as written"
+      }
     },
     "server.event_off.antivirus": {
       "in": "server",
@@ -46564,6 +46686,218 @@
         "packages/core/src/FileExplorer.vue"
       ]
     },
+    "storageWatch.cols.agent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ajan",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.cols.name": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ad",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.cols.seen": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son rapor",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.copiedIt": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kopyaladım",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.create": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtar oluştur",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.docs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Kurulum ve sorun giderme",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.empty": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Henüz filex-watch anahtarı yok. Bu deponun diskinin bulunduğu makine için bir tane oluşturun.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.full": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu deponun {max} anahtarı var, en fazla bu kadar olabilir. Önce birini geri alın.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.hint": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu deponun diski başka bir makinedeyse (filex'in ağ üzerinden eriştiği bir NAS paylaşımı, bir SFTP deposunun gösterdiği klasör) filex orada yazılanları bir sonraki senkrona kadar görmez. O makineye filex-watch kurun: değişen klasörleri bildirir, filex yalnız o klasörlere bakar. Disk bu makinedeyse Canlı izleme yeter.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.install": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Diskin bulunduğu makineye kurun",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.keyName": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hangi makine için",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.keyNamePlaceholder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "ör. nas01",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.made": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtar oluşturuldu",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.madeBy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Oluşturan: {who}",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.never": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Hiç",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.noAgent": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex başladığından beri rapor yok",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.platform.docker": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Docker"
+    },
+    "storageWatch.platform.linux": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Linux (systemd)"
+    },
+    "storageWatch.platform.macos": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "macOS"
+    },
+    "storageWatch.platform.windows": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Windows"
+    },
+    "storageWatch.replaceBoth": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "PASTE-THE-KEY-HERE yerine anahtarı (oluşturulduğu an bir kez gösterilir), /path/to/the/folder yerine de o makinede bu depo olan klasörü yazın.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.replaceFolder": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "/path/to/the/folder yerine o makinede bu depo olan klasörü yazın.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.revoke": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Geri al",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.revokeConfirm": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} anahtarı geri alınsın mı? Onu kullanan ajanın bir sonraki raporu reddedilir.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.revoked": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtar geri alındı",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.shownOnce": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Anahtar yalnız bu kez gösterilir: şimdi kopyalayın. Aşağıdaki komutların oluşturduğu anahtar dosyasına girer.",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.storageNumber": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Depo numarası: {id}",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
+    "storageWatch.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başka makinedeki değişiklikler (filex-watch)",
+      "where": [
+        "web/src/components/StorageWatchAgent.vue"
+      ]
+    },
     "storages.access.changed": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -46821,6 +47155,78 @@
         "web/src/components/StorageDriverFields.vue"
       ]
     },
+    "storages.advice.apply": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{interval} kullan",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.busy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{interval} aralıkla taramalar depoyu zamanın yaklaşık {'%'}{pct} kadarında meşgul eder (son tarama {entries} dosya ve klasör için {duration} sürdü). Önerilen: {suggested}; bu, yükü {'%'}{target} altında tutar. Yine de kendi değerinizi kaydedebilirsiniz.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.continuous": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bir tarama {interval} süresinden uzun sürüyor (sonuncusu {entries} dosya ve klasör için {duration} sürdü), bu yüzden biri biter bitmez sonraki başlıyor: depo sürekli taranıyor. Önerilen: {suggested}; bu, yükü {'%'}{target} altında tutar. Yine de kendi değerinizi kaydedebilirsiniz.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.lazy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Canlı izlemede bu aralık, kimsenin açık tutmadığı bir klasörün filex onu yeniden okumadan önce ne kadar eskiyebileceğidir; izlemelerin altındaki güvenlik ağıdır. Bu geçiş depo kullanılırken yavaşlar ve filex onu tek bir tarama olarak ölçmez; bu yüzden burada yük tahmini yoktur.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.memoryContainer": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son tarama sırasında filex {peak} bellek kullandı; bu, konteynerinin kullanabileceği {limit} belleğin {'%'}{pct} kadarı. Bellek biterse sistem filex'i durdurur. Konteynere daha fazla bellek verin ya da büyük klasörleri taramanın dışında bırakın.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.memoryHost": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son tarama sırasında filex {peak} bellek kullandı; bu, bu makinenin {limit} belleğinin {'%'}{pct} kadarı. Bellek biterse sistem filex'i durdurur. Bellek ekleyin ya da büyük klasörleri taramanın dışında bırakın.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.ok": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Son tarama {entries} dosya ve klasör için {duration} sürdü: {interval} aralıkla taramalar depoyu zamanın yaklaşık {'%'}{pct} kadarında meşgul eder.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.unmeasured": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu deponun ilk taraması bitince filex bir aralık önerir: tam bir taramanın ne kadar sürdüğünü ölçer.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
+    "storages.advice.unused": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu mod zamanlanmış tarama yapmaz; aralık kullanılmaz.",
+      "where": [
+        "web/src/components/StorageIntervalAdvice.vue"
+      ]
+    },
     "storages.catalog.cataloged": {
       "in": "admin",
       "syntax": "vue-i18n",
@@ -46939,6 +47345,24 @@
         "web/src/components/StorageCatalogStatus.vue",
         "web/src/views/StorageEdit.vue"
       ]
+    },
+    "storages.catalog.watchOff.network_fs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yok: ağ dosya sistemi"
+    },
+    "storages.catalog.watchOff.unavailable": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yok: izleme kullanılamıyor",
+      "where": [
+        "web/src/components/StorageCatalogStatus.vue"
+      ]
+    },
+    "storages.catalog.watchOff.unknown_fs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Yok: dosya sistemi tanınmadı"
     },
     "storages.catalog.watched": {
       "in": "admin",
@@ -47630,7 +48054,7 @@
     "storages.fields.syncIntervalHint": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex bu depoyu dışarıdan yapılan değişiklikler için ne sıklıkla tarasın (yoklama modu). Sunucu varsayılanı (15 dakika) için boş bırakın. Büyük ve seyrek değişen bir depo uzun aralıkla daha rahattır; aralığını aşan bir tarama ikinci kez başlatılmaz.",
+      "tr": "Periyodik tarama: filex, dışarıda yapılan değişiklikler için deponun tamamını ne sıklıkla dolaşsın; aralığını aşan bir tarama ikinci kez başlatılmaz. Canlı izleme: kimsenin açık tutmadığı bir klasör yeniden okunmadan önce ne kadar eskiyebilir. Sunucu varsayılanı (15 dakika) için boş bırakın.",
       "where": [
         "web/src/views/StorageEdit.vue",
         "web/src/views/StorageNew.vue"
@@ -47690,15 +48114,50 @@
         "web/src/components/StorageCatalogStatus.vue"
       ]
     },
+    "storages.liveOffer.body": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu depo her tarama aralığında baştan sona taranıyor; filex dışında klasörüne yazılan bir dosya bir sonraki taramaya kadar görünmez. Canlı izlemede klasör açıldığında depodan okunur ve ardından izlenir; böyle dosyalar hemen görünür. Tarama aralığı güvenlik ağı olarak kalır.",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue",
+        "web/src/views/Storages.vue"
+      ]
+    },
+    "storages.liveOffer.switch": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Canlı izlemeye geç",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue",
+        "web/src/views/Storages.vue"
+      ]
+    },
+    "storages.liveOffer.switched": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "{name} artık canlı izleme kullanıyor.",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue",
+        "web/src/views/Storages.vue"
+      ]
+    },
+    "storages.liveOffer.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Canlı izleme",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
+    },
     "storages.modeHelp.fsnotify": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "filex depoda dışarıda yapılan değişiklikleri izler ve her değişiklik dalgasından sonra depoyu yeniden dolaşır."
+      "tr": "filex deponun tamamını dışarıda yapılan değişiklikler için izler ve her değişiklik dalgasından sonra deponun tamamını yeniden dolaşır."
     },
     "storages.modeHelp.lazy": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Önceden dolaşma yok: birinin açtığı klasör doğrudan depodan listelenir ve ilk o kataloglanır. Kalanı arka planda ya da yalnız açıldıkça kataloglanır (aşağıda). Kimsenin izlemediği klasörler her tarama aralığında yeniden denetlenir."
+      "tr": "Önceden dolaşma yok: birinin açtığı klasör doğrudan depodan listelenir, ilk o kataloglanır ve sonra izlenir; böylece filex dışında yazılan bir dosya, klasörü açıldığında görünür. Kalanı arka planda ya da yalnız açıldıkça kataloglanır (aşağıda). Kimsenin izlemediği klasörler her tarama aralığında yeniden denetlenir. Ağ dosya sisteminde hiçbir şey izlenmez; açılan her klasör depodan okunur."
     },
     "storages.modeHelp.ondemand": {
       "in": "admin",
@@ -47713,12 +48172,12 @@
     "storages.modeLabel.fsnotify": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Canlı izleme"
+      "tr": "Tüm depoyu izle"
     },
     "storages.modeLabel.lazy": {
       "in": "admin",
       "syntax": "vue-i18n",
-      "tr": "Tembel katalog"
+      "tr": "Canlı izleme"
     },
     "storages.modeLabel.ondemand": {
       "in": "admin",
@@ -47734,6 +48193,54 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Desteklenmiyor (yoklamaya düşüyor)"
+    },
+    "storages.networkFs.body.fsnotify": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Bu depo ağdan bağlı: başka makinelerde yapılan değişiklikler filex'in izlemelerine hiç ulaşmaz; bu yüzden filex tüm depoyu izlemek yerine onu tarama aralığıyla tarar. Değişiklikleri anında görmek için diskin bulunduğu makineye filex-watch kurun.",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
+    },
+    "storages.networkFs.body.lazy": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başka makinelerde yapılan değişiklikler burada filex'in izlemelerine hiç ulaşmaz; bu yüzden her klasör açıldığında depodan okunur. Değişiklikleri anında görmek için diskin bulunduğu makineye filex-watch kurun.",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
+    },
+    "storages.networkFs.body.scan": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Başka makinelerde yapılan değişiklikler bir sonraki taramada bulunur. Onları anında görmek için diskin bulunduğu makineye filex-watch kurun.",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
+    },
+    "storages.networkFs.docs": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "filex-watch nasıl kurulur",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
+    },
+    "storages.networkFs.title": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ağ dosya sistemi",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
+    },
+    "storages.networkFs.titleTyped": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "Ağ dosya sistemi ({type})",
+      "where": [
+        "web/src/components/StorageLiveWatchOffer.vue"
+      ]
     },
     "storages.newTitle": {
       "in": "admin",
@@ -48304,6 +48811,14 @@
       "in": "admin",
       "syntax": "vue-i18n",
       "tr": "Bitti"
+    },
+    "sync.fields.peakMemory": {
+      "in": "admin",
+      "syntax": "vue-i18n",
+      "tr": "En yüksek bellek",
+      "where": [
+        "web/src/views/StorageEdit.vue"
+      ]
     },
     "sync.fields.scanned": {
       "in": "admin",
